@@ -1,0 +1,161 @@
+{
+  "sections": {
+    "new-product-template": {
+      "type": "new-product-template",
+      "blocks": {
+        "840a5589-7f85-47c4-9039-e4af05a5602a": {
+          "type": "service",
+          "settings": {
+            "service_icon": "shopify:\/\/shop_images\/trestique-product-icons-Aug-2021-copy_Shipping.png",
+            "service_text": "<p>FREE Shipping <\/p><p>on orders $49+<\/p>",
+            "service_icon_subscribe": "shopify:\/\/shop_images\/trestique-product-icons-Aug-2021-copy_Shipping_24a284fa-bc79-409a-91c5-cd568cdebfaf.png",
+            "service_text_subscribe": "<p>FREE Shipping on future refills<\/p>",
+            "learn_more_show": false
+          }
+        },
+        "603e883f-112b-483f-af3f-0566575ab1f9": {
+          "type": "service",
+          "settings": {
+            "service_icon": "shopify:\/\/shop_images\/trestique-product-icons-Aug-2021-copy_Afterpay-klarna.png",
+            "service_text": "<p>Pay in 4 easy <\/p><p>installments<\/p>",
+            "service_icon_subscribe": "shopify:\/\/shop_images\/35OFF_3.png",
+            "service_text_subscribe": "<p>Save 35% on<\/p><p>future refills<\/p>",
+            "learn_more_show": true
+          }
+        },
+        "e04dec30-7f89-48ac-8dbf-7893d4bc6027": {
+          "type": "service",
+          "settings": {
+            "service_icon": "shopify:\/\/shop_images\/trestique-product-icons-Aug-2021-copy_30-day.png",
+            "service_text": "<p>FREE + EASY returns<\/p>",
+            "service_icon_subscribe": "shopify:\/\/shop_images\/trestique-product-icons-Aug-2021-copy_30-day_3e06d86f-c9f4-4f96-9b65-4da4cf0933ee.png",
+            "service_text_subscribe": "<p>FREE + EASY returns<\/p>",
+            "learn_more_show": false
+          }
+        },
+        "e2f9e7f8-4b46-47a3-aebe-1515623a1ec6": {
+          "type": "product-tabs",
+          "settings": {
+            "tab_title": "How to Use",
+            "tab_description": "<p>{{ product.metafields.product_details.how_to_use | metafield_tag }}<\/p>"
+          }
+        },
+        "83ca1e86-62a6-4c7a-a131-4f462dcd41e8": {
+          "type": "product-tabs",
+          "settings": {
+            "tab_title": "Ingredients",
+            "tab_description": "<p>{{ product.metafields.product_details.ingredients | metafield_tag }}<\/p>"
+          }
+        },
+        "b3106b07-f79c-40d4-b132-b247ee59307e": {
+          "type": "product-tabs",
+          "settings": {
+            "tab_title": "Sustainability",
+            "tab_description": "<p>{{ product.metafields.product_details.sustainability | metafield_tag }}<\/p>"
+          }
+        },
+        "bdb876ef-8d81-48f4-86f2-4d83ebf52ed3": {
+          "type": "floating-image",
+          "settings": {
+            "floating_image": "shopify:\/\/shop_images\/PETA-Certified.png",
+            "tag_text": "floating-image-1"
+          }
+        },
+        "e0938e6d-d0f6-4070-b7ce-3688ab4260a1": {
+          "type": "floating-image",
+          "settings": {
+            "floating_image": "shopify:\/\/shop_images\/Made-from-recycled.png",
+            "tag_text": "floating-image-2"
+          }
+        },
+        "1c049053-7198-401e-91e6-68d17ad8adba": {
+          "type": "review",
+          "settings": {
+            "review_text": "<p>{{ product.metafields.my_fields.product_review_text_1 | metafield_tag }}<\/p>",
+            "review_author": "{{ product.metafields.my_fields.product_review_author_1.value }}",
+            "review_author_logo": "{{ product.metafields.my_fields.product_review_image_1.value }}",
+            "review_author_country_logo": "{{ product.metafields.my_fields.product_review_country_1.value }}"
+          }
+        },
+        "14a77940-416b-4331-881c-d1b62c71391c": {
+          "type": "review",
+          "settings": {
+            "review_text": "<p>{{ product.metafields.my_fields.product_review_text_2 | metafield_tag }}<\/p>",
+            "review_author": "{{ product.metafields.my_fields.product_review_author_2.value }}",
+            "review_author_logo": "{{ product.metafields.my_fields.product_review_image_2.value }}",
+            "review_author_country_logo": "{{ product.metafields.my_fields.product_review_country_image_2.value }}"
+          }
+        },
+        "951779d6-a7c2-4284-9334-8aa81cfb7118": {
+          "type": "review",
+          "settings": {
+            "review_text": "<p>{{ product.metafields.my_fields.product_review_text_3 | metafield_tag }}<\/p>",
+            "review_author": "{{ product.metafields.my_fields.product_review_author_3.value }}",
+            "review_author_logo": "{{ product.metafields.my_fields.product_review_image_3.value }}",
+            "review_author_country_logo": "{{ product.metafields.my_fields.product_review_country_image_3.value }}"
+          }
+        },
+        "d1c83e87-88d0-4ab2-9197-c42d1c147baf": {
+          "type": "review",
+          "settings": {
+            "review_text": "<p>{{ product.metafields.my_fields.product_review_text_4 | metafield_tag }}<\/p>",
+            "review_author": "{{ product.metafields.my_fields.product_review_author_4.value }}",
+            "review_author_logo": "{{ product.metafields.my_fields.product_review_image_4.value }}",
+            "review_author_country_logo": "{{ product.metafields.my_fields.product_review_country_image_4.value }}"
+          }
+        },
+        "d3e20fe6-b035-4763-9c40-0994ec453816": {
+          "type": "review",
+          "settings": {
+            "review_text": "<p>{{ product.metafields.my_fields.product_review_text_5 | metafield_tag }}<\/p>",
+            "review_author": "{{ product.metafields.my_fields.product_review_author_5.value }}",
+            "review_author_logo": "{{ product.metafields.my_fields.product_review_image_5.value }}",
+            "review_author_country_logo": "{{ product.metafields.my_fields.product_review_country_image_5.value }}"
+          }
+        },
+        "9af9f435-6cd8-4a05-89a9-7341a0bdfddf": {
+          "type": "review",
+          "settings": {
+            "review_text": "<p>{{ product.metafields.my_fields.product_review_text_6 | metafield_tag }}<\/p>",
+            "review_author": "{{ product.metafields.my_fields.product_review_author_6.value }}",
+            "review_author_logo": "{{ product.metafields.my_fields.product_review_image_6.value }}",
+            "review_author_country_logo": "{{ product.metafields.my_fields.product_review_country_image_6.value }}"
+          }
+        }
+      },
+      "block_order": [
+        "840a5589-7f85-47c4-9039-e4af05a5602a",
+        "603e883f-112b-483f-af3f-0566575ab1f9",
+        "e04dec30-7f89-48ac-8dbf-7893d4bc6027",
+        "e2f9e7f8-4b46-47a3-aebe-1515623a1ec6",
+        "83ca1e86-62a6-4c7a-a131-4f462dcd41e8",
+        "b3106b07-f79c-40d4-b132-b247ee59307e",
+        "bdb876ef-8d81-48f4-86f2-4d83ebf52ed3",
+        "e0938e6d-d0f6-4070-b7ce-3688ab4260a1",
+        "1c049053-7198-401e-91e6-68d17ad8adba",
+        "14a77940-416b-4331-881c-d1b62c71391c",
+        "951779d6-a7c2-4284-9334-8aa81cfb7118",
+        "d1c83e87-88d0-4ab2-9197-c42d1c147baf",
+        "d3e20fe6-b035-4763-9c40-0994ec453816",
+        "9af9f435-6cd8-4a05-89a9-7341a0bdfddf"
+      ],
+      "settings": {
+        "find_shade_link": "shopify:\/\/pages\/routine-finder",
+        "combo_product_title": "BUY FULL SIZE + REFILLS AND SAVE 10%",
+        "gift_product_title": "MORE HOLIDAY GIFT IDEAS",
+        "subscription_text": "Auto-Refill",
+        "subscription_offer_text": "Save 35% + free shipping",
+        "subscription_offer_text_xs": "Save 35% + free shipping",
+        "subscription_offer_info": "Cancel or manage your subscription.",
+        "subscription_offer_info_xs": "Cancel or change online at anytime.",
+        "subscription_badge_text": "{{ product.metafields.my_fields.subscription_badge_text.value }}",
+        "subscription_recommended_selector": "{{ product.metafields.my_fields.recommended_subscription.value }}",
+        "one_time_purchase_text": "One-time purchase",
+        "subscribr_popup_details": "Auto-refill program will automatically deliver refill cartridges of your favorite products based on the schedule you set.## Auto-refill orders are 35% off the full size price.##You will receive your recyclable refill cartridge to replace your empty cartridge. ##All auto-refill orders ship for FREE.##You can cancel or manage your orders online at any time. Visit our FAQ page to learn more."
+      }
+    }
+  },
+  "order": [
+    "new-product-template"
+  ]
+}

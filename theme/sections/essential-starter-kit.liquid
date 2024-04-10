@@ -1,0 +1,648 @@
+<!-- essential-8-builder -->
+<section>
+  <script>
+    window.essentialBuilder = window.essentialBuilder || {};
+    window.essentialSecionId = "{{section.id}}";
+    essentialBuilder = {
+      "layout":"new",
+      "base_review": `{{product.metafields.okendo.ProductListingSnippet }}`,
+      "settings" : {{ section.settings | json}},
+      "base_product" : {{ product | json }},
+      "bundle_type": "{{product.metafields.custom.bundle_type}}",
+      "tabs":[
+      {
+         "tab_title":"Description",
+         "tab_description":`{{product.description}}`
+       }, 
+      {
+         "tab_title":"How to Use",
+         "tab_description":`{{product.metafields.product_details.how_to_use}}`
+       },
+       {
+         "tab_title":"Ingredients",
+         "tab_description":`{{product.metafields.product_details.ingredients}}`
+       },
+       {
+         "tab_title":"Sustainability",
+         "tab_description":`{{product.metafields.product_details.sustainability}}`
+       }
+      ],
+      "benifits":[
+        {% assign benifits = section.blocks | where: 'type', 'benifits'  %}
+        {%- for block in benifits -%}
+          {{block.settings | json }}{% unless forloop.last %},{% endunless %}
+        {%- endfor -%}
+      ],
+      "benifits2":[
+        {% assign benifits = section.blocks | where: 'type', 'benifits2'  %}
+        {%- for block in benifits -%}
+          {{block.settings | json }}{% unless forloop.last %},{% endunless %}
+        {%- endfor -%}
+      ],
+      "services": [
+        {% assign services = section.blocks | where: 'type', 'service'  %}
+        {%- for block in services -%}
+          {{block.settings | json }}{% unless forloop.last %},{% endunless %}
+        {%- endfor -%}
+      ],
+      "reviews" : [
+        {% assign reviews = section.blocks | where: 'type', 'review'  %}
+        {%- for block in reviews -%}
+            {{block.settings | json}}{% unless forloop.last %},{% endunless %}
+        {%- endfor -%}
+      ],
+      "half_images" : [
+        {% assign half_images = section.blocks | where: 'type', 'half_image'  %}
+        {%- for block in half_images -%}
+            {{block.settings | json}}{% unless forloop.last %},{% endunless %}
+        {%- endfor -%}
+      ],
+      "full_images" : [
+        {% assign full_images = section.blocks | where: 'type', 'full_image'  %}
+        {%- for block in full_images -%}
+            {{block.settings | json}}{% unless forloop.last %},{% endunless %}
+        {%- endfor -%}
+      ],
+      "upsell_products": [
+        {% assign childPreselected = section.blocks | where: 'type', 'child-preselected'  %}
+        {%- for block in childPreselected -%}
+          {% assign preProduct = all_products[block.settings.product] %}
+            {
+              productData : {{ preProduct | json}},
+              metadata : {{ preProduct.metafields.product_details | json}},
+              selected_variant : {{ preProduct.selected_or_first_available_variant | json }},
+              selected: false
+            }
+            {% unless forloop.last %},{% endunless %}
+        {%- endfor -%}
+      ],
+      "sustainability_practices": [
+        {% assign Sustainability = section.blocks | where: 'type', 'sustainability_practices'  %}
+        {%- for block in Sustainability -%}
+            "{{ block.settings.image | img_url : original }}"
+            {% unless forloop.last %},{% endunless %}
+        {%- endfor -%}
+      ],
+      "video_section" : [
+      {% assign videoSections = section.blocks | where: 'type', 'video_section'  %}
+        {%- for block in videoSections -%}
+            "{{ block.settings.image | img_url : original }}"
+            {% unless forloop.last %},{% endunless %}
+        {%- endfor -%}
+      ],
+      "review_section" : {{ product.metafields.okendo.ProductListingSnippet | json }}
+    }
+    window.essentialBuilder.selectable_products = [];
+    // window.essentialBuilder.selectable_products.push() 
+    {% assign childSelectable = section.blocks | where: 'type', 'child-selectable'  %}
+
+    {%- for block in childSelectable -%}
+      {% assign preselect_product = all_products[block.settings.product] %}
+        {% unless preselect_product == blank %}
+          var obj = {
+              productData : {{ preselect_product | json}},
+              metadata : {{ preselect_product.metafields.product_details | json}},
+              number : {{ block.settings.number | json}},
+              exclude_variants : "{{ block.settings.exclude_variants }}"
+          }
+          {% assign exclude_variants = block.settings.exclude_variants | split:',' %}
+          {% if block.settings.exclude_variants != blank  %}
+            obj.productData.variants = [];
+            {% for variant in preselect_product.variants %} 
+              {% assign excludevariant = false %}
+              {% for exclude in exclude_variants %}
+                {% assign exclude_handle = exclude | handle %}
+                {% assign v_handle = variant.title | handle %}
+                {% if exclude_handle == v_handle %}
+                    {% assign excludevariant = true %}
+                {% endif %}
+              {% endfor %}
+
+              {% if excludevariant == false %}
+                obj.productData.variants.push({{variant | json}});
+              {% endif %}
+            {% endfor %}
+          {% endif %}
+        {% endunless %}
+        if(obj.productData.variants.length > 0){
+          window.essentialBuilder.selectable_products.push(obj);
+        }
+    {%- endfor -%}
+  </script>
+  {% comment %} Json script start {% endcomment %}
+  {% comment %} Creating json for side cart edit bundle. When user click on edit bundle then fetching bundle data from this json to edit bundle {% endcomment %}
+  <script id="bundle-data-json">
+    {
+      "masterProduct":{{product | json }},
+      "cart": {{cart | json}},
+      "size": "{{section.blocks.size}}",
+      "products": [
+        {% assign count = 0 %}
+        {%- for block in section.blocks -%}
+          {% if block.type == 'child-selectable' %}
+            {% if count != 0 %},{% endif %}
+            {% assign product_data = all_products[block.settings.product] %}
+            {% render 'edit-product',product:product_data %}
+            {% assign count = count | plus:1 %}
+          {% endif %}
+        {%- endfor -%}
+      ]
+    }
+  </script>
+  {% comment %} Json script end {% endcomment %}
+
+</section>
+<div class="es-8-review-section-container hide">
+  <h6 class="review-section-title">reviews</h6>
+  <div class="okeReviews-widget-holder" data-oke-reviews-widget-holder data-oke-reviews-product-id="shopify-{{ product.id }}">
+    <div data-oke-reviews-nav-bar></div>
+    <div data-oke-reviews-widget>{{ product.metafields.okendo.ProductReviewsWidgetSnippet }}</div>
+    <div data-oke-reviews-qanda></div>
+  </div>
+</div>
+
+<link
+  rel="stylesheet"
+  type="text/css"
+  charset="UTF-8"
+  href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.0/slick.min.css"
+/>
+<link
+  rel="stylesheet"
+  type="text/css"
+  href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.0/slick-theme.min.css"
+/>
+
+{% schema %}
+{
+  "name": "Essential starter kit",
+  "settings": [
+    {
+      "type": "text",
+      "id": "title_text",
+      "label": "Page title",
+      "default": "Essential 8: Signature Set"
+    },
+    {
+        "type": "select",
+        "id": "mobile_title_position",
+        "label": "Title position in mobile",
+        "options": [
+          {
+            "value": "above_image",
+            "label": "Above image"
+          },
+          {
+            "value": "bottom_image",
+            "label": "Bottom image"
+          }
+        ],
+        "default": "above_image"
+    },
+    {
+        "type": "select",
+        "id": "price_visibility_on_title",
+        "label": "Price visibility on title",
+        "options": [
+          {
+            "value": "show_on_desk_only",
+            "label": "Show on desktop only"
+          },
+          {
+            "value": "show_on_xs_only",
+            "label": "Show on mobile only"
+          },
+          {
+            "value": "show_on_both",
+            "label": "Show on all devices"
+          },
+          {
+            "value": "hide_on_both",
+            "label": "Hide on all devices"
+          }
+        ],
+        "default": "show_on_both"
+    },
+    {
+      "type": "richtext",
+      "id": "content_text",
+      "label": "Content"
+    },
+    {
+        "type": "select",
+        "id": "content_visible",
+        "label": "Description visible on",
+        "options": [
+          {
+            "value": "xs-hide",
+            "label": "Desktop only"
+          },
+          {
+            "value": "xs-show",
+            "label": "Mobile only"
+          },
+          {
+            "value": "",
+            "label": "All device"
+          }
+        ],
+        "default": "xs-hide"
+    },
+    {
+      "type": "text",
+      "id": "accordion_title",
+      "label": "Accordion Title",
+      "default": "PRE-SELECTED PRODUCTS INCLUDED"
+    },
+    {
+      "type": "text",
+      "id": "error_text",
+      "label": "Error Text",
+      "default": "Please choose your shade!",
+      "info": "This error will be displayed when user hasn't selected shade"
+    },
+    {
+      "type": "text",
+      "id": "error_bag_text",
+      "label": "Error Text",
+      "default": "Please choose your Bag!",
+      "info": "This error will be displayed when user hasn't selected bag"
+    },
+    {
+      "type": "header",
+      "content": "Add to cart button"
+    },
+    
+    {
+      "type": "text",
+      "id": "add_to_cart_text",
+      "label": "Add to cart button text",
+      "default": "Add to cart"
+    },
+    {
+      "type": "color",
+      "id": "add_to_cart_text_color",
+      "label": "Add to cart text color",
+      "default": "#ffffff"
+    },
+    {
+      "type": "color",
+      "id": "add_to_cart_bg_color",
+      "label": "Add to cart background color",
+      "default": "#00263A"
+    },
+    {
+        "type": "select",
+        "id": "btn_action",
+        "label": "Button action",
+        "options": [
+          {
+            "value": "drawer",
+            "label": "Open drawer"
+          },
+          {
+            "value": "checkout",
+            "label": "Checkout"
+          }
+        ],
+        "default": "drawer"
+    },
+    {
+      "type": "header",
+      "content": "Soldout button"
+    },
+    {
+      "type": "text",
+      "id": "soldout_text",
+      "label": "Soldout button text",
+      "default": "Soldout"
+    },
+    {
+      "type": "color",
+      "id": "soldout_text_color",
+      "label": "Soldout text color",
+      "default": "#ffffff"
+    },
+    {
+      "type": "color",
+      "id": "soldout_bg_color",
+      "label": "Soldout background color",
+      "default": "#00263A"
+    },
+    {
+        "type": "range",
+        "step": 1,
+        "min": 6,
+        "max": 30,
+        "id": "btn_font_size",
+        "label": "Button font size for desktop",
+        "default": 14,
+        "unit": "px"
+    },
+    {
+        "type": "range",
+        "step": 1,
+        "min": 6,
+        "max": 30,
+        "id": "btn_font_size_xs",
+        "label": "Button font size for mobile",
+        "default": 14,
+        "unit": "px"
+    },
+    {
+        "type": "range",
+        "step": 1,
+        "min": 1,
+        "max": 100,
+        "id": "btn_width",
+        "label": "Button width for desktop",
+        "default": 58,
+        "unit": "%"
+    },
+    {
+      "type": "checkbox",
+      "id": "show_price_on_button",
+      "label": "Show price on button"
+    },
+    {
+      "type": "text",
+      "id": "sustain_package_title",
+      "label": "Sustainability Package Title",
+      "default": "Transparently clean. Sustainably packaged.",
+      "info": "This title will be displayed on Sustainability section"
+    },
+    {
+      "type": "checkbox",
+      "default":false,
+      "id": "video_enable",
+      "label": "Video enable?"
+    },
+    {
+      "type": "text",
+      "id": "video_section_title",
+      "label": "Video Section Title",
+      "default": "See it in action @trestique",
+      "info": "This title will be displayed on Video Section"
+    },
+    {
+      "type": "image_picker",
+      "id": "video_preview",
+      "label": "Video Preview"
+    },
+    {
+      "type": "text",
+      "id": "video_link",
+      "label": "Video link"
+    },
+    {
+      "type": "image_picker",
+      "id": "video_preview_xs",
+      "label": "Video Preview for mobile"
+    },
+    {
+      "type": "text",
+      "id": "video_link_xs",
+      "label": "Video link for mobile"
+    },
+    {
+      "type":"text",
+      "label":"Top offer message",
+      "id":"top_offer_msg",
+      "default": "get $50 off for a limited time only"
+    },
+    {
+      "type":"text",
+      "label":"Offer badge message",
+      "id":"offer_badge_msg",
+      "default": "limited time offer"
+    },
+    {
+      "type":"color",
+      "label":"Offer badge message bg color",
+      "id":"offer_badge_msg_bg_color",
+      "default": "#00263A"
+    },
+    {
+      "type":"text",
+      "label":"Offer badge message text color",
+      "id":"offer_badge_msg_text_color",
+      "default": "#fff"
+    },
+    {
+        "type": "select",
+        "id": "badge_visible",
+        "label": "Badge visible on",
+        "options": [
+          {
+            "value": "xs-hide",
+            "label": "Desktop only"
+          },
+          {
+            "value": "xs-show",
+            "label": "Mobile only"
+          },
+          {
+            "value": "",
+            "label": "All device"
+          }
+        ],
+        "default": "xs-hide"
+    },
+    {
+      "type":"number",
+      "label":"Upsell Discount",
+      "id":"upsell_discount",
+      "default": 30
+    }
+
+  ],
+  "blocks": [
+  {
+  "type": "benifits",
+  "name": "Benifits",
+  "limit": 4,
+  "settings": [
+      {
+        "type":"header",
+        "content":"It will show only 1 item at a time"
+      },
+      {
+        "type": "image_picker",
+        "id": "service_icon",
+        "label": "Service icon"
+      },
+      {
+          "type": "text",
+          "id": "service_text",
+          "label": "Service text"
+      }
+    ]
+  },
+  {
+  "type": "benifits2",
+  "name": "Benifits for mobile only",
+  "limit": 4,
+  "settings": [
+      {
+        "type":"header",
+        "content":"It will show only 1 item at a time"
+      },
+      {
+        "type": "image_picker",
+        "id": "service_icon",
+        "label": "Service icon"
+      },
+      {
+          "type": "text",
+          "id": "service_text",
+          "label": "Service text"
+      }
+    ]
+  },
+  {
+    "type": "service",
+    "name": "Service",
+    "limit": 3,
+    "settings": [
+        {
+          "type": "image_picker",
+          "id": "service_icon",
+          "label": "Service icon"
+        },
+        {
+            "type": "richtext",
+            "id": "service_text",
+            "label": "Service text"
+        }
+      ]
+    },
+    {
+    "type": "half_image",
+    "name": "Half grid image",
+    "limit": 2,
+    "settings": [
+        {
+          "type": "image_picker",
+          "id": "img",
+          "label": "Image"
+        },
+        {
+          "type": "url",
+          "id": "link",
+          "label": "Link"
+        }
+      ]
+    },
+    {
+    "type": "full_image",
+    "name": "Full image slider",
+    "limit": 10,
+    "settings": [
+        {
+          "type": "image_picker",
+          "id": "img",
+          "label": "Image"
+        },
+        {
+          "type": "url",
+          "id": "link",
+          "label": "Link"
+        }
+      ]
+    },
+    {
+      "type": "review",
+      "name": "Review",
+      "settings": [
+        {
+          "type": "richtext",
+          "id": "review_text",
+          "label": "Review text",
+          "default": "<p>“I love products that are quick and easy and these are exactly that.”</p>"
+        },
+        {
+          "type": "text",
+          "id": "review_author",
+          "label": "Review author",
+          "default": " Jenn Kapahi (Co-founder)"
+        },
+        {
+          "type": "image_picker",
+          "id": "review_author_logo",
+          "label": "Review author logo"
+        },
+        {
+          "type": "image_picker",
+          "id": "review_author_country_logo",
+          "label": "Review author country logo"
+        }
+      ]
+    },
+    {
+      "type": "child-selectable",
+      "name": "Child Selectable",
+      "limit": 20,
+      "settings": [
+        {
+          "type": "product",
+          "id": "product",
+          "label": "Choose Product"
+        },
+        {
+          "type": "text",
+          "id": "number",
+          "label": "Number text",
+          "default":"1"
+        },
+        {
+          "type": "textarea",
+          "id": "exclude_variants",
+          "label": "Exclude variants"
+        }
+      ]
+    },
+    {
+      "type": "child-preselected",
+      "name": "Child Preselected",
+      "limit": 5,
+      "settings": [
+        {
+          "type": "product",
+          "id": "product",
+          "label": "Choose Product"
+        }
+      ]
+    },
+    {
+      "type" : "sustainability_practices",
+      "name" : "Sustain Practices Images",
+      "limit": 6,
+      "settings": [
+        {
+          "type": "image_picker",
+          "id": "image",
+          "label": "Choose Image"
+        }
+      ]
+    },
+    {
+      "type" : "video_section",
+      "name" : "See it in Action Images",
+      "limit": 4,
+      "settings": [
+        {
+          "type": "image_picker",
+          "id": "image",
+          "label": "Choose Image"
+        }
+      ]
+    }
+  ],
+  "presets": [
+      {
+        "name": "Essential starter kit",
+        "category": "Bundle"
+      }
+  ]
+}
+{% endschema %}

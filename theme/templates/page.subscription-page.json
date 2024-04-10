@@ -1,0 +1,154 @@
+{
+  "sections": {
+    "164179720479e01688": {
+      "type": "subscription-image-with-text-features",
+      "blocks": {
+        "86c0a0d9-e43e-4488-8060-7612e415ed80": {
+          "type": "block",
+          "settings": {
+            "block_image": "shopify:\/\/shop_images\/swr.png",
+            "content": "Save 25% on future refills"
+          }
+        },
+        "445a0bc0-0ee0-402b-9512-7c0d4e7108a2": {
+          "type": "block",
+          "disabled": true,
+          "settings": {
+            "block_image": "shopify:\/\/shop_images\/Rectangle_2_057ff8b5-c1ee-4d56-8e35-8a78c14c732b.png",
+            "content": "Free Shipping with no minimum threshold"
+          }
+        },
+        "933f4fa7-6086-4d4d-a0ef-3e2122319abd": {
+          "type": "block",
+          "settings": {
+            "block_image": "shopify:\/\/shop_images\/Rectangle_3_d129f750-98b9-4dcc-b658-8a1ff9c3652d.png",
+            "content": "Go eco-friendly with refillable products"
+          }
+        }
+      },
+      "block_order": [
+        "86c0a0d9-e43e-4488-8060-7612e415ed80",
+        "445a0bc0-0ee0-402b-9512-7c0d4e7108a2",
+        "933f4fa7-6086-4d4d-a0ef-3e2122319abd"
+      ],
+      "settings": {
+        "video": "https:\/\/cdn.shopify.com\/s\/files\/1\/0114\/0621\/3220\/files\/Foundation_Stick_Refill.mp4?v=1642460329",
+        "bg_color": "#f3e9e2",
+        "title": "Replenish, Refill & Go",
+        "sub_title": "Auto-Refill Program",
+        "content": "Receive your trestique refills automatically, so you never have to worry about running out of your favorite products. Better for your wallet and for the planet."
+      }
+    },
+    "1641797657cb8e03e6": {
+      "type": "subscription-how-it-works",
+      "settings": {
+        "right_image": "shopify:\/\/shop_images\/Trestique_SideBySide_Lip_1.jpg",
+        "video": "",
+        "title": "How it works",
+        "content": "<p class=\"title-name\">1. START SHOPPING<\/p>\n<p class=\"data\">Select the auto-replenishment option on the product page of your choice. <\/p>\n<p class=\"title-name\">2. SCHEDULE YOUR SHIPMENTS<\/p>\n<p class=\"data\">Choose how often you'd like to receive your refills. We recommend every 4, 6, 8 or 12 weeks depending on how often you use your makeup. Need to make a change? Cancel or modify your order at any time. <\/p>\n<p class=\"title-name\">3. SAVE TIME, MONEY & THE PLANET<\/p>\n<p class=\"data\">Save time on shopping for makeup with our auto-refill program. Plus, save up to 25% when you subscribe to refills (including 10% off first order). Recycle your old refills and keep your refillable packaging.<\/p>",
+        "button_link": "https:\/\/www.trestique.com\/collections\/makeup-refills",
+        "button_text": "START SHOPPING"
+      }
+    },
+    "16417984774885e955": {
+      "type": "subscription-easy-to-manage",
+      "blocks": {
+        "40581cf2-95b9-4b92-9e51-ee6f39882eaf": {
+          "type": "block",
+          "settings": {
+            "block_image": "shopify:\/\/shop_images\/Group_46.png",
+            "content": "At checkout, your first shipment will be processed immediately and your subscription will be activated."
+          }
+        },
+        "80d97202-ab42-4af3-8299-35746a1a8cf3": {
+          "type": "block",
+          "settings": {
+            "block_image": "shopify:\/\/shop_images\/Group_47.png",
+            "content": "We’ll send you an email reminder before each delivery with plenty of time to edit your order if needed."
+          }
+        },
+        "0d55ddbc-8aeb-48ba-b9a1-86f373c9c77d": {
+          "type": "block",
+          "settings": {
+            "block_image": "shopify:\/\/shop_images\/Group_48.png",
+            "content": "Manage the frequency, delivery and quantity from your account at any time."
+          }
+        },
+        "33102f8d-2e78-413e-bd8d-7c05314a4a22": {
+          "type": "block",
+          "settings": {
+            "block_image": "shopify:\/\/shop_images\/Group_49.png",
+            "content": "Your credit card will be charged for each subscription order only when it’s shipped."
+          }
+        },
+        "69f82f41-09da-47de-9ae6-11a8017def06": {
+          "type": "block",
+          "settings": {
+            "block_image": "shopify:\/\/shop_images\/Group_50.png",
+            "content": "Browse the site & add products to your upcoming subscription order anytime."
+          }
+        }
+      },
+      "block_order": [
+        "40581cf2-95b9-4b92-9e51-ee6f39882eaf",
+        "80d97202-ab42-4af3-8299-35746a1a8cf3",
+        "0d55ddbc-8aeb-48ba-b9a1-86f373c9c77d",
+        "33102f8d-2e78-413e-bd8d-7c05314a4a22",
+        "69f82f41-09da-47de-9ae6-11a8017def06"
+      ],
+      "settings": {
+        "bg_color": "#f3e9e2",
+        "section_title": "Easy to manage",
+        "font_size_title": 36
+      }
+    },
+    "1641883932f7de219b": {
+      "type": "subscription-favorites",
+      "settings": {
+        "section_title": "Auto-refill favorites",
+        "font_size_title": 36,
+        "collection": "subscription-favorites"
+      }
+    },
+    "1641798857dc253140": {
+      "type": "subscription-have-question",
+      "blocks": {
+        "03411af7-82af-4166-a235-3e4f2d8cd655": {
+          "type": "contact-block",
+          "settings": {
+            "icon_Image": "shopify:\/\/shop_images\/Group_44.png",
+            "title-head": "E-mail us or Chat with the team",
+            "content-data": "10 AM - 5 PM EST\nMonday - Friday\n(excluding holidays)"
+          }
+        },
+        "89faae2a-64c7-46a7-b3a6-53bea30827ef": {
+          "type": "contact-block",
+          "settings": {
+            "icon_Image": "shopify:\/\/shop_images\/Group_45.png",
+            "title-head": "Book a Free Video Consult",
+            "content-data": "12 PM - 3 PM EST\nMonday - Friday\n(excluding holidays)"
+          }
+        }
+      },
+      "block_order": [
+        "03411af7-82af-4166-a235-3e4f2d8cd655",
+        "89faae2a-64c7-46a7-b3a6-53bea30827ef"
+      ],
+      "settings": {
+        "bg_color": "#f3e9e2",
+        "title": "Have questions?",
+        "font_size_title": 36,
+        "content": "Our team is here to answer any questions you might have about your products or our auto-replenishment service. We're here to help!",
+        "button_link": "https:\/\/www.trestique.com\/pages\/faq-help-center",
+        "button_text": "check our FAQ"
+      }
+    }
+  },
+  "order": [
+    "164179720479e01688",
+    "1641797657cb8e03e6",
+    "16417984774885e955",
+    "1641883932f7de219b",
+    "1641798857dc253140"
+  ]
+}

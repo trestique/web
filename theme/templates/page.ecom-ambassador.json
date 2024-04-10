@@ -1,0 +1,12 @@
+{
+  "layout": "theme",
+  "sections": {
+    "ecom-ambassador": {
+      "type": "ecom-ambassador-page",
+      "settings": {}
+    }
+  },
+  "order": [
+    "ecom-ambassador"
+  ]
+}

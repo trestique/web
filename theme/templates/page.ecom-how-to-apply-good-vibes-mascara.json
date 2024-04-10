@@ -1,0 +1,12 @@
+{
+  "layout": "theme",
+  "sections": {
+    "ecom-how-to-apply-good-vibes-mascara": {
+      "type": "ecom-how-to-apply-good-vibes-mascara-page",
+      "settings": {}
+    }
+  },
+  "order": [
+    "ecom-how-to-apply-good-vibes-mascara"
+  ]
+}

@@ -1,0 +1,80 @@
+<!-- subscription-image-with-text-features -->
+<section class="section how-its-works">
+  <div class="image-with-text-wrapper">
+    <div class="content-wrapper">
+      {% unless section.settings.title == blank %}
+        <h5 class="title">{{ section.settings.title }}</h5>
+      {% endunless %}
+      {% unless section.settings.content == blank %}
+        <p class="content">{{ section.settings.content }}</p>
+      {% endunless %}
+      <div class="button-wrapper">
+        <a href="{{ section.settings.button_link }}" class="btn-shopping button button--primary">
+          {{ section.settings.button_text }}
+        </a>
+      </div>
+    </div>
+    <div class="image-wrapper">
+      {%- if section.settings.right_image != blank -%}
+        {%- render 'srcset', 
+          src_alt:section.settings.right_image.alt,
+          src_name:section.settings.right_image,
+          load_blur:true 
+        -%}
+      {%- else -%}
+        <div class="video-section">
+          <video controls loop playsinline autoplay muted="muted">
+            <source src="{{ section.settings.video }}" type="video/mp4">
+          </video>
+        </div>
+      {%- endif -%}
+    </div>
+  </div>
+</section>
+
+{% schema %}
+{
+  "name": "How its works",
+  "settings": [
+      {
+        "type": "header",
+        "content": "How it works section"
+      },
+      {
+        "type": "image_picker",
+        "id": "right_image",
+        "label": "image"
+      },
+      {
+        "type": "text",
+        "id": "video",
+        "label": "Video URL"
+      },
+      {
+        "type": "text",
+        "id": "title",
+        "label": "Title"
+      },
+      {
+        "type": "textarea",
+        "id": "content",
+        "label": "Content"
+      },
+      {
+        "type": "url",
+        "id": "button_link",
+        "label": "Link"
+      },
+      {
+        "type": "text",
+        "id": "button_text",
+        "label": "Button text"
+      }
+    ],
+    "presets": [
+    {
+      "name": "How its works"
+    }
+  ]
+}
+{% endschema %}

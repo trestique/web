@@ -1,0 +1,328 @@
+<script>
+    window.quiz.settings = {...window.quiz.settings,...{{ section.settings | json}}};
+    window.quiz.settings.bagProducts = {};
+    {% assign large_bag = section.settings.large_bag %}
+    {% assign small_bag = section.settings.small_bag %}
+    {% if small_bag !=  blank and small_bag.available == true %}
+    window.quiz.settings.bagProducts.smallBag = {
+        "type":"small",
+        "id": {{small_bag.id}},
+        "product_title": "{{small_bag.title}}",
+        "featured_image":"{{small_bag.featured_image | img_url:'master'}}",
+        "text":{{section.settings.screen_8_small_bag_text | json }},
+        "options":{{small_bag.options_with_values | json}},
+        "variants":{{small_bag.variants | json }},
+        "currentVariant": null,
+        "metaData": {{ small_bag.metafields.product_details | json }},
+        "excludeVariants": "{{section.settings.small_bag_exclude_variants}}"
+    }
+    {% endif %}
+    {% if large_bag !=  blank and large_bag.available == true %}
+    window.quiz.settings.bagProducts.largeBag = {
+        "type":"large",
+        "id": {{large_bag.id}},
+        "product_title": "{{large_bag.title}}",
+        "featured_image":"{{large_bag.featured_image | img_url:'master'}}",
+        "text":{{section.settings.screen_8_large_bag_text | json }},
+        "options":{{large_bag.options_with_values | json}},
+        "variants":{{large_bag.variants | json }},
+        "currentVariant": null,
+        "metaData": {{ large_bag.metafields.product_details | json }},
+        "excludeVariants": "{{section.settings.large_bag_exclude_variants}}"
+    }
+    {% endif %} 
+    window.quiz.settings.eyeBrows = [
+            {% assign count = 0 %}
+            {% for block in section.blocks %}
+                {% if block.type == 'eyebrow' %}
+                    {% unless count == 0 %},{% endunless %}
+                        {{block.settings | json}}
+                    {% assign count = count | plus: 1  %}
+                {% endif %}
+            {% endfor %}
+    ]
+    window.quiz.settings.bagImages = {
+            "small":{
+                {% assign count = 0 %}
+                {% for block in section.blocks %}
+                    {% if block.type == 'small_bag_image' %}
+                        {% unless count == 0 %},{% endunless %}
+                            "{{block.settings.bag_color_name}}":"{{block.settings.bag_img | img_url:'master'}}"
+                        {% assign count = count | plus: 1  %}
+                    {% endif %}
+                {% endfor %}    
+            },
+            "large":{
+                {% assign count = 0 %}
+                {% for block in section.blocks %}
+                    {% if block.type == 'large_bag_image' %}
+                        {% unless count == 0 %},{% endunless %}
+                            "{{block.settings.bag_color_name}}":"{{block.settings.bag_img | img_url:'master'}}"
+                        {% assign count = count | plus: 1  %}
+                    {% endif %}
+                {% endfor %}    
+            }
+    }
+</script> 
+
+
+<script id="bundle-data-json"  type="application/json">
+    {
+        {%- for item in cart.items -%}
+        {% if item.properties['_quiz'] == "true" and item.properties['_type'] == "master" %}
+        "masterProduct":{{item.product | json }},
+        {% endif %}
+        {% endfor %}
+      "cart": {{cart | json}},
+      "products": [
+        {% render 'edit-product',product:product_data %},
+        {% render 'edit-product',product:large_bag %},
+        {% assign count = 0 %}
+        {%- for item in cart.items -%}
+            {% if item.properties['_quiz'] == "true" and item.properties['_type'] == "child" %}
+            {% unless count == 0 %},{% endunless %}
+            {% assign count = count | plus: 1 %}
+            {% render 'edit-product',product:item.product %}
+            {% endif %}
+        {% endfor %}
+      ]
+      }
+  </script>
+  
+{% schema %}
+{
+  "name": "7-12 customizations",
+  "settings": [
+    {
+        "type":"header",
+        "content":"Screen 7 - 12 customizations"
+    },
+    {
+        "type":"header",
+        "content":"Screen 7",
+        "info": "Which matches your eyebrow color best?"
+    },
+    {
+        "type":"text",
+        "label":"Screen 7 title",
+        "id":"screen_7_title",
+        "default":"Which matches your eyebrow color best?"
+    },
+    {
+        "type":"richtext",
+        "label":"Screen 7 text",
+        "id":"screen_7_text"
+    },
+    {
+        "type":"header",
+        "content":"Screen 8",
+        "info": "Choose your favorite bag"
+    },
+    {
+        "type":"text",
+        "label":"Screen 8 title",
+        "id":"screen_8_title",
+        "default":"Choose your favorite bag"
+    },
+    {
+        "type":"text",
+        "label":"Screen 8 error title",
+        "id":"screen_8_error_title",
+        "default":"Build your kit",
+        "info":"Add XX for show number dynamically"
+    },
+    
+    {
+        "type":"image_picker",
+        "label":"Screen 8 error desktop image",
+        "id":"screen_8_error_desk_img"
+    },
+    {
+        "type":"image_picker",
+        "label":"Screen 8 error mobile image",
+        "id":"screen_8_error_xs_img"
+    },
+    {
+        "type":"text",
+        "label":"Screen 8 error button : select more product text",
+        "id":"screen_8_error_btn_1_text",
+        "default":"SELECT MORE PRODUCTS"
+    },
+    {
+        "type":"text",
+        "label":"Screen 8 error button : don't want more product text",
+        "id":"screen_8_error_btn_2_text",
+        "default":"I DON’T WANT MORE PRODUCTS"
+    },
+    {
+        "type":"header",
+        "content": "Large bag details"
+    },
+    {
+        "type":"richtext",
+        "label":"Screen 8 small bag text",
+        "id":"screen_8_small_bag_text",
+        "default":"<p>All of our makeup bags are designed to fit in the palm of your hand and hold up to 10 full size products. They’re also made from a single recycled water bottle.</p>"
+    },
+    {
+        "type":"product",
+        "label":"Select small bag",
+        "id":"small_bag"
+    },
+    {
+        "type":"textarea",
+        "label":"Small bag exclude variants",
+        "id":"small_bag_exclude_variants",
+        "default":"Tie Dye",
+        "info":"Add variant name which you don't want to show by comma seperated"
+    },
+    {
+        "type":"header",
+        "content": "Large bag details"
+    },
+    {
+        "type":"richtext",
+        "label":"Screen 8 Large bag text",
+        "id":"screen_8_large_bag_text",
+        "default":"<p>All of our makeup bags are designed to fit in the palm of your hand and hold up to 12 full size products. They’re also made from a single recycled water bottle.</p>"
+    },
+    {
+        "type":"product",
+        "label":"Select large bag",
+        "id":"large_bag"
+    },
+    {
+        "type":"textarea",
+        "label":"Large bag exclude variants",
+        "id":"large_bag_exclude_variants",
+        "info":"Add variant name which you don't want to show by comma seperated"
+    },
+    {
+        "type":"header",
+        "content":"Screen 9",
+        "info": "Customer data screen"
+    },
+    {
+        "type":"text",
+        "label":"Screen 9 title",
+        "id":"screen_9_title"
+    },
+    {
+        "type":"richtext",
+        "label":"Screen 9 text",
+        "id":"screen_9_text",
+        "default":"<p>To get your results sent to your inbox, share your email with us (we won’t overwhelm you with tons of emails, promise).</p>"
+    },
+    {
+        "type":"text",
+        "label":"Screen 9 email placeholder",
+        "id":"screen_9_email_placeholder",
+        "default":"Your email"
+    },
+    {
+        "type":"text",
+        "label":"Screen 9 Button text",
+        "id":"screen_9_btn_text",
+        "default":"Get results"
+    },
+    {
+        "type":"richtext",
+        "label":"Screen 9 privacy policy text",
+        "id":"screen_9_privacy_policy_text",
+        "default":"<p>* Required field</p><p>By providing your email address, you agree to our Privacy Policy and Terms & Conditions.</p>"
+    },
+    {
+        "type":"header",
+        "content":"Screen 9",
+        "info": "Results screen"
+    },
+    {
+        "type":"text",
+        "label":"Screen 9 results title",
+        "id":"screen_9_results_title",
+        "default":"Your personalized shade results"
+    },
+    {
+        "type":"text",
+        "label":"Screen 9 results text",
+        "id":"screen_9_results_text",
+        "default":"Edit your product selection below"
+    },
+    {
+        "type":"text",
+        "label":"Screen 9 start over button text",
+        "id":"screen_9_start_over_text",
+        "default":"Start over"
+    },
+    {
+        "type":"text",
+        "label":"Screen 9 add to cart button text",
+        "id":"screen_9_add_to_cart_text",
+        "default":"Add to cart"
+    }
+  ],
+  "blocks":[
+    {
+        "type":"eyebrow",
+        "name":"Eyebrow",
+        "settings":[
+            {
+                "type":"image_picker",
+                "label":"Desktop image",
+                "id":"image"
+            },
+            {
+                "type":"image_picker",
+                "label":"Mobile image",
+                "id":"image_Xs"
+            },
+            {
+                "type":"text",
+                "label":"Text",
+                "id":"text"
+            },
+            {
+                "type":"text",
+                "label":"API text",
+                "id":"api_text",
+                "info":"Don't change this API text without ask Developer"
+            }
+        ]
+    },
+    {
+        "type":"small_bag_image",
+        "name":"Small bag image",
+        "settings":[
+            {
+                "type":"text",
+                "label":"Bag color name",
+                "id":"bag_color_name"
+            },
+            {
+                "type":"image_picker",
+                "label":"Product image",
+                "id":"bag_img",
+                "info":"If this image uploaded then it will be overwrite with product image by default show product image"
+            }
+        ]
+    },
+    {
+        "type":"large_bag_image",
+        "name":"Large bag image",
+        "settings":[
+            {
+                "type":"text",
+                "label":"Bag color name",
+                "id":"bag_color_name"
+            },
+            {
+                "type":"image_picker",
+                "label":"Product image",
+                "id":"bag_img",
+                "info":"If this image uploaded then it will be overwrite with product image by default show product image"
+            }
+        ]
+    }
+  ]
+}
+{% endschema %}

@@ -1,0 +1,24 @@
+"metadata": {
+    "ingredients" : `{{ product.metafields.product_details.bundle_ingredients }}`,
+    "description" : `{{ product.metafields.product_details.bundle_description }}`,
+    "info" : {{ product.metafields.product_details.info | json }},
+    "how_to_use" : `{{ product.metafields.product_details.product_bundle_how_to_use }}`,
+    "how_to_use_video": `{{ product.metafields.product_details.bundle_how_to_use_video }}`,
+    "short_info" : {{ product.metafields.product_details.short_info | json }},
+    "sustainability" : `{{ product.metafields.product_details.bundle_sustainability }}`,
+    "sustainability_video" : `{{ product.metafields.product_details.sustainability_video }}`,
+    "variantMeta":{
+      {% for variant in product.variants %}
+      '{{variant.title}}':{
+        "description": `{{variant.metafields.custom.description}}`,
+        "how_to_use": `{{variant.metafields.custom.how_to_use}}`,
+        "ingredients": `{{variant.metafields.custom.ingredients}}`,
+        "sustainability": `{{variant.metafields.custom.sustainability}}`,
+        "color_on_hover":`{{variant.metafields.custom.color_on_hover}}`,
+        "bg_on_hover":`{{variant.metafields.custom.background_color_on_hover}}`,
+        "text_on_hover":`{{variant.metafields.custom.text_on_hover}}`,
+        "show_default_text":`{{variant.metafields.custom.show_default_text}}`
+      }{% unless forloop.last %},{% endunless %}
+      {% endfor %}
+    }
+}, 

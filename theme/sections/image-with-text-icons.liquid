@@ -1,0 +1,194 @@
+<style>
+.section-{{section.id}}{
+    padding-top:{{section.settings.padding_top}}px;
+    padding-bottom:{{section.settings.padding_bottom}}px;
+}
+</style>
+<div class="section-{{section.id}} image-with-text-and-icons">
+        {% unless section.settings.image == blank %}
+        <div class="img xs-hide">
+            <a href="{{section.settings.image_link}}">
+                {% render 'srcset',
+                    src_name: section.settings.image,
+                    src_alt: section.settings.image.alt
+                %}    
+            </a>
+        </div>
+        {% endunless %}
+        {% unless section.settings.image_xs == blank %}
+        <div class="img xs-show">
+            <a href="{{section.settings.image_link}}">
+                {% render 'srcset',
+                    src_name: section.settings.image_xs,
+                    src_alt: section.settings.image_xs.alt
+                %}    
+            </a>
+        </div>
+        {% endunless %}
+    <div class="text-wrapper">
+        <h2>{{section.settings.title}}</h2>
+        <div class="desc">
+            {{section.settings.text}}
+        </div>
+        <div class="xs-hide">
+        <div class="main-icons">
+                        {% unless section.settings.main_icon == blank %}
+                        <div class="main-icon">
+                            {% render 'srcset' , src_name:section.settings.main_icon, src_alt:section.settings.main_icon.alt %}
+                        </div>
+                        {% endunless %}
+                        {% unless section.settings.main_icon_2 == blank %}
+                        <div class="main-icon">
+                            {% render 'srcset' , src_name:section.settings.main_icon_2, src_alt:section.settings.main_icon_2.alt %}
+                        </div>
+                        {% endunless %}
+                        {% unless section.settings.main_icon_3 == blank %}
+                        <div class="main-icon">
+                            {% render 'srcset' , src_name:section.settings.main_icon_3, src_alt:section.settings.main_icon_3.alt %}
+                        </div>
+                        {% endunless %}
+                </div>
+            </div>
+        {% unless section.settings.button_label == blank %}
+        {% render 'button',
+                        label: section.settings.button_label,
+                        href: section.settings.link,
+                        type: "link",
+                        style: section.settings.button_1_style
+                %}
+        {% endunless %}
+    </div>
+    <div class="xs-show">
+
+    <div class="main-icons">
+                        {% unless section.settings.main_icon == blank %}
+                        <div class="main-icon">
+                            {% render 'srcset' , src_name:section.settings.main_icon, src_alt:section.settings.main_icon.alt %}
+                        </div>
+                        {% endunless %}
+                        {% unless section.settings.main_icon_2 == blank %}
+                        <div class="main-icon">
+                            {% render 'srcset' , src_name:section.settings.main_icon_2, src_alt:section.settings.main_icon_2.alt %}
+                        </div>
+                        {% endunless %}
+                        {% unless section.settings.main_icon_3 == blank %}
+                        <div class="main-icon">
+                            {% render 'srcset' , src_name:section.settings.main_icon_3, src_alt:section.settings.main_icon_3.alt %}
+                        </div>
+                        {% endunless %}
+                </div>
+            </div>
+
+</div>
+{% schema %}
+{
+  "name": "Image with text and icons",
+  "settings": [
+    {
+      "type": "header",
+      "content": "Layout"
+    },
+    {
+      "type": "range",
+      "id": "padding_top",
+      "label": "Top spacing",
+      "min": 0,
+      "max": 80,
+      "default": 0,
+      "unit": "px"
+    },
+    {
+      "type": "range",
+      "id": "padding_bottom",
+      "label": "Bottom spacing",
+      "default": 0,
+      "min": 0,
+      "max": 80,
+      "unit": "px"
+    },
+    {
+        "type": "image_picker",
+        "id": "image",
+        "label": "Image for desktop"
+    },
+    {
+        "type": "image_picker",
+        "id": "image_xs",
+        "label": "Image for mobile"
+    },
+    {
+        "type": "url",
+        "id": "image_link",
+        "label": "Link"
+    },
+    {
+        "type": "text",
+        "id": "title",
+        "label": "Heading",
+        "default": "Heading text here"
+    },
+    {
+        "type": "richtext",
+        "id": "text",
+        "label": "Text",
+        "default": "<p>Use this text to share information about your brand with your customers. Describe a product, share announcements, or welcome customers to your store.</p>"
+    },
+    {
+        "type": "text",
+        "id": "button_label",
+        "label": "Button label",
+        "default": "View all"
+    },
+    {
+        "type": "url",
+        "id": "link",
+        "label": "Button link"
+    },
+    {
+      "type": "select",
+      "id": "button_1_style",
+      "label": "Button 1 style",
+      "options": [
+        {
+          "value": "button--primary",
+          "label": "Primary"
+        },
+        {
+          "value": "button--secondary",
+          "label": "Secondary"
+        },
+        {
+          "value": "button--link-style",
+          "label": "Link style"
+        }
+      ],
+      "default": "button--secondary"
+    },
+    {
+        "type": "image_picker",
+        "id": "main_icon",
+        "label": "Image main icon 1"
+    },
+    {
+        "type": "image_picker",
+        "id": "main_icon_2",
+        "label": "Image main icon 2"
+    },
+    {
+        "type": "image_picker",
+        "id": "main_icon_3",
+        "label": "Image main icon 3"
+    }
+  ],
+  "presets": [
+    {
+      "name": "Image with text and icons",
+      "category": "Image",
+      "settings": {
+          "padding_top": 20,
+          "padding_bottom": 20
+      }
+    }
+  ]
+}
+{% endschema %}

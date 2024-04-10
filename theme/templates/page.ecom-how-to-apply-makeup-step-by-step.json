@@ -1,0 +1,12 @@
+{
+  "layout": "theme",
+  "sections": {
+    "ecom-how-to-apply-makeup-step-by-step": {
+      "type": "ecom-how-to-apply-makeup-step-by-step-page",
+      "settings": {}
+    }
+  },
+  "order": [
+    "ecom-how-to-apply-makeup-step-by-step"
+  ]
+}

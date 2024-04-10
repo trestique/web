@@ -1,0 +1,103 @@
+<style>
+
+  {% assign url = section.settings.bg_image_lg | image_url: width: 2048 %}
+  .image-with-text-{{section.id}} {
+
+    background-color: {{section.settings.bg_color}};
+    background-image: url({{url}});
+  }
+
+</style>
+
+
+<div class="image-with-text image-with-text-{{section.id}}">
+
+  <div class="row">
+    <div class="col-xs-12 banner-xs">
+      {% render 'srcset', 
+        src_name:section.settings.bg_image_xs, 
+        src_alt:section.settings.bg_image_xs.alt,
+      %}    
+    </div>
+    <div class="col-lg-6 col-xs-12">
+  
+      <div class="brand-logo-wrapper">
+  
+        <div class="trestique-logo">
+          {% render 'srcset' , 
+            src_name:section.settings.logo_trestique, 
+            src_alt:section.settings.logo_trestique.alt,
+          %}
+        </div>
+        <span class="cross"></span>      
+        <div class="lastobject-logo">
+          {% render 'srcset' , 
+            src_name:section.settings.logo_lastobject, 
+            src_alt:section.settings.logo_lastobject.alt,
+          %}
+        </div>
+  
+      </div>
+  
+      <div class="banner-text">
+        {{section.settings.content_text}}
+      </div>
+  
+      <div class="banner_subtext">
+        {{section.settings.content_subtext}}
+      </div>
+  
+      <div class="disclaimer-text">
+        {{section.settings.disclaimer_text}}
+      </div>
+    </div>    
+  </div>
+
+</div>
+{% schema %}
+{
+  "name": "Image with text",
+  "settings": [
+    {
+      "type": "image_picker",
+      "id": "bg_image_lg",
+      "label": "Background image for desktop"
+    },
+    {
+      "type": "image_picker",
+      "id": "bg_image_xs",
+      "label": "Background image for mobile"
+    },
+    {
+      "type": "color",
+      "id": "bg_color",
+      "label": "Background color"
+    },
+    {
+      "type": "image_picker",
+      "id": "logo_trestique",
+      "label": "Trestique logo"
+    },
+    {
+      "type": "image_picker",
+      "id": "logo_lastobject",
+      "label": "Lastobject logo"
+    },
+    {
+      "type": "richtext",
+      "id": "content_text",
+      "label": "Content"
+    },
+    {
+      "type": "richtext",
+      "id": "content_subtext",
+      "label": "Subtext"
+    },
+    {
+      "type": "richtext",
+      "id": "disclaimer_text",
+      "label": "Subtext"
+    }
+  ]
+}
+{% endschema %}

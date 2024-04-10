@@ -1,0 +1,27 @@
+{% assign image_with_text_exist = false %}
+{% if metaImage.enable %}
+{% if metaImage.image != blank or metaImage.image_title != blank or metaImage.title != blank or metaImage.btn_text != blank or metaImage.btn_link != blank  %}
+{% assign image_with_text_exist = true %}
+{% endif %}
+{% endif %}
+{% if image_with_text_exist  %}
+<div class="collection-list-imagee-with-text">
+    <ul class="collection-list-imagee-with-text-data">
+        <li class="col-sm-6 col-xs-12">
+            <div class="img">
+                {% assign img = metaImage.image | split: '/' | last %}
+                {% render 'srcset' , src_name:img ,file_url:true, src_alt:metaImage.image_title %}
+                <p class="info">{{metaImage.image_title}}</p>
+            </div>
+        </li>
+        <li class="col-sm-6 col-xs-12">
+            <div class="text">
+                <div class="text-wrap">
+                    <h3 class="title">{{metaImage.title}}</h3>
+                    <a class="btn button" href="{{metaImage.btn_link}}">{{metaImage.btn_text}}</a>
+                </div>
+            </div>
+        </li>
+    </ul>
+</div>
+{% endif %}

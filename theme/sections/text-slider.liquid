@@ -1,0 +1,20 @@
+<div class="text-slider text-slider-{{section.id}}">
+
+  <div class="track">
+    <div class="text-1">{{section.settings.text}}</div>
+    <div class="text-2">{{section.settings.text}}</div>
+  </div>
+
+</div>
+{% schema %}
+{
+  "name": "Text slider",
+ "settings": [
+    {
+      "type": "richtext",
+      "id": "text",
+      "label": "Text"
+    }
+ ]
+}
+{% endschema %}

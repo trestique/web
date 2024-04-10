@@ -1,0 +1,815 @@
+{
+  "sections": {
+    "essential-quiz-1": {
+      "type": "essential-quiz-1",
+      "blocks": {
+        "2aee068a-793e-4ef9-b956-dcbdfb2583c6": {
+          "type": "skintype",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Light_8b181750-9496-40f5-9c07-a6e11174c532.png",
+            "image_xs": "shopify:\/\/shop_images\/Light_b6e1004f-96a5-40eb-acf7-5b32a4ab9bb5.png",
+            "text": "Light",
+            "info": "fair and light skintones",
+            "bg_color": "#ebcbbb",
+            "text_color": "#00263a",
+            "swatch_img": "shopify:\/\/shop_images\/light_fd840c03-43b0-4c19-a412-b4f351f1bce7.png"
+          }
+        },
+        "d9aad5ac-1f66-457c-a047-7a4644075e3a": {
+          "type": "skintype",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Light_to_Medium_skin_01.png",
+            "image_xs": "shopify:\/\/shop_images\/Light_-_Medium_9048e9c9-cf97-41df-ac32-00a458ac4b33.png",
+            "text": "Light - Medium",
+            "info": "beige and medium skintones",
+            "bg_color": "#e5bc9e",
+            "text_color": "#00263a",
+            "swatch_img": "shopify:\/\/shop_images\/light-medium.png"
+          }
+        },
+        "96e800ea-ab83-4dbe-a1da-2c8a5dd222b8": {
+          "type": "skintype",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Medium_00d269d8-2bf1-4053-9304-f7d6e7114d26.png",
+            "image_xs": "shopify:\/\/shop_images\/Medium_66d2a7bb-e051-492a-8b20-5d982f40aba9.png",
+            "text": "Medium",
+            "info": "golden and tan skintones",
+            "bg_color": "#dda475",
+            "text_color": "#00263a",
+            "swatch_img": "shopify:\/\/shop_images\/medium_9267608c-fc1b-4237-b431-2b48bfd62549.png"
+          }
+        },
+        "055de558-37d0-40bb-969e-04e9e84261d7": {
+          "type": "skintype",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Medium_-_Deep.png",
+            "image_xs": "shopify:\/\/shop_images\/Medium_-_Deep_c2707ed4-0785-4a14-bf79-d3f0ad8f2d3a.png",
+            "text": "Medium - Deep",
+            "info": "tan and dark skintones",
+            "bg_color": "#956037",
+            "text_color": "#ffffff",
+            "swatch_img": "shopify:\/\/shop_images\/medium-deep.png"
+          }
+        },
+        "3b161b9b-1b53-4b40-9681-34d4529b7024": {
+          "type": "skintype",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Deep_e19a9bfd-c7a8-4b35-8f81-75c0c5ce2335.png",
+            "image_xs": "shopify:\/\/shop_images\/Deep_a1f820c6-2980-4da7-845d-2c0b2686729c.png",
+            "text": "Deep",
+            "info": "tan and dark skintones",
+            "bg_color": "#603a29",
+            "text_color": "#ffffff",
+            "swatch_img": "shopify:\/\/shop_images\/deep.png"
+          }
+        }
+      },
+      "block_order": [
+        "2aee068a-793e-4ef9-b956-dcbdfb2583c6",
+        "d9aad5ac-1f66-457c-a047-7a4644075e3a",
+        "96e800ea-ab83-4dbe-a1da-2c8a5dd222b8",
+        "055de558-37d0-40bb-969e-04e9e84261d7",
+        "3b161b9b-1b53-4b40-9681-34d4529b7024"
+      ],
+      "settings": {
+        "screen_1_title": "Take or share a selfie",
+        "screen_1_text": "<p>Help us find your perfect shade match by sharing your photo with us (we'll only use it to find your match!)<\/p>",
+        "screen_1_image_1": "shopify:\/\/shop_images\/Group_77_86519539-76bf-4551-957a-2a4ea9d278c6.png",
+        "screen_1_text_1": "Natural lighting",
+        "screen_1_image_2": "shopify:\/\/shop_images\/Group_76.png",
+        "screen_1_text_2": "Remove your glasses",
+        "screen_1_image_3": "shopify:\/\/shop_images\/Group_75.png",
+        "screen_1_text_3": "FACE STRAIGHT AT THE CAMERA",
+        "screen_1_image_4": "shopify:\/\/shop_images\/Group_74.png",
+        "screen_1_text_4": "Plain background, no busy art",
+        "screen_2_title": "We found your match!",
+        "screen_2_subtitle": "Did we get it right?"
+      }
+    },
+    "essential-quiz-2": {
+      "type": "essential-quiz-2",
+      "blocks": {
+        "1345da99-81a7-41bd-b897-f71e646b1fa9": {
+          "type": "light",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Fair_Skin.png",
+            "image_xs": "shopify:\/\/shop_images\/Fair_Skin_fa3fc186-b0a9-4c52-b9b1-cc5fcd6fc9fc.png",
+            "text": "Crete Cloud",
+            "info": "For fair skin with cool, pink undertones",
+            "bg_color": "#ebcbbb",
+            "text_color": "#00263a",
+            "swatch_img": "shopify:\/\/shop_images\/light-1.png"
+          }
+        },
+        "01ef7f88-4401-41b8-825f-89e5e3f4dee8": {
+          "type": "light",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Fair_to_Light_skin.png",
+            "image_xs": "shopify:\/\/shop_images\/Fair_to_Light_skin_8bd6ea98-fad4-4635-a1c8-3e046f13a4ae.png",
+            "text": "Lima Opal",
+            "info": "For fair-light skin with neutral, yellow undertones",
+            "bg_color": "#f3caae",
+            "text_color": "#00263a",
+            "swatch_img": "shopify:\/\/shop_images\/light-2.png"
+          }
+        },
+        "defaaea2-174e-476a-8cce-d38182511655": {
+          "type": "light",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Light_skin_01.png",
+            "image_xs": "shopify:\/\/shop_images\/Light_skin_01_06c35bb7-2891-442a-9a9f-fa4900ee6eb9.png",
+            "text": "Cape Cod Stone",
+            "info": "For light skin with yellow undertones",
+            "bg_color": "#edd5b4",
+            "text_color": "#00263a",
+            "swatch_img": "shopify:\/\/shop_images\/light-3.png"
+          }
+        },
+        "6c67254c-158c-4a70-8ff6-4cdc941c4324": {
+          "type": "light",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Light_skin_02.png",
+            "image_xs": "shopify:\/\/shop_images\/Light_skin_02_834e5313-d7dc-44e8-a560-4d67c2bf69c8.png",
+            "text": "Polynesian Ivory",
+            "info": "For beige skin with neutral, pink undertones",
+            "bg_color": "#e2b5a0",
+            "text_color": "#00263a",
+            "swatch_img": "shopify:\/\/shop_images\/light-4.png"
+          }
+        },
+        "49163583-3d4a-4740-b9d2-b918b02e3850": {
+          "type": "light_medium",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Light_to_Medium_skin_01_27ac2655-61b9-4f74-94a6-deb3e40ac013.png",
+            "image_xs": "shopify:\/\/shop_images\/Light_to_Medium_skin_01_09ce1ca4-e08a-4493-b481-a9d70f9a9256.png",
+            "text": "Paradise Island Beige",
+            "info": "For beige skin with neutral or warm undertones",
+            "bg_color": "#e5bc9c",
+            "text_color": "#00263a",
+            "swatch_img": "shopify:\/\/shop_images\/light-medium-1.png"
+          }
+        },
+        "771162bd-9821-4aec-aff1-96ac0e82d2e0": {
+          "type": "light_medium",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Light_to_Medium_skin_02.png",
+            "image_xs": "shopify:\/\/shop_images\/Light_to_Medium_skin_02_2d6b43e9-91a6-4109-99f2-29c7034ecc31.png",
+            "text": "Tulum Nude",
+            "info": "For medium beige skin with warm, yellow undertones",
+            "bg_color": "#deac7d",
+            "text_color": "#00263a",
+            "swatch_img": "shopify:\/\/shop_images\/light-medium-2.png"
+          }
+        },
+        "7bcc27a4-a94a-4375-ba16-9379a7fc423c": {
+          "type": "medium",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Medium_skin_fac9aba3-12d9-426a-8474-5ad6b40fd08e.png",
+            "image_xs": "shopify:\/\/shop_images\/Medium_skin.png",
+            "text": "Tenerife Natural",
+            "info": "For medium tan skin with neutral or warm undertones",
+            "bg_color": "#dda475",
+            "text_color": "#00263a",
+            "swatch_img": "shopify:\/\/shop_images\/medium-1.png"
+          }
+        },
+        "6abc4535-2d35-4248-a7a1-d9ade6f0228c": {
+          "type": "medium_deep",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Medium_to_Deep_skin_02.png",
+            "image_xs": "shopify:\/\/shop_images\/Medium_to_Deep_skin_02_2c7663e9-5178-4f88-a88f-f1db941dd2b7.png",
+            "text": "Waikiki Tan",
+            "info": "For tan skin with warm, red undertones",
+            "bg_color": "#ad7d59",
+            "text_color": "#00263a",
+            "swatch_img": "shopify:\/\/shop_images\/medium-2.png"
+          }
+        },
+        "67f86ecd-b1c8-445a-836c-0d3ceacea385": {
+          "type": "medium_deep",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Medium_to_Deep_skin_03.png",
+            "image_xs": "shopify:\/\/shop_images\/xs-2_8578e13e-eff4-4754-aaf6-8343f001f4e0.jpg",
+            "text": "Copacabana Chestnut",
+            "info": "For dark skin with warm, yellow undertones",
+            "bg_color": "#ad7d59",
+            "text_color": "#ffffff",
+            "swatch_img": "shopify:\/\/shop_images\/medium-deep-1.png"
+          }
+        },
+        "a0e30d3d-99a3-4675-b3af-e0bdd73785c1": {
+          "type": "deep",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Deep_skin.png",
+            "image_xs": "shopify:\/\/shop_images\/Deep_skin_a4ff4984-de37-4199-ae49-4f267d804c8c.png",
+            "text": "São Paulo Cinnamon",
+            "info": "For deep skin with warm, golden undertones",
+            "bg_color": "#7d4e39",
+            "text_color": "#ffffff",
+            "swatch_img": "shopify:\/\/shop_images\/deep-1.png"
+          }
+        },
+        "c8589fd2-cc18-4721-a967-b7679271105a": {
+          "type": "deep",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/image_2_2x_583a8ea7-880c-43c7-bd16-e28816a68d8b.jpg",
+            "image_xs": "shopify:\/\/shop_images\/image_2_3x_f4c917d4-30f5-45f3-b39f-a219b9a3df33.jpg",
+            "text": "West Indies Walnut",
+            "info": "For deep, rich skin with neutral or cool undertones",
+            "bg_color": "#603a29",
+            "text_color": "#ffffff",
+            "swatch_img": "shopify:\/\/shop_images\/deep-2.png"
+          }
+        },
+        "0a219cbc-284d-43cb-9137-1486ed3ed0be": {
+          "type": "deep",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Deep_to_Rich_skin_02_0b091a5d-76ac-409e-b7c9-0d5208571f59.png",
+            "image_xs": "shopify:\/\/shop_images\/Deep_to_Rich_skin_02.png",
+            "text": "Maui Mahogany",
+            "info": "For deep-rich skin with neutral, peach undertones",
+            "bg_color": "#4f2d1d",
+            "text_color": "#ffffff",
+            "swatch_img": "shopify:\/\/shop_images\/deep-3.png"
+          }
+        },
+        "2b386d45-f08a-40f6-bb32-dfcca43eabcc": {
+          "type": "medium",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Medium_to_Deep_skin_01.png",
+            "image_xs": "shopify:\/\/shop_images\/Medium_to_Deep_skin_01_755aa7f6-f734-435c-abe3-a90dfc4b60fd.png",
+            "text": "Waikiki Tan",
+            "info": "For tan skin with warm, red undertones",
+            "bg_color": "#ad7d59",
+            "text_color": "#00263a",
+            "swatch_img": "shopify:\/\/shop_images\/medium-2_43ca07fb-b5f8-4430-9c1a-dd25c3397632.png"
+          }
+        }
+      },
+      "block_order": [
+        "1345da99-81a7-41bd-b897-f71e646b1fa9",
+        "01ef7f88-4401-41b8-825f-89e5e3f4dee8",
+        "defaaea2-174e-476a-8cce-d38182511655",
+        "6c67254c-158c-4a70-8ff6-4cdc941c4324",
+        "49163583-3d4a-4740-b9d2-b918b02e3850",
+        "771162bd-9821-4aec-aff1-96ac0e82d2e0",
+        "7bcc27a4-a94a-4375-ba16-9379a7fc423c",
+        "6abc4535-2d35-4248-a7a1-d9ade6f0228c",
+        "67f86ecd-b1c8-445a-836c-0d3ceacea385",
+        "a0e30d3d-99a3-4675-b3af-e0bdd73785c1",
+        "c8589fd2-cc18-4721-a967-b7679271105a",
+        "0a219cbc-284d-43cb-9137-1486ed3ed0be",
+        "2b386d45-f08a-40f6-bb32-dfcca43eabcc"
+      ],
+      "settings": {
+        "screen_3_title": "Let’s get more precise!",
+        "screen_3_text": "Which of the bellow best matches your skin tone?"
+      }
+    },
+    "essential-quiz-3": {
+      "type": "essential-quiz-3",
+      "blocks": {
+        "34b8b64e-ee83-4aa1-a4dc-35b3f916e043": {
+          "type": "Product",
+          "settings": {
+            "product": "zero-waste-makeup-system-foundation-stick",
+            "product_image": "shopify:\/\/shop_images\/2x-quiz-productsPrancheta_1_2x_5f2db81e-5cd9-4ca8-beea-2bfb8b8ab900.png",
+            "title": "",
+            "image": "shopify:\/\/shop_images\/IMG_0791.jpg",
+            "visible_image_Xs": false,
+            "image_top_text": "FOR A FLAWLESS BASE, START WITH FOUNDATION",
+            "image_bottom_text": "<p>Get a fresh, radiant complexion that's ready to face the day.<\/p>"
+          }
+        },
+        "270543db-364e-4321-ab91-38017035b0c6": {
+          "type": "Product",
+          "settings": {
+            "product": "cruelty-free-makeup-concealer-crayon",
+            "product_image": "shopify:\/\/shop_images\/2x-quiz-productsPrancheta_2_2x_3a3a5b0c-65a1-4e96-bfab-0ac805645c69.png",
+            "title": "",
+            "image": "shopify:\/\/shop_images\/7-1.png",
+            "visible_image_Xs": false,
+            "image_top_text": "CONCEAL, COVER & CORRECT LIKE A PRO",
+            "image_bottom_text": "<p>Need help covering blemishes, dark circles & under eye bags? Our concealer is a best seller.<\/p>"
+          }
+        },
+        "15a3b779-920b-48c2-9423-f29e34cd8a22": {
+          "type": "Product",
+          "settings": {
+            "product": "cruelty-free-makeup-blush-stick",
+            "product_image": "shopify:\/\/shop_images\/blush-stick-02_765x_fdea8eff-6d50-4a6e-9d67-cd66e62fda1f.webp",
+            "title": "Blush Stick",
+            "image": "shopify:\/\/shop_images\/2022-08-15_10-12-08.png",
+            "visible_image_Xs": true,
+            "image_top_text": "ENHANCE YOUR BEAUTY",
+            "image_bottom_text": "<p>Test<\/p>"
+          }
+        },
+        "04e6b438-9544-42a5-ac36-52a988c56560": {
+          "type": "Product",
+          "settings": {
+            "product": "cruelty-free-brow-pencil-gel",
+            "product_image": "shopify:\/\/shop_images\/2x-quiz-productsPrancheta_8_2x_7c8bd6a0-f8b5-4a8c-98c6-ee95f7956505.png",
+            "title": "",
+            "image": "shopify:\/\/shop_images\/9_e6517a01-16bd-4552-9821-f51dbd2ab04b.jpg",
+            "visible_image_Xs": false,
+            "image_top_text": "CREATE FULL, DEFINED OR NATURAL-LOOKING BROWS",
+            "image_bottom_text": "<p>Pencil tip mixes with the natural oil of your brows for mistake-proof application while the brow gel grooms & sets<\/p>"
+          }
+        },
+        "65c8117b-dd6f-47e9-bd2d-b629ed8a7a34": {
+          "type": "Product",
+          "settings": {
+            "product": "refillable-makeup-matte-lip-crayon-balm",
+            "product_image": "shopify:\/\/shop_images\/2x-quiz-productsPrancheta_6_2x_f9ccd6fd-da22-4bef-bfaf-2b85eca3f656.png",
+            "title": "",
+            "image": "shopify:\/\/shop_images\/11_e607882b-92ce-4560-a652-a6108b152593.jpg",
+            "visible_image_Xs": false,
+            "image_top_text": "BRING IT ALL TOGETHER WITH A MATTE LIP COLOR",
+            "image_bottom_text": "<p>Enhance your lips with our modern matte formula (add moisture with built-in lip balm)<\/p>"
+          }
+        },
+        "4be58f98-ef24-42c3-a5ba-46647a16058f": {
+          "type": "Product",
+          "settings": {
+            "product": "cruelty-free-eyeshadow-crayon",
+            "product_image": "shopify:\/\/shop_images\/2x-quiz-productsPrancheta_9_2x_b536ab62-572e-493c-bcae-eb2eb7122248.png",
+            "title": "",
+            "image": "shopify:\/\/shop_images\/bigger_shadow_crayon.jpg",
+            "visible_image_Xs": false,
+            "image_top_text": "BUILD AN EYE-DEFINING LOOK",
+            "image_bottom_text": "<p>A long-wearing, crease-free formula in two finishes for every occasion<\/p>"
+          }
+        },
+        "e50f6c94-c8f6-4b3c-880d-a10b9803229c": {
+          "type": "Product",
+          "settings": {
+            "product": "cruelty-free-eyeliner-pencil",
+            "product_image": "shopify:\/\/shop_images\/2x-quiz-productsPrancheta_11_2x_bfba0719-7e24-4c37-9695-b9ffc0355dca.png",
+            "title": "",
+            "image": "shopify:\/\/shop_images\/image_10_2x_05accbe4-6ec8-43f0-af99-71bc431424df.jpg",
+            "visible_image_Xs": false,
+            "image_top_text": "LINE & DEFINE WITH PRECISE APPLICATION",
+            "image_bottom_text": "<p>Go from pin-point precision to smoky smudge with a flick of the wrist<\/p>"
+          }
+        },
+        "d476d71b-e986-4c25-b830-6a0e5af1f449": {
+          "type": "Product",
+          "settings": {
+            "product": "cruelty-free-makeup-good-vibes-mascara",
+            "product_image": "shopify:\/\/shop_images\/2x-quiz-productsPrancheta_10_2x_232d24f8-f9d1-49e8-8ada-5b7a90e57420.png",
+            "title": "",
+            "image": "shopify:\/\/shop_images\/10_3766ab13-d22d-46ca-9e76-6398dfffe5b2.jpg",
+            "visible_image_Xs": false,
+            "image_top_text": "CURL, LIFT & LENGTHEN",
+            "image_bottom_text": "<p>Your all-in-one mascara and lash curler for ultimate volume, curl & length<\/p>"
+          }
+        }
+      },
+      "block_order": [
+        "34b8b64e-ee83-4aa1-a4dc-35b3f916e043",
+        "270543db-364e-4321-ab91-38017035b0c6",
+        "15a3b779-920b-48c2-9423-f29e34cd8a22",
+        "04e6b438-9544-42a5-ac36-52a988c56560",
+        "65c8117b-dd6f-47e9-bd2d-b629ed8a7a34",
+        "4be58f98-ef24-42c3-a5ba-46647a16058f",
+        "e50f6c94-c8f6-4b3c-880d-a10b9803229c",
+        "d476d71b-e986-4c25-b830-6a0e5af1f449"
+      ],
+      "settings": {
+        "shadow_product": "cruelty-free-eyeshadow-crayon",
+        "shadow_shimmer_title": "Your eyes",
+        "shadow_shimmer_text": "Select as many finishes as you want!",
+        "shadow_shimmer_desktop_img": "shopify:\/\/shop_images\/shimmer.png",
+        "shadow_shimmer_xs_img": "shopify:\/\/shop_images\/shimmer-xs.png",
+        "shadow_matte_desktop_img": "shopify:\/\/shop_images\/matte.png",
+        "shadow_matte_xs_img": "shopify:\/\/shop_images\/matte-xs.png",
+        "lips_products": "refillable-makeup-matte-lip-crayon-balm,refillable-makeup-prime-shine-lip-crayon",
+        "lips_title": "Your lips",
+        "lips_text": "Select as many finishes as you want!",
+        "lips_natural_desktop_img": "shopify:\/\/shop_images\/Lips_Natural.png",
+        "lips_natural_xs_img": "shopify:\/\/shop_images\/lips-natural-xs.png",
+        "lips_natural_text": "Natural lips",
+        "lips_bold_desktop_img": "shopify:\/\/shop_images\/Lips_Bold.png",
+        "lips_bold_xs_img": "shopify:\/\/shop_images\/Lips_Bold-xs.png",
+        "lips_bold_text": "Bold lips"
+      }
+    },
+    "essential-quiz-4": {
+      "type": "essential-quiz-4",
+      "blocks": {
+        "0e730ed1-cf04-45a8-a9c1-605b7f4a2f50": {
+          "type": "eyebrow",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/image_1-1.png",
+            "image_Xs": "shopify:\/\/shop_images\/eye-1_cb6a2035-12fa-4417-9dbc-cf0af2e02298.png",
+            "text": "Blonde, red or grey",
+            "api_text": "Blonde, red or grey"
+          }
+        },
+        "d2f64e18-06b8-4c28-ab83-41437a23802b": {
+          "type": "eyebrow",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/image_2-1.png",
+            "image_Xs": "shopify:\/\/shop_images\/eye-2.png",
+            "text": "Light or medium brown",
+            "api_text": "Light or medium brown"
+          }
+        },
+        "9db9228e-8c9f-4261-b0bf-8e2c4d26e450": {
+          "type": "eyebrow",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/image_3-1.png",
+            "image_Xs": "shopify:\/\/shop_images\/eye-3.png",
+            "text": "Dark brown",
+            "api_text": "Dark brown"
+          }
+        },
+        "0ae2c399-2a1c-4ba0-a014-9179568589ff": {
+          "type": "eyebrow",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/image_5-1.png",
+            "image_Xs": "shopify:\/\/shop_images\/eye-4.png",
+            "text": "Black",
+            "api_text": "Black"
+          }
+        },
+        "e1abaedd-67da-493d-8cd7-c093c31f0af8": {
+          "type": "bag_image",
+          "settings": {
+            "bag_color_name": "Black",
+            "bag_img": "shopify:\/\/shop_images\/Rectangle_184_1.png"
+          }
+        },
+        "151cb702-04ee-4448-87db-aee5c3d289b0": {
+          "type": "bag_image",
+          "settings": {
+            "bag_color_name": "Burgundy",
+            "bag_img": "shopify:\/\/shop_images\/Rectangle_186_1.png"
+          }
+        },
+        "de84b62d-c3a3-4410-8469-b49f491421fd": {
+          "type": "bag_image",
+          "settings": {
+            "bag_color_name": "Navy",
+            "bag_img": "shopify:\/\/shop_images\/Rectangle_188.png"
+          }
+        },
+        "b0f73457-5e83-487e-a4dc-9e20a2a333ab": {
+          "type": "bag_image",
+          "settings": {
+            "bag_color_name": "Gray",
+            "bag_img": "shopify:\/\/shop_images\/Rectangle_190.png"
+          }
+        },
+        "ca24cad4-f002-4aef-8550-06098686b551": {
+          "type": "bag_image",
+          "settings": {
+            "bag_color_name": "Aqua",
+            "bag_img": "shopify:\/\/shop_images\/Rectangle_192_2.png"
+          }
+        },
+        "e161292b-7b39-4c9a-8a1e-35fdec1740f0": {
+          "type": "bag_image",
+          "settings": {
+            "bag_color_name": "Olive",
+            "bag_img": "shopify:\/\/shop_images\/Rectangle_194_2.png"
+          }
+        },
+        "24e89135-e7e5-4eb6-b6a4-45a1240c2c36": {
+          "type": "bag_image",
+          "settings": {
+            "bag_color_name": "Floral",
+            "bag_img": "shopify:\/\/shop_images\/Rectangle_198_1.png"
+          }
+        },
+        "d581dbfa-dd72-4bc3-ba03-a9ce0b0ff842": {
+          "type": "bag_image",
+          "settings": {
+            "bag_color_name": "Tie Dye",
+            "bag_img": "shopify:\/\/shop_images\/Rectangle_196.png"
+          }
+        }
+      },
+      "block_order": [
+        "0e730ed1-cf04-45a8-a9c1-605b7f4a2f50",
+        "d2f64e18-06b8-4c28-ab83-41437a23802b",
+        "9db9228e-8c9f-4261-b0bf-8e2c4d26e450",
+        "0ae2c399-2a1c-4ba0-a014-9179568589ff",
+        "e1abaedd-67da-493d-8cd7-c093c31f0af8",
+        "151cb702-04ee-4448-87db-aee5c3d289b0",
+        "de84b62d-c3a3-4410-8469-b49f491421fd",
+        "b0f73457-5e83-487e-a4dc-9e20a2a333ab",
+        "ca24cad4-f002-4aef-8550-06098686b551",
+        "e161292b-7b39-4c9a-8a1e-35fdec1740f0",
+        "24e89135-e7e5-4eb6-b6a4-45a1240c2c36",
+        "d581dbfa-dd72-4bc3-ba03-a9ce0b0ff842"
+      ],
+      "settings": {
+        "screen_4_title": "We found your match!",
+        "screen_4_text": "Which matches your eyebrow color best?",
+        "screen_5_title": "Select Your Bag",
+        "screen_5_bag_text": "<p>All of our makeup bags are designed to fit in the palm of your hand and hold up to 10 full size products. They’re also made from a single recycled water bottle.<\/p>",
+        "screen_6_title": "Your personalized shade results",
+        "screen_6_bag_text": "Edit your product selection below",
+        "bag": "eco-friendly-extra-luxe-makeup-bag",
+        "bag_exclude_variants": ""
+      }
+    },
+    "essential-8-builder": {
+      "type": "essential-8-builder",
+      "blocks": {
+        "f816838d-08a1-4adf-a7f5-a0d1dba11e75": {
+          "type": "child-selectable",
+          "settings": {
+            "product": "zero-waste-makeup-system-foundation-stick",
+            "exclude_variants": ""
+          }
+        },
+        "79145e21-3711-46b2-a90b-8c63331239e3": {
+          "type": "child-selectable",
+          "settings": {
+            "product": "cruelty-free-makeup-concealer-crayon",
+            "exclude_variants": ""
+          }
+        },
+        "3a0c7ad7-336b-4c97-891d-c44508e038d9": {
+          "type": "child-selectable",
+          "settings": {
+            "product": "cruelty-free-makeup-blush-stick",
+            "exclude_variants": "40512314343524"
+          }
+        },
+        "37eddee6-2273-4ce3-966b-67947fb2f8db": {
+          "type": "child-selectable",
+          "settings": {
+            "product": "shimmer-shadow-crayon",
+            "exclude_variants": ""
+          }
+        },
+        "89d03b77-cc77-490b-84d4-ec928947b2c2": {
+          "type": "child-selectable",
+          "settings": {
+            "product": "matte-shadow-crayon",
+            "exclude_variants": ""
+          }
+        },
+        "29b6c1ac-79b5-4131-b536-ec6041ed520d": {
+          "type": "child-selectable",
+          "settings": {
+            "product": "cruelty-free-eyeliner-pencil",
+            "exclude_variants": ""
+          }
+        },
+        "58ce31c3-34cf-4c46-8604-de191dc04d5d": {
+          "type": "child-selectable",
+          "settings": {
+            "product": "cruelty-free-brow-pencil-gel",
+            "exclude_variants": ""
+          }
+        },
+        "20826652-0654-4839-92a0-a90a7fba250d": {
+          "type": "child-selectable",
+          "settings": {
+            "product": "refillable-makeup-prime-shine-lip-crayon",
+            "exclude_variants": ""
+          }
+        },
+        "84524122-34db-41cf-be40-f60a41661122": {
+          "type": "child-selectable",
+          "settings": {
+            "product": "eco-friendly-extra-luxe-makeup-bag",
+            "exclude_variants": ""
+          }
+        },
+        "96336263-b232-4bf1-a494-7dfd76ede89a": {
+          "type": "sustainability_practices",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/E8-Icons_1.png"
+          }
+        },
+        "fe48c92a-f97c-4b0b-93c8-47344781b897": {
+          "type": "sustainability_practices",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/E8-Icons_2.png"
+          }
+        },
+        "02283399-9277-493b-9a65-2081fdf9f82f": {
+          "type": "sustainability_practices",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/E8-Icons_3.png"
+          }
+        },
+        "fc65878d-95a2-44ea-b24e-a9975bff2c20": {
+          "type": "sustainability_practices",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/E8-Icons_4.png"
+          }
+        },
+        "9ef153e2-9c3e-41ac-9b12-288c84b9ef03": {
+          "type": "sustainability_practices",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/E8-Icons_5.png"
+          }
+        },
+        "701c2789-c3f1-4d8a-9f99-ffee528bc47b": {
+          "type": "sustainability_practices",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/E8-Icons.png"
+          }
+        },
+        "2220be21-b576-4511-a339-83649f1d6419": {
+          "type": "service",
+          "settings": {
+            "service_icon": "shopify:\/\/shop_images\/trestique-product-icons-Aug-2021.png",
+            "service_text": "<p>FREE Shipping<\/p><p>on orders $49+<\/p>"
+          }
+        },
+        "d6cd4383-d567-49d5-9e92-070f7d931260": {
+          "type": "service",
+          "settings": {
+            "service_icon": "shopify:\/\/shop_images\/afterpay.png",
+            "service_text": "<p>Pay in 4 easy<\/p><p>installments<\/p>"
+          }
+        },
+        "24636e23-a14d-49ec-a622-aa0fe1ba111e": {
+          "type": "service",
+          "settings": {
+            "service_icon": "shopify:\/\/shop_images\/trestique-product-icons-Aug-2021_2.png",
+            "service_text": "<p>Free Returns & Exchanges<\/p>"
+          }
+        },
+        "d7770303-65a8-49d5-8e7b-eb342a647e71": {
+          "type": "review",
+          "disabled": true,
+          "settings": {
+            "review_text": "<p>TrèStique Relaunches With Clean, Zero Waste Refillable Makeup System<\/p>",
+            "review_author": "",
+            "review_author_logo": "shopify:\/\/shop_images\/Group_9_4e95ab98-613a-4470-9fea-e12f1557874a.png",
+            "review_author_country_logo": "shopify:\/\/shop_images\/Gift.png"
+          }
+        },
+        "869fb3e7-e19c-4270-805e-4b72ba39cf0e": {
+          "type": "review",
+          "disabled": true,
+          "settings": {
+            "review_text": "<p>I am in LOVE with my new trestique products! The mascara doesn’t give me raccoon eyes, the red lip is a vintage hit and the foundation melts into my skin! Thank you trestique!<\/p>",
+            "review_author": "Gina L.",
+            "review_author_logo": "shopify:\/\/shop_images\/Gina-L.png",
+            "review_author_country_logo": "shopify:\/\/shop_images\/usa-flag.webp"
+          }
+        },
+        "e4a320b1-c7de-4bb4-91ef-c68ada26f51f": {
+          "type": "review",
+          "settings": {
+            "review_text": "<p>Terrific bundle with a little of everything! The makeup is so light I don't realize I'm wearing it - especially the foundation! The coverage is smooth and natural looking.<\/p>",
+            "review_author": "Jennifer D.",
+            "review_author_logo": "shopify:\/\/shop_images\/J-D-customer-review-sets.png",
+            "review_author_country_logo": "shopify:\/\/shop_images\/usa-flag.webp"
+          }
+        },
+        "6830de66-af9b-40d2-8890-77133be4f27d": {
+          "type": "review",
+          "settings": {
+            "review_text": "<p>Best Foundation EVER! <\/p><p>Easy on the go - feels as if I have nothing on! Blends beautifully, and covers VERY WELL with very little!<\/p>",
+            "review_author": "Sarah B.",
+            "review_author_logo": "shopify:\/\/shop_images\/Sarah-B.png",
+            "review_author_country_logo": "shopify:\/\/shop_images\/usa-flag.webp"
+          }
+        },
+        "48ca5172-66b0-4dc7-89b5-e3f274baeb67": {
+          "type": "review",
+          "settings": {
+            "review_text": "<p>Its a great package, with everything you need. As someone who doesn't wear make up a lot, it makes everything simple and quick.<\/p>",
+            "review_author": "Rachel H.",
+            "review_author_logo": "shopify:\/\/shop_images\/Trestique_01_1993386a-ad92-4de8-b012-3d79c8e36943.png",
+            "review_author_country_logo": "shopify:\/\/shop_images\/usa-flag.png"
+          }
+        },
+        "60d5707a-2527-4214-9928-2ab94a3ce4ec": {
+          "type": "review",
+          "settings": {
+            "review_text": "<p> This is the best makeup kit ever. No mess, no fuss, and has made my morning routine quick!<\/p>",
+            "review_author": "Verneal S.",
+            "review_author_logo": "shopify:\/\/shop_images\/Trestique_01_1993386a-ad92-4de8-b012-3d79c8e36943.png",
+            "review_author_country_logo": "shopify:\/\/shop_images\/usa-flag.png"
+          }
+        },
+        "36dfa2fc-69e2-46c0-b861-ef2bf3d4dd50": {
+          "type": "review",
+          "settings": {
+            "review_text": "<p>If you don’t know where to start, this is a great kit. A perfect “intro” to makeup because it has the essentials.<\/p>",
+            "review_author": "Deanna N.",
+            "review_author_logo": "shopify:\/\/shop_images\/Trestique_01_1993386a-ad92-4de8-b012-3d79c8e36943.png",
+            "review_author_country_logo": "shopify:\/\/shop_images\/usa-flag.png"
+          }
+        },
+        "b556a929-1734-4a1a-b927-b75dacee59c8": {
+          "type": "review",
+          "settings": {
+            "review_text": "<p>I love this kit! It fits perfectly in your purse or travel bag and everything you need is in here.<\/p>",
+            "review_author": "Rosanna",
+            "review_author_logo": "shopify:\/\/shop_images\/Trestique_01_1993386a-ad92-4de8-b012-3d79c8e36943.png",
+            "review_author_country_logo": "shopify:\/\/shop_images\/usa-flag.png"
+          }
+        },
+        "086f17db-3edb-4887-a7fa-0475afcd0d18": {
+          "type": "review",
+          "settings": {
+            "review_text": "<p>So quick and easy. I still feel very put together with only 5 min of makeup.<\/p>",
+            "review_author": "Jessica S.",
+            "review_author_logo": "shopify:\/\/shop_images\/Trestique_01_1993386a-ad92-4de8-b012-3d79c8e36943.png",
+            "review_author_country_logo": "shopify:\/\/shop_images\/usa-flag.png"
+          }
+        },
+        "0044c8a3-71a2-4e52-8a6b-90ee1512f06b": {
+          "type": "child-preselected",
+          "settings": {
+            "product": "zero-waste-makeup-system-highlight-stick"
+          }
+        }
+      },
+      "block_order": [
+        "f816838d-08a1-4adf-a7f5-a0d1dba11e75",
+        "79145e21-3711-46b2-a90b-8c63331239e3",
+        "3a0c7ad7-336b-4c97-891d-c44508e038d9",
+        "37eddee6-2273-4ce3-966b-67947fb2f8db",
+        "89d03b77-cc77-490b-84d4-ec928947b2c2",
+        "29b6c1ac-79b5-4131-b536-ec6041ed520d",
+        "58ce31c3-34cf-4c46-8604-de191dc04d5d",
+        "20826652-0654-4839-92a0-a90a7fba250d",
+        "84524122-34db-41cf-be40-f60a41661122",
+        "96336263-b232-4bf1-a494-7dfd76ede89a",
+        "fe48c92a-f97c-4b0b-93c8-47344781b897",
+        "02283399-9277-493b-9a65-2081fdf9f82f",
+        "fc65878d-95a2-44ea-b24e-a9975bff2c20",
+        "9ef153e2-9c3e-41ac-9b12-288c84b9ef03",
+        "701c2789-c3f1-4d8a-9f99-ffee528bc47b",
+        "2220be21-b576-4511-a339-83649f1d6419",
+        "d6cd4383-d567-49d5-9e92-070f7d931260",
+        "24636e23-a14d-49ec-a622-aa0fe1ba111e",
+        "d7770303-65a8-49d5-8e7b-eb342a647e71",
+        "869fb3e7-e19c-4270-805e-4b72ba39cf0e",
+        "e4a320b1-c7de-4bb4-91ef-c68ada26f51f",
+        "6830de66-af9b-40d2-8890-77133be4f27d",
+        "48ca5172-66b0-4dc7-89b5-e3f274baeb67",
+        "60d5707a-2527-4214-9928-2ab94a3ce4ec",
+        "36dfa2fc-69e2-46c0-b861-ef2bf3d4dd50",
+        "b556a929-1734-4a1a-b927-b75dacee59c8",
+        "086f17db-3edb-4887-a7fa-0475afcd0d18",
+        "0044c8a3-71a2-4e52-8a6b-90ee1512f06b"
+      ],
+      "settings": {
+        "title_text": "The Essential 8",
+        "content_text": "<p><strong>All-in-one Kit —<\/strong> Amplify your makeup routine with the set that is created by us and customized by you. With the Essential 8, you can apply your makeup in 5 minutes or less – anytime, anywhere. These refillable, 2-in-1 products include mistake-proof formulas and the applicators you need to get the job done.                                     <\/p><p><\/p><p><br\/>Featuring eight essential products you need to enhance your natural features or take your look from day to night – all in a makeup bag the size of a coffee cup.                                     <\/p><p><\/p><p><br\/>Finally, a set of intuitive, multi-tasking products that will help you save time, money, counter-space - and the Planet!<\/p>",
+        "enable_subscription_popup": false,
+        "essential_shade_text": "",
+        "essential_shade_popup_open_text": "",
+        "toggle_essential_shade": true,
+        "essential_shade_bg": "#bfebf3",
+        "essential_shade_text_color": "#00263a",
+        "shades_title": "",
+        "accordion_title": "UNLOCK 30% OFF ADDITIONAL ITEMS",
+        "error_text": "Please choose your shade !",
+        "error_bag_text": "Please choose your Bag!",
+        "sustain_package_title": "What makes trestique makeup sets special?",
+        "video_enable": false,
+        "video_section_title": "",
+        "video_preview": "shopify:\/\/shop_images\/Full_Routine-How_To-min.jpg",
+        "customize_routine_image": "shopify:\/\/shop_images\/y-e1Atb8.png",
+        "customize_routine_image_mob": "shopify:\/\/shop_images\/Kobgsyug.png",
+        "customize_routine_header": "Find your perfect shade match in 90 seconds with our quiz",
+        "customize_routine_description": "",
+        "customize_routine_btn_text": "FIND YOUR SHADES",
+        "customize_routine_btn_link": "https:\/\/www.trestique.com\/pages\/routine-finder",
+        "top_offer_msg": "",
+        "offer_badge_msg": "limited time offer",
+        "offer_badge_msg_bg_color": "#b04a5a",
+        "offer_badge_msg_text_color": "#fff",
+        "upsell_discount": 30
+      }
+    },
+    "b7a5277d-b5a6-4c87-9043-59ad5c963e9e": {
+      "type": "index__html",
+      "settings": {
+        "html_content": "<div class=\"collection-main-description\">\n        <div class=\"description-content\">\n          <h1 style=\"font-family: AntroVectra-er; font-size: 30px;\"><strong>Essential 08: The All-In-One Makeup Kit<\/strong><\/h1>\n          <h2 style=\"font-family: AntroVectra-er; font-size: 20px;\"><strong>Your Ultimate Beauty Set <\/strong><\/h2>\n<br>\n          <p style=\"margin-bottom: 12px;\">Experience the allure of the Essential 08, our all-inclusive makeup kit, your ultimate essentials set. Its unmatched convenience, versatility, and comprehensiveness make it a beauty essential for all. This compact makeup kit caters to a wide range of cosmetic needs, perfect as a travel makeup kit.<\/p>\n          <p style=\"margin-bottom: 12px;\">The Essential 08 kit encompasses an array of beauty must-haves, making it the complete makeup kit you've been looking for. From face products like foundation and blush to eye makeup essentials like eyeshadow and mascara, down to the perfect lipstick or gloss for your lips. All products are thoughtfully curated in this cosmetics kit to complement each other, simplifying the creation of harmonious makeup looks.<\/p>\n          <p style=\"margin-bottom: 12px;\">Whether you desire a natural daytime appearance or a dramatic evening style, Essential 08 is your go-to all-in-one makeup kit. This makeup essentials kit not only offers a complete makeup solution but also provides exceptional value for money. Experience the benefit of having a full makeup set in one package, which is more cost-effective than individual purchases.<\/p>\n          <p style=\"margin-bottom: 12px;\">The Set serves as a perfect makeup starter kit for beginners, offering a wide range of products to experiment with and learn from. And for the seasoned makeup enthusiasts, it's a comprehensive makeup collection set and makeup combo set, providing all your favorite beauty products in one place.<\/p>\n          <p style=\"margin-bottom: 12px;\"> Essential 08 is a must-have all-in-one makeup kit, the perfect replacement for an old makeup palette kit for on-the-go touch-ups, travel, or just to streamline your daily makeup routine. Elevate your beauty game today with Essential 08, the ultimate professional makeup kit!<\/p>\n        <\/div>\n      <\/div>",
+        "width": "wide",
+        "padding_top": 0,
+        "padding_bottom": 0,
+        "padding_left": 0,
+        "padding_right": 0,
+        "animation": "none",
+        "css_class": "",
+        "custom_css": ".collection-main-description {\n    padding: 0px 35px 35px 35px;\n}"
+      }
+    }
+  },
+  "order": [
+    "essential-quiz-1",
+    "essential-quiz-2",
+    "essential-quiz-3",
+    "essential-quiz-4",
+    "essential-8-builder",
+    "b7a5277d-b5a6-4c87-9043-59ad5c963e9e"
+  ]
+}

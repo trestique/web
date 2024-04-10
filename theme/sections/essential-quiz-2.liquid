@@ -1,0 +1,283 @@
+<script>
+    //Here we are differentiate 6 step blocks because 6 step number data show based on what customer selected on step 5
+    window.quiz.settings.skinTypesDetails = {
+        "light": [
+            {% assign count = 0 %}
+            {% for block in section.blocks %}
+                {% if block.type == 'light' %}
+                    {% unless count == 0 %},{% endunless %}
+                        {{block.settings | json}}
+                    {% assign count = count | plus: 1  %}
+                {% endif %}
+            {% endfor %}
+        ],
+        "light-medium": [
+            {% assign count = 0 %}
+            {% for block in section.blocks %}
+                {% if block.type == 'light_medium' %}
+                    {% unless count == 0 %},{% endunless %}
+                        {{block.settings | json}}
+                    {% assign count = count | plus: 1  %}
+                {% endif %}
+            {% endfor %}
+        ],
+        "medium": [
+            {% assign count = 0 %}
+            {% for block in section.blocks %}
+                {% if block.type == 'medium' %}
+                    {% unless count == 0 %},{% endunless %}
+                        {{block.settings | json}}
+                    {% assign count = count | plus: 1  %}
+                {% endif %}
+            {% endfor %}
+        ],
+        "medium-deep": [
+            {% assign count = 0 %}
+            {% for block in section.blocks %}
+                {% if block.type == 'medium_deep' %}
+                    {% unless count == 0 %},{% endunless %}
+                        {{block.settings | json}}
+                    {% assign count = count | plus: 1  %}
+                {% endif %}
+            {% endfor %}
+        ],
+        "deep": [
+            {% assign count = 0 %}
+            {% for block in section.blocks %}
+                {% if block.type == 'deep' %}
+                    {% unless count == 0 %},{% endunless %}
+                        {{block.settings | json}}
+                    {% assign count = count | plus: 1  %}
+                {% endif %}
+            {% endfor %}
+        ]
+    }
+    window.quiz.settings = {...window.quiz.settings,...{{ section.settings | json}}};
+</script>
+
+{% schema %}
+{
+  "name": "Screen 2 customizations",
+  "settings": [
+    {
+        "type":"text",
+        "label":"Screen 3 title",
+        "id":"screen_3_title",
+        "default":"Let’s get more precise!"
+    },
+    {
+        "type":"textarea",
+        "label":"Screen 3 text",
+        "id":"screen_3_text",
+        "default":"Which of the bellow best matches your skin tone?"
+    }
+  ],
+  "blocks":[
+    {
+        "type":"light",
+        "name":"Light",
+        "settings":[
+            {
+                "type":"image_picker",
+                "label":"Desktop image",
+                "id":"image"
+            },
+            {
+                "type":"image_picker",
+                "label":"Mobile image",
+                "id":"image_xs"
+            },
+            {
+                "type":"text",
+                "label":"Text",
+                "id":"text"
+            },
+            {
+                "type":"text",
+                "label":"Information text",
+                "id":"info"
+            },
+            {
+                "type":"color",
+                "label":"Background",
+                "id":"bg_color"
+            },
+            {
+                "type":"color",
+                "label":"Text color",
+                "id":"text_color"
+            },
+            {
+                "type":"image_picker",
+                "label":"Swatch image",
+                "id":"swatch_img"
+            }
+        ]
+    },
+    {
+        "type":"light_medium",
+        "name":"Light - Medium",
+        "settings":[
+            {
+                "type":"image_picker",
+                "label":"Desktop image",
+                "id":"image"
+            },
+            {
+                "type":"image_picker",
+                "label":"Mobile image",
+                "id":"image_xs"
+            },
+            {
+                "type":"text",
+                "label":"Text",
+                "id":"text"
+            },
+            {
+                "type":"text",
+                "label":"Information text",
+                "id":"info"
+            },
+            {
+                "type":"color",
+                "label":"Background",
+                "id":"bg_color"
+            },
+            {
+                "type":"color",
+                "label":"Text color",
+                "id":"text_color"
+            },
+            {
+                "type":"image_picker",
+                "label":"Swatch image",
+                "id":"swatch_img"
+            }
+        ]
+    },
+    {
+        "type":"medium",
+        "name":"Medium",
+        "settings":[
+            {
+                "type":"image_picker",
+                "label":"Desktop image",
+                "id":"image"
+            },
+            {
+                "type":"image_picker",
+                "label":"Mobile image",
+                "id":"image_xs"
+            },
+            {
+                "type":"text",
+                "label":"Text",
+                "id":"text"
+            },
+            {
+                "type":"text",
+                "label":"Information text",
+                "id":"info"
+            },
+            {
+                "type":"color",
+                "label":"Background",
+                "id":"bg_color"
+            },
+            {
+                "type":"color",
+                "label":"Text color",
+                "id":"text_color"
+            },
+            {
+                "type":"image_picker",
+                "label":"Swatch image",
+                "id":"swatch_img"
+            }
+        ]
+    },
+    {
+        "type":"medium_deep",
+        "name":"Medium - deep",
+        "settings":[
+            {
+                "type":"image_picker",
+                "label":"Desktop image",
+                "id":"image"
+            },
+            {
+                "type":"image_picker",
+                "label":"Mobile image",
+                "id":"image_xs"
+            },
+            {
+                "type":"text",
+                "label":"Text",
+                "id":"text"
+            },
+            {
+                "type":"text",
+                "label":"Information text",
+                "id":"info"
+            },
+            {
+                "type":"color",
+                "label":"Background",
+                "id":"bg_color"
+            },
+            {
+                "type":"color",
+                "label":"Text color",
+                "id":"text_color"
+            },
+            {
+                "type":"image_picker",
+                "label":"Swatch image",
+                "id":"swatch_img"
+            }
+        ]
+    },
+    {
+        "type":"deep",
+        "name":"Deep",
+        "settings":[
+            {
+                "type":"image_picker",
+                "label":"Desktop image",
+                "id":"image"
+            },
+            {
+                "type":"image_picker",
+                "label":"Mobile image",
+                "id":"image_xs"
+            },
+            {
+                "type":"text",
+                "label":"Text",
+                "id":"text"
+            },
+            {
+                "type":"text",
+                "label":"Information text",
+                "id":"info"
+            },
+            {
+                "type":"color",
+                "label":"Background",
+                "id":"bg_color"
+            },
+            {
+                "type":"color",
+                "label":"Text color",
+                "id":"text_color"
+            },
+            {
+                "type":"image_picker",
+                "label":"Swatch image",
+                "id":"swatch_img"
+            }
+        ]
+    }
+  ]
+}
+{% endschema %}

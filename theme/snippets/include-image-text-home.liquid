@@ -1,0 +1,92 @@
+<div class="product-image-with-text">
+  <div class="items">
+    <div class="item {{block.settings.image_position}}" style="background-color: {{block.settings.bg_color}};">
+      {% unless block.settings.image == blank %}
+        <div class="img xs-hide">
+          {% render 'srcset' , src_name:block.settings.image, src_alt:block.settings.image.alt %}
+        </div>
+      {% endunless %}
+      {% unless block.settings.mobile_image == blank %}
+        <div class="img xs-show">
+          {% render 'srcset' , src_name:block.settings.mobile_image, src_alt:block.settings.mobile_image.alt %}
+        </div>
+      {% endunless %}
+      <div class="details">
+        <h3 class="title">{{block.settings.title}}</h3>
+        <div class="desc">{{block.settings.text}}</div>
+        <div class="others-info">
+          <div class="texts-list">
+            <div class="list">
+              <div class="logo">
+                {% if block.settings.icon_1 != blank %}
+                  {% render 'srcset' , src_name:block.settings.icon_1, src_alt:block.settings.icon_1.alt %}
+                {% else %}
+                  <h3>{{block.settings.icon_text_1}}</h3>
+                {% endif %}
+              </div>
+              <div class="list-text">
+                {{block.settings.text_1}}
+              </div>
+            </div>
+            <div class="list">
+              <div class="logo">
+                {% if block.settings.icon_2 != blank %}
+                  <div class="logo-img">
+                    {% render 'srcset' , src_name:block.settings.icon_2, src_alt:block.settings.icon_2.alt %}
+                  </div>
+                {% else %}
+                  <h3>{{block.settings.icon_text_2}}</h3>
+                {% endif %}
+              </div>
+              <div class="list-text">
+                {{block.settings.text_2}}
+              </div>
+            </div>
+            <div class="list">
+              <div class="logo">
+                {% if block.settings.icon_3 != blank %}
+                  {% render 'srcset' , src_name:block.settings.icon_3, src_alt:block.settings.icon_3.alt %}
+                {% else %}
+                  <h3>{{block.settings.icon_text_3}}</h3>
+                {% endif %}
+              </div>
+              <div class="list-text">
+                {{block.settings.text_3}}
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="main-icons position-{{block.settings.main_icons_position}}">
+          {% unless block.settings.main_icon == blank %}
+            <div class="main-icon">
+              {% render 'srcset' , src_name:block.settings.main_icon, src_alt:block.settings.main_icon.alt %}
+            </div>
+          {% endunless %}
+          {% unless block.settings.main_icon_2 == blank %}
+            <div class="main-icon">
+              {% render 'srcset' , src_name:block.settings.main_icon_2, src_alt:block.settings.main_icon_2.alt %}
+            </div>
+          {% endunless %}
+          {% unless block.settings.main_icon_3 == blank %}
+            <div class="main-icon">
+              {% render 'srcset' , src_name:block.settings.main_icon_3, src_alt:block.settings.main_icon_3.alt %}
+            </div>
+          {% endunless %}
+          {% unless block.settings.main_icon_4 == blank %}
+            <div class="main-icon">
+              {% render 'srcset' , src_name:block.settings.main_icon_4, src_alt:block.settings.main_icon_4.alt %}
+            </div>
+          {% endunless %}
+        </div>
+        <div class="text-wrapper">
+          {{block.settings.text_description}}
+        </div>
+        <div class="btn-wrap {{block.settings.image_position}}">
+          {% unless block.settings.btn_text == blank%}
+            <a class="btn" href="{{block.settings.btn_link}}">{{block.settings.btn_text}}</a>
+          {% endunless %}
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

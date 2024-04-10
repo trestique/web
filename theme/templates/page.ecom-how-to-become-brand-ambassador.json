@@ -1,0 +1,12 @@
+{
+  "layout": "theme",
+  "sections": {
+    "ecom-how-to-become-brand-ambassador": {
+      "type": "ecom-how-to-become-brand-ambassador-page",
+      "settings": {}
+    }
+  },
+  "order": [
+    "ecom-how-to-become-brand-ambassador"
+  ]
+}

@@ -1,0 +1,12 @@
+{
+  "layout": "theme",
+  "sections": {
+    "ecom-how-to-apply-prime-shine-lip-crayon": {
+      "type": "ecom-how-to-apply-prime-shine-lip-crayon-page",
+      "settings": {}
+    }
+  },
+  "order": [
+    "ecom-how-to-apply-prime-shine-lip-crayon"
+  ]
+}

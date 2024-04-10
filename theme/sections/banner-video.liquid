@@ -1,0 +1,169 @@
+<style>
+
+  .banner-video {
+
+    max-width: {{section.settings.max_width}}px;
+  }
+
+  .my-set-btn {
+    background-color: {{section.settings.btn_bg_color}};    
+  }
+
+  .wrapper-{{section.id}} {
+
+    background-color: {{section.settings.tagline_bg_color}};
+    color: {{sections.settings.tagline_text_color}};
+  }
+
+
+</style>
+
+<div class="banner-video text-center">
+
+  <h1 class="heading">{{section.settings.title}}</h1>
+  <div class="media-wrapper">
+    {% if section.settings.video_url == blank %}
+    
+      <div class="img-wrapper">
+        {% render 'srcset' , src_name:section.settings.img, src_alt:block.section.img.alt %}
+      </div>
+
+      {% else %}
+
+      {% if section.settings.video_url_lg != blank %}   
+      <div class="video-wrapper-essential-mix xs-hide">
+      <video playsinline loop  class="video">
+        <source src="{{section.settings.video_url_lg}}" type="video/mp4">
+      </video>
+      <div class="play-btn-wrapper btn-sm">
+        {% render 'srcset' , src_name:section.settings.video_play_btn, src_alt:block.section.video_play_btn.alt %}
+      </div>
+      </div>
+      {% endif %}
+      {% if section.settings.video_url != blank %}
+      <div class="video-wrapper-essential-mix xs-show">
+        <video playsinline loop   class="video">
+          <source src="{{section.settings.video_url}}#t=0.001" type="video/mp4">
+        </video>
+        <div class="play-btn-wrapper btn-sm">
+          {% render 'srcset' , src_name:section.settings.video_play_btn, src_alt:block.section.video_play_btn.alt %}
+        </div>
+      </div>
+      {% endif %}
+    {% endif %}
+  </div>
+
+  <div class="text-wrapper">
+
+    <div class="section-content">
+      {{section.settings.content}}
+    </div>
+
+    <div class="create-set-wrapper">
+      {% assign url = section.settings.btn_url %}
+      {% if url == blank %}
+        {% assign url = '/products/the-essential-mix?step=2' %}
+      {% endif %}
+      <a href="{{ url }}" style="background:{{section.settings.btn_bg_color}};color:{{section.settings.btn_text_color}}" class="my-set-btn my-set-btn button button--primary">{{section.settings.btn_text}}</a>
+    </div>
+
+    <div class="tagline-wrapper wrapper-{{section.id}}">
+      {{section.settings.tagline_text}}
+    </div>
+  </div> 
+</div>
+
+{% schema %}
+{
+  "name": "Banner video",
+  "settings": [
+    {
+      "type": "text",
+      "id": "title",
+      "label": "Title"
+    },
+    {
+      "type": "richtext",
+      "id": "content",
+      "label": "Content"
+    },
+    {
+      "type": "number",
+      "id": "max_width",
+      "label": "Max width",
+      "default": 1440
+    },
+    {
+      "type": "header",
+      "content": "Media"
+    },
+    {
+      "type": "text",
+      "id": "video_url",     
+      "label": "Video url for mobile"
+    },
+    {
+      "type": "text",
+      "id": "video_url_lg",     
+      "label": "Video url for desktop"
+    },
+    {
+      "type": "image_picker",
+      "id": "video_play_btn",
+      "label": "Video play button"
+    },
+    {
+      "type": "image_picker",
+      "id": "img",
+      "label": "Image"
+    },
+    {
+      "type": "header",
+      "content": "Create set button"
+    },
+    {
+      "type": "color",
+      "id": "btn_bg_color",
+      "label": "Background color",
+      "default": "#00263A"
+    },
+    {
+      "type": "color",
+      "id": "btn_text_color",
+      "label": "Text color",
+      "default": "#FFFFFF"
+    },
+    {
+      "type": "text",
+      "id": "btn_text",
+      "label": "Text"
+    },
+    {
+      "type": "url",
+      "id": "btn_url",
+      "label" : "URL for button"
+    },
+    {
+      "type": "header",
+      "content": "Tagline"
+    },
+    {
+      "type": "text",
+      "id": "tagline_text",
+      "label": "Tagline"
+    },
+    {
+      "type": "color",
+      "id": "tagline_bg_color",
+      "label": "Background color",
+      "default": "#F3E9E2"
+    },
+    {
+      "type": "color",
+      "id": "tagline_text_color",
+      "label": "Text color",
+      "default": "#B04A5A"
+    }
+  ]
+}
+{% endschema %}

@@ -1,0 +1,12 @@
+{
+  "layout": "theme",
+  "sections": {
+    "ecom-how-to-tutorial-matte-lip-crayon": {
+      "type": "ecom-how-to-tutorial-matte-lip-crayon-page",
+      "settings": {}
+    }
+  },
+  "order": [
+    "ecom-how-to-tutorial-matte-lip-crayon"
+  ]
+}

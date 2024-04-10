@@ -1,0 +1,16 @@
+{
+  "sections": {
+    "collection-list-template": {
+      "type": "collection-list-template",
+      "settings": {
+        "description": true,
+        "switch_image": true,
+        "product_row": "col-sm-3",
+        "product_row_xs": "col-xs-6"
+      }
+    }
+  },
+  "order": [
+    "collection-list-template"
+  ]
+}

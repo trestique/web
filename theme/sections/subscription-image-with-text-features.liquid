@@ -1,0 +1,111 @@
+<!-- subscription-image-with-text-features -->
+<style>
+  .subscription-features-wrapper .content-wrapper {
+    background-color: {{ section.settings.bg_color }};
+  }
+</style>
+<section class="section subscription-features-wrapper">
+  <div class="image-with-text-wrapper">
+    <div class="image-wrapper">
+      {%- if section.settings.left_image != blank -%}
+        {%- render 'srcset', 
+          src_alt:section.settings.left_image.alt,
+          src_name:section.settings.left_image,
+          load_blur:true 
+        -%}
+      {%- else -%}
+        <div class="video-section">
+          <video controls loop playsinline autoplay muted="muted">
+            <source src="{{ section.settings.video }}" type="video/mp4">
+          </video>
+        </div>
+      {%- endif -%}
+    </div>
+    <div class="content-wrapper">
+      <h5 class="title">{{ section.settings.title }}</h5>
+      <h6 class="sub-title">{{ section.settings.sub_title }}</h6>
+      <div class="content">{{ section.settings.content }}</div>
+      <div class="block-wrapper">
+        {%- for block in section.blocks -%}
+          <div class="icon-block">
+            {%- if block.settings.block_image != blank -%}
+              {%- render 'srcset', 
+                src_alt:block.settings.block_image.alt,
+                src_name:block.settings.block_image,
+                load_blur:true 
+              -%}
+            {%- endif -%}
+            {% unless block.settings.content == blank %}
+              <p class="content">{{ block.settings.content }}</p>
+            {% endunless %}
+          </div>
+        {%- endfor -%}
+      </div>
+    </div>
+  </div>
+</section>
+
+{% schema %}
+{
+  "name": "Subscription Features",
+  "settings": [
+      {
+        "type": "header",
+        "content": "Replenish Refil Section"
+      },
+      {
+        "type": "image_picker",
+        "id": "left_image",
+        "label": "image"
+      },
+      {
+        "type": "text",
+        "id": "video",
+        "label": "Video URL"
+      },
+      {
+        "type":"color",
+        "id":"bg_color",
+        "label":"background color right part"
+      },
+      {
+        "type": "text",
+        "id": "title",
+        "label": "Title"
+      },
+      {
+        "type": "text",
+        "id": "sub_title",
+        "label": "Sub title"
+      },
+      {
+        "type": "textarea",
+        "id": "content",
+        "label": "Content"
+      }
+    ],
+    "blocks": [
+      {
+        "type": "block",
+        "name": "block",
+        "settings": [
+          {
+            "type": "image_picker",
+            "id": "block_image",
+            "label": "Icon Image"
+          },
+          {
+            "type": "textarea",
+            "id": "content",
+            "label": "Content"
+          }
+        ]
+      }
+    ],
+    "presets": [
+    {
+      "name": "Subscription Features"
+    }
+  ]
+}
+{% endschema %}

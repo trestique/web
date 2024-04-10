@@ -1,0 +1,307 @@
+<div class="product-image-with-text">
+    <div class="items">
+        {% for block in section.blocks %}
+
+        {% assign show_section = true %}
+        {% if template contains 'product' %}
+          {% assign enable = 'product_image_with_text_' | append: forloop.index %}
+          {% if product.metafields.product_details[enable] == false %}
+          {% assign show_section = false %}
+          {% endif %}
+        {% endif %}
+        {% if show_section %}
+            <div class="item {{block.settings.image_position}}" style="background-color: {{block.settings.bg_color}};">
+                {% unless block.settings.image == blank %}
+                <div class="img xs-hide">
+                    {% render 'srcset' , src_name:block.settings.image, src_alt:block.settings.image.alt %}
+                </div>
+                {% endunless %}
+                {% unless block.settings.mobile_image == blank %}
+                <div class="img xs-show">
+                    {% render 'srcset' , src_name:block.settings.mobile_image, src_alt:block.settings.mobile_image.alt %}
+                </div>
+                {% endunless %}
+                <div class="details">
+                    <h3 class="title">{{block.settings.title}}</h3>
+                    <div class="desc">{{block.settings.text}}</div>
+                    <div class="others-info">
+                        <div class="texts-list">
+                            <div class="list">
+                                <div class="logo">
+                                    {% if block.settings.icon_1 != blank %}
+                                    {% render 'srcset' , src_name:block.settings.icon_1, src_alt:block.settings.icon_1.alt %}
+                                    {% else %}
+                                    <h3>{{block.settings.icon_text_1}}</h3>
+                                    {% endif %}
+                                </div>
+                                <div class="list-text">
+                                    {{block.settings.text_1}}
+                                </div>
+                            </div>
+                            <div class="list">
+                                <div class="logo">
+                                    {% if block.settings.icon_2 != blank %}
+                                    <div class="logo-img">
+                                        {% render 'srcset' , src_name:block.settings.icon_2, src_alt:block.settings.icon_2.alt %}
+                                    </div>
+                                    {% else %}
+                                    <h3>{{block.settings.icon_text_2}}</h3>
+                                    {% endif %}
+                                </div>
+                                <div class="list-text">
+                                    {{block.settings.text_2}}
+                                </div>
+                            </div>
+                            <div class="list">
+                                <div class="logo">
+                                    {% if block.settings.icon_3 != blank %}
+                                    {% render 'srcset' , src_name:block.settings.icon_3, src_alt:block.settings.icon_3.alt %}
+                                    {% else %}
+                                    <h3>{{block.settings.icon_text_3}}</h3>
+                                    {% endif %}
+                                </div>
+                                <div class="list-text">
+                                    {{block.settings.text_3}}
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="main-icons position-{{block.settings.main_icons_position}}">
+                        {% unless block.settings.main_icon == blank %}
+                        <div class="main-icon">
+                            {% render 'srcset' , src_name:block.settings.main_icon, src_alt:block.settings.main_icon.alt %}
+                        </div>
+                        {% endunless %}
+                        {% unless block.settings.main_icon_2 == blank %}
+                        <div class="main-icon">
+                            {% render 'srcset' , src_name:block.settings.main_icon_2, src_alt:block.settings.main_icon_2.alt %}
+                        </div>
+                        {% endunless %}
+                        {% unless block.settings.main_icon_3 == blank %}
+                        <div class="main-icon">
+                            {% render 'srcset' , src_name:block.settings.main_icon_3, src_alt:block.settings.main_icon_3.alt %}
+                        </div>
+                        {% endunless %}
+                        {% unless block.settings.main_icon_4 == blank %}
+                        <div class="main-icon">
+                            {% render 'srcset' , src_name:block.settings.main_icon_4, src_alt:block.settings.main_icon_4.alt %}
+                        </div>
+                        {% endunless %}
+                    </div>
+                    <div class="text-wrapper">
+                        {{block.settings.text_description}}
+                    </div>
+                    <div class="btn-wrap {{block.settings.image_position}}">
+                        {% unless block.settings.btn_text == blank%}
+                        <a class="btn" href="{{block.settings.btn_link}}">{{block.settings.btn_text}}</a>
+                        {% endunless %}
+                    </div>
+                </div>
+            </div>
+            {% endif %}
+        {% endfor %}
+    </div>
+</div>
+
+{% schema %}
+  {
+    "name": "Product image with text",
+    "max_blocks": 3,
+    "settings": [
+    ],
+    "blocks": [
+      {
+        "type": "image",
+        "name": "Image",
+        "settings": [
+            {
+                "type":"color",
+                "label":"Background color",
+                "id":"bg_color",
+                "default":"#fff"
+            },
+            {
+                "type": "select",
+                "id": "image_position",
+                "label": "Image position",
+                "options": [
+                  {
+                    "value": "left",
+                    "label": "Left"
+                  },
+                  {
+                    "value": "right",
+                    "label": "Right"
+                  }
+                ],
+                "default": "left"
+            },
+            {
+                "type": "image_picker",
+                "id": "image",
+                "label": "Image"
+            },
+            {
+                "type": "image_picker",
+                "id": "mobile_image",
+                "label": "Mobile image"
+            },
+            {
+                "type": "text",
+                "id": "title",
+                "label": "Title",
+                "default": "Zero Waste"
+            },
+            {
+                "type": "richtext",
+                "id": "text",
+                "label": "text",
+                "default": "<p>We use recycled materials whenever possible</p>"
+            },
+            {
+                "type": "image_picker",
+                "id": "icon_1",
+                "label": "Image icon 1"
+            },
+            {
+                "type": "text",
+                "id": "icon_text_1",
+                "label": "Image icon text 1",
+                "default":"-90%"
+            },
+            {
+                "type": "richtext",
+                "id": "text_1",
+                "label": "Text 1",
+                "default": "<p>We use recycled materials whenever possible</p>"
+            },
+            {
+                "type": "image_picker",
+                "id": "icon_2",
+                "label": "Image icon 2"
+            },
+            {
+                "type": "text",
+                "id": "icon_text_2",
+                "label": "Image icon text 2",
+                "default":"86%"
+            },
+            {
+                "type": "richtext",
+                "id": "text_2",
+                "label": "Text 2",
+                "default": "<p>We use recycled materials whenever possible</p>"
+            },
+
+
+            {
+                "type": "image_picker",
+                "id": "icon_3",
+                "label": "Image icon 3"
+            },
+            {
+                "type": "text",
+                "id": "icon_text_3",
+                "label": "Image icon text3",
+                "default":"86%"
+            },
+            {
+                "type": "richtext",
+                "id": "text_3",
+                "label": "Text 3",
+                "default": "<p>We use recycled materials whenever possible</p>"
+            },
+            {
+                "type": "select",
+                "id": "main_icons_position",
+                "label": "Icons position position",
+                "options": [
+                  {
+                    "value": "left",
+                    "label": "Left"
+                  },
+                  {
+                    "value": "center",
+                    "label": "Center"
+                  },
+                  {
+                    "value": "right",
+                    "label": "Right"
+                  }
+                ],
+                "default": "center"
+            },
+            {
+                "type": "image_picker",
+                "id": "main_icon",
+                "label": "Image main icon 1"
+            },
+            {
+                "type": "image_picker",
+                "id": "main_icon_2",
+                "label": "Image main icon 2"
+            },
+            {
+                "type": "image_picker",
+                "id": "main_icon_3",
+                "label": "Image main icon 3"
+            },
+            {
+                "type": "image_picker",
+                "id": "main_icon_4",
+                "label": "Image main icon 4"
+            },
+            {
+                "type": "text",
+                "id": "text_description",
+                "label": "Text description"
+            },
+            {
+                "type": "text",
+                "id": "btn_text",
+                "label": "Button text",
+                "default":"Learn more"
+            },
+            {
+                "type": "url",
+                "id": "btn_link",
+                "label": "Button link"
+            },
+            {
+                "type": "select",
+                "id": "button_position",
+                "label": "Button position",
+                "options": [
+                {
+                    "value": "left",
+                    "label": "Left"
+                },
+                {
+                    "value": "right",
+                    "label": "Right"
+                }
+                ],
+                "default": "left"
+            }
+        ]
+      }
+    ],
+    "presets": [
+      {
+        "name": "Product image with text",
+        "category": "Image",
+        "blocks": [
+          {
+            "type": "image"
+          },
+          {
+            "type": "image"
+          },
+          {
+            "type": "image"
+          }
+        ]
+      }
+    ]
+  }
+{% endschema %}

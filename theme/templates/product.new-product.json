@@ -1,0 +1,458 @@
+{
+  "sections": {
+    "16812428665d8c17c8": {
+      "type": "apps",
+      "blocks": {
+        "ce4f0061-61b0-43d0-84f4-e1de9c593634": {
+          "type": "shopify:\/\/apps\/channelwill-back-in-stock\/blocks\/product-restore-email\/b190bced-3b7b-47da-a05f-6ea4821c3a77",
+          "settings": {}
+        }
+      },
+      "block_order": [
+        "ce4f0061-61b0-43d0-84f4-e1de9c593634"
+      ],
+      "settings": {}
+    },
+    "new-product-template": {
+      "type": "new-product-template",
+      "blocks": {
+        "840a5589-7f85-47c4-9039-e4af05a5602a": {
+          "type": "service",
+          "settings": {
+            "service_icon": "shopify:\/\/shop_images\/trestique-product-icons-Aug-2021-copy_Shipping.png",
+            "service_text": "<p>FREE Shipping <\/p><p>on orders $49+<\/p>",
+            "service_icon_subscribe": "shopify:\/\/shop_images\/Save_With_Refills__2x_1.png",
+            "service_text_subscribe": "",
+            "learn_more_show": false
+          }
+        },
+        "603e883f-112b-483f-af3f-0566575ab1f9": {
+          "type": "service",
+          "settings": {
+            "service_icon": "shopify:\/\/shop_images\/Group_after12.png",
+            "service_text": "<p>Pay in 4 easy<\/p><p>installments<\/p>",
+            "service_icon_subscribe": "shopify:\/\/shop_images\/Group_9_3.png",
+            "service_text_subscribe": "",
+            "learn_more_show": true
+          }
+        },
+        "e04dec30-7f89-48ac-8dbf-7893d4bc6027": {
+          "type": "service",
+          "settings": {
+            "service_icon": "shopify:\/\/shop_images\/trestique-product-icons-Aug-2021-copy_30-day.png",
+            "service_text": "<p>Free Returns & Exchanges<\/p>",
+            "service_icon_subscribe": "shopify:\/\/shop_images\/Group_8_344c1e72-b881-4eb9-8f44-4339533eeb77.png",
+            "service_text_subscribe": "",
+            "learn_more_show": false
+          }
+        },
+        "e2f9e7f8-4b46-47a3-aebe-1515623a1ec6": {
+          "type": "product-tabs",
+          "settings": {
+            "tab_title": "How to Use",
+            "tab_description": "<p>{{ product.metafields.product_details.how_to_use | metafield_tag }}<\/p>"
+          }
+        },
+        "83ca1e86-62a6-4c7a-a131-4f462dcd41e8": {
+          "type": "product-tabs",
+          "settings": {
+            "tab_title": "Ingredients",
+            "tab_description": "<p>{{ product.metafields.product_details.ingredients | metafield_tag }}<\/p>"
+          }
+        },
+        "b3106b07-f79c-40d4-b132-b247ee59307e": {
+          "type": "product-tabs",
+          "settings": {
+            "tab_title": "Sustainability",
+            "tab_description": "<p>{{ product.metafields.product_details.sustainability | metafield_tag }}<\/p>"
+          }
+        },
+        "bdb876ef-8d81-48f4-86f2-4d83ebf52ed3": {
+          "type": "floating-image",
+          "settings": {
+            "floating_image": "shopify:\/\/shop_images\/PETA-Certified.png",
+            "tag_text": "floating-image-1"
+          }
+        },
+        "e0938e6d-d0f6-4070-b7ce-3688ab4260a1": {
+          "type": "floating-image",
+          "settings": {
+            "floating_image": "shopify:\/\/shop_images\/Made-from-recycled.png",
+            "tag_text": "floating-image-2"
+          }
+        },
+        "1c049053-7198-401e-91e6-68d17ad8adba": {
+          "type": "review",
+          "settings": {
+            "review_text": "<p>{{ product.metafields.my_fields.product_review_text_1 | metafield_tag }}<\/p>",
+            "review_author": "{{ product.metafields.my_fields.product_review_author_1.value }}",
+            "review_author_logo": "{{ product.metafields.my_fields.product_review_image_1.value }}",
+            "review_author_country_logo": "{{ product.metafields.my_fields.product_review_country_1.value }}"
+          }
+        },
+        "14a77940-416b-4331-881c-d1b62c71391c": {
+          "type": "review",
+          "settings": {
+            "review_text": "<p>{{ product.metafields.my_fields.product_review_text_2 | metafield_tag }}<\/p>",
+            "review_author": "{{ product.metafields.my_fields.product_review_author_2.value }}",
+            "review_author_logo": "{{ product.metafields.my_fields.product_review_image_2.value }}",
+            "review_author_country_logo": "{{ product.metafields.my_fields.product_review_country_image_2.value }}"
+          }
+        },
+        "951779d6-a7c2-4284-9334-8aa81cfb7118": {
+          "type": "review",
+          "settings": {
+            "review_text": "<p>{{ product.metafields.my_fields.product_review_text_3 | metafield_tag }}<\/p>",
+            "review_author": "{{ product.metafields.my_fields.product_review_author_3.value }}",
+            "review_author_logo": "{{ product.metafields.my_fields.product_review_image_3.value }}",
+            "review_author_country_logo": "{{ product.metafields.my_fields.product_review_country_image_3.value }}"
+          }
+        },
+        "d1c83e87-88d0-4ab2-9197-c42d1c147baf": {
+          "type": "review",
+          "settings": {
+            "review_text": "<p>{{ product.metafields.my_fields.product_review_text_4 | metafield_tag }}<\/p>",
+            "review_author": "{{ product.metafields.my_fields.product_review_author_4.value }}",
+            "review_author_logo": "{{ product.metafields.my_fields.product_review_image_4.value }}",
+            "review_author_country_logo": "{{ product.metafields.my_fields.product_review_country_image_4.value }}"
+          }
+        },
+        "d3e20fe6-b035-4763-9c40-0994ec453816": {
+          "type": "review",
+          "settings": {
+            "review_text": "<p>{{ product.metafields.my_fields.product_review_text_5 | metafield_tag }}<\/p>",
+            "review_author": "{{ product.metafields.my_fields.product_review_author_5.value }}",
+            "review_author_logo": "{{ product.metafields.my_fields.product_review_image_5.value }}",
+            "review_author_country_logo": "{{ product.metafields.my_fields.product_review_country_image_5.value }}"
+          }
+        },
+        "9af9f435-6cd8-4a05-89a9-7341a0bdfddf": {
+          "type": "review",
+          "settings": {
+            "review_text": "<p>{{ product.metafields.my_fields.product_review_text_6 | metafield_tag }}<\/p>",
+            "review_author": "{{ product.metafields.my_fields.product_review_author_6.value }}",
+            "review_author_logo": "{{ product.metafields.my_fields.product_review_image_6.value }}",
+            "review_author_country_logo": "{{ product.metafields.my_fields.product_review_country_image_6.value }}"
+          }
+        },
+        "4da1eac5-9872-4c16-9b6c-6ec2b642ac0e": {
+          "type": "floating-image",
+          "disabled": true,
+          "settings": {
+            "tag_text": ""
+          }
+        }
+      },
+      "block_order": [
+        "840a5589-7f85-47c4-9039-e4af05a5602a",
+        "603e883f-112b-483f-af3f-0566575ab1f9",
+        "e04dec30-7f89-48ac-8dbf-7893d4bc6027",
+        "e2f9e7f8-4b46-47a3-aebe-1515623a1ec6",
+        "83ca1e86-62a6-4c7a-a131-4f462dcd41e8",
+        "b3106b07-f79c-40d4-b132-b247ee59307e",
+        "bdb876ef-8d81-48f4-86f2-4d83ebf52ed3",
+        "e0938e6d-d0f6-4070-b7ce-3688ab4260a1",
+        "1c049053-7198-401e-91e6-68d17ad8adba",
+        "14a77940-416b-4331-881c-d1b62c71391c",
+        "951779d6-a7c2-4284-9334-8aa81cfb7118",
+        "d1c83e87-88d0-4ab2-9197-c42d1c147baf",
+        "d3e20fe6-b035-4763-9c40-0994ec453816",
+        "9af9f435-6cd8-4a05-89a9-7341a0bdfddf",
+        "4da1eac5-9872-4c16-9b6c-6ec2b642ac0e"
+      ],
+      "settings": {
+        "find_shade_link": "shopify:\/\/pages\/routine-finder",
+        "combo_product_title": "BUY FULL SIZE + REFILLS AND SAVE 10%",
+        "gift_product_title": "MORE HOLIDAY GIFT IDEAS",
+        "subscription_text": "Auto-Refill:",
+        "subscription_offer_text": "10% off today & 25% off future refills",
+        "subscription_offer_text_xs": "10% off today & 25% off future  refillsEvery 4 Weeks",
+        "subscription_offer_info": "Cancel or manage your subscription.",
+        "subscription_offer_info_xs": "Cancel or change online at anytime.",
+        "subscription_badge_text": "{{ product.metafields.my_fields.subscription_badge_text.value }}",
+        "subscription_recommended_selector": "{{ product.metafields.my_fields.recommended_subscription.value }}",
+        "one_time_purchase_text": "One-time purchase",
+        "subscribr_popup_details": "Auto-refill program will automatically deliver refill cartridges of your favorite products based on the schedule you set.## Auto-refill orders are 25% off the full size price.##You will receive your recyclable refill cartridge to replace your empty cartridge.##You can cancel or manage your orders online at any time. Visit our FAQ page to learn more.",
+        "product_subscription_popup_title": "",
+        "product_subscription_popup_description": "",
+        "no_thank_you_btn_label": "NO, THANK YOU",
+        "subscribe_btn_label": "SUBSCRIBE"
+      }
+    },
+    "164728930353071b70": {
+      "type": "index__html",
+      "settings": {
+        "html_content": "",
+        "width": "standard",
+        "padding_top": 20,
+        "padding_bottom": 20,
+        "padding_left": 0,
+        "padding_right": 0,
+        "animation": "none",
+        "css_class": "",
+        "custom_css": ""
+      }
+    },
+    "16371496592fab1a1d": {
+      "type": "product-video",
+      "settings": {
+        "video_url": "{{ product.metafields.product_details.desktop_video_url.value }}",
+        "video_url_mobile": "{{ product.metafields.product_details.mobile_video_url.value }}"
+      }
+    },
+    "16371543355bbf0115": {
+      "type": "image-grid-with-title",
+      "blocks": {
+        "163715433527de815b-0": {
+          "type": "image",
+          "settings": {
+            "image": "{{ product.metafields.my_fields.see_it_in_action_image_1.value }}",
+            "link": "shopify:\/\/products\/zero-waste-makeup-system-lip-balm-refill"
+          }
+        },
+        "163715433527de815b-1": {
+          "type": "image",
+          "settings": {
+            "image": "{{ product.metafields.my_fields.see_it_in_action_image_2.value }}",
+            "link": ""
+          }
+        },
+        "163715433527de815b-2": {
+          "type": "image",
+          "settings": {
+            "image": "{{ product.metafields.my_fields.see_it_in_action_image_3.value }}",
+            "link": ""
+          }
+        },
+        "163715433527de815b-3": {
+          "type": "image",
+          "settings": {
+            "image": "{{ product.metafields.my_fields.see_it_in_action_image_4.value }}",
+            "link": ""
+          }
+        }
+      },
+      "block_order": [
+        "163715433527de815b-0",
+        "163715433527de815b-1",
+        "163715433527de815b-2",
+        "163715433527de815b-3"
+      ],
+      "settings": {
+        "section_title": "SEE IT IN ACTION @TRESTIQUE",
+        "width": "standard",
+        "images_per_row": 4,
+        "show_gutter": false,
+        "padding_top": 20,
+        "padding_bottom": 20,
+        "css_class": "",
+        "custom_css": ""
+      }
+    },
+    "1637655214c002e0f2": {
+      "type": "banner-with-text",
+      "disabled": true,
+      "settings": {
+        "link": "",
+        "video_url": "",
+        "video_url_mobile": "",
+        "image": "shopify:\/\/shop_images\/desk-banner-t.jpg",
+        "mobile_image": "shopify:\/\/shop_images\/mobile-banner-t.png",
+        "pretext": "",
+        "title": "Customize your makeup routine",
+        "subtitle": "<p>All of our products are designed to mix and match creating infinite combinations and timeless looks that will all fit in one bag!<\/p>",
+        "pretext_color": "#000000",
+        "heading_color": "#000000",
+        "subheading_color": "#000000",
+        "text_alignment": "center",
+        "text_horizontal_position": "center",
+        "text_vertical_position": "middle",
+        "background_color": "#ffffff",
+        "background_opacity": 0,
+        "border_color": "#ffffff",
+        "border_width": 0,
+        "text_width": 40,
+        "button_1": "CREATE YOUR SET",
+        "button_text_color": "#ffffff",
+        "button_bg_color": "#000000",
+        "button_hover_bg_color": "#ffffff",
+        "button_hover_color": "#000000",
+        "button_1_link": "https:\/\/www.trestique.com\/products\/the-essential-mix?step=2",
+        "button_1_style": "button--secondary",
+        "button_2": "",
+        "button_2_link": "",
+        "button_2_style": "button--secondary",
+        "mobile_image_crop": "none",
+        "mobile_text_below_image": true,
+        "mobile_text_position": "middle",
+        "pretext_color_mobile": "rgba(0,0,0,0)",
+        "heading_color_mobile": "rgba(0,0,0,0)",
+        "subheading_color_mobile": "rgba(0,0,0,0)",
+        "width": "wide",
+        "padding_top": 0,
+        "padding_bottom": 0,
+        "padding_left": 0,
+        "padding_right": 0,
+        "animation": "none",
+        "css_class": "",
+        "custom_css": ""
+      }
+    },
+    "16371496646264f8b7": {
+      "type": "index__image-with-text-overlay",
+      "disabled": true,
+      "settings": {
+        "link": "",
+        "image": "shopify:\/\/shop_images\/257571821_4588420567863657_8014009163972472178_n.jpg",
+        "mobile_image": "shopify:\/\/shop_images\/Rectangle_47_1.png",
+        "pretext": "",
+        "title": "Customize your makeup routine",
+        "subtitle": "<p>All of our products are designed to mix and match creating infinite combinations and timeless looks that will all fit in one bag!<\/p>",
+        "pretext_color": "#000000",
+        "heading_color": "#000000",
+        "subheading_color": "#000000",
+        "text_alignment": "center",
+        "text_horizontal_position": "center",
+        "text_vertical_position": "middle",
+        "background_color": "#ffffff",
+        "background_opacity": 0,
+        "border_color": "#ffffff",
+        "border_width": 0,
+        "text_width": 40,
+        "button_1": "CREATE YOUR SET",
+        "button_1_link": "shopify:\/\/products\/the-essential-mix",
+        "button_1_style": "button--secondary",
+        "button_2": "",
+        "button_2_link": "",
+        "button_2_style": "button--secondary",
+        "mobile_image_crop": "none",
+        "mobile_text_below_image": true,
+        "pretext_color_mobile": "rgba(0,0,0,0)",
+        "heading_color_mobile": "rgba(0,0,0,0)",
+        "subheading_color_mobile": "rgba(0,0,0,0)",
+        "width": "wide",
+        "padding_top": 0,
+        "padding_bottom": 0,
+        "padding_left": 0,
+        "padding_right": 0,
+        "animation": "none",
+        "css_class": "",
+        "custom_css": ""
+      }
+    },
+    "1637243663476ff3b6": {
+      "type": "product-image-with-text",
+      "disabled": true,
+      "blocks": {
+        "163724366367cc4904-0": {
+          "type": "image",
+          "settings": {
+            "bg_color": "#ffffff",
+            "image_position": "right",
+            "image": "shopify:\/\/shop_images\/zero_waste_FPO.png",
+            "mobile_image": "shopify:\/\/shop_images\/Rectangle_52.png",
+            "title": "Sustainably-made",
+            "text": "<p>We use recycled materials <\/p><p>whenever possible<\/p>",
+            "icon_text_1": "-90%",
+            "text_1": "<p>Virgin plastic in our packaging <\/p>",
+            "icon_text_2": "86%",
+            "text_2": "<p>of recycled materials used on the production of the full product line<\/p>",
+            "icon_text_3": "100%",
+            "text_3": "<p>Refillable and recyclable<\/p>",
+            "main_icons_position": "center",
+            "main_icon": "shopify:\/\/shop_images\/image_42.png",
+            "main_icon_2": "shopify:\/\/shop_images\/image_51.png",
+            "main_icon_3": "shopify:\/\/shop_images\/image_52.png",
+            "main_icon_4": "shopify:\/\/shop_images\/fsc-logo.png",
+            "text_description": "",
+            "btn_text": "Learn more",
+            "btn_link": "shopify:\/\/pages\/sustainability",
+            "button_position": "left"
+          }
+        },
+        "163724366367cc4904-1": {
+          "type": "image",
+          "settings": {
+            "bg_color": "#faede5",
+            "image_position": "left",
+            "image": "shopify:\/\/shop_images\/clean_makeup_FPO.png",
+            "mobile_image": "shopify:\/\/shop_images\/clean_makeup_FPO.png",
+            "title": "Clean formulations",
+            "text": "<p>NO HARMFUL INGREDIENTS<\/p>",
+            "icon_text_1": "NO!",
+            "text_1": "<p>Harmful ingredients, including parabens, phthalates, sulfates, PEGs, BHA, Gluten, fragrance, mineral oil, formaldehyde, triclosan\/ tricarbon, among many other ingredients that are potentially hazardous. <\/p>",
+            "icon_2": "shopify:\/\/shop_images\/PETA-Certified_1_367675b1-8035-4939-ac32-f2540500aba9.png",
+            "icon_text_2": "86%",
+            "text_2": "<p>We are PETA-certified, cruelty-free and vegan.<\/p>",
+            "icon_text_3": "",
+            "text_3": "",
+            "main_icons_position": "center",
+            "main_icon": "shopify:\/\/shop_images\/clean-icon-1.png",
+            "main_icon_2": "shopify:\/\/shop_images\/clean-icon-2.png",
+            "main_icon_3": "shopify:\/\/shop_images\/clean-icon-3.png",
+            "text_description": "",
+            "btn_text": "Learn more",
+            "btn_link": "shopify:\/\/pages\/clean-formulations",
+            "button_position": "left"
+          }
+        },
+        "163724366367cc4904-2": {
+          "type": "image",
+          "settings": {
+            "bg_color": "#e1b6a5",
+            "image_position": "right",
+            "image": "shopify:\/\/shop_images\/ezgif.com-gif-maker_5_dcf54e73-6dcd-4121-bc9e-c2e84ac739ad.gif",
+            "mobile_image": "shopify:\/\/shop_images\/ezgif.com-gif-maker_5_dcf54e73-6dcd-4121-bc9e-c2e84ac739ad.gif",
+            "title": "Endlessly refillable",
+            "text": "<p>SAVE 25% with refills<\/p>",
+            "icon_text_1": "1",
+            "text_1": "<p>PULL CARTIGE OUT & RECYCLE<\/p>",
+            "icon_text_2": "2",
+            "text_2": "<p>CLICK THE NEW REFILL  INTO YOUR FOREVER CASE<\/p>",
+            "icon_text_3": "3",
+            "text_3": "<p>SNAP NEW REFILL CARTRIDGE INTO YOUR FOREVER CASE<\/p>",
+            "main_icons_position": "center",
+            "main_icon": "shopify:\/\/shop_images\/Refillable_4f58994f-580c-4a8f-9029-45d19deb167d.png",
+            "text_description": "Save 10% MORE WITH AUTO REPLENISHMENT",
+            "btn_text": "Learn more",
+            "btn_link": "shopify:\/\/pages\/subscription",
+            "button_position": "left"
+          }
+        }
+      },
+      "block_order": [
+        "163724366367cc4904-0",
+        "163724366367cc4904-1",
+        "163724366367cc4904-2"
+      ],
+      "settings": {}
+    },
+    "16372553912b71f3ca": {
+      "type": "apps",
+      "blocks": {
+        "ab7fba80-053a-454b-ba5c-712eb849329b": {
+          "type": "shopify:\/\/apps\/okendo-product-reviews-ugc\/blocks\/reviews-widget\/bb689e69-ea70-4661-8fb7-ad24a2e23c29",
+          "settings": {
+            "product": "{{ product }}",
+            "widget_type": "reviews_widget"
+          }
+        }
+      },
+      "block_order": [
+        "ab7fba80-053a-454b-ba5c-712eb849329b"
+      ],
+      "settings": {}
+    }
+  },
+  "order": [
+    "16812428665d8c17c8",
+    "new-product-template",
+    "164728930353071b70",
+    "16371496592fab1a1d",
+    "16371543355bbf0115",
+    "1637655214c002e0f2",
+    "16371496646264f8b7",
+    "1637243663476ff3b6",
+    "16372553912b71f3ca"
+  ]
+}

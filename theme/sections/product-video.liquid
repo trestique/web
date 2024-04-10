@@ -1,0 +1,68 @@
+{% assign show_section = true %}
+{% if template contains 'product' %}
+  {% assign show_section = false %}
+  {% if product.metafields.product_details.video_section_enable %}
+  {% assign show_section = true %}
+  {% endif %}
+{% endif %}
+{% if show_section %}
+<div class="product-page-videos">
+    <div class="video-wrapper">
+        <div class="xs-hide">
+            {% unless section.settings.video_url == blank %}
+            {% if section.settings.video_url contains "www.youtube.com" %}
+            <iframe src="{{section.settings.video_url}}"> </iframe>
+            {% else %}
+            <video controls muted autoplay playsinline width="100%" height="100%">
+                <source src="{{section.settings.video_url}}" type="video/mp4" />
+            </video>
+            {% endif %}
+            {% endunless %}
+
+        </div>
+        <div class="xs-show">
+            {% unless section.settings.video_url_mobile == blank %}
+            {% if section.settings.video_url_mobile contains "www.youtube.com" %}
+            <iframe src="{{section.settings.video_url_mobile}}"></iframe>
+            {% else %}
+                <video controls autoplay muted playsinline width="100%" height="100%">
+                    <source src="{{section.settings.video_url_mobile}}" type="video/mp4" />
+                </video>
+            {% endif %}
+            {% endunless %}
+        </div>
+    </div>
+</div>
+{% endif %}
+{% comment %}
+<script>
+  {% endcomment %}
+  {% schema %}
+  {
+    "name": "Product page - Videos",
+        "settings":[
+            {
+                "id":"video_url",
+                "type": "text",
+                "label": "Video URL",
+                "default": "https://www.youtube.com/embed/_9VUPq3SxOc"
+            },
+            {
+              "type": "text",
+              "id": "video_url_mobile",
+              "label": "Video URL mobile",
+              "default": "https://www.youtube.com/embed/_9VUPq3SxOc"
+            }
+        ],
+          "presets": [
+            {
+              "name": "Product - Video",
+              "category": "Video"
+            }
+          ]
+  }
+  {% endschema %}
+
+  {% comment %}
+</script>
+{% endcomment %}

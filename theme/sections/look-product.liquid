@@ -1,0 +1,85 @@
+<script>
+    const templateType  = "{{ template | replace: '.', '-' | handle }}";
+    const product = {{product | json }};
+    const currentVariant = {{product.selected_or_first_available_variant | json}};
+    const productMeta =  {{ product.metafields.product_details | json}};
+    productMeta['shop_by_look_info'] = {% if product.metafields.product_details.shop_by_look_info != blank %}{{product.metafields.product_details.shop_by_look_info}}{% else %}""{% endif %};
+    productMeta['shop_by_look_videos_links'] = {% if product.metafields.product_details.shop_by_look_video_links != blank %}{{product.metafields.product_details.shop_by_look_video_links}}{% else %}""{% endif %};
+    productMeta['shop_by_look_paragraph_1'] = `{{product.metafields.product_details.shop_by_look_paragraph_1}}`;
+    productMeta['shop_by_look_paragraph_2'] = `{{product.metafields.product_details.shop_by_look_paragraph_2}}`;
+    const productReview = `{{product.metafields.okendo.ProductListingSnippet }}`;
+    const settings = {{ section.settings | json}};
+    settings.services = [];
+    
+    {% assign services = section.blocks | where: 'type', 'service'  %}
+    {%- for block in services -%}
+        var obj = {
+          service_icon:"{{block.settings.service_icon | img_url:'master'}}",
+          service_text:"{{block.settings.service_text}}"
+        }
+        settings.services.push(obj);
+    {%- endfor -%}
+    
+
+    settings.products = [];
+    settings.bundleProducts = [];
+
+    {% assign bundle_products = product.metafields.product_details.shop_look_product_handles.value %}
+    {% if bundle_products != blank %}
+    {% assign count = 0 %}
+    {%assign bundle_products = bundle_products | split: ',' %}
+      {% for bundle_product in bundle_products %}
+        {% assign data = bundle_product | split:';' %}
+        {% assign product_data = all_products[data[0]] %}
+
+        {% if product_data != blank %}
+          {% assign selectedVariant = product_data.selected_or_first_available_variant %}
+          {% for variant in product_data.variants %}
+            {% if variant.title == data[1] and data[1] != blank %}
+                {% assign selectedVariant = variant %}
+            {% endif %}
+          {% endfor %}
+          var obj = {{product_data | json}};
+          var vobj = {{selectedVariant | json }};
+          var product_obj = {
+              ...obj,"selectedVariant":{...vobj},"index":{{count}}
+          }
+          {% assign count = count | plus: 1 %}
+          settings.bundleProducts.push(product_obj)
+        {% endif %}
+      {% endfor %}
+    {% endif %}
+
+
+    simply.product = {
+        product: { ...product, ...productMeta,productReview},currentVariant,settings,templateType
+    };
+</script>
+
+{% schema %}
+{
+  "name": "Product settings",
+  "settings": [
+    
+  ],
+  "blocks": [
+    {
+      "type": "service",
+      "name": "Service",
+      "limit": 3,
+      "settings": [
+        {
+          "type": "image_picker",
+          "id": "service_icon",
+          "label": "Service icon"
+        },
+        {
+            "type": "richtext",
+            "id": "service_text",
+            "label": "Service text"
+        }
+      ]
+    }
+  ]
+}
+{% endschema %}

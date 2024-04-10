@@ -1,0 +1,184 @@
+<style>
+
+  .image-text-with-slider-{{section.id}} {
+    {% if section.settings.bg_gradiant_color != blank %}
+      background: {{section.settings.bg_gradiant_color}};
+      {% else %}      
+        {% if section.settings.bg_color %}
+          background-color: {{section.settings.bg_color}};
+        {% endif %}
+    {% endif %}  
+    margin-top: {{section.settings.margin_top}}px;
+  }
+
+  .btn--{{section.id}} {
+    background-color: {{section.settings.btn_background_color}};
+    color: {{section.settings.btn_text_color}};
+  }
+
+  .btn--{{section.id}}:hover {
+    color: {{section.settings.btn_text_color}};
+  }
+
+</style>
+<script type="text/json">
+  {{section.settings | json}}
+</script>
+<div class="image-text-with-slider image-text-with-slider-{{section.id}}">
+
+  <div class="row image-with-text-section">
+    <div class="col-lg-6 col-xs-12 col-md-6 {{section.settings.img_potion}} text-block">
+      <div class="text-wrapper">
+        <h1 class="heading">{{section.settings.title}}</h1>
+        <div class="content-text">
+          {{section.settings.content_text}}
+        </div>
+        <a href="{{section.settings.url}}" class="cta-btn btn--{{section.id}}">{{section.settings.btn_text}}</a>
+      </div>
+    </div>
+    <div class="col-lg-6 col-xs-12 col-md-6 xs-1">
+      <div class="image-wrapper">
+        {% render 'srcset' , 
+          src_name:section.settings.image, 
+          src_alt:section.settings.image.alt
+        %}
+      </div>
+    </div>
+  </div>
+
+  <div class="block-wrapper">
+  <div class="lastobject-block-slider">
+      {% for block in section.blocks %}
+        <div class="block">
+          <div class="img-wrapper-block">
+            {% render 'srcset' , 
+              src_name:block.settings.block_img, 
+              src_alt:block.settings.block_img.alt
+            %}
+          </div>
+          <div class="text-wrapper-block">
+            <h3 class="block-heading">{{block.settings.block_title}}</h3>
+            <div class="block-content">
+              {{block.settings.block_content}}
+            </div>
+          </div>
+        </div>
+      {% endfor %}
+    </div>
+  </div>
+
+</div>
+
+{% schema %}
+{
+  "name": "Image with text slider",
+  "settings": [
+    {
+      "type": "color",
+      "id": "bg_color",
+      "label": "Background color"
+    },
+    {
+      "type": "text",
+      "id": "bg_gradiant_color",
+      "label": "Background color with gradiant"
+    },
+    {
+      "type": "number",
+      "id": "margin_top",
+      "label": "Margin top"
+    },
+    {
+      "type": "number",
+      "id": "margin_bottom",
+      "label": "Margin bottom"
+    },
+    {
+      "type": "text",
+      "id": "title",
+      "label": "Heading"
+    },
+    {
+      "type": "richtext",
+      "id": "content_text",
+      "label": "Text"
+    },
+    {
+      "type": "image_picker",
+      "id": "image",
+      "label": "Image"
+    },
+    {
+      "type": "select",
+      "id": "img_potion",
+      "label": "Image posistion",
+      "default": "right",
+      "options": [
+          {
+            "value": "left",
+            "label": "Left"
+          },
+          {
+            "value": "right",
+            "label": "Right"
+          }
+      ]
+    },
+    {
+      "type": "header",
+      "content": "Button"
+    },
+    {
+      "type": "checkbox",
+      "id": "show_btn",
+      "label": "Show button",
+      "default": true
+    },
+    {
+      "type": "text",
+      "id": "btn_text",
+      "label": "Button text"
+    },
+    {
+      "type": "color",
+      "id": "btn_background_color",
+      "label": "Background color",
+      "default": "#B66C6D"
+    },
+    {
+      "type": "color",
+      "id": "btn_text_color",
+      "label": "Text color",
+      "default": "#fff"
+    },    
+    {
+      "type": "url",
+      "id": "url",
+      "label": "Link"
+    }
+  ],
+  "blocks": [
+    {
+      "name": "Slides",
+      "type": "slide",
+      "settings": [      
+        {
+          "type": "image_picker",
+          "id": "block_img",
+          "label": "Image"
+        },
+        {
+          "type": "text",
+          "id": "block_title",
+          "label": "Title"
+        },
+        {
+          "type": "richtext",
+          "id": "block_content",
+          "label": "Content text"
+        }
+      ]
+    }
+  ]
+}
+{% endschema %}

@@ -1,0 +1,12 @@
+{% layout none %}
+{% if product.tags contains 'shop-by-look' %}
+{% render 'shop-look-edit' %}
+{% elsif product.handle == 'the-essential-mix' %}
+{% section 'essential-mix-builder' %}
+{% elsif product.handle == 'essential-8' or product.handle contains 'essential-'  %}
+{% section 'essential-8-builder' %}
+{% elsif product.handle == 'essential-6' %}
+{% section 'essential-8-builder' %}
+{% else %}
+{% section 'quiz-4' %}
+{% endif %}

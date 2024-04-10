@@ -1,0 +1,78 @@
+{{ 'simply-collection.css' | asset_url | stylesheet_tag }}
+<script src="{{ 'simply-collection.js' | asset_url }}" defer></script>
+<div id="collection-page">
+    <div class="collection-page-container">
+        <div class="collection-page-wrapper">
+            {% paginate collection.products by {{section.settings.image_per_page}}  %}
+            <div class="product-list">
+                {% render 'collection-details' %}
+                <div class="collection-pagination">
+                  {% if paginate.pages > 1 %}
+                      {% render 'simply-pagination', paginate:paginate %}
+                  {% endif %}
+                </div>
+                {% render 'collection-image-with-text',metaImage: collection.metafields.self_image_with_text %}
+            </div>
+            {% endpaginate %}
+        </div>
+
+
+       
+        {% if section.settings.description and collection.description != blank %}
+            <div class="collection-main-description">
+                <div class="description-content">
+                    {{collection.description}}
+                </div>
+            </div>
+            {% endif %}
+        {% unless collection.metafields.collection.footer_images == blank %}
+        {% assign images = collection.metafields.collection.footer_images | split:'<>' %}
+
+          <div class="collection-footer-image">
+            <ul class="images-list">
+              {% for obj in images %}
+              <li>
+              {% assign data = obj | split:'##' %}
+              {% assign footer_img = data[0] | split: '/' | last %}
+              {% assign text = data[1] %}
+              {% assign link = data[2] %}
+              <div class="img">
+                <a href="{{link}}">
+                  {% render 'srcset' , src_name:footer_img, src_alt:text, file_url: true %}
+                  <p class="text">{{text}}</p>
+                </a>
+              </div>
+            </li>
+              {% endfor %}
+            </ul>
+          </div>
+          {% endunless %}
+    </div>
+</div>
+
+{% schema %}
+{
+  "name": "Collection settings",
+  "settings": [
+    {
+      "type": "checkbox",
+      "label": "Collection description",
+      "id": "description",
+      "default": true
+    },
+    {
+        "type": "checkbox",
+        "label": "Switch image on hover",
+        "id": "switch_image",
+        "default": true
+    },
+    {
+      "type": "number",
+      "id": "image_per_page",
+      "label": "Images per Page",
+      "default": 42
+    }
+  ]
+}
+
+{% endschema %}

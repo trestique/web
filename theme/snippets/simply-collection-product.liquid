@@ -1,0 +1,114 @@
+{%- comment -%}Sold out{%- endcomment -%}
+{% assign sold_out = false %}
+{% unless product.available %}
+{% assign sold_out = true %}
+{% endunless %}
+{% assign meta = product.metafields.product_details %}
+<div class="simply-collection-product">
+    {% if meta.product_badge_message != blank %}  
+    <p class="col-product-badge-msg" style="background:{{meta.product_badge_msg_background}};color:{{meta.product_badge_msg_text_color}};">{{meta.product_badge_message}}</p>
+    {% endif %}
+    {% assign current_variant = product.selected_or_first_available_variant %}
+    <div class="image">
+    <a class="img-link" href="{{product.url | within: collection }}">
+      <div class="img">
+        {% if meta.discount_badge_text != blank %}  
+        <p class="col-product-dis-badge-msg" style="background:{{meta.discount_badge_bg_color}};color:{{meta.discount_badge_text_color}};">{{meta.discount_badge_text}}</p>
+        {% endif %}
+        
+            {% if product.featured_image %}
+            {% render 'srcset' , src_name:product.featured_image.src, src_alt:current_variant.title %}
+            {%- if switch_img and product.images[1].src != blank -%}
+              {%- unless sold_out -%}
+                {%- assign src_name = product.images[1].src -%}
+                {%- assign src_alt = product.images[1].alt | escape  -%}
+                <img src='{{src_name | img_url:'grande'}}' 
+                  width="{{ src_name.width }}"
+                  height="{{ src_name.height }}"
+                loading="lazy" alt='{{src_alt}}' class="alter-image img-responsive">
+              {%-  endunless -%}
+            {%- endif -%}
+            {% else %}
+            {{ 'product-'| append:i | placeholder_svg_tag }}
+            {% endif %}
+        
+      </div>
+      </a>
+    </div>
+    <div class="product-info">
+      <form action="/cart/add" data-productid="{{ product.id }}" class="common-ajax-cart">
+        <div class="product-title-details">
+        <h3 class="product-title {% if product.variants.size == 1 and product.variants[0].title == "Default Title" %} no_variants{% endif %}">
+            <a href="{{product.url | within: collection}}">{{product.title}}</a></h3>
+        <div class="product-review">
+          {{ product.metafields.okendo.ProductListingSnippet }}
+        </div>
+      </div>
+        <p class="product-short-info">{{product.metafields.product_details.short_info}}</p>
+        <div class="variants-details-block">
+          <div class="variants-details {% if product.variants.size == 1 and product.variants[0].title == "Default Title" %} default-details{% endif %}">
+            <ul class="swatch-wrap {% if product.variants.size == 1 and product.variants[0].title == "Default Title" %} hide{% endif %}">
+                  {% for variant in product.variants %}
+                  {% assign value = variant.title | handle %}
+                  {%- assign color_swatch_name = value | handle | append: '.png' -%}
+                  {%- assign color_swatch_image = images[color_swatch_name] -%}
+                  {% if variant.featured_image.src == blank %}
+                  {% assign main_img = product.featured_image.src %}
+                  {% else %}
+                  {% assign main_img = variant.featured_image.src %}
+                  {% endif %}
+                  <li data-id="{{variant.id}}" data-available="{{variant.available}}" data-price="{{variant.price | money}}" data-img="{{main_img | img_url:'master'}}" data-info="{{product.metafields.product_details.info[variant.title]}}" data-value="{{variant.title | handle}}" class="swatch-element color {{variant.title | handle}} {% if variant.available == false %} variant-soldout{% endif %} {% if variant == current_variant %} active{% endif %}">
+                        <label class="swatch-label" style="background-color: {{ value | replace: ' ', '' | downcase }}; {% if color_swatch_image != blank %}background-image: url({{ color_swatch_image | img_url: '64x64' }}){% endif %}"  data-index= '{{forloop.index0}}'>
+                            <span>{{variant.title}}</span>
+                        </label>
+                    </li>
+                  {% endfor %}
+              </ul>
+              {% unless product.variants.size == 1 and product.variants[0].title == "Default Title" %}
+              {% if product.available %}
+              <button class="single-add-to-cart add-to-cart button button--primary" type="submit"> 
+                {% if product.metafields.custom.product_button_text.value != blank %}
+                  {{ product.metafields.custom.product_button_text.value }}
+                {% else %}
+                  add to cart {{current_variant.price | money }}</button>
+                {% endif %}
+              {% else %}
+              <button class="single-add-to-cart add-to-cart button button--primary disabled soldout" disabled type="submit"> Soldout</button>
+              {% endif %}
+              {% endunless %}
+          </div>
+        </div>
+        <input type="hidden" name="id" data-productid="{{ product.id }}" value="{{current_variant.id}}" />
+        {% if product.available %}
+          {% if product.metafields.my_fields.collection_product_link %}
+            {% assign link = product.url %}
+            {% if product.metafields.my_fields.collection_product_url != blank %}
+            {% assign link = product.metafields.my_fields.collection_product_url %}
+            {% endif %}
+            <a href="{{link}}" class="button button--primary">
+             {% if product.metafields.custom.product_button_text.value != blank %}
+                  {{ product.metafields.custom.product_button_text.value }}
+                {% else %}add to cart
+              {% endif %}
+                
+                </a>
+          {% else %}
+            {% if product.variants.size == 1 and product.variants[0].title == "Default Title" %}
+            <button class="single-add-to-cart add-to-cart button button--primary" type="submit"> 
+              {% if product.metafields.custom.product_button_text.value != blank %}
+                {{ product.metafields.custom.product_button_text.value }}
+              {% else %}
+                add to cart {{current_variant.price | money }}</button>
+              {% endif %}
+            {% else %}
+            <button class="multi-add-to-cart add-to-cart button button--primary" type="button"> Select shade {{current_variant.price | money }}</button>
+            {% endif %}
+          {% endif %}
+        {% else %}
+          <button class="multi-add-to-cart add-to-cart button button--primary soldout disabled" disabled type="button">Soldout</button>
+        {% endif %}
+      </form>
+    </div>
+  </div>
+  
+  

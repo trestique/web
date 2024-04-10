@@ -1,0 +1,6 @@
+{% layout none %}
+<script>
+{% for item in cart.items %}
+    console.log({{ item.grams | json }})
+{% endfor %}
+</script>

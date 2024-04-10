@@ -1,0 +1,12 @@
+{% assign bundle_data = product.metafields.product_details.shop_by_look_products_bundles.value %}
+<script id="bundle-data-json"  type="application/json">
+    {
+      "masterProduct":{{product | json }},
+      "cart": {{cart | json}},
+      "products": [
+            {% for prod in bundle_data %}
+            {% render 'edit-product',product:prod %}{% unless firstIndex == section.blocks.size and forloop.last %},{% endunless %}
+            {% endfor %}
+      ]
+      }
+  </script>

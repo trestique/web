@@ -1,0 +1,86 @@
+{% assign blocks_size = 0 %}
+{% for block in section.blocks %}
+{% if block.settings.review_text != blank or block.settings.review_author != blank or block.settings.review_logo != blank%}
+{% assign blocks_size = blocks_size | plus: 1 %}
+{% endif %}
+{% endfor %}
+{% if blocks_size > 0%}
+<div class="product-review-slider">
+    <div class="section">
+        <div class="review-items">
+            {% for block in section.blocks %}
+            {% if block.settings.review_text != blank or block.settings.review_author != blank or block.settings.review_logo != blank%}
+            <div class="review-item">
+                <div class="review-text">
+                    {{block.settings.review_text}}
+                </div>
+                <h3 class="review-author">{{block.settings.review_author}}</h3>
+                {% unless block.settings.review_logo == blank %}
+                <div class="img"><img src="{{block.settings.review_logo | img_url:'master' }}" /></div>
+                {% endunless %}
+            </div>
+            {% endif %}
+            {% endfor %}
+        </div>
+    </div>
+</div>
+{% endif %}
+{% schema %}
+  {
+    "name": "Product review slider",
+    "max_blocks": 6,
+    "settings": [
+    ],
+    "blocks": [
+      {
+        "type": "review",
+        "name": "Review",
+        "settings": [
+          {
+            "type": "richtext",
+            "id": "review_text",
+            "label": "Review text",
+            "default": "<p>“I love products that are quick and easy and these are exactly that.”</p>"
+          },
+          {
+            "type": "text",
+            "id": "review_author",
+            "label": "Review author",
+            "default": " Jenn Kapahi (Co-founder)"
+          },
+          {
+            "type": "image_picker",
+            "id": "review_logo",
+            "label": "Review logo"
+          }
+        ]
+      }
+    ],
+    "presets": [
+      {
+        "name": "Product Review",
+        "category": "review",
+        "blocks": [
+          {
+            "type": "review"
+          },
+          {
+            "type": "review"
+          },
+          {
+            "type": "review"
+          },
+          {
+            "type": "review"
+          },
+          {
+            "type": "review"
+          },
+          {
+            "type": "review"
+          }
+        ]
+      }
+    ]
+  }
+{% endschema %}

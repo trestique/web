@@ -1,0 +1,190 @@
+{
+  "sections": {
+    "shop-by-look-banner": {
+      "type": "shop-by-look-banner",
+      "blocks": {
+        "9da6138b-d726-4893-a86f-7f3c9defabce": {
+          "type": "banner",
+          "disabled": true,
+          "settings": {
+            "background_img_desk": "shopify:\/\/shop_images\/hero2.png",
+            "background_img_mob": "shopify:\/\/shop_images\/F895B2A4-06B2-4644-9514-5D1986980E82.png",
+            "heading_text": "A look for every occasion",
+            "heading_description": "<p>Browse our lookbook and get a step-by-step tutorial on how to apply + blend. You'll save 15% when you shop the look!<\/p>",
+            "text_color": "#00263a",
+            "button_text": "SHOP NOW",
+            "button_link": "#anchor-look",
+            "cta_color": "#f9ebe3",
+            "cta_back": "#00263a",
+            "cta_enable": "both-hide",
+            "box_bg_color": "#ffffff",
+            "box_opacity": 0.4,
+            "vertical_alignment": 50,
+            "horizontal_alignment": 26
+          }
+        },
+        "c5afef30-079f-4471-b558-c11a4775a21b": {
+          "type": "video",
+          "settings": {
+            "bg_color": "#00263a",
+            "video_url": "https:\/\/cdn.shopify.com\/videos\/c\/o\/v\/a1ba494b6acc4f4f9014ecde7bed08fa.mp4",
+            "video_url_mobile": "https:\/\/cdn.shopify.com\/s\/files\/1\/0114\/0621\/3220\/files\/lastobject-desktop-3.mp4?v=1646345229",
+            "heading_text": "A look for every occasion",
+            "heading_description": "<p>Browse our lookbook and get a step-by-step tutorial on how to apply + blend. You'll save 15% when you shop the look!<\/p>",
+            "text_color": "#f9ebe3",
+            "button_text": "",
+            "button_link": "",
+            "cta_color": "#00263a",
+            "cta_back": "#00263a"
+          }
+        }
+      },
+      "block_order": [
+        "9da6138b-d726-4893-a86f-7f3c9defabce",
+        "c5afef30-079f-4471-b558-c11a4775a21b"
+      ],
+      "settings": {}
+    },
+    "shop-by-look-grid": {
+      "type": "shop-by-look-grid",
+      "blocks": {
+        "8a14a495-163a-45a7-9981-db750f456324": {
+          "type": "look",
+          "settings": {
+            "category_name": "Evening Looks",
+            "category_img": "shopify:\/\/shop_images\/circles_look04.png",
+            "collection": "evening-looks"
+          }
+        },
+        "8c5d0107-2714-41f2-9cb7-4b2d830f62f4": {
+          "type": "look",
+          "settings": {
+            "category_name": "Everyday Looks",
+            "category_img": "shopify:\/\/shop_images\/circles_look05.png",
+            "collection": "everyday-looks"
+          }
+        },
+        "901582dc-a442-4605-91f2-958a70f058e0": {
+          "type": "look",
+          "settings": {
+            "category_name": "Complexion Looks",
+            "category_img": "shopify:\/\/shop_images\/circles_look01.png",
+            "collection": "complexion-looks"
+          }
+        },
+        "3f9ccaef-c264-4d04-bf8f-9612df0e5264": {
+          "type": "look",
+          "settings": {
+            "category_name": "Eye Looks",
+            "category_img": "shopify:\/\/shop_images\/circles_look03.png",
+            "collection": "eye-looks"
+          }
+        },
+        "8e3ad746-9221-4fcb-95e4-bcce6c55fec0": {
+          "type": "look",
+          "settings": {
+            "category_name": "Lip Looks",
+            "category_img": "shopify:\/\/shop_images\/circles_look02.png",
+            "collection": "lip-looks"
+          }
+        },
+        "c83dd51d-f3fb-4f3d-9472-9fa790fc11c1": {
+          "type": "look",
+          "disabled": true,
+          "settings": {
+            "category_name": "Best Sellers",
+            "category_img": "shopify:\/\/shop_images\/Ellipse_48.jpg",
+            "collection": "best-sellers-shop-the-look"
+          }
+        },
+        "348dc35c-ce77-467b-9e5e-8d9efd732939": {
+          "type": "look",
+          "disabled": true,
+          "settings": {
+            "category_name": "All Looks",
+            "category_img": "shopify:\/\/shop_images\/Ellipse_49.jpg",
+            "collection": "all-looks"
+          }
+        },
+        "57a91d43-48a0-48ca-bf7c-8d7dc65be30a": {
+          "type": "look",
+          "disabled": true,
+          "settings": {
+            "category_name": "Shop All",
+            "category_img": "shopify:\/\/shop_images\/Ellipse_48.jpg",
+            "collection": "all-looks"
+          }
+        }
+      },
+      "block_order": [
+        "8a14a495-163a-45a7-9981-db750f456324",
+        "8c5d0107-2714-41f2-9cb7-4b2d830f62f4",
+        "901582dc-a442-4605-91f2-958a70f058e0",
+        "3f9ccaef-c264-4d04-bf8f-9612df0e5264",
+        "8e3ad746-9221-4fcb-95e4-bcce6c55fec0",
+        "c83dd51d-f3fb-4f3d-9472-9fa790fc11c1",
+        "348dc35c-ce77-467b-9e5e-8d9efd732939",
+        "57a91d43-48a0-48ca-bf7c-8d7dc65be30a"
+      ],
+      "settings": {
+        "title": "Choose a Look",
+        "all_img": "shopify:\/\/shop_images\/Ellipse_42.png"
+      }
+    },
+    "shop-by-look-img-with-text": {
+      "type": "shop-by-look-img-with-text",
+      "blocks": {
+        "ff54909d-b8d4-488b-852f-efa95700b25d": {
+          "type": "image_with_text",
+          "settings": {
+            "shade_image": "shopify:\/\/shop_images\/Kobgsyug.png",
+            "shade_image_mob": "shopify:\/\/shop_images\/Kobgsyug.png",
+            "shade_title_color": "#00263a",
+            "shade_title": "Not sure what you need?\nTake the quiz to find your shades",
+            "btn_text_color": "#ffffff",
+            "btn_back_color": "#00263a",
+            "shade_button_url": "shopify:\/\/pages\/routine-finder",
+            "shade_button_title": "Find Your Shades"
+          }
+        }
+      },
+      "block_order": [
+        "ff54909d-b8d4-488b-852f-efa95700b25d"
+      ],
+      "settings": {}
+    },
+    "shop-by-look-desc": {
+      "type": "shop-by-look-desc",
+      "settings": {
+        "text_color": "#00263a",
+        "back_color": "#f9ebe3",
+        "description": "<p>Explore simple makeup looks from your favorite creators with makeup tutorials for beginners. Create easy makeup looks and find how to do makeup to get the look. Discover cute makeup looks, makeup inspo, easy makeup ideas, cool makeup looks, elegant makeup ideas, natural makeup inspiration, and more.<\/p>",
+        "button_url": "",
+        "button_title": "",
+        "btn_text_color": "#00263a",
+        "btn_back_color": ""
+      }
+    },
+    "1653059894747ea0a4": {
+      "type": "index__html",
+      "settings": {
+        "html_content": "<a id=\"anchor-look\"><\/a>",
+        "width": "standard",
+        "padding_top": 20,
+        "padding_bottom": 20,
+        "padding_left": 0,
+        "padding_right": 0,
+        "animation": "none",
+        "css_class": "",
+        "custom_css": ""
+      }
+    }
+  },
+  "order": [
+    "shop-by-look-banner",
+    "shop-by-look-grid",
+    "shop-by-look-img-with-text",
+    "shop-by-look-desc",
+    "1653059894747ea0a4"
+  ]
+}

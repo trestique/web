@@ -1,0 +1,316 @@
+<script>
+    const templateType  = "{{ template | replace: '.', '-' | handle }}";
+    const product = {{product | json }};
+    const oneTimeDisable = {
+      {% for variant in product.variants %}
+      {{variant.id}}:"{{variant.metafields.product_details.one_time_customisation}}"{% unless forloop.last %},{% endunless %}
+      {% endfor %}
+    }
+    const subscriptionShow = {
+      {% for variant in product.variants %}
+      {{variant.id}}:"{{variant.metafields.product_details.subscription_show}}"{% unless forloop.last %},{% endunless %}
+      {% endfor %}
+    }
+    const currentVariant = {{product.selected_or_first_available_variant | json}};
+    const productMeta =  {{ product.metafields.product_details | json}};
+    const variantMeta = {};
+    {% for variant in product.variants %}
+    variantMeta['{{variant.title}}'] = {
+      "description": `{{variant.metafields.custom.description}}`,
+      "how_to_use": `{{variant.metafields.custom.how_to_use}}`,
+      "ingredients": `{{variant.metafields.custom.ingredients}}`,
+      "sustainability": `{{variant.metafields.custom.sustainability}}`,
+      "color_on_hover":`{{variant.metafields.custom.color_on_hover}}`,
+      "bg_on_hover":`{{variant.metafields.custom.background_color_on_hover}}`,
+      "text_on_hover":`{{variant.metafields.custom.text_on_hover}}`,
+      'show_default_text':"{{variant.metafields.custom.show_default_text}}"
+    }
+    {% endfor %}
+    const productReview = `{{product.metafields.okendo.ProductListingSnippet }}`;
+    const settings = {{ section.settings | json}};
+    settings.services = { 'subscribe': [], 'one-time':[]}
+    {% assign services = section.blocks | where: 'type', 'service'  %}
+    {%- for block in services -%}
+        var obj = {
+          service_icon:"{{block.settings.service_icon | img_url:'master'}}",
+          service_text:"{{block.settings.service_text}}",
+          learn_more_show: {{block.settings.learn_more_show}}
+        }
+        settings.services['one-time'].push(obj);
+        var subscribeObj = {
+          service_icon:"{{block.settings.service_icon_subscribe | img_url:'master' }}",
+          service_text:"{{block.settings.service_text_subscribe}}",
+          learn_more_show: {{block.settings.learn_more_show}}
+        }
+        settings.services['subscribe'].push(subscribeObj);
+    {%- endfor -%}
+    
+    settings.floatingImages = [
+    {% assign services = section.blocks | where: 'type', 'floating-image'  %}
+    {%- for block in services -%}
+        {{block.settings | json}}{% unless forloop.last %},{% endunless %}
+    {%- endfor -%}
+    ]
+
+    settings.tabs = [
+    {% unless product.description == blank %}
+    {tab_title: 'Description', tab_description: `{{product.description}}`},
+    {% endunless %}
+    {% assign tabs = section.blocks | where: 'type', 'product-tabs'  %}
+    {%- for block in tabs -%}
+        {{block.settings | json}}{% unless forloop.last %},{% endunless %}
+    {%- endfor -%}
+    ]
+    settings.reviews = [
+    {% assign reviews = section.blocks | where: 'type', 'review'  %}
+    {%- for block in reviews -%}
+        {{block.settings | json}}{% unless forloop.last %},{% endunless %}
+    {%- endfor -%}
+    ]
+    settings.comboProduct = [
+        {% assign combo_1 = all_products[product.metafields.product_details.combo_1] %}
+        {% assign combo_2 = all_products[product.metafields.product_details.combo_2] %}
+        {% if combo_1 != blank %}
+        {{combo_1 | json }},
+        {% endif %}
+        {% if combo_2 != blank %}
+        {{combo_2 | json }},
+        {% endif %}
+    ]
+    settings['gift_suggestion_enable'] = {{product.metafields.product_details.gift_suggestion_enable | default: false }};
+    settings['combo_enable'] = {{product.metafields.product_details.combo_enable | default: false }};
+
+    settings["productSubscriptionPopupSets"] = {};
+    settings["productSubscriptionPopupSets"].title = "{{section.settings.product_subscription_popup_title }}";
+
+    settings.suggestionProduct = [
+        {% assign suggest_1 = all_products[product.metafields.product_details.product_gift_suggestion_1] %}
+        {% assign suggest_2 = all_products[product.metafields.product_details.product_gift_suggestion_2] %}
+        {% assign suggest_3 = all_products[product.metafields.product_details.product_gift_suggestion_3] %}
+        {% if suggest_1 != blank %}
+        {{suggest_1 | json }},
+        {% endif %}
+        {% if suggest_2 != blank %}
+        {{suggest_2 | json }},
+        {% endif %}
+        {% if suggest_3 != blank %}
+        {{suggest_3 | json }},
+        {% endif %}
+    ]
+    simply.product = {
+        product: { ...product, "variantMeta":{...variantMeta}, ...productMeta,productReview,oneTimeDisable,subscriptionShow}, 
+        currentVariant,
+        settings,
+        templateType
+    };
+</script>
+
+{% schema %}
+{
+  "name": "Product settings",
+  "settings": [
+    {
+      "type": "url",
+      "id": "find_shade_link",
+      "label": "Find shade link"
+    },
+    {
+      "type":"text",
+      "label":"Combo product title",
+      "id":"combo_product_title",
+      "default":"BUY FULL SIZE + REFILLS AND SAVE 10%"
+    },
+    {
+      "type":"text",
+      "label":"Gift suggestion title",
+      "id":"gift_product_title",
+      "default":"MORE HOLIDAY GIFT IDEAS"
+    },
+    {
+      "type": "header",
+      "content": "Subscribe section"
+    },
+    {
+      "type":"text",
+      "id":"subscription_text",
+      "label":"Subscription text",
+      "default":"Auto-Replenish: "
+    },
+    {
+      "type":"text",
+      "id":"subscription_offer_text",
+      "label":"Subscription offer text",
+      "default":"Save 35% with refills"
+    },
+    {
+      "type":"text",
+      "id":"subscription_offer_text_xs",
+      "label":"Subscription offer text mobile",
+      "default":"Save 35% on future refills<br/>Every 4 Weeks"
+    },
+    {
+      "type":"text",
+      "id":"subscription_offer_info",
+      "label":"Subscription offer info",
+      "default":"Cancel or manage your subscription online at anytime.<br/>Pay when your order ships."
+    },
+    {
+      "type":"text",
+      "id":"subscription_offer_info_xs",
+      "label":"Subscription offer info for mobile",
+      "default":"Cancel or change online at anytime."
+    },
+    {
+      "type":"text",
+      "id":"subscription_badge_text",
+      "label":"Subscription badge text"
+    },
+    {
+      "type":"text",
+      "id":"subscription_recommended_selector",
+      "label":"Subscription recommended selector"
+    },
+    {
+      "type":"text",
+      "id":"one_time_purchase_text",
+      "label":"One time purchase text",
+      "default":"Change to one-time purchase"
+    },
+    {
+      "type":"textarea",
+      "id":"subscribr_popup_details",
+      "label":"One time purchase text"
+    },
+    {
+      "type": "header",
+      "content": "Product subscription popup sets"
+    },
+    {
+      "type": "text",
+      "id": "product_subscription_popup_title",
+      "label": "Subscription popup title"
+    },
+    {
+      "type": "textarea",
+      "id": "product_subscription_popup_description",
+      "label": "Subscription popup description"
+    },
+    {
+      "type": "text",
+      "id": "no_thank_you_btn_label",
+      "label": "Button label",
+      "default": "NO, THANK YOU"
+    },
+    {
+      "type": "text",
+      "id": "subscribe_btn_label",
+      "label": "Button label",
+      "default": "SUBSCRIBE"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "service",
+      "name": "Service",
+      "limit": 3,
+      "settings": [
+        {
+          "type":"header",
+          "content":"One time purchase" 
+        },
+        {
+          "type": "image_picker",
+          "id": "service_icon",
+          "label": "Service icon"
+        },
+        {
+            "type": "richtext",
+            "id": "service_text",
+            "label": "Service text"
+        },
+        {
+          "type":"header",
+          "content":"Subscribe and purchase" 
+        },
+        {
+          "type": "image_picker",
+          "id": "service_icon_subscribe",
+          "label": "Service icon"
+        },
+        {
+            "type": "richtext",
+            "id": "service_text_subscribe",
+            "label": "Service text"
+        },
+        {
+          "type":"checkbox",
+          "id":"learn_more_show",
+          "label":"Learn more show"
+        }
+      ]
+    },
+    {
+      "type": "product-tabs",
+      "name": "Product Tabs",
+      "limit": 3,
+      "settings": [
+        {
+          "type": "text",
+          "id": "tab_title",
+          "label": "Tab title"
+        },
+        {
+            "type": "richtext",
+            "id": "tab_description",
+            "label": "Description"
+        }
+      ]
+    },
+    {
+      "type": "floating-image",
+      "name": "Floating image",
+      "limit": 3,
+      "settings": [
+        {
+          "type": "image_picker",
+          "id": "floating_image",
+          "label": "Floating image"
+        },
+        {
+            "type": "text",
+            "id": "tag_text",
+            "label": "Tag text"
+        }
+      ]
+    },
+    {
+      "type": "review",
+      "name": "Review",
+      "settings": [
+        {
+          "type": "richtext",
+          "id": "review_text",
+          "label": "Review text",
+          "default": "<p>“I love products that are quick and easy and these are exactly that.”</p>"
+        },
+        {
+          "type": "text",
+          "id": "review_author",
+          "label": "Review author",
+          "default": " Jenn Kapahi (Co-founder)"
+        },
+        {
+          "type": "image_picker",
+          "id": "review_author_logo",
+          "label": "Review author logo"
+        },
+        {
+          "type": "image_picker",
+          "id": "review_author_country_logo",
+          "label": "Review author country logo"
+        }
+      ]
+    }
+  ]
+}
+{% endschema %}

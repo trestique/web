@@ -1,0 +1,130 @@
+<style>
+  .image-with-video-grid {
+    background-color:{{section.settings.background_color}};
+  }
+</style>
+{% comment %}::  image-with-video-grid start ::{% endcomment %}
+<div class="image-with-video-grid">
+  <div class="section">
+    <div class="text-wrapper-block">
+      <div class="image-video-wrapper">
+          <div class="image">
+            <a href="{{section.settings.image_one_url }}" class="{% if section.settings.video_url_one != blank %}open-video{% endif %}">
+            {% render 'image-element',
+            image: section.settings.image_one,
+            alt: section.settings.image_one.alt
+            %}
+            </a>
+            {% unless section.settings.video_url_one == blank %}
+            <div class="video-wrapper">
+              <video playsinline loop {% if section.settings.autoplay_video %}autoplay{% endif %} width="100%" height="auto" controls muted class="js-video" allow="autoplay; encrypted-media" allowfullscreen">
+                <source src="{{ section.settings.video_url_one }}" type="video/mp4">
+                </video>
+              </div>
+            {% endunless %}
+          </div>
+          {% unless section.settings.button_text_one == blank %}
+          <div class="button-wrapper">
+            <a class="button button--primary" href="{{section.settings.image_one_url }}">{{section.settings.button_text_one}}</a>
+          </div>
+          {% endunless %}
+        </div>
+        <div class="image-video-wrapper">
+            <div class="image">
+              <a href="{{section.settings.image_two_url }}" class="{% if section.settings.image_two_url != blank %}open-video{% endif %}">
+              {% render 'image-element',
+              image: section.settings.image_two,
+              alt: section.settings.image_one.alt
+              %}
+            </a>
+              {% unless section.settings.video_url_two == blank %}
+              <div class="video-wrapper">
+                <video playsinline loop {% if section.settings.autoplay_video %}autoplay{% endif %} width="100%" height="auto" controls muted class="js-video" allow="autoplay; encrypted-media" allowfullscreen">
+                  <source src="{{ section.settings.video_url_two }}" type="video/mp4">
+                  </video>
+                </div>
+                {% endunless %}
+            </div>
+            
+
+            {% unless section.settings.image_one_url == blank %}
+            <div class="button-wrapper">
+              <a class="button button--primary" href="{{section.settings.image_two_url }}">{{section.settings.button_text_two}}</a>
+            </div>
+            {% endunless %}
+          </div>
+        </div>
+      </div>
+    </div>
+    {% comment %}::  image-with-video-grid end ::{% endcomment %}
+    {% schema %}
+    {
+      "name": "Image with video : Grid",
+      "settings": [
+      {
+        "type": "color",
+        "id": "background_color",
+        "label": "Background color"
+      },
+      {
+        "type": "header",
+        "content": "Image section one"
+      },
+      {
+        "type": "image_picker",
+        "id": "image_one",
+        "label": "image 1"
+      },
+      {
+        "type": "text",
+        "id": "video_url_one",
+        "label": "Video one",
+        "info":"image and video size should be same"
+      },
+      {
+        "type": "text",
+        "id": "button_text_one",
+        "label": "Text one"
+      },
+      {
+        "type": "url",
+        "id": "image_one_url",
+        "label": "URL"
+      },
+      {
+        "type": "header",
+        "content": "Image section two"
+      },
+      {
+        "type": "image_picker",
+        "id": "image_two",
+        "label": "image 2"
+      },
+      {
+        "type": "text",
+        "id": "video_url_two",
+        "label": "Video two",
+        "info":"image and video size should be same"
+      },
+      {
+        "type": "text",
+        "id": "button_text_two",
+        "label": "Text two"
+      },
+      {
+        "type": "url",
+        "id": "image_two_url",
+        "label": "URL"
+      }
+      ],
+      "presets": [
+      {
+        "name": "Image with video : Grid",
+        "category": "Text",
+        "settings": {
+
+      }
+    }
+    ]
+  }
+  {% endschema %}

@@ -1,0 +1,11 @@
+{% assign items_count = 0 %}
+{% for item in cart.items %}
+    {% if item.properties['_bid'] %}
+        {% if item.properties['_type'] == 'master' %}
+            {% assign items_count = items_count | plus:item.quantity %}
+        {% endif %}
+    {% else %}
+        {% assign items_count = items_count | plus:item.quantity %}
+    {% endif %}
+{% endfor %}
+{{items_count}}

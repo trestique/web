@@ -1,0 +1,234 @@
+{
+  "sections": {
+    "banner_video": {
+      "type": "banner-video",
+      "disabled": true,
+      "settings": {
+        "title": "Win it all (placement only)",
+        "content": "",
+        "max_width": 1000,
+        "video_url": "",
+        "video_url_lg": "",
+        "img": "shopify:\/\/shop_images\/win_it.png",
+        "btn_bg_color": "#e32c2b",
+        "btn_text_color": "#ffffff",
+        "btn_text": "",
+        "btn_url": "#",
+        "tagline_text": "",
+        "tagline_bg_color": "#ffffff",
+        "tagline_text_color": "#b04a5a"
+      }
+    },
+    "what_makes": {
+      "type": "what-makes-it-trestique",
+      "disabled": true,
+      "settings": {
+        "bg_color": "#bfebf3",
+        "text_color": "#00263a",
+        "main_heading": "What makes trestique makeup sets special?",
+        "slides_to_show_lg": 5,
+        "slides_to_show_sm": 1,
+        "margin_sm": 30,
+        "margin_lg": 300,
+        "block_title_color": "#00263a",
+        "block_text_color": "#00263a"
+      }
+    },
+    "join_hero": {
+      "type": "join-zero",
+      "disabled": true,
+      "settings": {
+        "bg_color": "#f0f0f0",
+        "main_title": "Join the zero-waste beauty movement",
+        "star_img": "shopify:\/\/shop_images\/five-star.png",
+        "show_arrow": true,
+        "slides_dots": true,
+        "auto_play": false,
+        "slides_to_show_lg": 1,
+        "slides_to_show_sm": 1,
+        "max_width": 1170,
+        "block_bg_color": "#f3e9e2"
+      }
+    },
+    "fbbabd55-40f3-4ae9-90d7-f7ffd392fbee": {
+      "type": "banner-with-text",
+      "settings": {
+        "link": "",
+        "video_url": "",
+        "video_url_mobile": "",
+        "image": "shopify:\/\/shop_images\/Banner4.png",
+        "pretext": "",
+        "title": "",
+        "subtitle": "",
+        "pretext_color": "#000000",
+        "heading_color": "#00263a",
+        "heading_font_desk": 50,
+        "subheading_color": "#000000",
+        "text_alignment": "center",
+        "text_horizontal_position": "center",
+        "text_vertical_position": "bottom",
+        "background_color": "#ffffff",
+        "background_opacity": 0,
+        "border_color": "#ffffff",
+        "border_width": 0,
+        "text_width": 40,
+        "button_1": "",
+        "button_text_color": "#ffffff",
+        "button_bg_color": "#000000",
+        "button_hover_bg_color": "#ffffff",
+        "button_hover_color": "#000000",
+        "button_1_link": "",
+        "button_1_style": "button--secondary",
+        "button_2": "",
+        "button_2_link": "",
+        "button_2_style": "button--secondary",
+        "mobile_image_crop": "none",
+        "mobile_text_below_image": false,
+        "mobile_text_position": "middle",
+        "pretext_color_mobile": "rgba(0,0,0,0)",
+        "heading_color_mobile": "rgba(0,0,0,0)",
+        "subheading_color_mobile": "rgba(0,0,0,0)",
+        "width": "wide",
+        "padding_top": 0,
+        "padding_bottom": 0,
+        "padding_left": 0,
+        "padding_right": 0,
+        "animation": "none",
+        "css_class": "",
+        "custom_css": ""
+      }
+    },
+    "b70535a0-5cbb-4325-a870-9becdd8c9f1f": {
+      "type": "index__html",
+      "settings": {
+        "html_content": "<body>\n\n<meta charset=\"utf-8\">\n<title>Documento sem título<\/title>\n\n\t\n\t<style>\n\t\n.create-my-set {\ndisplay: none;\n}\n\n\n\t.id-me { \npadding: 10px 300px;\n}\n\n\t.idme { \nmargin: auto;\ntext-align: center;\n}\n\n.id-title {\nfont-family: antrovectra-er;\nfont-size: 40px;\n}\n\nh2, p { \ntext-align: center;\n}\n\n.id-img {\nheight: 40px;\nmargin: auto;\ndisplay: block;\n}\n\t\t\n\t\n@media (max-width: 950px){\n\t.id-me { \npadding: 10px 30px;\n}\n}\n    <\/style>\n\n\n\t\n\t<div class=\"id-me\">\n<h2 class=\"id-title\">How it works:<\/h2>\n<br><p>Enjoy up to 20% off your order – it takes seconds when you verify with ID.me. \n<br><\/p>\n<p>\n<br>\n<\/p>\n<div class=\"idme\">\n    <div class=\"idme-shopify\">\n      <a class=\"idme-btn-unify\" href=\"https:\/\/discountify.id.me\/oauth\/checkpoint\/trestique1\">\n        <img src=\"https:\/\/s3.amazonaws.com\/idme\/developer\/idme-buttons\/assets\/img\/verify.svg\" alt=\"ID.me\" style=\"height:42px\">\n      <\/a>\n<p class=\"idme-btn-affinity\">Alumni, Government Employees, Hospital Employees, Medical Providers, Military, Nurses, First Responders, Students, and Teachers receive a discount<\/p>\n    <\/div>\n  <\/div>\n\t\n\n<\/div>\n<\/body>",
+        "width": "standard",
+        "padding_top": 20,
+        "padding_bottom": 20,
+        "padding_left": 0,
+        "padding_right": 0,
+        "animation": "none",
+        "css_class": "",
+        "custom_css": ""
+      }
+    },
+    "20a59b3c-35dc-4008-98ea-d557a9fc39be": {
+      "type": "index__gallery",
+      "disabled": true,
+      "blocks": {
+        "template--15509905539172__20a59b3c-35dc-4008-98ea-d557a9fc39be-166747869800dc2df0-0": {
+          "type": "image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Group_53243.png",
+            "link": ""
+          }
+        },
+        "template--15509905539172__20a59b3c-35dc-4008-98ea-d557a9fc39be-166747869800dc2df0-1": {
+          "type": "image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Group_3_c1080dae-5536-481d-a9af-01caa93ebd0e.png",
+            "link": ""
+          }
+        },
+        "template--15509905539172__20a59b3c-35dc-4008-98ea-d557a9fc39be-166747869800dc2df0-2": {
+          "type": "image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Group_4_efee9136-ee0d-4d7e-9a24-0c0ee033b41b.png",
+            "link": ""
+          }
+        }
+      },
+      "block_order": [
+        "template--15509905539172__20a59b3c-35dc-4008-98ea-d557a9fc39be-166747869800dc2df0-0",
+        "template--15509905539172__20a59b3c-35dc-4008-98ea-d557a9fc39be-166747869800dc2df0-1",
+        "template--15509905539172__20a59b3c-35dc-4008-98ea-d557a9fc39be-166747869800dc2df0-2"
+      ],
+      "settings": {
+        "gallery_type": "classic",
+        "crop_images": false,
+        "images_per_row": 4,
+        "enable_lightbox": true,
+        "overlay_color": "#000000",
+        "link_color": "#ffffff",
+        "width": "standard",
+        "show_gutter": true,
+        "padding_top": 20,
+        "padding_bottom": 20,
+        "animation": "none",
+        "css_class": "",
+        "custom_css": ""
+      }
+    },
+    "how_it_works": {
+      "type": "how-it-works",
+      "blocks": {
+        "6f98ec25-409e-4ce5-923b-ae5019df968a": {
+          "type": "block",
+          "settings": {
+            "step_img": "shopify:\/\/shop_images\/Step_1_2abea28b-3b7b-43fa-b18b-1c4a0fb3aba7.png",
+            "step_title": "Add products to cart."
+          }
+        },
+        "900c23b9-3b1e-4704-a3f2-44a1d114d06c": {
+          "type": "block",
+          "settings": {
+            "step_img": "shopify:\/\/shop_images\/ezgif-1-c2e9a833ac.gif",
+            "step_title": "Verify with ID.me at checkout."
+          }
+        },
+        "71004f11-1d02-4d6f-bcad-ed512cab8042": {
+          "type": "block",
+          "settings": {
+            "step_img": "shopify:\/\/shop_images\/ezgif.com-gif-maker_5757056e-bddb-4c2e-b41c-3e655699f2b4.gif",
+            "step_title": "Enjoy your new, time-saving makeup!"
+          }
+        }
+      },
+      "block_order": [
+        "6f98ec25-409e-4ce5-923b-ae5019df968a",
+        "900c23b9-3b1e-4704-a3f2-44a1d114d06c",
+        "71004f11-1d02-4d6f-bcad-ed512cab8042"
+      ],
+      "settings": {
+        "bg_color": "#f0f0f0",
+        "slides_to_show_lg": 3,
+        "slides_to_show_sm": 1,
+        "max_width": 1000,
+        "title": "",
+        "next_step_img": "shopify:\/\/shop_images\/next_c21ddd57-7e38-4b6e-8ef5-77529d1aac2e.png",
+        "tagline_text": "",
+        "tagline_bg_color": "#ffffff",
+        "tagline_text_color": "#b04a5a",
+        "btn_text": "",
+        "btn_bg_color": "#ffffff",
+        "btn_color": "#ffffff",
+        "step_bg_color": "#f0f0f0",
+        "text_color": "#00263a"
+      }
+    },
+    "617a666c-f74e-4fd0-8145-0979ead91b63": {
+      "type": "index__html",
+      "settings": {
+        "html_content": "<body>\n\n<meta charset=\"utf-8\">\n<title>who-qualifies<\/title>\n\n\t\n\t<style>\n\t\n\t#main {\n\t\tbackground-color: #F3E9E2;\n\t\twidth: 100%;\n\t\theight: auto;\n\t\tmargin: auto;\n\t\ttext-align: center;\n\t\tpadding-bottom: 25px;\n\t}\n\t\n\t.the-content { \n\t\tdisplay: flex;\n\t\tjustify-content: center;\n\t\talign-items: top;\n\t\tmargin: auto;\n\t\ttext-align: center;\n\t}\n\t\n\t\n\t.the-title {\n\t\ttext-align: center;\n\t\tfont-family: antrovectra-er;\n\t\tfont-size: 40px;\n\t\tcolor: #00263A;\n\t\tpadding: 20px 50px;\n\t}\n\t\n\t.the-image {\n\t\theight: auto;\n\t\tmax-width: 100px;\n\t\tmargin: auto30px;\n\t}\n\t\n\t.block-logo {\n\t\twidth: auto;\n\t\tmax-width: 280px;\n\t\tmargin: 0px 50px;\n\t}\n\t\n\t.copy-logo {\n\t\ttext-align: center;\n\t\tfont-family: FuturaBT;\n\t\tfont-size: 14px;\n\t}\n\t\n\n@media (max-width : 1068px ){\n\t#main {\n\t\twidth: 60%;\n\t}\n\t\n\t.the-content {\n\t\tdisplay: inline-block;\n\t\twidth: 30%;\n\t\tmargin: auto;\n\t}\n\t\n\t.block-logo { \n\t\tmargin: 20px 10px;\n\t}\n}\n\t\n\t\n@media (max-width: 800px){\n\t#main {\n\t\twidth: 100%;\n\t}\n\t\t\n\t.block-logo { \n\t\tmargin: 20px auto;\n\t}\n\t\n\t.the-content {\n\t\tdisplay: inline-block;\n\t\twidth: auto;\n\t\tmargin: auto;\n\t}\n}\n    <\/style>\n\n\n<div id=\"main\">\n\t\t<div class=\"the-title\">Who qualifies?<\/div>\n\t<div class=\"the-content\">\n\t\t<div class=\"block-logo\">\n<img class=\"the-image\" src=\"https:\/\/cdn.shopify.com\/s\/files\/1\/0114\/0621\/3220\/files\/College_Student_Female_1.png?v=1667249467\"><h3 class=\"copy-logo\">Alumni and students<br>\n<\/h3>\n<\/div>\n\t\t<div class=\"block-logo\">\n<img class=\"the-image\" src=\"https:\/\/cdn.shopify.com\/s\/files\/1\/0114\/0621\/3220\/files\/Manager_Female_1.png?v=1667249476\"><h3 class=\"copy-logo\">US and Canada Government employees<\/h3>\n<\/div>\n\t\t<div class=\"block-logo\">\n<img class=\"the-image\" src=\"https:\/\/cdn.shopify.com\/s\/files\/1\/0114\/0621\/3220\/files\/Medical_Doctor_Female_1.png?v=1667249476\"><h3 class=\"copy-logo\">US and Canada Hospital employees, medical providers and nurses <\/h3>\n<\/div>\n\t\t<div class=\"block-logo\">\n<img class=\"the-image\" src=\"https:\/\/cdn.shopify.com\/s\/files\/1\/0114\/0621\/3220\/files\/Policewoman_1.png?v=1667249476\"><h3 class=\"copy-logo\">US and Canada military and first responders<br>\n<\/h3>\n<\/div>\n\t\t<div class=\"block-logo\">\n<img class=\"the-image\" src=\"https:\/\/cdn.shopify.com\/s\/files\/1\/0114\/0621\/3220\/files\/Teacher_Female_1.png?v=1667249483\"><h3 class=\"copy-logo\">US and Canada teachers<br>\n<\/h3>\n<\/div>\n\t<\/div>\n<\/div>\n\n\n\t\n<\/body>",
+        "width": "wide",
+        "padding_top": 20,
+        "padding_bottom": 11,
+        "padding_left": 0,
+        "padding_right": 0,
+        "animation": "none",
+        "css_class": "",
+        "custom_css": ".section.has-background {\npadding-left: 0;\npadding-right: 0;\n}"
+      }
+    }
+  },
+  "order": [
+    "banner_video",
+    "what_makes",
+    "join_hero",
+    "fbbabd55-40f3-4ae9-90d7-f7ffd392fbee",
+    "b70535a0-5cbb-4325-a870-9becdd8c9f1f",
+    "20a59b3c-35dc-4008-98ea-d557a9fc39be",
+    "how_it_works",
+    "617a666c-f74e-4fd0-8145-0979ead91b63"
+  ]
+}

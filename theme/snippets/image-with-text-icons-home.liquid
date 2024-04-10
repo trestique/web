@@ -1,0 +1,82 @@
+<style>
+.section-{{block.id}}{
+    padding-top:{{block.settings.padding_top}}px;
+    padding-bottom:{{block.settings.padding_bottom}}px;
+}
+</style>
+<div class="section-{{block.id}} image-with-text-and-icons">
+        {% unless block.settings.image == blank %}
+        <div class="img xs-hide">
+            <a href="{{block.settings.image_link}}">
+                {% render 'srcset',
+                    src_name: block.settings.image,
+                    src_alt: block.settings.image.alt
+                %}    
+            </a>
+        </div>
+        {% endunless %}
+        {% unless block.settings.image_xs == blank %}
+        <div class="img xs-show">
+            <a href="{{block.settings.image_link}}">
+                {% render 'srcset',
+                    src_name: block.settings.image_xs,
+                    src_alt: block.settings.image_xs.alt
+                %}    
+            </a>
+        </div>
+        {% endunless %}
+    <div class="text-wrapper">
+        <h2>{{block.settings.title}}</h2>
+        <div class="desc">
+            {{block.settings.text}}
+        </div>
+        <div class="xs-hide">
+        <div class="main-icons">
+                        {% unless block.settings.main_icon == blank %}
+                        <div class="main-icon">
+                            {% render 'srcset' , src_name:block.settings.main_icon, src_alt:block.settings.main_icon.alt %}
+                        </div>
+                        {% endunless %}
+                        {% unless block.settings.main_icon_2 == blank %}
+                        <div class="main-icon">
+                            {% render 'srcset' , src_name:block.settings.main_icon_2, src_alt:block.settings.main_icon_2.alt %}
+                        </div>
+                        {% endunless %}
+                        {% unless block.settings.main_icon_3 == blank %}
+                        <div class="main-icon">
+                            {% render 'srcset' , src_name:block.settings.main_icon_3, src_alt:block.settings.main_icon_3.alt %}
+                        </div>
+                        {% endunless %}
+                </div>
+            </div>
+        {% unless block.settings.button_label == blank %}
+        {% render 'button',
+                        label: block.settings.button_label,
+                        href: block.settings.link,
+                        type: "link",
+                        style: block.settings.button_1_style
+                %}
+        {% endunless %}
+    </div>
+    <div class="xs-show">
+
+    <div class="main-icons">
+                        {% unless block.settings.main_icon == blank %}
+                        <div class="main-icon">
+                            {% render 'srcset' , src_name:block.settings.main_icon, src_alt:block.settings.main_icon.alt %}
+                        </div>
+                        {% endunless %}
+                        {% unless block.settings.main_icon_2 == blank %}
+                        <div class="main-icon">
+                            {% render 'srcset' , src_name:block.settings.main_icon_2, src_alt:block.settings.main_icon_2.alt %}
+                        </div>
+                        {% endunless %}
+                        {% unless block.settings.main_icon_3 == blank %}
+                        <div class="main-icon">
+                            {% render 'srcset' , src_name:block.settings.main_icon_3, src_alt:block.settings.main_icon_3.alt %}
+                        </div>
+                        {% endunless %}
+                </div>
+            </div>
+
+</div>

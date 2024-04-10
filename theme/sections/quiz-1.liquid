@@ -1,0 +1,343 @@
+<script>
+    window.quiz.settings = {...{{ section.settings | json}}};
+    window.quiz.settings.makeups = [
+                {% assign count = 0 %}
+                {% for block in section.blocks %}
+                        {% if block.type == 'makeup' %}
+                        {% unless count == 0 %},{% endunless %}
+                        {{block.settings | json}}
+                        {% assign count = count | plus: 1  %}
+                        {% endif %}
+                {% endfor %}
+    ];
+    window.quiz.settings.skinTypes = [
+                {% assign count = 0 %}
+                {% for block in section.blocks %}
+                        {% if block.type == 'skintype' %}
+                        {% unless count == 0 %},{% endunless %}
+                        {{block.settings | json}}
+                        {% assign count = count | plus: 1  %}
+                        {% endif %}
+                {% endfor %}
+    ];
+</script>
+
+{% schema %}
+{
+  "name": "Screen 1-4 customizations",
+  "settings": [
+    {
+        "type":"header",
+        "content":"Screen 1"
+    },
+    {
+    "type": "select",
+    "id": "screen_type",
+    "label": "Screen options",
+    "options": [
+        {
+            "label": "Both",
+            "value": "both"
+        },
+        {
+            "label": "Video Consultation",
+            "value": "video_consultation"
+        },
+        {
+            "label": "Meet your match",
+            "value": "meet_your_match"
+        }
+    ]
+    },
+    {
+      "type": "header",
+      "content": "Video consultation"
+    },
+    {
+      "type":"image_picker",
+      "label":"Desktop image",
+      "id":"screen_image"
+    },
+    {
+      "type":"image_picker",
+      "label":"Mobile image",
+      "id":"screen_image_xs"
+    },
+    { 
+      "type":"text",
+      "label":"Title",
+      "id":"screen_title",
+      "default":"Video Consultation"
+    },
+    {
+      "type":"richtext",
+      "label":"Screen 1 text",
+      "id":"screen_text",
+      "default":"<p>Chat with our beauty experts for advice or 1-on-1 tutorials</p>"
+    },
+    {
+      "type":"text",
+      "label":"Buttontext",
+      "id":"screen_btn_text",
+      "default":"Let's chat"
+    },
+    {
+      "type":"text",
+      "label":"Button link",
+      "id":"screen_left_btn_link",
+      "default":"/pages/consultation"
+    },
+    {
+      "type":"header",
+      "content":"Meet your match"
+    },
+    {
+      "type": "image_picker",
+      "label": "Desktop image",
+      "id": "screen_image_1"
+    },
+    {
+      "type": "image_picker",
+      "label": "Mobile image",
+      "id": "screen_image_xs_1"
+    },
+    {
+      "type": "text",
+      "label": "Title",
+      "id": "screen_title_1",
+      "default": "Meet your match"
+    },
+    {
+      "type": "richtext",
+      "label": "Text",
+      "id": "screen_text_1",
+      "default": "<p>Take the quiz and find your perfect makeup shades for your entire routine!</p>"
+    },
+    {
+      "type": "text",
+      "label": "Button text",
+      "id": "screen_btn_text_1",
+      "default": "Take the quiz"
+    },
+    {
+      "type": "header",
+      "content": "Display both option"
+    },
+    {
+        "type":"header",
+        "content":"Screen 1 left part",
+        "info": "Video Consultation"
+    },
+    {
+        "type":"image_picker",
+        "label":"Desktop image",
+        "id":"screen_image_1_left"
+    },
+    {
+        "type":"image_picker",
+        "label":"Mobile image",
+        "id":"screen_image_1_left_xs"
+    },
+    {
+        "type":"text",
+        "label":"Title",
+        "id":"screen_1_left_title",
+        "default":"Video Consultation"
+    },
+    {
+        "type":"richtext",
+        "label":"Screen 1 text",
+        "id":"screen_1_left_text",
+        "default":"<p>Chat with our beauty experts for advice or 1-on-1 tutorials</p>"
+    },
+    {
+        "type":"text",
+        "label":"Buttontext",
+        "id":"screen_1_left_btn_text",
+        "default":"Let's chat"
+    },
+    {
+        "type":"text",
+        "label":"Button link",
+        "id":"screen_1_left_btn_link",
+        "default":"/pages/consultation"
+    },
+    {
+        "type":"header",
+        "content":"Screen 1 right part",
+        "info": "Meet your match"
+    },
+    {
+        "type":"image_picker",
+        "label":"Desktop image",
+        "id":"screen_image_1_right"
+    },
+    {
+        "type":"image_picker",
+        "label":"Mobile image",
+        "id":"screen_image_1_right_xs"
+    },
+    {
+        "type":"text",
+        "label":"Title",
+        "id":"screen_1_right_title",
+        "default":"Meet your match"
+    },
+    {
+        "type":"richtext",
+        "label":"Text",
+        "id":"screen_1_right_text",
+        "default":"<p>Take the quiz and find your perfect makeup shades for your entire routine!</p>"
+    },
+    {
+        "type":"text",
+        "label":"Button text",
+        "id":"screen_1_right_btn_text",
+        "default":"Take the quiz"
+    },
+    {
+        "type":"header",
+        "content":"Screen 2",
+        "info": "Take or share a selfie"
+    },
+    {
+        "type":"image_picker",
+        "label":"Screen 3 main image 1",
+        "id":"screen_3_main_image_1",
+        "info":"Selfie image 1"
+    },
+    {
+        "type":"image_picker",
+        "label":"Screen 3 main image 2",
+        "id":"screen_3_main_image_2",
+        "info":"Selfie image 2"
+    },
+    {
+        "type":"image_picker",
+        "label":"Screen 3 main image 3",
+        "id":"screen_3_main_image_3",
+        "info":"Selfie image 3"
+    },
+    {
+        "type":"image_picker",
+        "label":"Screen 3 image 1",
+        "id":"screen_3_image_1",
+        "info":"Selfie icon 1"
+    },
+    {
+        "type":"text",
+        "label":"Screen 3 text 1",
+        "id":"screen_3_text_1",
+        "default":"Natural lighting",
+        "info":"Selfie icon description 1"
+    },
+    {
+        "type":"image_picker",
+        "label":"Screen 3 image 2",
+        "id":"screen_3_image_2",
+        "info":"Selfie icon 2"
+    },
+    {
+        "type":"text",
+        "label":"Screen 3 text 2",
+        "id":"screen_3_text_2",
+        "default":"Remove your glasses",
+        "info":"Selfie icon description 2"
+    },
+    {
+        "type":"image_picker",
+        "label":"Screen 3 image 3",
+        "id":"screen_3_image_3",
+        "info":"Selfie icon 3"
+    },
+    {
+        "type":"text",
+        "label":"Screen 3 text 3",
+        "id":"screen_3_text_3",
+        "default":"Face straight to the camera",
+        "info":"Selfie icon description 3"
+    },
+    {
+        "type":"image_picker",
+        "label":"Screen 3 image 4",
+        "id":"screen_3_image_4",
+        "info":"Selfie icon 4"
+    },
+    {
+        "type":"text",
+        "label":"Screen 3 text 4",
+        "id":"screen_3_text_4",
+        "default":"Plain background, no busy art",
+        "info":"Selfie icon description 4"
+    },
+    {
+        "type":"header",
+        "content":"Screen 4",
+        "info": "We found your match"
+    }
+  ],
+  "blocks":[
+    {
+        "type":"makeup",
+        "name":"Makeup",
+        "settings":[
+            {
+                "type":"image_picker",
+                "label":"Desktop image",
+                "id":"image"
+            },
+            {
+                "type":"image_picker",
+                "label":"Mobile image",
+                "id":"image_xs"
+            },
+            {
+                "type":"text",
+                "label":"Text",
+                "id":"text"
+            }
+        ]
+    },{
+        "type":"skintype",
+        "name":"Skin type",
+        "settings":[
+            {
+                "type":"image_picker",
+                "label":"Desktop image",
+                "id":"image"
+            },
+            {
+                "type":"image_picker",
+                "label":"Mobile image",
+                "id":"image_xs"
+            },
+            {
+                "type":"text",
+                "label":"Text",
+                "id":"text"
+            },
+            {
+                "type":"text",
+                "label":"Info",
+                "id":"info"
+            },
+            {
+                "type":"color",
+                "label":"Background",
+                "id":"bg_color"
+            },
+            {
+                "type":"color",
+                "label":"Text color",
+                "id":"text_color"
+            },
+            {
+                "type":"image_picker",
+                "label":"Swatch image",
+                "id":"swatch_img"
+            }
+        ]
+    }
+    ]
+}
+{% endschema %}

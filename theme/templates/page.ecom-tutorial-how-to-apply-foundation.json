@@ -1,0 +1,12 @@
+{
+  "layout": "theme",
+  "sections": {
+    "ecom-tutorial-how-to-apply-foundation": {
+      "type": "ecom-tutorial-how-to-apply-foundation-page",
+      "settings": {}
+    }
+  },
+  "order": [
+    "ecom-tutorial-how-to-apply-foundation"
+  ]
+}

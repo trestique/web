@@ -1,0 +1,62 @@
+{% schema %}
+{
+  "name": "Latest posts",
+  "settings": [],
+  "presets": [
+    {
+      "name": "Latest posts",
+      "category": "Blog",
+      "settings": {}
+    }
+  ]
+}
+{% endschema %}
+
+{% stylesheet %}
+.latest-posts {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.latest-post {
+  max-width: 300px;
+  margin: 10px;
+  padding: 20px;
+  background-color: #f8f8f8;
+  border: 1px solid #ddd;
+}
+
+.latest-post h2 {
+  font-size: 20px;
+  margin-top: 0;
+}
+
+.latest-post .date {
+  font-size: 14px;
+  color: #666;
+}
+
+.latest-post .excerpt {
+  margin-top: 10px;
+  font-size: 16px;
+}
+{% endstylesheet %}
+
+{% javascript %}
+{% endjavascript %}
+
+<main id="latest-posts" class="shopify-section">
+  <section class="latest-posts">
+    {% assign all_blogs = blogs %}
+    {% for blog in all_blogs %}
+      {% assign latest_post = blog.articles.first %}
+      <article class="latest-post">
+        <h2>{{ latest_post.title }}</h2>
+        <p class="date">{{ latest_post.published_at | date: '%B %d, %Y' }}</p>
+        <p class="excerpt">{{ latest_post.content | truncatewords: 20 }}</p>
+      </article>
+    {% endfor %}
+  </section>
+</main>
+

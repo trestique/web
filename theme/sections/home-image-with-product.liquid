@@ -1,0 +1,157 @@
+<!-- home-image-with-product -->
+
+{% assign id = section.id %}
+{% assign margin_top = section.settings.margin_top %}
+{% assign margin_bottom = section.settings.margin_bottom %}
+{% assign mobile_margin_top = section.settings.mobile_margin_top %}
+{% assign mobile_margin_bottom = section.settings.mobile_margin_bottom %}
+
+{% style %}
+  #shopify-section-{{ id }} {
+    margin-top: {{ margin_top }}px;
+    margin-bottom: {{ margin_bottom }}px;
+  }
+  @media(max-width:767px) {
+    #shopify-section-{{ id }} {
+      margin-top: {{ mobile_margin_top }}px;
+      margin-bottom: {{ mobile_margin_bottom }}px;
+    }
+  }
+{% endstyle %}
+
+<section id="shopify-section-{{ id }}" class="product-grid section better-together-section">
+  <div class="section-wrapper {% if section.settings.reverse %}reverse{% endif %}">
+    <div class="left-part product-grid-part">
+      {% unless section.settings.section_title == blank%}
+        <h5 class="section-title"><span>{{section.settings.section_title}}</span></h5>
+      {% endunless %}
+      {% unless section.settings.content == blank%}
+        <p class="content">{{section.settings.content}}</p>
+      {% endunless %}
+      <div class="collection-wrapper">
+        {% for product in collections[section.settings.collection].products limit:2 %}
+          {% render 'simply-product',product:product %}
+        {% endfor%}
+      </div>
+    </div>
+    <div class="right-part">
+      <div class="image-grid">
+        {% unless section.settings.image == blank%}
+          <div class="image-full-width">
+            {% render 'srcset',
+              src_name: section.settings.image,
+              src_alt: section.settings.image_1.alt
+            %}
+          </div>
+        {% endunless %}
+        <div class="text-overlay">
+          {% unless section.settings.title_overlay == blank%}
+            <h3 class="title-overlay">{{section.settings.title_overlay}}</h3>
+          {% endunless %}
+          {% unless section.settings.button_title == blank%}
+            <a href="{{section.settings.button_url}}" class="find-my-shade-btn button button--primary">{{section.settings.button_title}}</a>
+          {% endunless %}
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+{% schema %}
+{
+  "name": "image-grid-with-product",
+  "settings": [
+      {
+        "type": "checkbox",
+        "id": "reverse",
+        "label": "Reverse image & text"
+      },
+      {
+        "type": "header",
+        "content": "Left part"
+      },
+      {
+        "type":"text",
+        "id":"section_title",
+        "label":"Title"
+      },
+      {
+        "type":"textarea",
+        "id":"content",
+        "label":"Content"
+      },
+      {
+        "type":"collection",
+        "id":"collection",
+        "label":"Select collection"
+      },
+      {
+        "type": "header",
+        "content": "Right part"
+      },
+      {
+        "type": "image_picker",
+        "id": "image",
+        "label": "Image full width"
+      },
+      {
+        "type":"text",
+        "id":"title_overlay",
+        "label":"Title overlay"
+      },
+      {
+        "type":"text",
+        "id":"button_title",
+        "label":"Button name"
+      },
+      {
+        "type":"url",
+        "id":"button_url",
+        "label":"Button link"
+      },
+      {
+        "type": "range",
+        "id": "margin_top",
+        "label": "Top spacing",
+        "min": 0,
+        "max": 100,
+        "default": 40,
+        "unit": "px"
+      },
+      {
+        "type": "range",
+        "id": "margin_bottom",
+        "label": "Bottom spacing",
+        "min": 0,
+        "max": 100,
+        "default": 40,
+        "unit": "px"
+      },
+      {
+        "type": "range",
+        "id": "mobile_margin_top",
+        "label": "Mobile top spacing",
+        "min": -65,
+        "max": 35,
+        "default": 30,
+        "unit": "px"
+      },
+      {
+        "type": "range",
+        "id": "mobile_margin_bottom",
+        "label": "Mobile bottom spacing",
+        "min": 0,
+        "max": 100,
+        "default": 30,
+        "unit": "px"
+      }
+    ],
+    "presets": [
+      {
+        "name": "image-grid-with-product",
+        "category": "Product"
+      }
+    ]
+  }
+{% endschema %}

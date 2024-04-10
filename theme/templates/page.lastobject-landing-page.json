@@ -1,0 +1,197 @@
+{
+  "sections": {
+    "image_with_text": {
+      "type": "image-with-text",
+      "settings": {
+        "bg_image_lg": "shopify:\/\/shop_images\/header-lastobject.png",
+        "bg_image_xs": "shopify:\/\/shop_images\/mobile-lastobject_045c33d7-c984-45b5-b646-d35aaabd46ee.png",
+        "bg_color": "#f1f1f1",
+        "logo_trestique": "shopify:\/\/shop_images\/trestique-logo_a33a634c-204d-43ed-bde2-32e3326f84ce.png",
+        "logo_lastobject": "shopify:\/\/shop_images\/lastobject-logo.png",
+        "content_text": "<p>We've partnered with LastObject to take single-use plastic out of your makeup routine all month long. Whether you're applying in the morning or taking it off at night, we've got you covered.<\/p>",
+        "content_subtext": "<p>Get a FREE LastRound reusable cotton round with your $49+ trestique purchase.*<\/p>",
+        "disclaimer_text": "<p>*Offer is valid while supplies last and ends March 31, 2022.<\/p>"
+      }
+    },
+    "banner-with-video": {
+      "type": "video-banner",
+      "settings": {
+        "title": "Let's make reusable <br class=\"xs-show\"> the new standard",
+        "bg_color": "",
+        "bg_gradiant_color": "linear-gradient(135deg, #F3E9E2 0%, #E0B39E 100%), linear-gradient(135deg, #F3E9E2 0%, #BFBFBF 100%);",
+        "content": "<p>From day time to date night and back to bed, trestique x LastObject are natural extensions of each other's product lines – one reusable design after another.<\/p>",
+        "max_width": 1440,
+        "video_url": "https:\/\/cdn.shopify.com\/s\/files\/1\/0114\/0621\/3220\/files\/Trestique_x_Last_Object_Refilm_edit1.MOV?v=1646406791",
+        "video_url_lg": "https:\/\/cdn.shopify.com\/s\/files\/1\/0114\/0621\/3220\/files\/lastobject-desktop-3.mp4?v=1646345229",
+        "video_play_btn": "shopify:\/\/shop_images\/play-video.png",
+        "img": "shopify:\/\/shop_images\/lastobject-banner-video.png",
+        "show_cta_btn": false,
+        "btn_bg_color": "#00263a",
+        "btn_text_color": "#ffffff",
+        "btn_text": "",
+        "show_tagline": false,
+        "tagline_text": "",
+        "tagline_bg_color": "#f3e9e2",
+        "tagline_text_color": "#b04a5a"
+      }
+    },
+    "text_slider": {
+      "type": "text-slider",
+      "settings": {
+        "text": "<p>Products that respect you and the planet, 100%. Products that respect you and the planet, 100%. Products that respect you and the planet, 100%<\/p>"
+      }
+    },
+    "product_image_grid": {
+      "type": "product-image-grid",
+      "blocks": {
+        "2e79f28e-0d76-469a-8bd8-338df99b469d": {
+          "type": "slide",
+          "settings": {
+            "slide_img": "shopify:\/\/shop_images\/lo-lp-1_7fa5c781-c0d9-4581-bd89-43b07a75ca9b.png",
+            "slide_img_hover": "shopify:\/\/shop_images\/lo-lp-2_4264d34a-a754-4f26-ae27-cc4f5cce3c0f.png",
+            "slide_title": "Shadow Crayon",
+            "url": "https:\/\/www.trestique.com\/products\/cruelty-free-eyeshadow-crayon?_pos=1&_psq=shadow%20c&_ss=e&_v=1.0&variant=39363174236260"
+          }
+        },
+        "641ef8bc-1b18-47fb-b41c-b0bf2f3904b0": {
+          "type": "slide",
+          "settings": {
+            "slide_img": "shopify:\/\/shop_images\/lo-lp-3.png",
+            "slide_img_hover": "shopify:\/\/shop_images\/Rectangle_137_1.png",
+            "slide_title": "Foundation Stick",
+            "url": "https:\/\/www.trestique.com\/products\/zero-waste-makeup-system-foundation-stick?_pos=1&_psq=foundation%20&_ss=e&_v=1.0"
+          }
+        },
+        "69d30a52-5047-4d6a-a117-3c5efa3c5c3f": {
+          "type": "slide",
+          "settings": {
+            "slide_img": "shopify:\/\/shop_images\/lo-lp-5.png",
+            "slide_img_hover": "shopify:\/\/shop_images\/lo-lp-6_01ab752d-6c64-4764-899e-bfbafec519a6.png",
+            "slide_title": "lastswab",
+            "url": "https:\/\/lastobject.com\/products\/lastswab-basic?_pos=2&_sid=e9d7b45bb&_ss=r"
+          }
+        },
+        "5c00e365-3b2d-4244-a4a6-15bff6607a00": {
+          "type": "slide",
+          "settings": {
+            "slide_img": "shopify:\/\/shop_images\/lo-lp-7.png",
+            "slide_img_hover": "shopify:\/\/shop_images\/Rectangle_134.png",
+            "slide_title": "lastround",
+            "url": "https:\/\/lastobject.com\/products\/lastround?_pos=1&_sid=5dc4b8bef&_ss=r"
+          }
+        }
+      },
+      "block_order": [
+        "2e79f28e-0d76-469a-8bd8-338df99b469d",
+        "641ef8bc-1b18-47fb-b41c-b0bf2f3904b0",
+        "69d30a52-5047-4d6a-a117-3c5efa3c5c3f",
+        "5c00e365-3b2d-4244-a4a6-15bff6607a00"
+      ],
+      "settings": {}
+    },
+    "image_text_with_slider": {
+      "type": "image-text-with-slider",
+      "blocks": {
+        "0369b3a1-4cf1-4fc1-8882-56eeedf248e0": {
+          "type": "slide",
+          "settings": {
+            "block_img": "shopify:\/\/shop_images\/Rectangle_141.png",
+            "block_title": "Low Environmental Impact",
+            "block_content": "<p>Products must have at least 10x real environmental impact vs the traditional single use products they replace.<\/p>"
+          }
+        },
+        "044883a2-7c3f-4fec-93b6-a67d1b600728": {
+          "type": "slide",
+          "settings": {
+            "block_img": "shopify:\/\/shop_images\/Rectangle_143.png",
+            "block_title": "Cradle to Grave Sustainability",
+            "block_content": "<p>They use plant-based plastics and organic cotton to minimize their impact, while helping clean up waste by using recycled ocean plastic in their products.<\/p>"
+          }
+        },
+        "416d63fe-1e6d-4fe5-9c03-3fe7a70de8b6": {
+          "type": "slide",
+          "settings": {
+            "block_img": "shopify:\/\/shop_images\/Rectangle_145.png",
+            "block_title": "High Quality Products",
+            "block_content": "<p>”Good enough” is not good enough - they are obsessed with their products.<\/p>"
+          }
+        }
+      },
+      "block_order": [
+        "0369b3a1-4cf1-4fc1-8882-56eeedf248e0",
+        "044883a2-7c3f-4fec-93b6-a67d1b600728",
+        "416d63fe-1e6d-4fe5-9c03-3fe7a70de8b6"
+      ],
+      "settings": {
+        "bg_color": "#f3e9e2",
+        "bg_gradiant_color": "",
+        "margin_top": 32,
+        "margin_bottom": 0,
+        "title": "Why #trestiqueloveslastobject",
+        "content_text": "<p>LastObject is a Denmark-based brand whose mission is to eliminate single-use products by creating reusable alternatives. Not only do their products work well and come in beautiful and convenient cases, they have some pretty high standards for their product design.<br\/><br\/>LastObject’s Beauty Kit is the perfect solution to sustainably touching up or taking off your makeup. Use the LastSwab to make sure your eyeliner is pin-sharp or soak your LastRound in a facial toner for fuss-free makeup removal.<br\/><br\/>Get 20% off of LastObject + a free trestique mini with code <strong>LOxTRE20<\/strong><\/p>",
+        "image": "shopify:\/\/shop_images\/Mixed_Posters-11975_1.jpg",
+        "img_potion": "right",
+        "show_btn": true,
+        "btn_text": "SHOP LASTOBJECT",
+        "btn_background_color": "#b66c6d",
+        "btn_text_color": "#ffffff",
+        "url": "https:\/\/lastobject.com\/discount\/TREXLO20?redirect=\/collections\/shop-all?utm_source=newsletter&utm_medium=email&utm_campaign=trexlo&utm_id=trexlo"
+      }
+    },
+    "image_text_with_slider-2": {
+      "type": "image-text-with-slider",
+      "blocks": {
+        "e2b8eaf6-7314-4ae4-8e79-2bbf3b238a36": {
+          "type": "slide",
+          "settings": {
+            "block_img": "shopify:\/\/shop_images\/refillable_recylable_132ea154-255a-4b94-a1c3-497eeeb57cbf.png",
+            "block_title": "100% Refillable & Recylable",
+            "block_content": "<p>We created the first-ever, zero-waste, refillable cosmetics system. Every product is designed to <a href=\"https:\/\/www.trestique.com\/pages\/subscription-page\" target=\"_blank\" title=\"https:\/\/www.trestique.com\/pages\/subscription-page\">buy once and refill forever.<\/a><\/p>"
+          }
+        },
+        "6a2a123c-a29e-4771-b7a3-30009784b840": {
+          "type": "slide",
+          "settings": {
+            "block_img": "shopify:\/\/shop_images\/sustainably-made.png",
+            "block_title": "Sustainably-Made",
+            "block_content": "<p>Our packaging has the highest level of PCR recycled materials that technology allows. Our full product line is made with an average of 86% recycled materials.<\/p>"
+          }
+        },
+        "e67e8464-ec82-4dcb-bbed-eb2dd1c70395": {
+          "type": "slide",
+          "settings": {
+            "block_img": "shopify:\/\/shop_images\/clean-formulas.png",
+            "block_title": "Clean Formulas",
+            "block_content": "<p>We’re committed to health and safety standards that go far beyond the US & surpass the high bar of the EU guidelines. <a href=\"https:\/\/www.trestique.com\/pages\/clean-formulations\" target=\"_blank\" title=\"https:\/\/www.trestique.com\/pages\/clean-formulations\">Cruelty-free & vegan always.<\/a><\/p>"
+          }
+        }
+      },
+      "block_order": [
+        "e2b8eaf6-7314-4ae4-8e79-2bbf3b238a36",
+        "6a2a123c-a29e-4771-b7a3-30009784b840",
+        "e67e8464-ec82-4dcb-bbed-eb2dd1c70395"
+      ],
+      "settings": {
+        "bg_color": "",
+        "bg_gradiant_color": "linear-gradient(135deg, #F3E9E2 0%, #E0B39E 100%)",
+        "title": "Why #lastobjectlovestrestique",
+        "content_text": "<p>At trestique, we’re all about easy-to-use, refillable makeup essentials.<br\/><br\/>Our mission is to empower you with time-saving beauty routines using clean, uncomplicated, sustainable makeup that gets you out the door in minutes. All of our products are designed to refill endlessly and be recycled afterwards. Better for you and the planet. Our full product line is made with an average of 86% recycled materials—the highest in the beauty industry.<br\/><br\/>We use less than 9% virgin plastic in our packaging. And all our products are carbon-neutral.<\/p>",
+        "image": "shopify:\/\/shop_images\/lo-lp-17.png",
+        "img_potion": "left",
+        "show_btn": true,
+        "btn_text": "SHOP TRESTIQUE",
+        "btn_background_color": "#00263a",
+        "btn_text_color": "#ffffff",
+        "url": "https:\/\/www.trestique.com\/collections\/all-makeup-products"
+      }
+    }
+  },
+  "order": [
+    "image_with_text",
+    "banner-with-video",
+    "text_slider",
+    "product_image_grid",
+    "image_text_with_slider",
+    "image_text_with_slider-2"
+  ]
+}

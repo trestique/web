@@ -1,0 +1,29 @@
+{% layout none %}
+{
+    "id": "{{product.id}}",
+    "title":"{{product.title}}",
+    "handle":"{{product.handle}}",
+    "image":"{{product.featured_image.src | img_url:'master'}}",
+    "variants": {{product.variants | json }},
+    "selling_plans":{
+        {%- for variant in product.variants -%}
+        "{{variant.id}}":[
+        {% for selling_plan_allocation in variant.selling_plan_allocations %}
+        {{selling_plan_allocation.selling_plan | json }}{% unless forloop.last %},{% endunless %}
+        {% endfor %}
+        ]{% unless forloop.last %},{% endunless %}
+        {% endfor %}
+    },
+    "options": {{product.options | json}},
+    "images": {{product.images | json}},
+    "variantImages": [
+        {% for variant in product.variants %}
+            {% assign v_handle = variant.title | handle | append:'.png' %}
+            {
+                "title":"{{variant.title}}",
+                "vimg":"{{v_handle | file_url}}",
+                "image":"{% if variant.image == blank %}{{product.featured_image.src}}{% else %}{{variant.image.src}}{% endif %}"
+            }{% unless forloop.last %},{% endunless %}
+        {% endfor %}
+    ]
+}

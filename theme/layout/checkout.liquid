@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="{{ locale }}" dir="{{ direction }}" class="{{ checkout_html_classes }}">
+  <head>
+    <script>(function () { function asyncLoad() { var s = document.createElement('script'); s.type = 'text/javascript'; s.async = true; s.src = 'https://s3.eu-west-1.amazonaws.com/production-klarna-il-shopify-osm/06813f2bbb40bf097c85cc33982be5da59692f3f/trestique1.myshopify.com-1679487619791.js'; var x = document.getElementsByTagName('script')[0]; x.parentNode.insertBefore(s, x); }; if (window.attachEvent) { window.attachEvent('onload', asyncLoad); } else { window.addEventListener('load', asyncLoad, false); } })(); </script>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, height=device-height, minimum-scale=1.0, user-scalable=0">
+    <meta name="referrer" content="origin">
+    <title>{{ page_title }}</title>
+    {{ content_for_header }}
+    {{ checkout_stylesheets }}
+    {{ checkout_scripts }}
+ 
+<!-- SEARCH ANALYTICS SCRIPTS -->
+<!-- Start Clarity -->
+  <script type="text/javascript">
+    (function(c,l,a,r,i,t,y){
+        c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
+        t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
+        y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
+    })(window, document, "clarity", "script", "h4du7jeq0p");
+</script>
+<!-- END Clarity -->
+
+<!-- StartFathom -->
+  <script src="https://cdn.usefathom.com/script.js" data-site="REHDUTBK" defer></script>
+<!-- END StartFathom -->
+
+<!-- END SEARCH ANALYTICS SCRIPTS -->
+
+<!-- EXTERNAL SCRIPTS -->    
+
+<!-- loyaltylion -->
+{% include "loyaltylion" %}
+<script>lion.configure({ checkout: true })</script>
+<!-- END loyaltylion -->
+
+    
+<!-- END EXTERNAL SCRIPTS -->    
+
+</head>
+  
+  <body>
+    {{ skip_to_content_link }}
+    <header class="banner" data-header role="banner">
+      <div class="wrap">
+        {{ content_for_logo }}
+      </div>
+    </header>
+    
+    {{ order_summary_toggle }}
+    
+    <div class="content" data-content>
+      {%- unless request.path contains 'thank_you' or request.path contains 'order' -%}
+      <div class="dk-flat-static" shipping="{{checkout.shipping_price}}" taxes = "{{checkout.tax_price}}" discounts = "{{checkout.discounts_amount}}"></div>
+     {%- endunless -%}
+      <div class="wrap">
+        <div class="main">
+          <header class="main__header" role="banner">
+            {{ content_for_logo }}
+            {{ breadcrumb }}
+            {{ alternative_payment_methods }}
+          </header>
+          <main class="main__content" role="main">
+  
+            {{ content_for_layout }}
+                <div style="display: none; border-top: 1px solid #d9d9d9; margin-top: 1rem;" id="customer_account">
+                  <div style="border: 1px solid #d9d9d9; padding: 10px; border-radius: 5px; margin-top: 1rem;">  
+                   {% render "customer-fields", form_id: "2qt9L4" %}  
+                 </div>
+               </div>
+         </main>
+          
+        <footer class="main__footer" role="contentinfo">
+            {{ content_for_footer }}
+          </footer>
+        </div>
+        
+        <aside class="sidebar" role="complementary">
+          <div class="sidebar__header">
+            {{ content_for_logo }}
+          </div>
+          <div class="sidebar__content">
+            {{ content_for_order_summary }}
+          
+          </div>
+        </aside>
+      </div>
+    </div>
+    {{ '//ajax.googleapis.com/ajax/libs/jquery/2.2.3/jquery.min.js' | script_tag }}
+    <script src="{{ 'simply-checkout.js' | asset_url }}" defer></script>
+    
+<!-- klaviyo -->
+<script async type="text/javascript" src="https://static.klaviyo.com/onsite/js/klaviyo.js?company_id=NcVtMv"></script>
+<!-- END klaviyo -->
+   
+<!-- IDME -->
+  {{ 'idme-checkout-style.css' | asset_url | stylesheet_tag }}
+<!-- END OF IDME -->
+
+<script>
+  window.liQ = window.liQ || [];
+{% if content_for_layout contains 'data-step="shipping_method"' or content_for_layout contains 'data-step="payment_method"' %}
+    
+    window.liQ.push({
+      "event": "addToCart",
+      "email": "{{ checkout.email }}",
+      "items": [
+        {% for line_item in checkout.line_items %}{
+            "id": " {{line_item.product_id}}",
+            "name": "{{line_item.title}}",
+            "quantity": "{{line_item.quantity}}",
+            "currency": "{{checkout.currency}}",
+            "price": {{line_item.line_price | times: 0.01}}
+          },{% endfor %}
+      ]
+  });
+{% endif %}
+console.log("LIQ",window.liQ);
+</script>
+        <script>
+      /*
+      We need to set the form ID and form element to setup an event listener later.
+      */
+      var formId = '2qt9L4'; // <- set form id from render here
+      var $form = document.querySelector('form[data-cf-form="' + formId + '"]');
+/**
+      / We add cookie handlers to check to see if customer already used this widget
+      / if they did, we don't show.
+      */
+      function setCookie(name, value, days) {
+          var expires = "";
+          if (days) {
+              var date = new Date();
+              date.setTime(date.getTime() + (days * 24 * 60 * 60 * 1000));
+              expires = "; expires=" + date.toUTCString();
+          }
+          document.cookie = name + "=" + (value || "") + expires + "; path=/";
+      }
+      function getCookie(name) {
+          var nameEQ = name + "=";
+          var ca = document.cookie.split(';');
+          for (var i = 0; i < ca.length; i++) {
+              var c = ca[i];
+              while (c.charAt(0) == ' ') c = c.substring(1, c.length);
+              if (c.indexOf(nameEQ) == 0) return c.substring(nameEQ.length, c.length);
+          }
+          return null;
+      }
+/*
+      / If the customer form is ready, we check the following: logged in has to be false,
+      / line_items has to have a selling plan (liquid way is broken)
+      / and cf_submitted cookie has to be false
+      */
+CF.ready(() => {
+          const signUp = document.querySelector('#customer_account');
+          {% if customer%}
+           const customer = false;
+          {%else%}
+           const customer = true;
+          {% endif %}
+          if (customer && !(getCookie("cf_submitted"))) {
+             //All criteria is met, show customer account create
+             signUp.style.display = 'block';
+          }
+      });
+      //If form is submitted, set cookie to true with 300 day duration.
+      $form.addEventListener('cf:form_submitted', function (event) {
+          setCookie("cf_submitted", true, 300);
+      });
+</script>
+    {{ tracking_code }}
+  
+  
+</body>
+</html>
+{{ 'idme-checkout-style.css' | asset_url | stylesheet_tag }}
+{{ 'idme-checkout-template.js' | asset_url | script_tag }}

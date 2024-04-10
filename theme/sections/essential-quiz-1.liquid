@@ -1,0 +1,152 @@
+<script>
+    window.quiz.settings = {...{{ section.settings | json}}};
+    window.quiz.settings.skinTypes = [
+        {% assign count = 0 %}
+        {% for block in section.blocks %}
+                {% if block.type == 'skintype' %}
+                {% unless count == 0 %},{% endunless %}
+                {{block.settings | json}}
+                {% assign count = count | plus: 1  %}
+                {% endif %}
+        {% endfor %}
+    ];
+</script>
+{% schema %}
+{
+  "name": "Screen 1 and 2 settings",
+  "settings": [
+    {
+        "type":"header",
+        "content":"Screen 1"
+    },
+    {
+        "type":"header",
+        "content":"Screen 1",
+        "info": "Take or share a selfie"
+    },
+    {
+        "type":"text",
+        "label":"Screen 1 title",
+        "id":"screen_1_title",
+        "default":"Take or share a selfie"
+    },
+    {
+        "type":"richtext",
+        "label":"Screen 1 text",
+        "id":"screen_1_text",
+        "default":"<p>Help us find your perfect shade match by sharing your photo with us (we'll only use it to find your match!)</p>"
+    },
+    {
+        "type":"image_picker",
+        "label":"Screen 1 image 1",
+        "id":"screen_1_image_1",
+        "info":"Selfie icon 1"
+    },
+    {
+        "type":"text",
+        "label":"Screen 1 text 1",
+        "id":"screen_1_text_1",
+        "default":"Natural lighting",
+        "info":"Selfie icon description 1"
+    },
+    {
+        "type":"image_picker",
+        "label":"Screen 1 image 2",
+        "id":"screen_1_image_2",
+        "info":"Selfie icon 2"
+    },
+    {
+        "type":"text",
+        "label":"Screen 1 text 2",
+        "id":"screen_1_text_2",
+        "default":"Remove your glass",
+        "info":"Selfie icon description 2"
+    },
+    {
+        "type":"image_picker",
+        "label":"Screen 1 image 3",
+        "id":"screen_1_image_3",
+        "info":"Selfie icon 3"
+    },
+    {
+        "type":"text",
+        "label":"Screen 1 text 3",
+        "id":"screen_1_text_3",
+        "default":"Face straight to the camera",
+        "info":"Selfie icon description 3"
+    },
+    {
+        "type":"image_picker",
+        "label":"Screen 1 image 4",
+        "id":"screen_1_image_4",
+        "info":"Selfie icon 4"
+    },
+    {
+        "type":"text",
+        "label":"Screen 1 text 4",
+        "id":"screen_1_text_4",
+        "default":"Plain background, no busy art",
+        "info":"Selfie icon description 4"
+    },
+    {
+        "type":"header",
+        "content":"We found your match"
+    },
+    {
+      "type":"text",
+      "label":"Screen 2 title",
+      "id":"screen_2_title",
+      "default":"We found your match!"
+    },
+    {
+      "type":"text",
+      "label":"Screen 2 subtitle",
+      "id":"screen_2_subtitle",
+      "default":"Did we get it right?"
+    }
+  ],
+  "blocks":[
+   {
+        "type":"skintype",
+        "name":"Skin type",
+        "settings":[
+            {
+                "type":"image_picker",
+                "label":"Desktop image",
+                "id":"image"
+            },
+            {
+                "type":"image_picker",
+                "label":"Mobile image",
+                "id":"image_xs"
+            },
+            {
+                "type":"text",
+                "label":"Text",
+                "id":"text"
+            },
+            {
+                "type":"text",
+                "label":"Info",
+                "id":"info"
+            },
+            {
+                "type":"color",
+                "label":"Background",
+                "id":"bg_color"
+            },
+            {
+                "type":"color",
+                "label":"Text color",
+                "id":"text_color"
+            },
+            {
+                "type":"image_picker",
+                "label":"Swatch image",
+                "id":"swatch_img"
+            }
+        ]
+    }
+    ]
+}
+{% endschema %}

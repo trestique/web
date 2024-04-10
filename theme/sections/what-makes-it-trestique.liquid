@@ -1,0 +1,146 @@
+<style>
+  .what-makes-trestique-{{section.id}} {
+
+    background-color: {{section.settings.bg_color}}
+  }
+
+  .heading {
+    color: {{section.settings.text_color}};
+  }
+
+  .block-heading{
+    color: {{section.settings.block_title_color}};
+  }
+
+  .block-text {
+
+    color: {{section.settings.block_text_color}};
+  }
+
+</style>
+
+<div class="trestique-special what-makes-trestique-{{section.id}}">
+
+  {% if section.settings.main_heading != blank %}  
+    <h1 class="heading">{{section.settings.main_heading}}</h1>
+  {% endif %}
+
+  <div class="special-block-wrapper" 
+    data-slide-sm="{{section.settings.slides_to_show_sm}}" 
+    data-slide-lg="{{section.settings.slides_to_show_lg}}"
+    data-slide-md="3">
+
+    {% for block in section.blocks %}
+      {% if block.settings.slide_img != blank %}
+                
+        <div class="block trestique-special-block">
+          <div class="img-wrapper">
+            {% render 'srcset' , src_name:block.settings.slide_img, src_alt:block.settings.slide_img.alt %}
+          </div>
+
+          <h6 class="block-heading">{{block.settings.slide_title}}</h6>
+          <div class="block-text">
+            {{block.settings.slide_text}}
+          </div>
+        </div>
+      {% endif %}
+
+    {% endfor %}
+
+  </div>
+  
+</div>
+{% schema %}
+{
+  "name": "What Makes trestique",
+  "settings": [
+    {
+      "type": "color",
+      "id": "bg_color",
+      "label": "Background color",
+      "default": "#F3E9E2"
+    },
+    {
+      "type": "color",
+      "id": "text_color",
+      "label": "Text color",
+      "default": "#00263A"
+    },
+    {
+      "type": "text",
+      "id": "main_heading",
+      "label": "Title",
+      "default": "What makes trestique makeup sets special?"
+    },
+    {
+      "type": "range",
+      "id": "slides_to_show_lg",
+      "label": "Slides to show in desktop",
+      "min": 1,
+      "max": 5,
+      "step": 1,
+      "default": 5
+    },
+    {
+      "type": "range",
+      "id": "slides_to_show_sm",
+      "label": "Slides to show in mobile",
+      "min": 1,
+      "max": 5,
+      "step": 1,
+      "default": 1
+    },
+    {
+      "type": "number",
+      "id": "margin_sm",
+      "label": "Margin for mobile",
+      "default": 30
+    },
+    {
+      "type": "number",
+      "id": "margin_lg",
+      "label": "Margin for desktop",
+      "default": 30
+    },
+    {
+      "type": "header",
+      "content": "Block settings"
+    },
+    {
+      "type": "color",
+      "id": "block_title_color",
+      "label": "Title color",
+      "default": "#00263A"
+    },
+    {
+      "type": "color",
+      "id": "block_text_color",
+      "label": "Text color",
+      "default": "#00263A"
+    }
+  ],
+  "blocks": [
+    {
+      "name": "block",
+      "type": "Slide",
+      "settings": [
+        {
+          "type": "image_picker",
+          "id": "slide_img",
+          "label": "Image"
+        },
+        {
+          "type": "text",
+          "id": "slide_title",
+          "label": "Title"
+        },
+        {
+          "type": "textarea",
+          "id": "slide_text",
+          "label": "Content"
+        }
+      ]
+    }
+  ]
+}
+{% endschema %}

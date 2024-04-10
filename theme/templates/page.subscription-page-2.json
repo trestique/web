@@ -1,0 +1,226 @@
+{
+  "sections": {
+    "8b78d072-51c9-47ee-9387-d7e91acc9c9a": {
+      "type": "banner-with-text",
+      "settings": {
+        "link": "",
+        "video_url": "",
+        "video_url_mobile": "",
+        "image": "shopify:\/\/shop_images\/autoref1.png",
+        "mobile_image": "shopify:\/\/shop_images\/Frame_1_1c42a207-7af5-4b0c-8788-71899292849d.png",
+        "title": "Replenish, refill & go",
+        "subtitle": "<p>Avoid the wait list – get first dibs with Auto-refill for 25% savings on refills vs. the full size. Auto-refill is flexible, simply schedule your automatic shipments and skip, modify or cancel anytime. No commitment necessary.<\/p>",
+        "pretext_color": "#000000",
+        "heading_color": "#00263a",
+        "heading_font_desk": 50,
+        "subheading_color": "#00263a",
+        "text_alignment": "center",
+        "text_horizontal_position": "right",
+        "text_vertical_position": "middle",
+        "background_color": "#ffffff",
+        "background_opacity": 0,
+        "border_color": "#ffffff",
+        "border_width": 0,
+        "text_width": 53,
+        "button_1": "",
+        "button_text_color": "#ffffff",
+        "button_bg_color": "#00263a",
+        "button_hover_bg_color": "#d8ac92",
+        "button_hover_color": "#00263a",
+        "button_1_link": "https:\/\/www.trestique.com\/collections\/makeup-refills",
+        "button_1_style": "button--primary",
+        "button_2": "",
+        "button_2_link": "",
+        "button_2_style": "button--secondary",
+        "pretext": "",
+        "mobile_image_crop": "none",
+        "mobile_text_below_image": true,
+        "mobile_text_position": "middle",
+        "pretext_color_mobile": "rgba(0,0,0,0)",
+        "heading_color_mobile": "rgba(0,0,0,0)",
+        "subheading_color_mobile": "rgba(0,0,0,0)",
+        "width": "wide",
+        "padding_top": 0,
+        "padding_bottom": 0,
+        "padding_left": 0,
+        "padding_right": 0,
+        "animation": "none",
+        "css_class": "",
+        "custom_css": ""
+      }
+    },
+    "9cb47f0f-4f10-407b-99a3-cecc678ee61d": {
+      "type": "index__html",
+      "settings": {
+        "html_content": "<body>\n<meta charset=\"utf-8\">\n\n<title>Documento sem título<\/title>\n\n<style>\n  .main-div {\n    text-align: center;\n    align-items: center;\n    margin: auto;\n    padding: 20px 0px;\n    background-color: #F0F0F0;\n  }\n  .cys-img {\n    height: 100px;\n\tmargin: auto;\n  }\n  .cys-copy {\n    font-size: 50px;\n    font-family: FreightDisp;\n    text-align: center;\n    margin: 0px 70px;\n    color: #00263A\n  }\n  .image-container {\n    display: inline-block;\n\twidth: 15%;\n    text-align: center;\n    margin: 20px;\n\tvertical-align: middle;\n  }\n\t\n\t.paragraph1 {\n\t\tfont-family: FuturaBT;\n\t\tcolor: #00263A;\nmargin-top: 10px;\n\t}\n\t\n\t\n@media (min-width: 976px){\n  .main-div {\n\twidth: 60%;\n\tmin-width: 950px;\n\tborder-radius: 30px;\n  }\n}\n\t\n@media (min-width : 500px ) and ( max-width : 975px ){\n\t\n\t.main-div {\n    text-align: center;\n    align-items: center;\n\twidth: 100%;\n\tmin-width: 450px;\n    margin: auto;\n\tborder-radius: 0px;\n  }\n\t\n\t.cys-img {\n    height: 70px;\n    margin-bottom: 10px;\n  }\n\t\n\t  .cys-copy {\n    font-size: 40px;\n  }\n\t\n\t.image-container {\n    display: inline-block;\n\tmax-width: 500px;\n    text-align: center;\n    margin: 20px auto;\n\tpadding: 10px;\n\twidth: 20%;\n  }\n}\n\t\n@media (max-width : 499px ){\n\t\n  \t.cys-img {\n    height: 70px;\n  }\n\t\n\t  .cys-copy {\n    font-size: 40px;\n  }\n\t\n\t.image-container {\n    display: inline-grid;\n\twidth: 40%;\n\tmax-width: 200px;\n    text-align: center;\n    margin: 20px 10px;\n\tpadding: 5px;\n  }\n}\n\n<\/style>\n\n\n  <div class=\"main-div\">\n    <p class=\"cys-copy\">Why subscribe?<\/p>\n        <div class=\"images\">\n      <div class=\"image-container\">\n        <img class=\"cys-img\" src=\"https:\/\/cdn.shopify.com\/s\/files\/1\/0114\/0621\/3220\/files\/gyLk3_ZI.png?v=1676407853\">\n        <p class=\"paragraph1\">Never shop the full-size again.<\/p>\n      <\/div>\n      <div class=\"image-container\">\n        <img class=\"cys-img\" src=\"https:\/\/cdn.shopify.com\/s\/files\/1\/0114\/0621\/3220\/files\/wGLPvVgw.png?v=1676407555\">\n        <p class=\"paragraph1\">Get first dibs, so you never run out.<\/p>\n      <\/div>\n      <div class=\"image-container\">\n        <img class=\"cys-img\" src=\"https:\/\/cdn.shopify.com\/s\/files\/1\/0114\/0621\/3220\/files\/Shopping_Cart.png?v=1676407556\">\n        <p class=\"paragraph1\">Get automatic shipments.<\/p>\n      <\/div>\n\t\t<div class=\"image-container\">\n        <img class=\"cys-img\" src=\"https:\/\/cdn.shopify.com\/s\/files\/1\/0114\/0621\/3220\/files\/uePQjpI8.png?v=1676407555\">\n        <p class=\"paragraph1\">Refills are recyclable & made from PCR.<\/p>\n      <\/div>\n\t\t<\/div>\n\t\n\t\n\t<\/div>\n\n<\/body>",
+        "width": "wide",
+        "padding_top": 0,
+        "padding_bottom": 35,
+        "padding_left": 0,
+        "padding_right": 0,
+        "animation": "none",
+        "css_class": "",
+        "custom_css": ".section.is-width-wide {\n    padding: 0px;\n}"
+      }
+    },
+    "8bc7f0f6-0aa9-46aa-aa3e-b893e34746d0": {
+      "type": "index__image-with-text",
+      "blocks": {
+        "template--15604648804452__8bc7f0f6-0aa9-46aa-aa3e-b893e34746d0-167571229588652c64-1": {
+          "type": "image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Group_341_a94173e0-e20e-4f6c-b4f3-27840bda9017.png",
+            "image_crop": "none",
+            "image_link": ""
+          }
+        },
+        "template--15604648804452__8bc7f0f6-0aa9-46aa-aa3e-b893e34746d0-167571229588652c64-2": {
+          "type": "text",
+          "settings": {
+            "title": "How it works",
+            "heading_size": "regular",
+            "text": "<p><strong>1. SELECT<\/strong><\/p><p>Click “auto-refill” on your product of choice, select your desired frequency, and add to cart.<\/p><p><strong>2. MODIFY<\/strong><\/p><p>Create an account on<a href=\"https:\/\/www.trestique.com\/account\/register\"><span style=\"text-decoration:underline\"> trestique.com<\/span><\/a> to update frequency, skip or cancel your subscription.<\/p><p><strong>3. SAVE<\/strong><\/p><p>With your new subscription, you’ll save time, money & the planet!<\/p>",
+            "button_label": "",
+            "link": "",
+            "button_style": "button--primary",
+            "background": "#f4eae2",
+            "text_color": "rgba(0,0,0,0)",
+            "alignment": "left",
+            "vertical_position": "center"
+          }
+        }
+      },
+      "block_order": [
+        "template--15604648804452__8bc7f0f6-0aa9-46aa-aa3e-b893e34746d0-167571229588652c64-1",
+        "template--15604648804452__8bc7f0f6-0aa9-46aa-aa3e-b893e34746d0-167571229588652c64-2"
+      ],
+      "settings": {
+        "width": "standard",
+        "show_gutter": true,
+        "padding_top": 0,
+        "padding_bottom": 0,
+        "animation": "none",
+        "css_class": "",
+        "custom_css": ".image-with-text__heading.is-regular {\nfont-family: FreightDisp;\n}"
+      }
+    },
+    "be8e90f9-0bd9-4f6b-9327-1d87060d6cf9": {
+      "type": "index__html",
+      "settings": {
+        "html_content": "<body>\n<meta charset=\"utf-8\">\n<title>Documento sem título<\/title>\n<style>\n\t.main {\n\t\tdisplay: block;\n\t\ttext-align: center;\n\t}\n\t\n\t.testimonial {\n\t\tdisplay: inline-flex;\n\t\twidth: 40%;\n\t\tmax-width: 450px;\n\t\theight: 150px;\n\t\tbackground-image: url(https:\/\/cdn.shopify.com\/s\/files\/1\/0114\/0621\/3220\/files\/Group_343.png?v=1675719524);\n\t\tbackground-repeat: no-repeat;\n\t\tbackground-size: contain;\n\t\tmargin: 10px 60px;\n\t\tpadding: 10px;\n\t\talign-items: center;\n  \t\tjustify-content: center;\n  \t\tvertical-align: middle;\n}\n\t\n\t.psocial {\n\t\tfont-size: 18px;\n\t\tfont-family: FuturaBt;\n\t}\n\t\n\t.hsocial {\n\t\tfont-size: 45px;\n\t\tfont-family: FreightDisp;\n\t}\n\t@media (max-width: 750px){\n\t\t.main {\n\t\tdisplay: block;\n\t\ttext-align: center;\n\t}\n\t\n\t.testimonial {\n\t\tdisplay: inline-flex;\n\t\twidth: 80%;\n\t\tmargin: 20px 0px 90px 0px;\n\t\tpadding: 15px;\n}\n\t.hsocial {\n\t\tfont-size: 40px;\n\t\tfont-family: FreightDisp;\n\t}\n}\n\t<\/style>\n\t\n\t\n\t<div class=\"main\">\n\t\t\n\t\t<h1 class=\"hsocial\"> Hear it from them<\/h1>\n\t\t\n\t\t\t<div class=\"testimonial\">\n\t\t<p class=\"psocial\">I have never used such a creamy foundation. Not only that, but their refillable system is the future! Always do what's best for the planet, and trestique is doing just that.\n<br><b>Hayley M., Verified Buyer.<\/b><\/p>\n\t<\/div>\n\t\n\t<div class=\"testimonial\">\n\t\t<p class=\"psocial\">Refillable so I can look good and feel good about not creating additional waste when using their products.<br><b>Roxanne M., Verified Buyer.<\/b><\/p>\n\t<\/div>\n\t<\/div>\n<\/body>",
+        "width": "wide",
+        "padding_top": 30,
+        "padding_bottom": 40,
+        "padding_left": 0,
+        "padding_right": 0,
+        "animation": "none",
+        "css_class": "",
+        "custom_css": ""
+      }
+    },
+    "a293c13c-ddb6-4f01-bcdf-aff9049ceb27": {
+      "type": "subscription-favorites",
+      "disabled": true,
+      "settings": {
+        "section_title": "<h1 style=\"font-family: antrovectra-er; font-size: 50px; text-align: center;\">Best Selling refills<\/h1>",
+        "font_size_title": 52,
+        "collection": "subscription-favorites"
+      }
+    },
+    "5acaf458-c553-4146-b21e-e7f34e119665": {
+      "type": "banner-with-text",
+      "settings": {
+        "link": "",
+        "video_url": "https:\/\/cdn.shopify.com\/videos\/c\/o\/v\/b88ff46e257c4b18a74f25c795d8702a.mp4",
+        "video_url_mobile": "https:\/\/cdn.shopify.com\/videos\/c\/o\/v\/26fc3cf37a5b45efa4071e45d927ad04.mp4",
+        "image": "shopify:\/\/shop_images\/Snag_c67a0f0.png",
+        "mobile_image": "shopify:\/\/shop_images\/Snag_c677cce.png",
+        "title": "",
+        "subtitle": "",
+        "pretext_color": "#000000",
+        "heading_color": "#00263a",
+        "heading_font_desk": 0,
+        "subheading_color": "#00263a",
+        "text_alignment": "center",
+        "text_horizontal_position": "center",
+        "text_vertical_position": "middle",
+        "background_color": "#ffffff",
+        "background_opacity": 0,
+        "border_color": "#ffffff",
+        "border_width": 0,
+        "text_width": 56,
+        "button_1": "shop now",
+        "button_text_color": "#ffffff",
+        "button_bg_color": "#00263a",
+        "button_hover_bg_color": "#ba0c2f",
+        "button_hover_color": "#ffffff",
+        "button_1_link": "https:\/\/www.trestique.com\/collections\/makeup-refills",
+        "button_1_style": "button--primary",
+        "button_2": "",
+        "button_2_link": "",
+        "button_2_style": "button--secondary",
+        "pretext": "",
+        "mobile_image_crop": "none",
+        "mobile_text_below_image": false,
+        "mobile_text_position": "middle",
+        "pretext_color_mobile": "rgba(0,0,0,0)",
+        "heading_color_mobile": "rgba(0,0,0,0)",
+        "subheading_color_mobile": "rgba(0,0,0,0)",
+        "width": "wide",
+        "padding_top": 0,
+        "padding_bottom": 0,
+        "padding_left": 0,
+        "padding_right": 0,
+        "animation": "none",
+        "css_class": "",
+        "custom_css": ""
+      }
+    },
+    "1641798857dc253140": {
+      "type": "subscription-have-question",
+      "blocks": {
+        "03411af7-82af-4166-a235-3e4f2d8cd655": {
+          "type": "contact-block",
+          "settings": {
+            "icon_Image": "shopify:\/\/shop_images\/Group_44.png",
+            "title-head": "E-mail us or Chat with the team",
+            "content-data": "10 AM - 5 PM EST\nMonday - Friday\n(excluding holidays)"
+          }
+        },
+        "89faae2a-64c7-46a7-b3a6-53bea30827ef": {
+          "type": "contact-block",
+          "settings": {
+            "icon_Image": "shopify:\/\/shop_images\/Group_45.png",
+            "title-head": "Book a Free Video Consult",
+            "content-data": "12 PM - 3 PM EST\nMonday - Friday\n(excluding holidays)"
+          }
+        }
+      },
+      "block_order": [
+        "03411af7-82af-4166-a235-3e4f2d8cd655",
+        "89faae2a-64c7-46a7-b3a6-53bea30827ef"
+      ],
+      "custom_css": [
+        "h5 {font-family: FreightDisp;}",
+        ".block-wrapper {justify-content: right; padding-right: 0px;}"
+      ],
+      "settings": {
+        "bg_color": "#f5f5f5",
+        "title": "Have questions?",
+        "font_size_title": 36,
+        "content": "Our team is here to answer any questions you might have about your products or our auto-replenishment service. We're here to help!",
+        "button_link": "https:\/\/www.trestique.com\/pages\/faq-help-center",
+        "button_text": "check our FAQ"
+      }
+    }
+  },
+  "order": [
+    "8b78d072-51c9-47ee-9387-d7e91acc9c9a",
+    "9cb47f0f-4f10-407b-99a3-cecc678ee61d",
+    "8bc7f0f6-0aa9-46aa-aa3e-b893e34746d0",
+    "be8e90f9-0bd9-4f6b-9327-1d87060d6cf9",
+    "a293c13c-ddb6-4f01-bcdf-aff9049ceb27",
+    "5acaf458-c553-4146-b21e-e7f34e119665",
+    "1641798857dc253140"
+  ]
+}

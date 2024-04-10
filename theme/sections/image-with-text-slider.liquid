@@ -1,0 +1,113 @@
+<style>
+  .image-with-text-slider.section-{{ section.id }} {
+    background:{{section.settings.background_color}};
+  }
+  .image-with-text-slider.section-{{ section.id }} .text-wrapper-block .title {
+    color:{{section.settings.text_color}};
+  }
+  .image-with-text-slider.section-{{ section.id }} .text-wrapper-block .subtext {
+    color:{{section.settings.text_color}};
+  }
+  .image-with-text-slider.section-{{ section.id }} .text-wrapper-block .slick-arrow svg line{
+    fill:{{section.settings.arrow_color}};
+    stroke: {{section.settings.arrow_color}};
+  }
+</style>
+{% comment %}::  image-with-text-slider start ::{% endcomment %}
+<div class="image-with-text-slider section-{{ section.id }}">
+  <div class="section">
+	  <h2 class="hslide" style="font-size:12px; font-family:FuturaBT; margin-left:40px;">AS SEEN ON</h2>
+    <div class="text-wrapper-block">
+      {%- for block in section.blocks -%}
+      <div class="blocks">
+        {% if block.settings.image %}
+        {% unless block.settings.image == blank  %}
+        <div class="image">
+          <a href="{{block.settings.image_link}}">
+            {% render 'image-element',
+            image: block.settings.image,
+            alt: block.settings.image.alt
+            %}
+          </a>
+        </div>
+        {% endunless %}
+        {% else %}
+          {% unless block.settings.title == blank %}
+          <h4 class="title">{{block.settings.title}}</h4>
+          {% endunless %}
+
+          {% unless block.settings.sub_title == blank %}
+          <h6 class="subtext">{{block.settings.sub_title}}</h6>
+          {% endunless %}
+        {% endif %}    
+      </div>
+      {%- endfor -%}
+    </div>
+  </div>
+</div>
+{% comment %}::  image-with-text-slider end ::{% endcomment %}
+{% schema %}
+  {
+    "name": "Image with text : slider",
+    "settings": [
+      {
+        "type": "header",
+        "content": "Image with text slider "
+      },
+      {
+        "type": "color",
+        "id": "background_color",
+        "label": "Background color"
+      },
+      {
+        "type": "color",
+        "id": "text_color",
+        "label": "Text color"
+      },
+      {
+        "type": "color",
+        "id": "arrow_color",
+        "label": "Arrow color",
+        "default":"#fff"
+      }
+    ],
+    "blocks": [
+    {
+      "type": "block",
+      "name": "block",
+      "settings": [
+        {
+          "type": "image_picker",
+          "id": "image",
+          "label": "Image"
+        },
+        {
+          "type":"url",
+          "id":"image_link",
+          "label":"Image link",
+          "default":"/collections/all"
+        },
+        {
+          "type": "text",
+          "id": "title",
+          "label": "Title"
+        },
+        {
+          "type": "text",
+          "id": "sub_title",
+          "label": "Subtitle"
+        }
+        ]
+      }
+    ],
+    "presets": [
+      {
+        "name": "Image with text : slider",
+        "category": "Text",
+        "settings": {
+
+        }
+      }
+    ]
+  }
+{% endschema %}

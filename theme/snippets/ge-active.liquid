@@ -1,0 +1,34 @@
+<script> 
+        function DOMready(callback) { 
+            if (document.readyState != 'loading') callback(); 
+            else document.addEventListener('DOMContentLoaded', callback); 
+        } 
+        DOMready(function() { 
+            try{
+              if (GLBE_PARAMS) { 
+                  var OperatedCountryArray = GLBE_PARAMS.operatedCountries; 
+                  var MyCountry = GLBE_PARAMS.countryCode; 
+                  var geActive = false; 
+                  var b = document.querySelector("body"); 
+                  for (var i = 0; i <= OperatedCountryArray.length; i++) { 
+                      if (MyCountry == OperatedCountryArray[i]) { 
+                          geActive = true; 
+                      } 
+                  } 
+                  if (geActive == true) { 
+                      b.setAttribute("ge-active", true); 
+                  } 
+              }            
+            } catch {}
+         }); 
+    </script> 
+    <style> 
+      body[ge-active="true"] .product-services ul.service-items li:nth-child(2), body[ge-active="true"] .product-services ul.service-items li:nth-child(1),
+      body[ge-active="true"] .subscribe-type.purchase-type,
+      body[ge-active="true"] .cart-subcription-refill,
+      body[ge-active="true"] .installment-text, 
+      body[ge-active="true"] .installment-pay-wrap,
+      body[ge-active="true"] .side-cart-shipping-bar-wrapper{
+        display: none !important;
+      } 
+    </style> 

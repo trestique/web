@@ -1,0 +1,111 @@
+{
+  "sections": {
+    "collection-list-template": {
+      "type": "subscription-collection-list-template",
+      "blocks": {
+        "cdbe6c7e-7012-4166-a6ca-e1e038bfebc2": {
+          "type": "banner",
+          "settings": {
+            "banner_img": "shopify:\/\/shop_images\/fYiYNCZM.jpg",
+            "banner_video": "https:\/\/cdn.shopify.com\/s\/files\/1\/0114\/0621\/3220\/files\/Eye_Makeup_Refills_collection_video.mp4",
+            "banner_heading": "Replenish, Refill & Go",
+            "banner_text": "<p>Clean, refillable beauty at your fingertips. Join Auto-refill so you never go without your favorites again. Just keep your navy forever case and click your new refill cartridge in as needed.<\/p>",
+            "banner_content": "*Modify, skip or cancel at anytime.",
+            "enable_images": true,
+            "banner_img_1": "shopify:\/\/shop_images\/Save_With_Refills_3bd376fb-8ccd-453f-b206-c7c040a15226.png",
+            "banner_img_2": "shopify:\/\/shop_images\/Free_Shipping_b541904e-09ea-498f-a731-1bf9dbcc0e4e.png",
+            "banner_img_3": "shopify:\/\/shop_images\/Easy_to_manage.png",
+            "banner_img_4": "shopify:\/\/shop_images\/Endlessly_Refillable.png",
+            "banner_img_5": "shopify:\/\/shop_images\/Save_The_Planet.png"
+          }
+        },
+        "09f2fc3a-ea04-4be3-b88b-1373986860b1": {
+          "type": "collection-with-media",
+          "settings": {
+            "collection_handle": "bestseller-refills",
+            "collection_title": "",
+            "show_collection_title": true,
+            "collection_description": "",
+            "show_collection_description": true,
+            "collection_video": "https:\/\/cdn.shopify.com\/s\/files\/1\/0114\/0621\/3220\/files\/Eye_Makeup_Refills_collection_video.mp4"
+          }
+        },
+        "73219e79-7f14-40cb-b9ec-26e95a7e1ac6": {
+          "type": "collection",
+          "settings": {
+            "collection_handle": "eyes-makeup-refill",
+            "collection_title": "",
+            "show_collection_title": true,
+            "collection_description": "",
+            "show_collection_description": true,
+            "max_collection_product": 5,
+            "collection_img": "shopify:\/\/shop_images\/Trestique-Fall2022-Refill-Stylized04-PhotoRoom_1.png",
+            "media_alignment": "left",
+            "collection_video": "",
+            "media_url": ""
+          }
+        },
+        "c6a174fd-cfdc-489c-8380-eadf93500a52": {
+          "type": "collection",
+          "settings": {
+            "collection_handle": "face-makeup-refill",
+            "collection_title": "",
+            "show_collection_title": true,
+            "collection_description": "",
+            "show_collection_description": true,
+            "max_collection_product": 5,
+            "collection_img": "shopify:\/\/shop_images\/Trestique-Fall2022-Refill-Stylized01-PhotoRoom_1.png",
+            "media_alignment": "left",
+            "collection_video": "",
+            "media_url": ""
+          }
+        },
+        "20089eba-141a-42db-81f7-a128238181b4": {
+          "type": "collection",
+          "settings": {
+            "collection_handle": "lip-makeup-refill",
+            "collection_title": "",
+            "show_collection_title": true,
+            "collection_description": "",
+            "show_collection_description": true,
+            "max_collection_product": 5,
+            "collection_img": "shopify:\/\/shop_images\/collection-banner_png.png",
+            "media_alignment": "left",
+            "collection_video": "",
+            "media_url": ""
+          }
+        },
+        "1595d303-0eb9-4646-9f62-e7a0ed4ffee7": {
+          "type": "collection-faq",
+          "settings": {
+            "mobile_only": true,
+            "faq_heading": "Have question?",
+            "faq_subheading": "<p>Our team is here to answer any questions you might have about your products or our auto-replenishment service. We're here to help!<\/p>",
+            "faq_btn_text": "CHECK OUR FAQ",
+            "faq_btn_url": "shopify:\/\/pages\/faq-help-center",
+            "faq_img_1": "shopify:\/\/shop_images\/Mail.png",
+            "faq_content_heading_1": "E-mail us or chat with the team",
+            "faq_content_subheading_1": "<p>10 AM - 5 PM EST Monday - Friday (excluding holidays)<\/p>",
+            "faq_img_2": "shopify:\/\/shop_images\/Video_Message.png",
+            "faq_content_heading_2": "Book a free video  consult",
+            "faq_content_subheading_2": "<p>12 PM - 3 PM EST Monday - Friday (excluding holidays)<\/p>",
+            "faq_content_heading_3": "",
+            "faq_content_subheading_3": ""
+          }
+        }
+      },
+      "block_order": [
+        "cdbe6c7e-7012-4166-a6ca-e1e038bfebc2",
+        "09f2fc3a-ea04-4be3-b88b-1373986860b1",
+        "73219e79-7f14-40cb-b9ec-26e95a7e1ac6",
+        "c6a174fd-cfdc-489c-8380-eadf93500a52",
+        "20089eba-141a-42db-81f7-a128238181b4",
+        "1595d303-0eb9-4646-9f62-e7a0ed4ffee7"
+      ],
+      "settings": {}
+    }
+  },
+  "order": [
+    "collection-list-template"
+  ]
+}

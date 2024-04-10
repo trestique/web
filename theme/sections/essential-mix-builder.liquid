@@ -1,0 +1,289 @@
+<!-- essential-mix-builder -->
+<section>
+  <script>
+    window.trestiqueBuilder = window.trestiqueBuilder || {};
+    simply.bundleBuilderDiscount = {{ section.settings.discount }};
+    trestiqueBuilder = {
+      "activeStep":1,
+      "master_product":{{product | json}},
+      "title_logo" : "{{ section.settings.title_logo }}",
+      "title_text" : "{{ section.settings.title_text }}",
+      "review_page_title_text" : "{{ section.settings.review_page_title_text }}",
+      "heading": "{{ section.settings.heading }}",
+      "sub_heading": "{{ section.settings.sub_heading }}",
+      "content_text": "{{ section.settings.content_text }}",
+      "button_text": "{{ section.settings.button_text }}",
+      "image": "{{ section.settings.image | img_url: 'master' }}",
+      "discount":{{ section.settings.discount }},
+      "small_bag_text":{
+        "main_title":"{{ section.settings.small_main_title }}",
+        "second_title":"{{ section.settings.small_second_title }}",
+        "description":"{{section.settings.small_description}}"
+      },
+      "large_bag_text":{
+        "main_title":"{{ section.settings.large_main_title }}",
+        "second_title":"{{ section.settings.large_second_title }}",
+        "description":"{{section.settings.large_description}}"
+      },{% assign small_bag = all_products[section.settings.small_bag] %}
+      "small_bag" : { {% if small_bag != blank  %} {% render 'essential-mix-bag',product:small_bag %} {% endif %} },
+      {% assign large_bag = all_products[section.settings.large_bag] %}
+      "large_bag" : { {% if large_bag != blank  %}  {% render 'essential-mix-bag',product:large_bag %} {% endif %} },
+      "all_products":[
+          {%- for block in section.blocks -%}
+            {% assign firstIndex = forloop.index %}
+            {%- assign collection_product = collections[block.settings.collection].products | where: "available" -%}
+            {%- for product in collection_product -%}
+            {
+              "data": {{ product | json }},
+              "review":`{{product.metafields.okendo.ProductListingSnippet }}`,
+              "selected_or_first_available_variant": {{product.selected_or_first_available_variant | json}},
+              "options": {{ product.options_with_values | json }},
+              {% render 'essential-product-meta', product:product %}
+              "learn_more": {{ product.metafields.learn_more | json }}
+            }{% unless firstIndex == section.blocks.size and forloop.last %},{% endunless %}
+            {%- endfor -%}
+          {% endfor%}
+          {% if small_bag != blank  %}
+           ,{
+             "type_bag": true,
+              "data": {{ small_bag | json }},
+              "review":`{{small_bag.metafields.okendo.ProductListingSnippet }}`,
+              "selected_or_first_available_variant": {{small_bag.selected_or_first_available_variant | json}},
+              "options": {{ small_bag.options_with_values | json }},
+              {% render 'essential-product-meta', product:small_bag %}
+              "learn_more": {{ small_bag.metafields.learn_more | json }}
+            }
+          {% endif %}
+          {% if large_bag != blank  %}
+           ,{
+             "type_bag": true,
+              "data": {{ large_bag | json }},
+              "review":`{{small_bag.metafields.okendo.ProductListingSnippet }}`,
+              "selected_or_first_available_variant": {{large_bag.selected_or_first_available_variant | json}},
+              "options": {{ large_bag.options_with_values | json }},
+              {% render 'essential-product-meta', product:small_bag %}
+              "learn_more": {{ large_bag.metafields.learn_more | json }}
+            }
+         {% endif %}
+      ],
+      "collections": [
+        {%- for block in section.blocks -%}{
+          "collection_handle": "{{ block.settings.collection }}",
+          "collection_text": "{{ block.settings.collection_label }}",
+          "collection_products": [
+          {%- assign collection_product = collections[block.settings.collection].products | where: "available" -%}
+          {%- for product in collection_product -%}{
+            "data": {{ product | json }},
+            "selected_or_first_available_variant": {{product.selected_or_first_available_variant | json}},
+            "options": {{ product.options_with_values | json }},
+            {% render 'essential-product-meta', product:product %}
+            "learn_more": {{ product.metafields.learn_more | json }}
+          }{% unless forloop.last %},{% endunless %}{%- endfor -%}
+        ]
+        }{% unless forloop.last %},{% endunless %}{%- endfor -%}
+        ,{
+          "collection_handle": "bags",
+          "collection_text": "Bags",
+          "collection_products": [
+          {% if small_bag != blank  %}
+            {
+              "type_bag": true,
+                "data": {{ small_bag | json }},
+                "review":`{{small_bag.metafields.okendo.ProductListingSnippet }}`,
+                "selected_or_first_available_variant": {{small_bag.selected_or_first_available_variant | json}},
+                "options": {{ small_bag.options_with_values | json }},
+                {% render 'essential-product-meta', product:small_bag %}
+
+                "learn_more": {{ small_bag.metafields.learn_more | json }}
+            },
+            {% endif %}
+            {% if large_bag != blank  %}
+            {
+              "type_bag": true,
+                "data": {{ large_bag | json }},
+                "review":`{{small_bag.metafields.okendo.ProductListingSnippet }}`,
+                "selected_or_first_available_variant": {{large_bag.selected_or_first_available_variant | json}},
+                "options": {{ large_bag.options_with_values | json }},
+                {% render 'essential-product-meta', product:large_bag %}
+                "learn_more": {{ large_bag.metafields.learn_more | json }}
+              }
+          {% endif %}
+          ]
+        }
+      ]
+    }
+  </script>
+
+{% comment %} Json script start {% endcomment %}
+{% comment %} Creating json for side cart edit bundle. When user click on edit bundle then fetching bundle data from this json to edit bundle {% endcomment %}
+<script id="bundle-data-json"  type="application/json">
+  {
+    "masterProduct":{{product | json }},
+    "cart": {{cart | json}},
+    "products": [
+      {% assign small_bag = section.settings.small_bag | split: ',' %}
+      {% if small_bag.size > 0 %}
+        {% for handle in small_bag %}
+          {% assign product_data = all_products[handle] %}
+          {% if product_data.available %}
+            {% render 'edit-product',product:product_data %},
+          {% endif %}
+        {% endfor %}
+      {% endif %}
+        {% assign large_bag = section.settings.large_bag | split: ',' %}
+        {% if large_bag.size > 0 %}
+          {% for handle in large_bag %}
+            {% assign product_data = all_products[handle] %}
+            {% if product_data.available %}
+            {% render 'edit-product',product:product_data %},
+            {% endif %}
+          {% endfor %}
+        {% endif %}
+          {%- for block in section.blocks -%}
+          {% assign firstIndex = forloop.index %}
+            {%- for product in collections[block.settings.collection].products -%}
+            {% render 'edit-product',product:product %}{% unless firstIndex == section.blocks.size and forloop.last %},{% endunless %}
+            {%- endfor -%}
+          {% endfor%}
+    ]
+    }
+</script>
+{% comment %} Json script end {% endcomment %}
+</section>
+
+<script>
+  a = document.getElementById('bundle-data-json');
+  window.test = JSON.parse(a.innerHTML);
+</script>
+
+{% schema %}
+
+{
+  "name": "Essential Mix Builder",
+  "settings": [
+    {
+      "type": "image_picker",
+      "id": "title_logo",
+      "label": "Logo"
+    },
+    {
+      "type": "text",
+      "id": "title_text",
+      "label": "Page title",
+      "default": "Customize your set"
+    },
+    {
+      "type": "text",
+      "id": "review_page_title_text",
+      "label": "Review page title text",
+      "default": "Your routine"
+    },
+    {
+      "type": "header",
+      "content": "Splash screen"
+    },
+    {
+      "type": "text",
+      "id": "heading",
+      "label": "Heading text"
+    },
+    {
+      "type": "text",
+      "id": "sub_heading",
+      "label": "Sub-heading text"
+    },
+    {
+      "type": "richtext",
+      "id": "content_text",
+      "label": "Content"
+    },
+    {
+      "type": "text",
+      "id": "button_text",
+      "label": "Button label",
+      "default": "CREATE MY SET"
+    },
+    {
+      "type": "image_picker",
+      "id": "image",
+      "label": "Image"
+    },
+    {
+      "type": "header",
+      "content": "Select product for bag"
+    },
+    {
+      "type": "text",
+      "id": "small_main_title",
+      "label": "Small bags main title"
+    },
+    {
+      "type": "text",
+      "id": "small_second_title",
+      "label": "Small bags second title"
+    },
+    {
+      "type": "text",
+      "id": "small_description",
+      "label": "Small bags description"
+    },
+    {
+      "type": "product",
+      "id": "small_bag",
+      "label": "Add small bags",
+      "info":"Add handle with comma separated"
+    },
+    {
+      "type": "text",
+      "id": "large_main_title",
+      "label": "Large bags main title"
+    },
+    {
+      "type": "text",
+      "id": "large_second_title",
+      "label": "Large bags second title"
+    },
+    {
+      "type": "text",
+      "id": "large_description",
+      "label": "Large bags description"
+    },
+    {
+      "type": "product",
+      "id": "large_bag",
+      "label": "Add large bag",
+      "info":"Add handle with comma separated"
+    },
+    {
+      "type": "header",
+      "content": "Bundle discount"
+    },
+    {
+      "type": "number",
+      "id": "discount",
+      "label": "Add discount on percentage",
+      "default":15
+    }
+  ],
+  "blocks": [
+    {
+      "type": "collections",
+      "name": "Collections",
+      "limit": 3,
+      "settings": [
+        {
+          "type": "collection",
+          "id": "collection",
+          "label": "Choose collection"
+        },
+        {
+          "type": "text",
+          "id": "collection_label",
+          "label": "Collection label"
+        }
+      ]
+    }
+  ]
+}
+
+{% endschema %}

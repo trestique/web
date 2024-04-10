@@ -1,0 +1,298 @@
+<!-- essential-8-builder -->
+<section>
+  <script>
+    window.essentialBuilder = window.essentialBuilder || {};
+    essentialBuilder = {
+      "settings" : {{ section.settings | json}},
+      "base_product" : {{ product | json }},
+      "bundle_type": "{{product.metafields.custom.bundle_type}}",
+      "tabs":[
+      {
+         "tab_title":"What's Included",
+         "tab_description":`{{product.description}}`
+       }, 
+      {
+         "tab_title":"FAQ",
+         "tab_description":`{{product.metafields.product_details.how_to_use}}`
+       },
+       {
+         "tab_title":"Ingredients",
+         "tab_description":`{{product.metafields.product_details.ingredients}}`
+       },
+       {
+         "tab_title":"Sustainability",
+         "tab_description":`{{product.metafields.product_details.sustainability}}`
+       }
+      ],
+      "selectable_products": [
+        {% assign childSelectable = section.blocks | where: 'type', 'child-selectable'  %}
+
+        {%- for block in childSelectable -%}
+          {
+            productData : {{ all_products[block.settings.product] | json}},
+            metadata : {{ all_products[block.settings.product].metafields.product_details | json}}
+          }
+          {% unless forloop.last %},{% endunless %}
+        {%- endfor -%}
+      ],
+      "services": [
+        {% assign services = section.blocks | where: 'type', 'service'  %}
+        {%- for block in services -%}
+          {{block.settings | json }}{% unless forloop.last %},{% endunless %}
+        {%- endfor -%}
+      ],
+      "reviews" : [
+        {% assign reviews = section.blocks | where: 'type', 'review'  %}
+        {%- for block in reviews -%}
+            {{block.settings | json}}{% unless forloop.last %},{% endunless %}
+        {%- endfor -%}
+      ],
+      "preselected_products": [
+      {% assign childPreselected = section.blocks | where: 'type', 'child-preselected'  %}
+        {%- for block in childPreselected -%}
+            {
+              productData : {{ all_products[block.settings.product] | json}},
+              productVariant : "{{ block.settings.variant_id }}"
+            }
+            {% unless forloop.last %},{% endunless %}
+        {%- endfor -%}
+      ],
+      "sustainability_practices": [
+        {% assign Sustainability = section.blocks | where: 'type', 'sustainability_practices'  %}
+        {%- for block in Sustainability -%}
+            "{{ block.settings.image | img_url : original }}"
+            {% unless forloop.last %},{% endunless %}
+        {%- endfor -%}
+      ],
+      "video_section" : [
+      {% assign videoSections = section.blocks | where: 'type', 'video_section'  %}
+        {%- for block in videoSections -%}
+            "{{ block.settings.image | img_url : original }}"
+            {% unless forloop.last %},{% endunless %}
+        {%- endfor -%}
+      ],
+      "review_section" : {{ product.metafields.okendo.ProductListingSnippet | json }}
+    }
+  </script>
+  {% comment %} Json script start {% endcomment %}
+  {% comment %} Creating json for side cart edit bundle. When user click on edit bundle then fetching bundle data from this json to edit bundle {% endcomment %}
+  <script id="bundle-data-json">
+    {
+      "masterProduct":{{product | json }},
+      "cart": {{cart | json}},
+      "products": [
+        {% assign count = 0 %}
+        {%- for block in section.blocks -%}
+          {% if block.type == 'child-selectable' %}
+            {% if count != 0 %},{% endif %}
+            {% assign product_data = all_products[block.settings.product] %}
+            {% render 'edit-product',product:product_data %}
+            {% assign count = count | plus:1 %}
+          {% endif %}
+        {%- endfor -%}
+      ]
+    }
+  </script>
+  {% comment %} Json script end {% endcomment %}
+</section>
+
+{% schema %}
+{
+  "name": "Essential 6 Builder",
+  "settings": [
+    {
+      "type": "text",
+      "id": "title_text",
+      "label": "Page title",
+      "default": "Essential 8: Signature Set"
+    },
+    {
+      "type": "richtext",
+      "id": "content_text",
+      "label": "Content"
+    },
+    {
+      "type": "text",
+      "id": "shades_title",
+      "label": "Shades Title",
+      "default": "CHOOSE YOUR SHADES"
+    },
+    {
+      "type": "text",
+      "id": "accordion_title",
+      "label": "Accordion Title",
+      "default": "PRE-SELECTED PRODUCTS INCLUDED"
+    },
+    {
+      "type": "text",
+      "id": "error_text",
+      "label": "Error Text",
+      "default": "Please choose your shade!",
+      "info": "This error will be displayed when user hasn't selected shade"
+    },
+    {
+      "type": "text",
+      "id": "error_bag_text",
+      "label": "Error Text",
+      "default": "Please choose your Bag!",
+      "info": "This error will be displayed when user hasn't selected bag"
+    },
+    {
+      "type": "text",
+      "id": "sustain_package_title",
+      "label": "Sustainability Package Title",
+      "default": "Transparently clean. Sustainably packaged.",
+      "info": "This title will be displayed on Sustainability section"
+    },
+    {
+      "type": "checkbox",
+      "default":false,
+      "id": "video_enable",
+      "label": "Video enable?"
+    },
+    {
+      "type": "text",
+      "id": "video_section_title",
+      "label": "Video Section Title",
+      "default": "See it in action @trestique",
+      "info": "This title will be displayed on Video Section"
+    },
+    {
+      "type": "image_picker",
+      "id": "video_preview",
+      "label": "Video Preview"
+    },
+    {
+      "type": "image_picker",
+      "id": "customize_routine_image",
+      "label": "Customize routine Image"
+    },
+    {
+      "type": "image_picker",
+      "id": "customize_routine_image_mob",
+      "label": "Customize routine Image (Mobile)"
+    },
+    {
+      "type": "text",
+      "id": "customize_routine_header",
+      "label": "Customize Header Image"
+    },
+    {
+      "type": "text",
+      "id": "customize_routine_description",
+      "label": "Customize routine description"
+    },
+     {
+      "type": "text",
+      "id": "customize_routine_btn_text",
+      "label": "Customize routine button text",
+      "default": "CREATE YOUR SET"
+    },
+    {
+      "type": "url",
+      "id": "customize_routine_btn_link",
+      "label": "Customize routine button link"
+    }
+  ],
+  "blocks": [
+  {
+    "type": "service",
+    "name": "Service",
+    "limit": 3,
+    "settings": [
+        {
+          "type": "image_picker",
+          "id": "service_icon",
+          "label": "Service icon"
+        },
+        {
+            "type": "richtext",
+            "id": "service_text",
+            "label": "Service text"
+        }
+      ]
+    },
+    {
+      "type": "review",
+      "name": "Review",
+      "settings": [
+        {
+          "type": "richtext",
+          "id": "review_text",
+          "label": "Review text",
+          "default": "<p>“I love products that are quick and easy and these are exactly that.”</p>"
+        },
+        {
+          "type": "text",
+          "id": "review_author",
+          "label": "Review author",
+          "default": " Jenn Kapahi (Co-founder)"
+        },
+        {
+          "type": "image_picker",
+          "id": "review_author_logo",
+          "label": "Review author logo"
+        },
+        {
+          "type": "image_picker",
+          "id": "review_author_country_logo",
+          "label": "Review author country logo"
+        }
+      ]
+    },
+    {
+      "type": "child-selectable",
+      "name": "Child Selectable",
+      "limit": 8,
+      "settings": [
+        {
+          "type": "product",
+          "id": "product",
+          "label": "Choose Product"
+        }
+      ]
+    },
+    {
+      "type": "child-preselected",
+      "name": "Child Preselected",
+      "limit": 5,
+      "settings": [
+        {
+          "type": "product",
+          "id": "product",
+          "label": "Choose Product"
+        },
+        {
+          "type": "text",
+          "id": "variant_id",
+          "label": "Enter Variant Id"
+        }
+      ]
+    },
+    {
+      "type" : "sustainability_practices",
+      "name" : "Sustain Practices Images",
+      "limit": 6,
+      "settings": [
+        {
+          "type": "image_picker",
+          "id": "image",
+          "label": "Choose Image"
+        }
+      ]
+    },
+    {
+      "type" : "video_section",
+      "name" : "See it in Action Images",
+      "limit": 4,
+      "settings": [
+        {
+          "type": "image_picker",
+          "id": "image",
+          "label": "Choose Image"
+        }
+      ]
+    }
+  ]
+}
+{% endschema %}

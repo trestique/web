@@ -1,0 +1,116 @@
+{{ 'simply-collection.css' | asset_url | stylesheet_tag }}
+<script src="{{ 'simply-collection.js' | asset_url }}" defer></script>
+<div id="collection-page">
+    <div class="collection-page-container">
+        <div class="collection-page-wrapper">
+            {% assign collection_list = collection.metafields.collection.collection_list | split:',' %}
+            {% for col_handle in collection_list %}
+            {% assign collectionList = collections[col_handle] %}
+            {% paginate collectionList.products by 50  %}
+            {% assign meta = collectionList.metafields.collection %}
+
+            {% assign metaImage = collectionList.metafields.image_with_text %}
+            {% assign image_with_text_exist = false %}
+            {% if metaImage.enable %}
+            {% if metaImage.image != blank or metaImage.image_title != blank or metaImage.title != blank or metaImage.btn_text != blank or metaImage.btn_link != blank  %}
+            {% assign image_with_text_exist = true %}
+            {% endif %}
+            {% endif %}
+            <div class="product-list collection-listings {% if image_with_text_exist %} image-text-exist{% endif %}">
+                {% render 'collection-details', collection:collectionList %}
+                {% if image_with_text_exist  %}
+                  {% render 'collection-image-with-text',metaImage: metaImage %}
+                {% endif %}
+            </div>
+            {% endpaginate %}
+            {% endfor %}
+        </div>
+        {% if section.settings.description and collection.description != blank %}
+            <div class="collection-main-description">
+                <div class="description-content">
+                    {{collection.description}}
+                </div>
+            </div>
+            {% endif %}
+        {% unless collection.metafields.collection.footer_images == blank %}
+        {% assign images = collection.metafields.collection.footer_images | split:'<>' %}
+          <div class="collection-footer-image">
+            <ul class="images-list">
+              {% for obj in images %}
+              <li>
+              {% assign data = obj | split:'##' %}
+              {% assign footer_img = data[0] | split: '/' | last %}
+              {% assign text = data[1] %}
+              {% assign link = data[2] %}
+              <div class="img">
+                <a href="{{link}}">
+                  {% render 'srcset' , src_name:footer_img, src_alt:text, file_url: true %}
+                  <p class="text">{{text}}</p>
+                </a>
+              </div>
+            </li>
+              {% endfor %}
+            </ul>
+          </div>
+          {% endunless %}
+    </div>
+</div>
+
+{% schema %}
+{
+  "name": "Collection settings",
+  "settings": [
+    {
+      "type": "checkbox",
+      "label": "Collection description",
+      "id": "description",
+      "default": true
+    },
+    {
+        "type": "checkbox",
+        "label": "Switch image on hover",
+        "id": "switch_image",
+        "default": true
+    },
+    {
+      "type": "select",
+      "label": "Product per row",
+      "id": "product_row",
+      "info": "Only for desktop view",
+      "options": [
+        {
+          "value": "col-sm-6",
+          "label": "2"
+        },
+        {
+          "value": "col-sm-4",
+          "label": "3"
+        },
+        {
+          "value": "col-sm-3",
+          "label": "4"
+        }
+      ],
+      "default":"col-sm-3"
+    },
+    {
+      "type": "select",
+      "label": "Product per row",
+      "id": "product_row_xs",
+      "info": "Only for mobile view",
+      "options": [
+        {
+          "value": "col-xs-6",
+          "label": "2"
+        },
+        {
+          "value": "col-xs-12",
+          "label": "1"
+        }
+      ],
+      "default":"col-xs-6"
+    }
+  ]
+}
+
+{% endschema %}

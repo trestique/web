@@ -1,0 +1,519 @@
+{
+  "sections": {
+    "banner_video": {
+      "type": "banner-video",
+      "disabled": true,
+      "settings": {
+        "title": "Win it all (placement only)",
+        "content": "",
+        "max_width": 1000,
+        "video_url": "",
+        "video_url_lg": "",
+        "img": "shopify:\/\/shop_images\/win_it.png",
+        "btn_bg_color": "#e32c2b",
+        "btn_text_color": "#ffffff",
+        "btn_text": "",
+        "btn_url": "#",
+        "tagline_text": "",
+        "tagline_bg_color": "#ffffff",
+        "tagline_text_color": "#b04a5a"
+      }
+    },
+    "how_it_works": {
+      "type": "how-it-works",
+      "blocks": {
+        "ca14f0af-f063-4589-8c66-1bf4b7784d9c": {
+          "type": "block",
+          "settings": {
+            "step_img": "shopify:\/\/shop_images\/bundle13.jpg",
+            "step_title": "Select your products"
+          }
+        },
+        "12bbe9cb-f7e3-4038-89fc-34e75bc97082": {
+          "type": "block",
+          "settings": {
+            "step_img": "shopify:\/\/shop_images\/step-2-banner.png",
+            "hover_img": "shopify:\/\/shop_images\/step-hover-img.png",
+            "step_title": "Choose your favorite makeup case"
+          }
+        },
+        "e983f339-6e5a-4b8e-a426-964d3db83745": {
+          "type": "block",
+          "settings": {
+            "step_img": "shopify:\/\/shop_images\/bundle12_ec91bed3-a701-429b-b819-994e29ee5ab5.jpg",
+            "step_title": "Enjoy your new simple and time-saving makeup set."
+          }
+        }
+      },
+      "block_order": [
+        "ca14f0af-f063-4589-8c66-1bf4b7784d9c",
+        "12bbe9cb-f7e3-4038-89fc-34e75bc97082",
+        "e983f339-6e5a-4b8e-a426-964d3db83745"
+      ],
+      "disabled": true,
+      "settings": {
+        "bg_color": "#f0f0f0",
+        "slides_to_show_lg": 3,
+        "slides_to_show_sm": 1,
+        "max_width": 1440,
+        "title": "How it works",
+        "next_step_img": "shopify:\/\/shop_images\/next_c21ddd57-7e38-4b6e-8ef5-77529d1aac2e.png",
+        "tagline_text": "Save 15% when you create a set of 4 products or more",
+        "tagline_bg_color": "#f3e9e2",
+        "tagline_text_color": "#b04a5a",
+        "btn_text": "CREATE MY SET",
+        "btn_bg_color": "#00263a",
+        "btn_color": "#ffffff",
+        "step_bg_color": "#f0f0f0",
+        "text_color": "#00263a"
+      }
+    },
+    "1653510607d3c26869": {
+      "type": "banner-with-text",
+      "settings": {
+        "link": "",
+        "video_url": "",
+        "video_url_mobile": "",
+        "image": "shopify:\/\/shop_images\/banner_b574c4c7-b968-416d-9449-34684bed7db9.png",
+        "mobile_image": "shopify:\/\/shop_images\/banner_travel_mobile.png",
+        "title": "Travel-friendly Beauty Essentials",
+        "subtitle": "<p>Say goodbye to messy, heavy makeup routines that take up precious suitcase space. Our makeup sets were designed to save time, money, space & the planet!<\/p><p><strong>Save up to 30%<\/strong> on 5-minute makeup sets.<\/p>",
+        "pretext_color": "#ffffff",
+        "heading_color": "#00263a",
+        "heading_font_desk": 60,
+        "subheading_color": "#00263a",
+        "text_alignment": "center",
+        "text_horizontal_position": "right",
+        "text_vertical_position": "middle",
+        "background_color": "#d8ac92",
+        "background_opacity": 0,
+        "border_color": "#ffffff",
+        "border_width": 0,
+        "text_width": 46,
+        "button_1": "",
+        "button_text_color": "#ffffff",
+        "button_bg_color": "#000000",
+        "button_hover_bg_color": "#ffffff",
+        "button_hover_color": "#000000",
+        "button_1_link": "",
+        "button_1_style": "button--secondary",
+        "button_2": "",
+        "button_2_link": "",
+        "button_2_style": "button--secondary",
+        "pretext": "",
+        "mobile_image_crop": "none",
+        "mobile_text_below_image": true,
+        "mobile_text_position": "middle",
+        "pretext_color_mobile": "rgba(0,0,0,0)",
+        "heading_font_xs": 40,
+        "heading_color_mobile": "#00263a",
+        "subheading_color_mobile": "#00263a",
+        "width": "wide",
+        "padding_top": 0,
+        "padding_bottom": 0,
+        "padding_left": 0,
+        "padding_right": 0,
+        "animation": "none",
+        "css_class": "",
+        "custom_css": ".title {\nfont-family: FreightDisp;\n}"
+      }
+    },
+    "what_makes": {
+      "type": "what-makes-it-trestique",
+      "blocks": {
+        "3423c95d-206e-480a-8c23-8bbda24ee214": {
+          "type": "Slide",
+          "settings": {
+            "slide_img": "shopify:\/\/shop_images\/travel-friendly.png",
+            "slide_title": "TRAVEL-FRIENDLY",
+            "slide_text": "Light-as-air makeup kits weigh less than 1\/2 lb and are TSA-approved. Our sleek makeup bags fit your entire mess-free beauty routine and easily slides into your carry-on without taking up space."
+          }
+        },
+        "00e26c1a-fd65-4586-9c90-dd7df1b6834d": {
+          "type": "Slide",
+          "settings": {
+            "slide_img": "shopify:\/\/shop_images\/easy-to-carry.png",
+            "slide_title": "EASY APPLICATION",
+            "slide_text": "Mistake-proof makeup sticks are easy to apply and spill-proof. All makeup bags feature a built-in mirror, some with a multi-purpose carrying strap."
+          }
+        },
+        "eea651ca-fb7e-4068-87b1-5a85347cc870": {
+          "type": "Slide",
+          "settings": {
+            "slide_img": "shopify:\/\/shop_images\/product-tool.png",
+            "slide_title": "SMART 2-IN-1 DESIGN",
+            "slide_text": "Every full size product comes with a built-in tool, applicator or formula. No matter where you are in the world, application is seamless and touch-ups are a breeze."
+          }
+        },
+        "817aa1aa-fcb2-42d1-bef7-0952d74a4197": {
+          "type": "Slide",
+          "settings": {
+            "slide_img": "shopify:\/\/shop_images\/time-saving.png",
+            "slide_title": "TIME-SAVING",
+            "slide_text": "Meet your full face in a case that applies in 5 minutes or less. Simply glide on, blend and go!"
+          }
+        },
+        "3654e456-8228-4ac4-be43-9c949dfd59d4": {
+          "type": "Slide",
+          "settings": {
+            "slide_img": "shopify:\/\/shop_images\/endlessly.png",
+            "slide_title": "SUSTAINABLY REFILLABLE",
+            "slide_text": "Endlessly refillable makeup with packaging made from recycled materials, certified carbon neutral by CarbonFund and easy to recycle."
+          }
+        },
+        "c4e48768-8e2a-4d1a-b9cf-dff5f520671e": {
+          "type": "Slide",
+          "settings": {
+            "slide_img": "shopify:\/\/shop_images\/CLEAN_668dd7f2-1e85-4da5-9298-d8ed70d8bbf8.png",
+            "slide_title": "CLEAN FORMULAS",
+            "slide_text": "PETA-certified, cruelty-free and vegan formulas. Our high-performance makeup features cream-gel textures that doesn't sweat on your skin or look cakey."
+          }
+        },
+        "ae1a3455-1fac-419d-b34b-f55e2d035a8b": {
+          "type": "Slide",
+          "disabled": true,
+          "settings": {
+            "slide_img": "shopify:\/\/shop_images\/travel-friendly.png",
+            "slide_title": "TRAVEL-FRIENDLY",
+            "slide_text": "Compact, lightweight makeup cases with mess-free products."
+          }
+        }
+      },
+      "block_order": [
+        "3423c95d-206e-480a-8c23-8bbda24ee214",
+        "00e26c1a-fd65-4586-9c90-dd7df1b6834d",
+        "eea651ca-fb7e-4068-87b1-5a85347cc870",
+        "817aa1aa-fcb2-42d1-bef7-0952d74a4197",
+        "3654e456-8228-4ac4-be43-9c949dfd59d4",
+        "c4e48768-8e2a-4d1a-b9cf-dff5f520671e",
+        "ae1a3455-1fac-419d-b34b-f55e2d035a8b"
+      ],
+      "disabled": true,
+      "settings": {
+        "bg_color": "#bfebf3",
+        "text_color": "#00263a",
+        "main_heading": "What makes trestique makeup sets special?",
+        "slides_to_show_lg": 5,
+        "slides_to_show_sm": 1,
+        "margin_sm": 30,
+        "margin_lg": 300,
+        "block_title_color": "#00263a",
+        "block_text_color": "#00263a"
+      }
+    },
+    "f40d81a6-3731-4f17-bd83-dbc09c13e999": {
+      "type": "index__html",
+      "settings": {
+        "html_content": "<body>\n<meta charset=\"utf-8\">\n\n<title>Documento sem título<\/title>\n\n\t<style>\n\t\t\n\t\t.main-div {\n\t\t\ttext-align: center;\n\t\t\talign-items: center;\n\t\t\tmargin: auto;\n\t\t\t\n\t\t}\n\t\n\t\t.cys-img { \n\t\t\theight: 150px;\n\t\t\tmargin: 20px 20px 10px 20px;\n\t\t}\n\t\t\t\n\t\n@media (max-width: 450px){\n\t\t\t\t.cys-img { \n\t\t\theight: 100px;\n\t\t\tmargin: 10px 20px;\n\t}\n}\n    <\/style>\n\n\n\t\n\t<div class=\"main-div\">\n\t\t<div class=\"images\">\n\t\t  <img class=\"cys-img\" src=\"https:\/\/cdn.shopify.com\/s\/files\/1\/0114\/0621\/3220\/files\/Group_27_17af1124-6359-4e8a-8ac3-fabf54dfa573.png?v=1674478225\">\n\t\t  <img class=\"cys-img\" src=\"https:\/\/cdn.shopify.com\/s\/files\/1\/0114\/0621\/3220\/files\/Group_28_4dd10d28-b183-4224-8a5e-9dc0ba5410b8.png?v=1674478226\">\n\t\t  <img class=\"cys-img\" src=\"https:\/\/cdn.shopify.com\/s\/files\/1\/0114\/0621\/3220\/files\/Group_29.png?v=1674478225\">\n\t\t  <img class=\"cys-img\" src=\"https:\/\/cdn.shopify.com\/s\/files\/1\/0114\/0621\/3220\/files\/Group_30.png?v=1674478225\">\n\t\t  <img class=\"cys-img\" src=\"https:\/\/cdn.shopify.com\/s\/files\/1\/0114\/0621\/3220\/files\/Group_31.png?v=1674478225\">\n\t\t<\/div>\n\t\n\t\n\t<\/div>\n\n\n<\/body>",
+        "width": "standard",
+        "padding_top": 0,
+        "padding_bottom": 0,
+        "padding_left": 0,
+        "padding_right": 0,
+        "animation": "none",
+        "css_class": "",
+        "custom_css": ""
+      }
+    },
+    "51f1dca8-a528-4736-b263-b8752a6ea0dc": {
+      "type": "banner-with-text",
+      "settings": {
+        "link": "https:\/\/www.trestique.com\/products\/the-essential-5-basics-starter-kit",
+        "video_url": "",
+        "video_url_mobile": "",
+        "image": "shopify:\/\/shop_images\/Starter_Kit_-_Desktop_257479a7-bf7b-4ac1-9c32-0a306962e7d1.png",
+        "mobile_image": "shopify:\/\/shop_images\/Starter_Kit_-_Mobile_791b4ce8-e2f1-4b6f-aa0b-49eb034cee11.png",
+        "title": "Starter Kit",
+        "subtitle": "<p>Reinvent your morning routine with a set of products you can apply & blend in a flash. Featuring a travel-friendly bag and five dual-ended products in shades of your choice. Save $28 on this 5-piece makeup kit – includes built-in applicators a makeup bag with mirror.<\/p>",
+        "pretext_color": "#000000",
+        "heading_color": "#00263a",
+        "heading_font_desk": 40,
+        "subheading_color": "#00263a",
+        "text_alignment": "left",
+        "text_horizontal_position": "left",
+        "text_vertical_position": "middle",
+        "background_color": "#ffffff",
+        "background_opacity": 0,
+        "border_color": "#ffffff",
+        "border_width": 0,
+        "text_width": 40,
+        "button_1": "shop now",
+        "button_text_color": "#ffffff",
+        "button_bg_color": "#00263a",
+        "button_hover_bg_color": "#ffffff",
+        "button_hover_color": "#00263a",
+        "button_1_link": "shopify:\/\/products\/the-essential-5-basics-starter-kit",
+        "button_1_style": "button--secondary",
+        "button_2": "",
+        "button_2_link": "",
+        "button_2_style": "button--secondary",
+        "pretext": "",
+        "mobile_image_crop": "none",
+        "mobile_text_below_image": true,
+        "mobile_text_position": "middle",
+        "pretext_color_mobile": "rgba(0,0,0,0)",
+        "heading_font_xs": 50,
+        "heading_color_mobile": "#00263a",
+        "subheading_color_mobile": "rgba(0,0,0,0)",
+        "width": "wide",
+        "padding_top": 0,
+        "padding_bottom": 0,
+        "padding_left": 0,
+        "padding_right": 0,
+        "animation": "none",
+        "css_class": "",
+        "custom_css": ""
+      }
+    },
+    "16536866685369a0cf": {
+      "type": "banner-with-text",
+      "settings": {
+        "link": "https:\/\/www.trestique.com\/products\/essential-8",
+        "video_url": "",
+        "video_url_mobile": "",
+        "image": "shopify:\/\/shop_images\/Essential_8_-_Desktop_76ecfa07-5fb8-441d-a077-fffe5bae2403.png",
+        "mobile_image": "shopify:\/\/shop_images\/Essential_8_-_Mobile_392d987c-85c4-44ae-8169-cc94ef04f704.png",
+        "title": "The Essential 8: All-in-one Kit",
+        "subtitle": "<p>A set created by us and customized by you. Featuring 8 essential products in shades of your choice to easily create the perfect look in less than 5 minutes. Save $59 on this 8-piece makeup kit – includes built-in applicators a makeup bag with mirror.<\/p>",
+        "pretext_color": "#000000",
+        "heading_color": "#00263a",
+        "heading_font_desk": 40,
+        "subheading_color": "#00263a",
+        "text_alignment": "left",
+        "text_horizontal_position": "right",
+        "text_vertical_position": "middle",
+        "background_color": "#ffffff",
+        "background_opacity": 0,
+        "border_color": "#ffffff",
+        "border_width": 0,
+        "text_width": 40,
+        "button_1": "shop now",
+        "button_text_color": "#ffffff",
+        "button_bg_color": "#00263a",
+        "button_hover_bg_color": "#ffffff",
+        "button_hover_color": "#000000",
+        "button_1_link": "shopify:\/\/products\/essential-8",
+        "button_1_style": "button--secondary",
+        "button_2": "",
+        "button_2_link": "",
+        "button_2_style": "button--secondary",
+        "pretext": "",
+        "mobile_image_crop": "none",
+        "mobile_text_below_image": true,
+        "mobile_text_position": "bottom",
+        "pretext_color_mobile": "rgba(0,0,0,0)",
+        "heading_font_xs": 50,
+        "heading_color_mobile": "#00263a",
+        "subheading_color_mobile": "rgba(0,0,0,0)",
+        "width": "wide",
+        "padding_top": 0,
+        "padding_bottom": 0,
+        "padding_left": 0,
+        "padding_right": 0,
+        "animation": "none",
+        "css_class": "",
+        "custom_css": ""
+      }
+    },
+    "16540961415186143a": {
+      "type": "banner-with-text",
+      "settings": {
+        "link": "https:\/\/www.trestique.com\/pages\/routine-finder",
+        "video_url": "",
+        "video_url_mobile": "",
+        "image": "shopify:\/\/shop_images\/02_product_module_banner.png",
+        "mobile_image": "shopify:\/\/shop_images\/Group_2_8f51f231-a931-4bd4-9b3a-e7cb34ddc14f.png",
+        "title": "Meet your perfect match",
+        "subtitle": "<p>Discover your custom shade matches for your entire beauty routine from foundation to brow. Take our 90 second selfie shade match quiz & build your dream makeup routine. <strong>Build your personalized bundle with 4 products or more and get 15% OFF.<\/strong><\/p>",
+        "pretext_color": "#d8ac92",
+        "heading_color": "#00263a",
+        "heading_font_desk": 40,
+        "subheading_color": "#00263a",
+        "text_alignment": "left",
+        "text_horizontal_position": "left",
+        "text_vertical_position": "middle",
+        "background_color": "#ffffff",
+        "background_opacity": 0,
+        "border_color": "#ffffff",
+        "border_width": 0,
+        "text_width": 40,
+        "button_1": "FIND YOUR SHADE",
+        "button_text_color": "#ffffff",
+        "button_bg_color": "#00263a",
+        "button_hover_bg_color": "#ffffff",
+        "button_hover_color": "#000000",
+        "button_1_link": "shopify:\/\/pages\/routine-finder",
+        "button_1_style": "button--secondary",
+        "button_2": "",
+        "button_2_link": "",
+        "button_2_style": "button--secondary",
+        "pretext": "",
+        "mobile_image_crop": "none",
+        "mobile_text_below_image": true,
+        "mobile_text_position": "bottom",
+        "pretext_color_mobile": "rgba(0,0,0,0)",
+        "heading_font_xs": 50,
+        "heading_color_mobile": "#00263a",
+        "subheading_color_mobile": "rgba(0,0,0,0)",
+        "width": "wide",
+        "padding_top": 0,
+        "padding_bottom": 0,
+        "padding_left": 0,
+        "padding_right": 0,
+        "animation": "none",
+        "css_class": "",
+        "custom_css": ""
+      }
+    },
+    "166068667379a656f1": {
+      "type": "banner-with-text",
+      "settings": {
+        "link": "https:\/\/www.trestique.com\/products\/the-essential-mix?step=2",
+        "video_url": "",
+        "video_url_mobile": "",
+        "image": "shopify:\/\/shop_images\/01_product_module_banner.png",
+        "mobile_image": "shopify:\/\/shop_images\/Group_1_398bb594-d290-4728-83ee-5b11ad675871.png",
+        "title": "Create your custom set",
+        "subtitle": "<p>Your makeup routine, your way. Take the chance to create the makeup routine of your dreams, personalized for your lifestyle. Simply choose your favorite products, shades & makeup bag. <strong>Save 15% when you create a makeup routine of 4 products or more.<\/strong><\/p>",
+        "pretext_color": "#000000",
+        "heading_color": "#00263a",
+        "heading_font_desk": 40,
+        "subheading_color": "#00263a",
+        "text_alignment": "left",
+        "text_horizontal_position": "right",
+        "text_vertical_position": "middle",
+        "background_color": "#ffffff",
+        "background_opacity": 0,
+        "border_color": "#ffffff",
+        "border_width": 0,
+        "text_width": 40,
+        "button_1": "CREATE YOUR SET",
+        "button_text_color": "#ffffff",
+        "button_bg_color": "#00263a",
+        "button_hover_bg_color": "#ffffff",
+        "button_hover_color": "#000000",
+        "button_1_link": "https:\/\/www.trestique.com\/products\/the-essential-mix",
+        "button_1_style": "button--secondary",
+        "button_2": "",
+        "button_2_link": "",
+        "button_2_style": "button--secondary",
+        "pretext": "",
+        "mobile_image_crop": "none",
+        "mobile_text_below_image": true,
+        "mobile_text_position": "middle",
+        "pretext_color_mobile": "rgba(0,0,0,0)",
+        "heading_font_xs": 50,
+        "heading_color_mobile": "rgba(0,0,0,0)",
+        "subheading_color_mobile": "rgba(0,0,0,0)",
+        "width": "wide",
+        "padding_top": 0,
+        "padding_bottom": 0,
+        "padding_left": 0,
+        "padding_right": 0,
+        "animation": "none",
+        "css_class": "",
+        "custom_css": ""
+      }
+    },
+    "join_hero": {
+      "type": "join-zero",
+      "blocks": {
+        "6b1a4f73-4db4-4b69-a4ac-d758b2aec254": {
+          "type": "block",
+          "settings": {
+            "slide_img": "shopify:\/\/shop_images\/bb-lp-2_8272f99a-d966-4219-9095-27e6f8580b74.jpg",
+            "client_review": "I love the convenience of trestique. All of the products are 2-in-1: the product is on one end and the tool is on the other!",
+            "clinet_review_color": "#00263a",
+            "client_name": "Megan",
+            "clinet_name_color": "#00263a"
+          }
+        },
+        "6f2aa91a-c4fc-41ee-af27-a755484b9869": {
+          "type": "block",
+          "settings": {
+            "slide_img": "shopify:\/\/shop_images\/Rectangle_175.png",
+            "client_review": "I'm always on the go and rely on the versatility and I take the makeup bag with me everywhere. It's so easy to travel with and has all the essentials.",
+            "clinet_review_color": "#00263a",
+            "client_name": "Erica",
+            "clinet_name_color": "#00263a"
+          }
+        },
+        "661c2138-b493-4ec9-9ab5-541e80985808": {
+          "type": "block",
+          "settings": {
+            "slide_img": "shopify:\/\/shop_images\/bb-lp-1_6c6d9e62-599e-4d3f-b1b1-e362d4755b63.jpg",
+            "client_review": "Let me tell you about my current obsession... trestique. All of their products are zero-waste and refillable!",
+            "clinet_review_color": "#00263a",
+            "client_name": "Skylar",
+            "clinet_name_color": "#00263a"
+          }
+        },
+        "c20c4c87-aa42-4e32-916c-1ae2f8de040c": {
+          "type": "block",
+          "disabled": true,
+          "settings": {
+            "slide_img": "shopify:\/\/shop_images\/hallie.png",
+            "client_review": "Trestique products are awesome. Nibh varius erat molestie tempus, eu.",
+            "clinet_review_color": "#00263a",
+            "client_name": "Hallie",
+            "clinet_name_color": "#00263a"
+          }
+        },
+        "14f002e7-4f43-478c-a78d-608d0642dca7": {
+          "type": "block",
+          "disabled": true,
+          "settings": {
+            "slide_img": "shopify:\/\/shop_images\/meghan.png",
+            "client_review": "Trestique products are awesome. Nibh varius erat molestie tempus, eu.",
+            "clinet_review_color": "#00263a",
+            "client_name": "",
+            "clinet_name_color": "#00263a"
+          }
+        },
+        "57a9b404-3394-4698-82bc-7d6702767ed3": {
+          "type": "block",
+          "disabled": true,
+          "settings": {
+            "client_review": "",
+            "clinet_review_color": "#00263a",
+            "client_name": "",
+            "clinet_name_color": "#00263a"
+          }
+        }
+      },
+      "block_order": [
+        "6b1a4f73-4db4-4b69-a4ac-d758b2aec254",
+        "6f2aa91a-c4fc-41ee-af27-a755484b9869",
+        "661c2138-b493-4ec9-9ab5-541e80985808",
+        "c20c4c87-aa42-4e32-916c-1ae2f8de040c",
+        "14f002e7-4f43-478c-a78d-608d0642dca7",
+        "57a9b404-3394-4698-82bc-7d6702767ed3"
+      ],
+      "disabled": true,
+      "settings": {
+        "bg_color": "#f0f0f0",
+        "main_title": "Join the zero-waste beauty movement",
+        "star_img": "shopify:\/\/shop_images\/five-star.png",
+        "show_arrow": true,
+        "slides_dots": true,
+        "auto_play": false,
+        "slides_to_show_lg": 1,
+        "slides_to_show_sm": 1,
+        "max_width": 1170,
+        "block_bg_color": "#f3e9e2"
+      }
+    }
+  },
+  "order": [
+    "banner_video",
+    "how_it_works",
+    "1653510607d3c26869",
+    "what_makes",
+    "f40d81a6-3731-4f17-bd83-dbc09c13e999",
+    "51f1dca8-a528-4736-b263-b8752a6ea0dc",
+    "16536866685369a0cf",
+    "16540961415186143a",
+    "166068667379a656f1",
+    "join_hero"
+  ]
+}

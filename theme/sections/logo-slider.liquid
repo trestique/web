@@ -1,0 +1,67 @@
+<style>
+  
+  .slider-wrapper--{{section.id}} {
+
+    background-color: {{section.settings.bg_color}};
+  }
+  
+  .logo-slider-{{section.id}}{
+    
+    max-width: {{section.settings.max_width}}px;
+    background-color: {{section.settings.bg_color}};
+  }
+  
+</style>
+<div class="slider-wrapper slider-wrapper--{{section.id}}">
+<div class="essential-mix-slider logo-slider-{{section.id}}"    
+    data-slide-sm="{{section.settings.slides_to_show_sm}}" 
+    data-slide-md="4" 
+    data-slide-lg="{{section.settings.slides_to_show_lg}}"
+    data-auto-play="{{section.settings.auto_play}}">
+    
+        {%- for block in section.blocks -%}
+        <div class="logo-img">
+          {% render 'srcset' , src_name:block.settings.logo_img, src_alt:block.settings.logo_img.alt %}
+        </div>
+        {%- endfor -%}
+
+</div>
+</div>
+
+{% schema %}
+{
+  "name": "Logo slider",
+  "settings": [
+     {
+       "type": "color",
+       "id": "bg_color",
+       "label": "Background color",
+       "default": "#B66C6D"
+    },
+    {
+      "type": "number",
+      "id": "max_width",
+      "label": "Max width"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "block",
+      "name": "Single slide",
+      "settings": [
+       {
+         "type": "image_picker",
+         "id": "logo_img",
+         "label": "Image"
+       }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "category": "slider",
+      "name":"Slider - Mix landing"
+    }
+  ]
+} 
+{% endschema %}

@@ -1,0 +1,80 @@
+<!-- subscription-easy-to-manage -->
+<style>
+  .easy-to-manage {
+    background-color: {{ section.settings.bg_color }};
+  }
+  .easy-to-manage .section-title {
+    font-size: {{ section.settings.font_size_title }}px;
+  }
+</style>
+<div class="easy-to-manage">
+  {% unless section.settings.section_title == blank %}
+    <h5 class="section-title">{{ section.settings.section_title }}</h5>
+  {% endunless %}
+  <div class="block-wrapper">
+    {%- for block in section.blocks -%}
+      <div class="icon-block">
+        {%- if block.settings.block_image != blank -%}
+          {%- render 'srcset', 
+            src_alt:block.settings.block_image.alt,
+            src_name:block.settings.block_image,
+            load_blur:true 
+          -%}
+        {%- endif -%}
+        {% unless block.settings.content == blank %}
+          <p class="content">{{ block.settings.content }}</p>
+        {% endunless %}
+      </div>
+    {%- endfor -%}
+  </div>
+</div>
+
+{% schema %}
+{
+  "name": "Easy to manage",
+  "settings": [
+      {
+        "type": "header",
+        "content": "Easy to manage"
+      },
+      {
+        "type":"color",
+        "id":"bg_color",
+        "label":"background_color"
+      },
+      {
+        "type":"text",
+        "id":"section_title",
+        "label":"Title"
+      },
+      {
+        "type": "number",
+        "id": "font_size_title",
+        "label": "Font size"
+      }
+    ],
+    "blocks": [
+      {
+        "type": "block",
+        "name": "block",
+        "settings": [
+          {
+            "type": "image_picker",
+            "id": "block_image",
+            "label": "Icon Image"
+          },
+          {
+            "type": "textarea",
+            "id": "content",
+            "label": "Content"
+          }
+        ]
+      }
+    ],
+    "presets": [
+      {
+        "name": "Easy to manage"
+      }
+    ]
+  }
+{% endschema %}

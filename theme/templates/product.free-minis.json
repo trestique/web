@@ -1,0 +1,66 @@
+{
+  "sections": {
+    "1662649023578815b9": {
+      "type": "index__image-with-text-overlay",
+      "settings": {
+        "link": "",
+        "image": "shopify:\/\/shop_images\/adfvnhj.png",
+        "pretext": "",
+        "title": "<h1 style=\"font-size: 45px; line-height: 35px; font-family: FreightDispPro;\">This product is a gift and can't be purchased.<\/h1>",
+        "subtitle": "",
+        "pretext_color": "#000000",
+        "heading_color": "#00263a",
+        "subheading_color": "#000000",
+        "text_alignment": "center",
+        "text_horizontal_position": "center",
+        "text_vertical_position": "middle",
+        "background_color": "#ffffff",
+        "background_opacity": 0,
+        "border_color": "#ffffff",
+        "border_width": 0,
+        "text_width": 60,
+        "button_1": "SHOP ALL",
+        "button_1_link": "shopify:\/\/collections\/all-makeup-products",
+        "button_1_style": "button--primary",
+        "button_2": "",
+        "button_2_link": "",
+        "button_2_style": "button--secondary",
+        "mobile_image_crop": "none",
+        "mobile_text_below_image": false,
+        "pretext_color_mobile": "rgba(0,0,0,0)",
+        "heading_color_mobile": "rgba(0,0,0,0)",
+        "subheading_color_mobile": "rgba(0,0,0,0)",
+        "width": "wide",
+        "padding_top": 0,
+        "padding_bottom": 0,
+        "padding_left": 0,
+        "padding_right": 0,
+        "animation": "none",
+        "css_class": "",
+        "custom_css": ""
+      }
+    },
+    "new-product-template": {
+      "type": "new-product-template",
+      "disabled": true,
+      "settings": {
+        "find_shade_link": "",
+        "combo_product_title": "",
+        "gift_product_title": "",
+        "subscription_text": "",
+        "subscription_offer_text": "",
+        "subscription_offer_text_xs": "",
+        "subscription_offer_info": "",
+        "subscription_offer_info_xs": "",
+        "subscription_badge_text": "",
+        "subscription_recommended_selector": "",
+        "one_time_purchase_text": "Change to one-time purchase",
+        "subscribr_popup_details": ""
+      }
+    }
+  },
+  "order": [
+    "1662649023578815b9",
+    "new-product-template"
+  ]
+}

@@ -1,0 +1,365 @@
+<script>
+    window.quiz.settings = {...window.quiz.settings,...{{ section.settings | json}}};
+    {% assign master_product = all_products[section.settings.master_product] %}
+    {% if master_product != blank %}
+    window.quiz.settings.masterProduct = {{master_product | json }};
+    {% endif  %}
+    window.quiz.settings.products = [];
+    window.quiz.settings.collections = [];
+    window.quiz.settings.products = [
+        {% assign count = 0 %}
+        {% for block in section.blocks %}
+        {% assign product = all_products[block.settings.product] %}
+        {% if product != blank and product.available %}
+        {% if count != 0 %},{% endif  %}
+        {% assign count = count | plus:1 %}
+        { 
+            "id": {{product.id}},
+            "product_title":"{% if block.settings.title != blank %}{{block.settings.title}}{% else %}{{product.title}}{% endif %}",
+            "product_handle":"{{product.handle}}",
+            "product_image":"{% if block.settings.product_image != blank %}{{block.settings.product_image | img_url:'master'}}{% else %}{{product.featured_image | img_url:'master'}}{% endif %}",
+            "image":"{{block.settings.image | img_url:'master'}}",
+            "visible_image_Xs": {{block.settings.visible_image_Xs}},
+            "image_top_text":"{{block.settings.image_top_text}}",
+            "image_bottom_text":"{{block.settings.image_bottom_text}}",
+            "options":{{product.options_with_values | json}},
+            "variants":{{product.variants | json }},
+            "currentVariant":{{product.selected_or_first_available_variant | json}},
+            "metaData": {{ product.metafields.product_details | json }},
+        }{% endif %}
+        {% endfor %}
+    ]
+    window.quiz.settings.shadowProductsDetails = {
+        "title":"{{section.settings.shadow_shimmer_title}}",
+        "text":"{{section.settings.shadow_shimmer_text}}",
+        "shadow_product_handle":"{{section.settings.shadow_product}}",
+        "mate_desk_img": "{{section.settings.shadow_matte_desktop_img | img_url:'master'}}",
+        "mate_xs_img": "{{section.settings.shadow_matte_xs_img | img_url:'master'}}",
+        "shimmer_desk_img": "{{section.settings.shadow_shimmer_desktop_img | img_url:'master'}}",
+        "shimmer_xs_img": "{{section.settings.shadow_shimmer_xs_img | img_url:'master'}}"
+    }
+    window.quiz.settings.lipsProductsDetails = {
+        "title":"{{section.settings.lips_title}}",
+        "text":"{{section.settings.lips_text}}",
+        "product_handles":"{{section.settings.lips_products}}",
+        "options":[
+            {
+                "img": "{{section.settings.lips_natural_desktop_img | img_url:'master'}}",
+                "xs_img": "{{section.settings.lips_natural_xs_img | img_url:'master'}}",
+                "text":"{{section.settings.lips_natural_text}}"
+            },
+            {
+                "img": "{{section.settings.lips_bold_desktop_img | img_url:'master'}}",
+                "xs_img": "{{section.settings.lips_bold_xs_img | img_url:'master'}}",
+                "text":"{{section.settings.lips_bold_text}}"
+            }
+        ]
+    }
+    window.quiz.settings.collections = [
+        {% assign collection_1 = collections[section.settings.collection_1] %}
+        {% assign collection_2 = collections[section.settings.collection_2] %}
+        {% assign collection_3 = collections[section.settings.collection_3] %}
+        {% if collection_1 != blank %}
+        {
+            "title":"{% if section.settings.collection_1_text != blank %}{{section.settings.collection_1_text}}{% else %}{{collection.title}}{% endif %}",
+            "products":[
+            {% for product in collection_1.products %}
+            {
+                "id": {{product.id}},
+                "product_title":"{{product.title}}",
+                "product_handle":"{{product.handle}}",
+                "product_image":"{{product.featured_image | img_url:'master'}}",
+                "options":{{product.options_with_values | json}},
+                "variants":{{product.variants | json }},
+                "currentVariant":{{product.selected_or_first_available_variant | json}},
+                "metaData": {{ product.metafields.product_details | json }},
+                "badge" : {
+                    "bg_color":"{{product.metafields.product_details.product_badge_msg_background}}",
+                    "color":"{{product.metafields.product_details.product_badge_msg_text_color}}",
+                    "text": "{{product.metafields.product_details.product_badge_message}}"
+                }
+            }{% unless forloop.last%},{% endunless %}
+            {% endfor %}
+            ]
+        },
+        {% endif %}
+        {% if collection_2 != blank %}
+        {
+            "title":"{% if section.settings.collection_2_text != blank %}{{section.settings.collection_2_text}}{% else %}{{collection.title}}{% endif %}",
+            "products":[
+            {% for product in collection_2.products %}
+            {
+                "id": {{product.id}},
+                "product_title":"{{product.title}}",
+                "product_handle":"{{product.handle}}",
+                "product_image":"{{product.featured_image | img_url:'master'}}",
+                "options":{{product.options_with_values | json}},
+                "variants":{{product.variants | json }},
+                "currentVariant":{{product.selected_or_first_available_variant | json}},
+                "metaData": {{ product.metafields.product_details | json }},
+                "badge" : {
+                    "bg_color":"{{product.metafields.product_details.product_badge_msg_background}}",
+                    "color":"{{product.metafields.product_details.product_badge_msg_text_color}}",
+                    "text": "{{product.metafields.product_details.product_badge_message}}"
+                }
+            }{% unless forloop.last%},{% endunless %}
+            {% endfor %}
+            ]
+        },
+        {% endif %}
+        {% if collection_3 != blank %}
+        {
+            "title":"{% if section.settings.collection_3_text != blank %}{{section.settings.collection_3_text}}{% else %}{{collection.title}}{% endif %}",
+            "products":[
+            {% for product in collection_3.products %}
+            {
+                "id": {{product.id}},
+                "product_title":"{{product.title}}",
+                "product_handle":"{{product.handle}}",
+                "product_image":"{{product.featured_image | img_url:'master'}}",
+                "options":{{product.options_with_values | json}},
+                "variants":{{product.variants | json }},
+                "currentVariant":{{product.selected_or_first_available_variant | json}},
+                "metaData": {{ product.metafields.product_details | json }},
+                "badge" : {
+                    "bg_color":"{{product.metafields.product_details.product_badge_msg_background}}",
+                    "color":"{{product.metafields.product_details.product_badge_msg_text_color}}",
+                    "text": "{{product.metafields.product_details.product_badge_message}}"
+                }
+            }{% unless forloop.last%},{% endunless %}
+            {% endfor %}
+            ]
+        },
+        {% endif %}
+    ];
+
+</script>
+
+{% schema %}
+{
+  "name": "Screen 6 customizations",
+  "settings": [
+    {
+        "type":"header",
+        "content":"Screen 6",
+        "info": "What are your makeup essentials?"
+    },
+    {
+        "type":"text",
+        "label":"Screen 6 title",
+        "id":"screen_6_title",
+        "default":"What are your makeup essentials?"
+    },
+    {
+        "type":"richtext",
+        "label":"Screen 6 text",
+        "id":"screen_6_text",
+        "default":"<p>Get 15% off when you select 4 or more<br> products to create a set.</p>"
+    },
+    {
+        "type":"richtext",
+        "label":"Screen 6 save msg",
+        "id":"screen_6_save_msg",
+        "default":"<p><u>Save 15%</u> when you choose <u>4 products or more!</u></p>"
+    },
+    {
+        "type":"product",
+        "label":"Master product",
+        "id":"master_product"
+    },
+    {
+        "type":"header",
+        "content":"Products display style"
+    },
+    {
+        "type": "select",
+        "id": "products_display_style",
+        "label": "Products display style",
+        "options": [
+            {
+            "value": "image_with_products",
+            "label": "Image with products"
+            },
+            {
+            "value": "products_grid",
+            "label": "Products grid"
+            }
+        ],
+        "default": "products_grid"
+    },
+    {
+        "type":"header",
+        "content":"Products display style"
+    },
+    {
+        "type":"text",
+        "id":"collection_1_text",
+        "label":"Collection text 1"
+    },
+    {
+        "type":"collection",
+        "id":"collection_1",
+        "label":"Collection 1"
+    },
+    {
+        "type":"text",
+        "id":"collection_2_text",
+        "label":"Collection text 2"
+    },
+    {
+        "type":"collection",
+        "id":"collection_2",
+        "label":"Collection 2"
+    },
+    {
+        "type":"text",
+        "id":"collection_3_text",
+        "label":"Collection text 3"
+    },
+    {
+        "type":"collection",
+        "id":"collection_3",
+        "label":"Collection 3"
+    },
+    {
+        "type":"header",
+        "content":"Shadow crayon details"
+    },
+    {
+        "type":"product",
+        "label":"Shadow crayon product",
+        "id":"shadow_product"
+    },
+    {
+        "type":"text",
+        "label":"Shadow shimmer title",
+        "id":"shadow_shimmer_title",
+        "default":"When it comes to your eyes,<br/>which feels right?"
+    },
+    {
+        "type":"text",
+        "label":"Shadow shimmer text",
+        "id":"shadow_shimmer_text",
+        "default":"Select as many as you want."
+    },
+    {
+        "type":"image_picker",
+        "label":"Shadow shimmer desktop image",
+        "id":"shadow_shimmer_desktop_img"
+    },
+    {
+        "type":"image_picker",
+        "label":"Shadow shimmer mobile image",
+        "id":"shadow_shimmer_xs_img"
+    },
+    {
+        "type":"image_picker",
+        "label":"Shadow matte desktop image",
+        "id":"shadow_matte_desktop_img"
+    },
+    {
+        "type":"image_picker",
+        "label":"Shadow matte mobile image",
+        "id":"shadow_matte_xs_img"
+    },
+    {
+        "type":"header",
+        "content":"Lips products details"
+    },
+    {
+        "type":"textarea",
+        "label":"Lips products",
+        "id":"lips_products"
+    },
+    {
+        "type":"text",
+        "label":"Lips title",
+        "id":"lips_title",
+        "default":"Which do you prefer?"
+    },
+    {
+        "type":"text",
+        "label":"Lips text",
+        "id":"lips_text",
+        "default":"Select as many as you want."
+    },
+    {
+        "type":"image_picker",
+        "label":"Lips natural desktop image",
+        "id":"lips_natural_desktop_img"
+    },
+    {
+        "type":"image_picker",
+        "label":"Lips natural mobile image",
+        "id":"lips_natural_xs_img"
+    },
+    {
+        "type":"text",
+        "label":"Lips natural text",
+        "id":"lips_natural_text",
+        "default":"Natural Lips"
+    },
+    {
+        "type":"image_picker",
+        "label":"Lips bold desktop image",
+        "id":"lips_bold_desktop_img"
+    },
+    {
+        "type":"image_picker",
+        "label":"Lips bold mobile image",
+        "id":"lips_bold_xs_img"
+    },
+    {
+        "type":"text",
+        "label":"Lips bold text",
+        "id":"lips_bold_text",
+        "default":"Bold Lips"
+    }
+  ],
+  "blocks":[
+    {
+        "type":"Product",
+        "name":"product",
+        "settings":[
+            {
+                "type":"product",
+                "label":"Product",
+                "id":"product"
+            },
+            {
+                "type":"image_picker",
+                "label":"Product image",
+                "id":"product_image",
+                "info":"If this image uploaded then it will be overwrite with product image by default show product image"
+            },
+            {
+                "type":"text",
+                "label":"Product title",
+                "id":"title",
+                "info":"If this title uploaded then it will be overwrite with product title by default show product title"
+            },
+            {
+                "type":"image_picker",
+                "label":"Product description image",
+                "id":"image"
+            },
+            {
+                "type":"checkbox",
+                "label":"Description image hide on mobile?",
+                "id":"visible_image_Xs"
+            },
+            {
+                "type":"text",
+                "label":"Image top text",
+                "id":"image_top_text"
+            },
+            {
+                "type":"richtext",
+                "label":"Image bottom text",
+                "id":"image_bottom_text"
+            }
+        ]
+    }
+  ]
+}
+{% endschema %}

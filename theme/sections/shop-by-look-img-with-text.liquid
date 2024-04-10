@@ -1,0 +1,65 @@
+<script>
+    simply.shopByLook.grid['settings'] = {{section.settings | json}};
+    simply.shopByLook.grid['blocks'] = [];
+    {% for block in section.blocks %}
+        simply.shopByLook.grid.blocks.push({...{{block.settings | json}},type:"{{block.type}}"});
+    {% endfor %}
+    </script>
+    
+    {% schema %}
+    {
+      "name": "Shop by look image text", 
+      "settings": [
+      ],
+      "blocks": [
+        {
+          "type": "image_with_text",
+          "name": "Image with text",
+          "settings": [
+            {
+              "type": "image_picker",
+              "id": "shade_image",
+              "label": "Image[Desktop]"
+            },
+            {
+              "type": "image_picker",
+              "id": "shade_image_mob",
+              "label": "Image[Mobile]"
+            },
+            {
+              "type": "color",
+              "id": "shade_title_color",
+              "label": "Title color"
+            },
+            {
+              "type": "textarea",
+              "id": "shade_title",
+              "label": "Title"
+            },
+            {
+                "type": "color",
+                "id": "btn_text_color",
+                "label": "Button text color"
+            },
+            {
+                "type": "color",
+                "id": "btn_back_color",
+                "label": "Button background color"
+            },
+            {
+              "type": "url",
+              "id": "shade_button_url",
+              "label": "Button link"
+            },
+            {
+              "type": "text",
+              "id": "shade_button_title",
+              "label": "Button title",
+              "default" : "Find Your Shades"
+            }
+          ]
+        }
+      ]
+    }
+    {% endschema %}
+    

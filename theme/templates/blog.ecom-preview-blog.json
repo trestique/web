@@ -1,0 +1,12 @@
+{
+  "layout": "theme",
+  "sections": {
+    "ecom-preview-blog": {
+      "type": "ecom-preview-blog-blog",
+      "settings": {}
+    }
+  },
+  "order": [
+    "ecom-preview-blog"
+  ]
+}

@@ -1,0 +1,345 @@
+{
+  "sections": {
+    "essential-starter-kit": {
+      "type": "essential-starter-kit",
+      "blocks": {
+        "f816838d-08a1-4adf-a7f5-a0d1dba11e75": {
+          "type": "child-selectable",
+          "settings": {
+            "product": "zero-waste-makeup-system-foundation-stick",
+            "number": "1.",
+            "exclude_variants": ""
+          }
+        },
+        "79145e21-3711-46b2-a90b-8c63331239e3": {
+          "type": "child-selectable",
+          "settings": {
+            "product": "cruelty-free-eyeshadow-crayon",
+            "number": "2.",
+            "exclude_variants": "Clay"
+          }
+        },
+        "37eddee6-2273-4ce3-966b-67947fb2f8db": {
+          "type": "child-selectable",
+          "settings": {
+            "product": "cruelty-free-makeup-good-vibes-mascara",
+            "number": "3.",
+            "exclude_variants": ""
+          }
+        },
+        "89d03b77-cc77-490b-84d4-ec928947b2c2": {
+          "type": "child-selectable",
+          "settings": {
+            "product": "cruelty-free-makeup-blush-stick",
+            "number": "4.",
+            "exclude_variants": ""
+          }
+        },
+        "20826652-0654-4839-92a0-a90a7fba250d": {
+          "type": "child-selectable",
+          "settings": {
+            "product": "refillable-makeup-prime-shine-lip-crayon",
+            "number": "5.",
+            "exclude_variants": ""
+          }
+        },
+        "84524122-34db-41cf-be40-f60a41661122": {
+          "type": "child-selectable",
+          "settings": {
+            "product": "eco-friendly-deluxe-makeup-bag",
+            "number": "YOUR BAG",
+            "exclude_variants": ""
+          }
+        },
+        "96336263-b232-4bf1-a494-7dfd76ede89a": {
+          "type": "sustainability_practices",
+          "disabled": true,
+          "settings": {
+            "image": "shopify:\/\/shop_images\/E8-Icons_1.png"
+          }
+        },
+        "fe48c92a-f97c-4b0b-93c8-47344781b897": {
+          "type": "sustainability_practices",
+          "disabled": true,
+          "settings": {
+            "image": "shopify:\/\/shop_images\/E8-Icons_2.png"
+          }
+        },
+        "02283399-9277-493b-9a65-2081fdf9f82f": {
+          "type": "sustainability_practices",
+          "disabled": true,
+          "settings": {
+            "image": "shopify:\/\/shop_images\/E8-Icons_3.png"
+          }
+        },
+        "fc65878d-95a2-44ea-b24e-a9975bff2c20": {
+          "type": "sustainability_practices",
+          "disabled": true,
+          "settings": {
+            "image": "shopify:\/\/shop_images\/E8-Icons_4.png"
+          }
+        },
+        "9ef153e2-9c3e-41ac-9b12-288c84b9ef03": {
+          "type": "sustainability_practices",
+          "disabled": true,
+          "settings": {
+            "image": "shopify:\/\/shop_images\/E8-Icons_5.png"
+          }
+        },
+        "701c2789-c3f1-4d8a-9f99-ffee528bc47b": {
+          "type": "sustainability_practices",
+          "disabled": true,
+          "settings": {
+            "image": "shopify:\/\/shop_images\/E8-Icons.png"
+          }
+        },
+        "2220be21-b576-4511-a339-83649f1d6419": {
+          "type": "service",
+          "settings": {
+            "service_icon": "shopify:\/\/shop_images\/trestique-product-icons-Aug-2021.png",
+            "service_text": "<p>FREE Shipping<\/p><p>on orders $49+<\/p>"
+          }
+        },
+        "d6cd4383-d567-49d5-9e92-070f7d931260": {
+          "type": "service",
+          "settings": {
+            "service_icon": "shopify:\/\/shop_images\/afterpay.png",
+            "service_text": "<p>Pay in 4 easy<\/p><p>installments<\/p>"
+          }
+        },
+        "24636e23-a14d-49ec-a622-aa0fe1ba111e": {
+          "type": "service",
+          "settings": {
+            "service_icon": "shopify:\/\/shop_images\/trestique-product-icons-Aug-2021_2.png",
+            "service_text": "<p>Free Returns & Exchanges<\/p>"
+          }
+        },
+        "d7770303-65a8-49d5-8e7b-eb342a647e71": {
+          "type": "review",
+          "disabled": true,
+          "settings": {
+            "review_text": "<p>TrèStique Relaunches With Clean, Zero Waste Refillable Makeup System<\/p>",
+            "review_author": "",
+            "review_author_logo": "shopify:\/\/shop_images\/Group_9_4e95ab98-613a-4470-9fea-e12f1557874a.png",
+            "review_author_country_logo": "shopify:\/\/shop_images\/Gift.png"
+          }
+        },
+        "869fb3e7-e19c-4270-805e-4b72ba39cf0e": {
+          "type": "review",
+          "disabled": true,
+          "settings": {
+            "review_text": "<p>I am in LOVE with my new trestique products! The mascara doesn’t give me raccoon eyes, the red lip is a vintage hit and the foundation melts into my skin! Thank you trestique!<\/p>",
+            "review_author": "Gina L.",
+            "review_author_logo": "shopify:\/\/shop_images\/Gina-L.png",
+            "review_author_country_logo": "shopify:\/\/shop_images\/usa-flag.webp"
+          }
+        },
+        "e4a320b1-c7de-4bb4-91ef-c68ada26f51f": {
+          "type": "review",
+          "settings": {
+            "review_text": "<p>Terrific bundle with a little of everything! The makeup is so light I don't realize I'm wearing it - especially the foundation! The coverage is smooth and natural looking.<\/p>",
+            "review_author": "Jennifer D.",
+            "review_author_logo": "shopify:\/\/shop_images\/J-D-customer-review-sets.png",
+            "review_author_country_logo": "shopify:\/\/shop_images\/usa-flag.webp"
+          }
+        },
+        "6830de66-af9b-40d2-8890-77133be4f27d": {
+          "type": "review",
+          "settings": {
+            "review_text": "<p>Best Foundation EVER! <\/p><p>Easy on the go - feels as if I have nothing on! Blends beautifully, and covers VERY WELL with very little!<\/p>",
+            "review_author": "Sarah B.",
+            "review_author_logo": "shopify:\/\/shop_images\/Sarah-B.png",
+            "review_author_country_logo": "shopify:\/\/shop_images\/usa-flag.webp"
+          }
+        },
+        "48ca5172-66b0-4dc7-89b5-e3f274baeb67": {
+          "type": "review",
+          "settings": {
+            "review_text": "<p>Its a great package, with everything you need. As someone who doesn't wear make up a lot, it makes everything simple and quick.<\/p>",
+            "review_author": "Rachel H.",
+            "review_author_logo": "shopify:\/\/shop_images\/Trestique_01_1993386a-ad92-4de8-b012-3d79c8e36943.png",
+            "review_author_country_logo": "shopify:\/\/shop_images\/usa-flag.png"
+          }
+        },
+        "60d5707a-2527-4214-9928-2ab94a3ce4ec": {
+          "type": "review",
+          "settings": {
+            "review_text": "<p> This is the best makeup kit ever. No mess, no fuss, and has made my morning routine quick!<\/p>",
+            "review_author": "Verneal S.",
+            "review_author_logo": "shopify:\/\/shop_images\/Trestique_01_1993386a-ad92-4de8-b012-3d79c8e36943.png",
+            "review_author_country_logo": "shopify:\/\/shop_images\/usa-flag.png"
+          }
+        },
+        "36dfa2fc-69e2-46c0-b861-ef2bf3d4dd50": {
+          "type": "review",
+          "settings": {
+            "review_text": "<p>If you don’t know where to start, this is a great kit. A perfect “intro” to makeup because it has the essentials.<\/p>",
+            "review_author": "Deanna N.",
+            "review_author_logo": "shopify:\/\/shop_images\/Trestique_01_1993386a-ad92-4de8-b012-3d79c8e36943.png",
+            "review_author_country_logo": "shopify:\/\/shop_images\/usa-flag.png"
+          }
+        },
+        "b556a929-1734-4a1a-b927-b75dacee59c8": {
+          "type": "review",
+          "settings": {
+            "review_text": "<p>I love this kit! It fits perfectly in your purse or travel bag and everything you need is in here.<\/p>",
+            "review_author": "Rosanna",
+            "review_author_logo": "shopify:\/\/shop_images\/Trestique_01_1993386a-ad92-4de8-b012-3d79c8e36943.png",
+            "review_author_country_logo": "shopify:\/\/shop_images\/usa-flag.png"
+          }
+        },
+        "086f17db-3edb-4887-a7fa-0475afcd0d18": {
+          "type": "review",
+          "settings": {
+            "review_text": "<p>So quick and easy. I still feel very put together with only 5 min of makeup.<\/p>",
+            "review_author": "Jessica S.",
+            "review_author_logo": "shopify:\/\/shop_images\/Trestique_01_1993386a-ad92-4de8-b012-3d79c8e36943.png",
+            "review_author_country_logo": "shopify:\/\/shop_images\/usa-flag.png"
+          }
+        },
+        "569dc61c-1e55-4190-ba0a-42f4268dfeb2": {
+          "type": "benifits",
+          "settings": {
+            "service_text": "Free Shipping"
+          }
+        },
+        "f8aa7713-7095-4362-adfc-e0c6a3c9849a": {
+          "type": "benifits",
+          "settings": {
+            "service_text": "Cruelty Free"
+          }
+        },
+        "520271a4-7695-404b-96b0-36d2409058bb": {
+          "type": "benifits",
+          "settings": {
+            "service_text": "2-in-1 Products"
+          }
+        },
+        "e1edd3a8-0fc0-4ead-9e21-bdf0ed64ebd6": {
+          "type": "benifits",
+          "settings": {
+            "service_text": "Recyclable Refillable"
+          }
+        },
+        "06211a4b-fe4e-480a-af66-edc7243ac941": {
+          "type": "half_image",
+          "settings": {
+            "img": "shopify:\/\/shop_images\/Rectangle_65.png",
+            "link": ""
+          }
+        },
+        "cf7d8290-4d81-4394-bf1b-c4119b17c725": {
+          "type": "half_image",
+          "settings": {
+            "img": "shopify:\/\/shop_images\/Rectangle_66.png",
+            "link": ""
+          }
+        },
+        "full_image_NWMz6g": {
+          "type": "full_image",
+          "settings": {
+            "img": "shopify:\/\/shop_images\/Image3_1e22cd3a-120b-4a84-91d5-bffb9372c524.png",
+            "link": ""
+          }
+        },
+        "benifits2_NTgqP4": {
+          "type": "benifits2",
+          "settings": {
+            "service_text": "Free Shipping"
+          }
+        },
+        "benifits2_VxEACE": {
+          "type": "benifits2",
+          "settings": {
+            "service_text": "30 Days Free Return"
+          }
+        },
+        "benifits2_nVzcqh": {
+          "type": "benifits2",
+          "settings": {
+            "service_text": "Pay in installments Afterpay"
+          }
+        },
+        "benifits2_DJmg93": {
+          "type": "benifits2",
+          "settings": {
+            "service_text": "Made in Italy"
+          }
+        }
+      },
+      "block_order": [
+        "f816838d-08a1-4adf-a7f5-a0d1dba11e75",
+        "79145e21-3711-46b2-a90b-8c63331239e3",
+        "37eddee6-2273-4ce3-966b-67947fb2f8db",
+        "89d03b77-cc77-490b-84d4-ec928947b2c2",
+        "20826652-0654-4839-92a0-a90a7fba250d",
+        "84524122-34db-41cf-be40-f60a41661122",
+        "96336263-b232-4bf1-a494-7dfd76ede89a",
+        "fe48c92a-f97c-4b0b-93c8-47344781b897",
+        "02283399-9277-493b-9a65-2081fdf9f82f",
+        "fc65878d-95a2-44ea-b24e-a9975bff2c20",
+        "9ef153e2-9c3e-41ac-9b12-288c84b9ef03",
+        "701c2789-c3f1-4d8a-9f99-ffee528bc47b",
+        "2220be21-b576-4511-a339-83649f1d6419",
+        "d6cd4383-d567-49d5-9e92-070f7d931260",
+        "24636e23-a14d-49ec-a622-aa0fe1ba111e",
+        "d7770303-65a8-49d5-8e7b-eb342a647e71",
+        "869fb3e7-e19c-4270-805e-4b72ba39cf0e",
+        "e4a320b1-c7de-4bb4-91ef-c68ada26f51f",
+        "6830de66-af9b-40d2-8890-77133be4f27d",
+        "48ca5172-66b0-4dc7-89b5-e3f274baeb67",
+        "60d5707a-2527-4214-9928-2ab94a3ce4ec",
+        "36dfa2fc-69e2-46c0-b861-ef2bf3d4dd50",
+        "b556a929-1734-4a1a-b927-b75dacee59c8",
+        "086f17db-3edb-4887-a7fa-0475afcd0d18",
+        "569dc61c-1e55-4190-ba0a-42f4268dfeb2",
+        "f8aa7713-7095-4362-adfc-e0c6a3c9849a",
+        "520271a4-7695-404b-96b0-36d2409058bb",
+        "e1edd3a8-0fc0-4ead-9e21-bdf0ed64ebd6",
+        "06211a4b-fe4e-480a-af66-edc7243ac941",
+        "cf7d8290-4d81-4394-bf1b-c4119b17c725",
+        "full_image_NWMz6g",
+        "benifits2_NTgqP4",
+        "benifits2_VxEACE",
+        "benifits2_nVzcqh",
+        "benifits2_DJmg93"
+      ],
+      "settings": {
+        "title_text": "Starter Kit",
+        "mobile_title_position": "bottom_image",
+        "price_visibility_on_title": "show_on_desk_only",
+        "content_text": "<p>Your Signature Look — Reinvent your morning routine. With the Starter Kit, you can apply, blend & go in a flash. These refillable, 2-in-1 products include mistake-proof formulas and the applicators you need to get the job done.<br\/><br\/>Featuring the five classic products needed to create a timeless, everyday look – all in a makeup bag the size of a coffee cup.<br\/><br\/>Finally, a set of intuitive, multi-tasking products that will help you save time, money, counter-space - and the Planet!<\/p>",
+        "content_visible": "xs-hide",
+        "accordion_title": "UNLOCK 30% OFF ADDITIONAL ITEMS",
+        "error_text": "Please choose your shade !",
+        "error_bag_text": "Please choose your Bag!",
+        "add_to_cart_text": "ADD TO CART |",
+        "add_to_cart_text_color": "#ffffff",
+        "add_to_cart_bg_color": "#00263a",
+        "btn_action": "drawer",
+        "soldout_text": "Soldout",
+        "soldout_text_color": "#ffffff",
+        "soldout_bg_color": "#00263a",
+        "btn_font_size": 14,
+        "btn_font_size_xs": 14,
+        "btn_width": 100,
+        "show_price_on_button": true,
+        "sustain_package_title": "What makes trestique makeup sets special?",
+        "video_enable": false,
+        "video_section_title": "",
+        "video_preview": "shopify:\/\/shop_images\/Full_Routine-How_To-min.jpg",
+        "video_link": "",
+        "video_link_xs": "",
+        "top_offer_msg": "",
+        "offer_badge_msg": "LIMITED TIME OFFER",
+        "offer_badge_msg_bg_color": "#b04a5a",
+        "offer_badge_msg_text_color": "#fff",
+        "badge_visible": "xs-hide",
+        "upsell_discount": 30
+      }
+    }
+  },
+  "order": [
+    "essential-starter-kit"
+  ]
+}

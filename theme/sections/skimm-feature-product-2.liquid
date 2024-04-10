@@ -1,0 +1,155 @@
+<section class="slides-product-feature js-product_section">
+    <div class="page-width ">
+        <div class="slide-product-single swiper">
+            <div class="swiper-wrapper wrapper">
+                {% for block in section.blocks %}
+                    {% assign product = block.settings.product %}
+
+                    {% liquid 
+                          case product.id 
+                              when 6578644484196 
+                                  assign img_small = "https://cdn.shopify.com/s/files/1/0114/0621/3220/files/img-1_85c19591-d063-443f-b7d7-02821e5dec11.png?v=1637086007"
+                              when 6580015333476 
+                                  assign img_small = "https://cdn.shopify.com/s/files/1/0114/0621/3220/files/IMG_2.png?v=1636670421"
+                              when 6580203880548 
+                                  assign img_small = "https://cdn.shopify.com/s/files/1/0114/0621/3220/files/IMG_3.png?v=1636670421"
+                              when 6580206698596 
+                                  assign img_small = "https://cdn.shopify.com/s/files/1/0114/0621/3220/files/IMG_4.png?v=1636670421"
+                              when 6580199587940 
+                                  assign img_small = "https://cdn.shopify.com/s/files/1/0114/0621/3220/files/IMG_5.png?v=1636670421"
+                              when 6580187332708 
+                                  assign img_small = "https://cdn.shopify.com/s/files/1/0114/0621/3220/files/IMG_6.png?v=1636670421"
+                          endcase 
+                      %}
+
+                    <div class="swiper-slide product-card-slide-mini">
+                        {% if product %}
+                            <div class="product-title h5">
+                                {{ product.title }}
+                            </div>
+                            <div class="content-image-product">
+                                {% if img_small %}
+                                    <img src="{{ img_small }}" alt="{{ product.title }}">
+                                {% else %}
+                                    <img src="{{ product.featured_image | img_url: 'master' }}" alt="{{ product.title }}">
+                                {% endif %}
+                            </div>
+                        {% endif %}
+                    </div>
+                {% endfor %}
+            </div>
+        </div>
+        <div class="slides-wrapper-product swiper">
+            <div class="swiper-wrapper">
+                {% for block in section.blocks %}
+                {% assign product = block.settings.product %}
+                    <div class="swiper-slide slide-single">
+                        {% if product %}
+                            {% render 'card-feature-product' product: product, slide_number: forloop.index, length: forloop.length %}
+                        {% endif %}
+                    </div>
+                {% endfor %}
+            </div>
+        </div>
+    <div class="feature-swiper-buttons">
+        <!-- If we need navigation buttons -->
+        <div class="feature-swiper-button-prev">
+          <svg width="16" height="56" viewBox="0 0 16 56" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M2.67055 55.0009L15.3606 28.4149C15.3666 28.4029 15.3646 28.3899 15.3706 28.3779C15.3916 28.3269 15.3976 28.2759 15.4076 28.2259C15.4156 28.1809 15.4276 28.1379 15.4276 28.0949C15.4276 28.0479 15.4156 28.0029 15.4076 27.9539C15.3976 27.9049 15.3876 27.8539 15.3706 27.8079C15.3646 27.7959 15.3666 27.7829 15.3606 27.7689L2.67055 1.18487C2.49055 0.810871 2.04455 0.65287 1.67055 0.830872C1.40055 0.959873 1.24255 1.22787 1.24255 1.50887C1.24255 1.61587 1.26555 1.72687 1.31655 1.83087L13.8536 28.0929L1.31755 54.3549C1.26855 54.4599 1.24555 54.5699 1.24555 54.6769C1.24555 54.9559 1.40155 55.2259 1.67255 55.3549C2.04455 55.5319 2.49155 55.3759 2.67055 55.0009Z" fill="#F9EBE3" stroke="#F9EBE3"/>
+          </svg>
+        </div>
+        <div class="feature-swiper-button-next">
+          <svg width="16" height="56" viewBox="0 0 16 56" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M2.67055 55.0009L15.3606 28.4149C15.3666 28.4029 15.3646 28.3899 15.3706 28.3779C15.3916 28.3269 15.3976 28.2759 15.4076 28.2259C15.4156 28.1809 15.4276 28.1379 15.4276 28.0949C15.4276 28.0479 15.4156 28.0029 15.4076 27.9539C15.3976 27.9049 15.3876 27.8539 15.3706 27.8079C15.3646 27.7959 15.3666 27.7829 15.3606 27.7689L2.67055 1.18487C2.49055 0.810871 2.04455 0.65287 1.67055 0.830872C1.40055 0.959873 1.24255 1.22787 1.24255 1.50887C1.24255 1.61587 1.26555 1.72687 1.31655 1.83087L13.8536 28.0929L1.31755 54.3549C1.26855 54.4599 1.24555 54.5699 1.24555 54.6769C1.24555 54.9559 1.40155 55.2259 1.67255 55.3549C2.04455 55.5319 2.49155 55.3759 2.67055 55.0009Z" fill="#F9EBE3" stroke="#F9EBE3"/>
+          </svg>
+        </div>
+    </div>
+
+      
+    </div>
+    
+
+    <script>
+        const swiperMiniProduct = new Swiper(".slide-product-single", {
+            // Optional parameters
+            direction: "horizontal",
+            slidesPerView: 6,
+            spaceBetween: 20,
+            freeMode: true,
+            watchSlidesProgress: true,
+            breakpoints: {
+                320: {
+                    slidesPerView: 2.3,
+                  spaceBetween: 10,
+                  centeredSlides:true,
+                  loop: true,
+                },
+                // when window width is >= 640px
+                640: {
+                    slidesPerView: 3,
+                    spaceBetween: 20,
+                  loop: true,
+                  centeredSlides:true,
+                },
+              	// when window width is >= 640px
+                850: {
+                    slidesPerView: 6,
+                    spaceBetween: 20,
+                  loop: false,
+                }
+            }
+        });
+
+        const swiperMainProduct = new Swiper(".slides-wrapper-product", {
+            // Optional parameters
+            direction: "horizontal",
+            loop: true,
+            slidesPerView: 1,
+            spaceBetween: 20,
+            thumbs: {
+            swiper: swiperMiniProduct,
+            },
+
+            // Navigation arrows
+            navigation: {
+            nextEl: ".feature-swiper-button-next",
+            prevEl: ".feature-swiper-button-prev",
+            },
+        });
+
+      
+    </script>
+  	
+</section>
+
+{% schema %}
+{
+    "name": "Slides Product",
+    "class": "slide-product-section",
+    "settings": [
+        {
+            "type": "text",
+            "id": "title",
+            "label": "Title Section"
+        }
+    ],
+    "blocks": [
+        {
+            "type": "Product", 
+            "name": "Product single",
+            "settings": [
+                {
+                    "type": "product",
+                    "id": "product",
+                    "label": "Select Product"
+                }
+            ]
+        }
+    ],
+    "presets": [
+        {
+            "name":"Slide Product"
+        }
+    ]
+}
+{% endschema %}

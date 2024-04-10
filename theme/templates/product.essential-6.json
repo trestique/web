@@ -1,0 +1,609 @@
+{
+  "sections": {
+    "essential-quiz-1": {
+      "type": "essential-quiz-1",
+      "blocks": {
+        "2aee068a-793e-4ef9-b956-dcbdfb2583c6": {
+          "type": "skintype",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Light_8b181750-9496-40f5-9c07-a6e11174c532.png",
+            "image_xs": "shopify:\/\/shop_images\/Light_b6e1004f-96a5-40eb-acf7-5b32a4ab9bb5.png",
+            "text": "Light",
+            "info": "fair and light skintones",
+            "bg_color": "#ebcbbb",
+            "text_color": "#00263a",
+            "swatch_img": "shopify:\/\/shop_images\/light_fd840c03-43b0-4c19-a412-b4f351f1bce7.png"
+          }
+        },
+        "d9aad5ac-1f66-457c-a047-7a4644075e3a": {
+          "type": "skintype",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Light_to_Medium_skin_01.png",
+            "image_xs": "shopify:\/\/shop_images\/Light_-_Medium_9048e9c9-cf97-41df-ac32-00a458ac4b33.png",
+            "text": "Light - Medium",
+            "info": "beige and medium skintones",
+            "bg_color": "#e5bc9e",
+            "text_color": "#00263a",
+            "swatch_img": "shopify:\/\/shop_images\/light-medium.png"
+          }
+        },
+        "96e800ea-ab83-4dbe-a1da-2c8a5dd222b8": {
+          "type": "skintype",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Medium_00d269d8-2bf1-4053-9304-f7d6e7114d26.png",
+            "image_xs": "shopify:\/\/shop_images\/Medium_66d2a7bb-e051-492a-8b20-5d982f40aba9.png",
+            "text": "Medium",
+            "info": "golden and tan skintones",
+            "bg_color": "#dda475",
+            "text_color": "#00263a",
+            "swatch_img": "shopify:\/\/shop_images\/medium_9267608c-fc1b-4237-b431-2b48bfd62549.png"
+          }
+        },
+        "055de558-37d0-40bb-969e-04e9e84261d7": {
+          "type": "skintype",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Medium_-_Deep.png",
+            "image_xs": "shopify:\/\/shop_images\/Medium_-_Deep_c2707ed4-0785-4a14-bf79-d3f0ad8f2d3a.png",
+            "text": "Medium - Deep",
+            "info": "tan and dark skintones",
+            "bg_color": "#956037",
+            "text_color": "#ffffff",
+            "swatch_img": "shopify:\/\/shop_images\/medium-deep.png"
+          }
+        },
+        "3b161b9b-1b53-4b40-9681-34d4529b7024": {
+          "type": "skintype",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Deep_e19a9bfd-c7a8-4b35-8f81-75c0c5ce2335.png",
+            "image_xs": "shopify:\/\/shop_images\/Deep_a1f820c6-2980-4da7-845d-2c0b2686729c.png",
+            "text": "Deep",
+            "info": "tan and dark skintones",
+            "bg_color": "#603a29",
+            "text_color": "#ffffff",
+            "swatch_img": "shopify:\/\/shop_images\/deep.png"
+          }
+        }
+      },
+      "block_order": [
+        "2aee068a-793e-4ef9-b956-dcbdfb2583c6",
+        "d9aad5ac-1f66-457c-a047-7a4644075e3a",
+        "96e800ea-ab83-4dbe-a1da-2c8a5dd222b8",
+        "055de558-37d0-40bb-969e-04e9e84261d7",
+        "3b161b9b-1b53-4b40-9681-34d4529b7024"
+      ],
+      "settings": {
+        "screen_1_title": "Take or share a selfie",
+        "screen_1_text": "<p>Help us find your perfect shade match by sharing your photo with us (we'll only use it to find your match!)<\/p>",
+        "screen_1_image_1": "shopify:\/\/shop_images\/Group_77_86519539-76bf-4551-957a-2a4ea9d278c6.png",
+        "screen_1_text_1": "Natural lighting",
+        "screen_1_image_2": "shopify:\/\/shop_images\/Group_76.png",
+        "screen_1_text_2": "Remove your glasses",
+        "screen_1_image_3": "shopify:\/\/shop_images\/Group_75.png",
+        "screen_1_text_3": "FACE STRAIGHT AT THE CAMERA",
+        "screen_1_image_4": "shopify:\/\/shop_images\/Group_74.png",
+        "screen_1_text_4": "Plain background, no busy art",
+        "screen_2_title": "We found your match!",
+        "screen_2_subtitle": "Did we get it right?"
+      }
+    },
+    "essential-quiz-2": {
+      "type": "essential-quiz-2",
+      "blocks": {
+        "1345da99-81a7-41bd-b897-f71e646b1fa9": {
+          "type": "light",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Fair_Skin.png",
+            "image_xs": "shopify:\/\/shop_images\/Fair_Skin_fa3fc186-b0a9-4c52-b9b1-cc5fcd6fc9fc.png",
+            "text": "Crete Cloud",
+            "info": "For fair skin with cool, pink undertones",
+            "bg_color": "#ebcbbb",
+            "text_color": "#00263a",
+            "swatch_img": "shopify:\/\/shop_images\/light-1.png"
+          }
+        },
+        "01ef7f88-4401-41b8-825f-89e5e3f4dee8": {
+          "type": "light",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Fair_to_Light_skin.png",
+            "image_xs": "shopify:\/\/shop_images\/Fair_to_Light_skin_8bd6ea98-fad4-4635-a1c8-3e046f13a4ae.png",
+            "text": "Lima Opal",
+            "info": "For fair-light skin with neutral, yellow undertones",
+            "bg_color": "#f3caae",
+            "text_color": "#00263a",
+            "swatch_img": "shopify:\/\/shop_images\/light-2.png"
+          }
+        },
+        "defaaea2-174e-476a-8cce-d38182511655": {
+          "type": "light",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Light_skin_01.png",
+            "image_xs": "shopify:\/\/shop_images\/Light_skin_01_06c35bb7-2891-442a-9a9f-fa4900ee6eb9.png",
+            "text": "Cape Cod Stone",
+            "info": "For light skin with yellow undertones",
+            "bg_color": "#edd5b4",
+            "text_color": "#00263a",
+            "swatch_img": "shopify:\/\/shop_images\/light-3.png"
+          }
+        },
+        "6c67254c-158c-4a70-8ff6-4cdc941c4324": {
+          "type": "light",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Light_skin_02.png",
+            "image_xs": "shopify:\/\/shop_images\/Light_skin_02_834e5313-d7dc-44e8-a560-4d67c2bf69c8.png",
+            "text": "Polynesian Ivory",
+            "info": "For beige skin with neutral, pink undertones",
+            "bg_color": "#e2b5a0",
+            "text_color": "#00263a",
+            "swatch_img": "shopify:\/\/shop_images\/light-4.png"
+          }
+        },
+        "49163583-3d4a-4740-b9d2-b918b02e3850": {
+          "type": "light_medium",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Light_to_Medium_skin_01_27ac2655-61b9-4f74-94a6-deb3e40ac013.png",
+            "image_xs": "shopify:\/\/shop_images\/Light_to_Medium_skin_01_09ce1ca4-e08a-4493-b481-a9d70f9a9256.png",
+            "text": "Paradise Island Beige",
+            "info": "For beige skin with neutral or warm undertones",
+            "bg_color": "#e5bc9c",
+            "text_color": "#00263a",
+            "swatch_img": "shopify:\/\/shop_images\/light-medium-1.png"
+          }
+        },
+        "771162bd-9821-4aec-aff1-96ac0e82d2e0": {
+          "type": "light_medium",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Light_to_Medium_skin_02.png",
+            "image_xs": "shopify:\/\/shop_images\/Light_to_Medium_skin_02_2d6b43e9-91a6-4109-99f2-29c7034ecc31.png",
+            "text": "Tulum Nude",
+            "info": "For medium beige skin with warm, yellow undertones",
+            "bg_color": "#deac7d",
+            "text_color": "#00263a",
+            "swatch_img": "shopify:\/\/shop_images\/light-medium-2.png"
+          }
+        },
+        "7bcc27a4-a94a-4375-ba16-9379a7fc423c": {
+          "type": "medium",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Medium_skin_fac9aba3-12d9-426a-8474-5ad6b40fd08e.png",
+            "image_xs": "shopify:\/\/shop_images\/Medium_skin.png",
+            "text": "Tenerife Natural",
+            "info": "For medium tan skin with neutral or warm undertones",
+            "bg_color": "#dda475",
+            "text_color": "#00263a",
+            "swatch_img": "shopify:\/\/shop_images\/medium-1.png"
+          }
+        },
+        "6abc4535-2d35-4248-a7a1-d9ade6f0228c": {
+          "type": "medium_deep",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Medium_to_Deep_skin_02.png",
+            "image_xs": "shopify:\/\/shop_images\/Medium_to_Deep_skin_02_2c7663e9-5178-4f88-a88f-f1db941dd2b7.png",
+            "text": "Waikiki Tan",
+            "info": "For tan skin with warm, red undertones",
+            "bg_color": "#ad7d59",
+            "text_color": "#00263a",
+            "swatch_img": "shopify:\/\/shop_images\/medium-2.png"
+          }
+        },
+        "67f86ecd-b1c8-445a-836c-0d3ceacea385": {
+          "type": "medium_deep",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Medium_to_Deep_skin_03.png",
+            "image_xs": "shopify:\/\/shop_images\/xs-2_8578e13e-eff4-4754-aaf6-8343f001f4e0.jpg",
+            "text": "Copacabana Chestnut",
+            "info": "For dark skin with warm, yellow undertones",
+            "bg_color": "#ad7d59",
+            "text_color": "#ffffff",
+            "swatch_img": "shopify:\/\/shop_images\/medium-deep-1.png"
+          }
+        },
+        "a0e30d3d-99a3-4675-b3af-e0bdd73785c1": {
+          "type": "deep",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Deep_skin.png",
+            "image_xs": "shopify:\/\/shop_images\/Deep_skin_a4ff4984-de37-4199-ae49-4f267d804c8c.png",
+            "text": "São Paulo Cinnamon",
+            "info": "For deep skin with warm, golden undertones",
+            "bg_color": "#7d4e39",
+            "text_color": "#ffffff",
+            "swatch_img": "shopify:\/\/shop_images\/deep-1.png"
+          }
+        },
+        "c8589fd2-cc18-4721-a967-b7679271105a": {
+          "type": "deep",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/image_2_2x_583a8ea7-880c-43c7-bd16-e28816a68d8b.jpg",
+            "image_xs": "shopify:\/\/shop_images\/image_2_3x_f4c917d4-30f5-45f3-b39f-a219b9a3df33.jpg",
+            "text": "West Indies Walnut",
+            "info": "For deep, rich skin with neutral or cool undertones",
+            "bg_color": "#603a29",
+            "text_color": "#ffffff",
+            "swatch_img": "shopify:\/\/shop_images\/deep-2.png"
+          }
+        },
+        "0a219cbc-284d-43cb-9137-1486ed3ed0be": {
+          "type": "deep",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Deep_to_Rich_skin_02_0b091a5d-76ac-409e-b7c9-0d5208571f59.png",
+            "image_xs": "shopify:\/\/shop_images\/Deep_to_Rich_skin_02.png",
+            "text": "Maui Mahogany",
+            "info": "For deep-rich skin with neutral, peach undertones",
+            "bg_color": "#4f2d1d",
+            "text_color": "#ffffff",
+            "swatch_img": "shopify:\/\/shop_images\/deep-3.png"
+          }
+        },
+        "2b386d45-f08a-40f6-bb32-dfcca43eabcc": {
+          "type": "medium",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Medium_to_Deep_skin_01.png",
+            "image_xs": "shopify:\/\/shop_images\/Medium_to_Deep_skin_01_755aa7f6-f734-435c-abe3-a90dfc4b60fd.png",
+            "text": "Waikiki Tan",
+            "info": "For tan skin with warm, red undertones",
+            "bg_color": "#ad7d59",
+            "text_color": "#00263a",
+            "swatch_img": "shopify:\/\/shop_images\/medium-2_43ca07fb-b5f8-4430-9c1a-dd25c3397632.png"
+          }
+        }
+      },
+      "block_order": [
+        "1345da99-81a7-41bd-b897-f71e646b1fa9",
+        "01ef7f88-4401-41b8-825f-89e5e3f4dee8",
+        "defaaea2-174e-476a-8cce-d38182511655",
+        "6c67254c-158c-4a70-8ff6-4cdc941c4324",
+        "49163583-3d4a-4740-b9d2-b918b02e3850",
+        "771162bd-9821-4aec-aff1-96ac0e82d2e0",
+        "7bcc27a4-a94a-4375-ba16-9379a7fc423c",
+        "6abc4535-2d35-4248-a7a1-d9ade6f0228c",
+        "67f86ecd-b1c8-445a-836c-0d3ceacea385",
+        "a0e30d3d-99a3-4675-b3af-e0bdd73785c1",
+        "c8589fd2-cc18-4721-a967-b7679271105a",
+        "0a219cbc-284d-43cb-9137-1486ed3ed0be",
+        "2b386d45-f08a-40f6-bb32-dfcca43eabcc"
+      ],
+      "settings": {
+        "screen_3_title": "Let’s get more precise!",
+        "screen_3_text": "Which of the bellow best matches your skin tone?"
+      }
+    },
+    "essential-quiz-3": {
+      "type": "essential-quiz-3",
+      "blocks": {
+        "34b8b64e-ee83-4aa1-a4dc-35b3f916e043": {
+          "type": "Product",
+          "settings": {
+            "product": "zero-waste-makeup-system-foundation-stick",
+            "product_image": "shopify:\/\/shop_images\/2x-quiz-productsPrancheta_1_2x_5f2db81e-5cd9-4ca8-beea-2bfb8b8ab900.png",
+            "title": "",
+            "image": "shopify:\/\/shop_images\/IMG_0791.jpg",
+            "visible_image_Xs": false,
+            "image_top_text": "FOR A FLAWLESS BASE, START WITH FOUNDATION",
+            "image_bottom_text": "<p>Get a fresh, radiant complexion that's ready to face the day.<\/p>"
+          }
+        },
+        "270543db-364e-4321-ab91-38017035b0c6": {
+          "type": "Product",
+          "settings": {
+            "product": "cruelty-free-makeup-concealer-crayon",
+            "product_image": "shopify:\/\/shop_images\/2x-quiz-productsPrancheta_2_2x_3a3a5b0c-65a1-4e96-bfab-0ac805645c69.png",
+            "title": "",
+            "image": "shopify:\/\/shop_images\/7-1.png",
+            "visible_image_Xs": false,
+            "image_top_text": "CONCEAL, COVER & CORRECT LIKE A PRO",
+            "image_bottom_text": "<p>Need help covering blemishes, dark circles & under eye bags? Our concealer is a best seller.<\/p>"
+          }
+        },
+        "4be58f98-ef24-42c3-a5ba-46647a16058f": {
+          "type": "Product",
+          "settings": {
+            "product": "cruelty-free-eyeshadow-crayon",
+            "product_image": "shopify:\/\/shop_images\/2x-quiz-productsPrancheta_9_2x_b536ab62-572e-493c-bcae-eb2eb7122248.png",
+            "title": "",
+            "image": "shopify:\/\/shop_images\/bigger_shadow_crayon.jpg",
+            "visible_image_Xs": false,
+            "image_top_text": "BUILD AN EYE-DEFINING LOOK",
+            "image_bottom_text": "<p>A long-wearing, crease-free formula in two finishes for every occasion<\/p>"
+          }
+        },
+        "e50f6c94-c8f6-4b3c-880d-a10b9803229c": {
+          "type": "Product",
+          "settings": {
+            "product": "cruelty-free-eyeliner-pencil",
+            "product_image": "shopify:\/\/shop_images\/2x-quiz-productsPrancheta_11_2x_bfba0719-7e24-4c37-9695-b9ffc0355dca.png",
+            "title": "",
+            "image": "shopify:\/\/shop_images\/image_10_2x_05accbe4-6ec8-43f0-af99-71bc431424df.jpg",
+            "visible_image_Xs": false,
+            "image_top_text": "LINE & DEFINE WITH PRECISE APPLICATION",
+            "image_bottom_text": "<p>Go from pin-point precision to smoky smudge with a flick of the wrist<\/p>"
+          }
+        },
+        "5a915fce-6c9f-45e7-9d40-175167d87021": {
+          "type": "Product",
+          "settings": {
+            "product": "refillable-makeup-prime-shine-lip-crayon",
+            "product_image": "shopify:\/\/shop_images\/2x-quiz-productsPrancheta_7_2x_3a5befa1-b589-426c-87ea-32f9e174d1a6.png",
+            "title": "",
+            "image": "shopify:\/\/shop_images\/12_fc5a3acc-d6f0-48af-bf71-1f2cf52f2778.jpg",
+            "visible_image_Xs": false,
+            "image_top_text": "OR ADD MOISTURE & SHINE WITH OUR SHINY LIP CRAYON",
+            "image_bottom_text": "<p>Add a whisper of buildable color for a supple and shiny finish (prime with built-in lip primer)<\/p>"
+          }
+        },
+        "d476d71b-e986-4c25-b830-6a0e5af1f449": {
+          "type": "Product",
+          "settings": {
+            "product": "cruelty-free-makeup-good-vibes-mascara",
+            "product_image": "shopify:\/\/shop_images\/2x-quiz-productsPrancheta_10_2x_232d24f8-f9d1-49e8-8ada-5b7a90e57420.png",
+            "title": "",
+            "image": "shopify:\/\/shop_images\/10_3766ab13-d22d-46ca-9e76-6398dfffe5b2.jpg",
+            "visible_image_Xs": false,
+            "image_top_text": "CURL, LIFT & LENGTHEN",
+            "image_bottom_text": "<p>Your all-in-one mascara and lash curler for ultimate volume, curl & length<\/p>"
+          }
+        }
+      },
+      "block_order": [
+        "34b8b64e-ee83-4aa1-a4dc-35b3f916e043",
+        "270543db-364e-4321-ab91-38017035b0c6",
+        "4be58f98-ef24-42c3-a5ba-46647a16058f",
+        "e50f6c94-c8f6-4b3c-880d-a10b9803229c",
+        "5a915fce-6c9f-45e7-9d40-175167d87021",
+        "d476d71b-e986-4c25-b830-6a0e5af1f449"
+      ],
+      "settings": {
+        "shadow_product": "cruelty-free-eyeshadow-crayon",
+        "shadow_shimmer_title": "Your eyes",
+        "shadow_shimmer_text": "Select as many finishes as you want!",
+        "shadow_shimmer_desktop_img": "shopify:\/\/shop_images\/shimmer.png",
+        "shadow_shimmer_xs_img": "shopify:\/\/shop_images\/shimmer-xs.png",
+        "shadow_matte_desktop_img": "shopify:\/\/shop_images\/matte.png",
+        "shadow_matte_xs_img": "shopify:\/\/shop_images\/matte-xs.png",
+        "lips_products": "refillable-makeup-matte-lip-crayon-balm,refillable-makeup-prime-shine-lip-crayon",
+        "lips_title": "Your lips",
+        "lips_text": "Select as many finishes as you want!",
+        "lips_natural_desktop_img": "shopify:\/\/shop_images\/Lips_Natural.png",
+        "lips_natural_xs_img": "shopify:\/\/shop_images\/lips-natural-xs.png",
+        "lips_natural_text": "Natural lips",
+        "lips_bold_desktop_img": "shopify:\/\/shop_images\/Lips_Bold.png",
+        "lips_bold_xs_img": "shopify:\/\/shop_images\/Lips_Bold-xs.png",
+        "lips_bold_text": "Bold lips"
+      }
+    },
+    "essential-quiz-4": {
+      "type": "essential-quiz-4",
+      "blocks": {
+        "0e730ed1-cf04-45a8-a9c1-605b7f4a2f50": {
+          "type": "eyebrow",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/image_1-1.png",
+            "image_Xs": "shopify:\/\/shop_images\/eye-1_cb6a2035-12fa-4417-9dbc-cf0af2e02298.png",
+            "text": "Blonde, red or grey",
+            "api_text": "Blonde, red or grey"
+          }
+        },
+        "d2f64e18-06b8-4c28-ab83-41437a23802b": {
+          "type": "eyebrow",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/image_2-1.png",
+            "image_Xs": "shopify:\/\/shop_images\/eye-2.png",
+            "text": "Light or medium brown",
+            "api_text": "Light or medium brown"
+          }
+        },
+        "9db9228e-8c9f-4261-b0bf-8e2c4d26e450": {
+          "type": "eyebrow",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/image_3-1.png",
+            "image_Xs": "shopify:\/\/shop_images\/eye-3.png",
+            "text": "Dark brown",
+            "api_text": "Dark brown"
+          }
+        },
+        "0ae2c399-2a1c-4ba0-a014-9179568589ff": {
+          "type": "eyebrow",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/image_5-1.png",
+            "image_Xs": "shopify:\/\/shop_images\/eye-4.png",
+            "text": "Black",
+            "api_text": "Black"
+          }
+        },
+        "e1abaedd-67da-493d-8cd7-c093c31f0af8": {
+          "type": "bag_image",
+          "settings": {
+            "bag_color_name": "Black",
+            "bag_img": "shopify:\/\/shop_images\/Rectangle_184_1.png"
+          }
+        },
+        "151cb702-04ee-4448-87db-aee5c3d289b0": {
+          "type": "bag_image",
+          "settings": {
+            "bag_color_name": "Burgundy",
+            "bag_img": "shopify:\/\/shop_images\/Rectangle_186_1.png"
+          }
+        },
+        "de84b62d-c3a3-4410-8469-b49f491421fd": {
+          "type": "bag_image",
+          "settings": {
+            "bag_color_name": "Navy",
+            "bag_img": "shopify:\/\/shop_images\/Rectangle_188.png"
+          }
+        },
+        "b0f73457-5e83-487e-a4dc-9e20a2a333ab": {
+          "type": "bag_image",
+          "settings": {
+            "bag_color_name": "Gray",
+            "bag_img": "shopify:\/\/shop_images\/Rectangle_190.png"
+          }
+        },
+        "ca24cad4-f002-4aef-8550-06098686b551": {
+          "type": "bag_image",
+          "settings": {
+            "bag_color_name": "Aqua",
+            "bag_img": "shopify:\/\/shop_images\/Rectangle_192_2.png"
+          }
+        },
+        "e161292b-7b39-4c9a-8a1e-35fdec1740f0": {
+          "type": "bag_image",
+          "settings": {
+            "bag_color_name": "Olive",
+            "bag_img": "shopify:\/\/shop_images\/Rectangle_194_2.png"
+          }
+        },
+        "24e89135-e7e5-4eb6-b6a4-45a1240c2c36": {
+          "type": "bag_image",
+          "settings": {
+            "bag_color_name": "Floral",
+            "bag_img": "shopify:\/\/shop_images\/Rectangle_198_1.png"
+          }
+        },
+        "d581dbfa-dd72-4bc3-ba03-a9ce0b0ff842": {
+          "type": "bag_image",
+          "settings": {
+            "bag_color_name": "Tie Dye",
+            "bag_img": "shopify:\/\/shop_images\/Rectangle_196.png"
+          }
+        }
+      },
+      "block_order": [
+        "0e730ed1-cf04-45a8-a9c1-605b7f4a2f50",
+        "d2f64e18-06b8-4c28-ab83-41437a23802b",
+        "9db9228e-8c9f-4261-b0bf-8e2c4d26e450",
+        "0ae2c399-2a1c-4ba0-a014-9179568589ff",
+        "e1abaedd-67da-493d-8cd7-c093c31f0af8",
+        "151cb702-04ee-4448-87db-aee5c3d289b0",
+        "de84b62d-c3a3-4410-8469-b49f491421fd",
+        "b0f73457-5e83-487e-a4dc-9e20a2a333ab",
+        "ca24cad4-f002-4aef-8550-06098686b551",
+        "e161292b-7b39-4c9a-8a1e-35fdec1740f0",
+        "24e89135-e7e5-4eb6-b6a4-45a1240c2c36",
+        "d581dbfa-dd72-4bc3-ba03-a9ce0b0ff842"
+      ],
+      "settings": {
+        "screen_4_title": "We found your match!",
+        "screen_4_text": "Which matches your eyebrow color best?",
+        "screen_5_title": "Select Your Bag",
+        "screen_5_bag_text": "<p>All of our makeup bags are designed to fit in the palm of your hand and hold up to 10 full size products. They’re also made from a single recycled water bottle.<\/p>",
+        "screen_6_title": "Your personalized shade results",
+        "screen_6_bag_text": "Edit your product selection below",
+        "bag": "eco-friendly-deluxe-makeup-bag",
+        "bag_exclude_variants": ""
+      }
+    },
+    "essential-8-builder": {
+      "type": "essential-8-builder",
+      "blocks": {
+        "e69c50a5-3c2d-4c44-96c8-acacb9b77cc2": {
+          "type": "child-selectable",
+          "settings": {
+            "product": "zero-waste-makeup-system-foundation-stick",
+            "exclude_variants": ""
+          }
+        },
+        "87abbeb8-881a-4ba1-bd13-59e3ad40e00b": {
+          "type": "child-selectable",
+          "settings": {
+            "product": "cruelty-free-makeup-concealer-crayon",
+            "exclude_variants": ""
+          }
+        },
+        "c0291d28-ce20-4749-9315-267974635b7c": {
+          "type": "child-selectable",
+          "settings": {
+            "product": "cruelty-free-eyeshadow-crayon",
+            "exclude_variants": ""
+          }
+        },
+        "cd0c5b48-3436-4da0-9f7d-381f475dd605": {
+          "type": "child-selectable",
+          "settings": {
+            "product": "cruelty-free-eyeliner-pencil",
+            "exclude_variants": ""
+          }
+        },
+        "dbe3daf1-975c-4d40-8413-e932bcf266f8": {
+          "type": "child-selectable",
+          "settings": {
+            "product": "refillable-makeup-prime-shine-lip-crayon",
+            "exclude_variants": ""
+          }
+        },
+        "a8a2958a-d5d2-4fb6-828e-29ddbecdc8f4": {
+          "type": "child-selectable",
+          "settings": {
+            "product": "eco-friendly-deluxe-makeup-bag",
+            "exclude_variants": ""
+          }
+        },
+        "4ef340c6-542c-4ad6-bddc-f2a067392fa0": {
+          "type": "child-preselected",
+          "settings": {
+            "product": "cruelty-free-makeup-good-vibes-mascara",
+            "variant_id": "39363180232804"
+          }
+        },
+        "aaaa5d15-ff2d-4b64-9429-4b891bcc8622": {
+          "type": "service",
+          "settings": {
+            "service_icon": "shopify:\/\/shop_images\/Bz0Pa-z0.png",
+            "service_text": "<p>Free shipping<\/p>"
+          }
+        },
+        "90056c95-7260-457b-92ea-f2f782a58246": {
+          "type": "service",
+          "settings": {
+            "service_icon": "shopify:\/\/shop_images\/Group_ea42f240-8108-4060-ae4b-25d2d0e49ea1.png",
+            "service_text": "<p>Return for free<\/p>"
+          }
+        },
+        "e03c2b49-86e9-4b5e-8d93-76aaa574c54e": {
+          "type": "service",
+          "settings": {
+            "service_icon": "shopify:\/\/shop_images\/Group-1.png",
+            "service_text": "<p>Try before you buy<\/p>"
+          }
+        }
+      },
+      "block_order": [
+        "e69c50a5-3c2d-4c44-96c8-acacb9b77cc2",
+        "87abbeb8-881a-4ba1-bd13-59e3ad40e00b",
+        "c0291d28-ce20-4749-9315-267974635b7c",
+        "cd0c5b48-3436-4da0-9f7d-381f475dd605",
+        "dbe3daf1-975c-4d40-8413-e932bcf266f8",
+        "a8a2958a-d5d2-4fb6-828e-29ddbecdc8f4",
+        "4ef340c6-542c-4ad6-bddc-f2a067392fa0",
+        "aaaa5d15-ff2d-4b64-9429-4b891bcc8622",
+        "90056c95-7260-457b-92ea-f2f782a58246",
+        "e03c2b49-86e9-4b5e-8d93-76aaa574c54e"
+      ],
+      "settings": {
+        "title_text": "The Essential 6 All-In-One Starter Kit",
+        "content_text": "<p>Our signature Starter Kit was designed to change the way you carry & apply makeup. The Essential 6 includes a makeup bag and six daily, 2-in-1 makeup must-haves that you can use anytime, anywhere.<br\/><br\/><strong>Now available via Try Before You Buy. Try it risk-free for 14 days.<\/strong><\/p><p><\/p><p><\/p><p>Each daily essential is 2-in-1, refillable, and works twice as hard so you can be out the door in 5 minutes or less. Super convenient, this kit will help you save time, money, counter-space - and the Planet!<br\/><br\/>Featuring all the products you need to enhance your natural features – all in a makeup bag the size of a coffee cup.<\/p>",
+        "essential_shade_title": "Meet your match",
+        "essential_shade_text": "Never second guess your shades again. Find your perfect match in 90 seconds with the shade match quiz.",
+        "essential_shade_image": "shopify:\/\/shop_images\/Group_335.png",
+        "essential_shade_bg": "#bfebf3",
+        "shades_title": "CHOOSE YOUR SHADES",
+        "accordion_title": "PRE-SELECTED PRODUCTS INCLUDED",
+        "error_text": "Please choose your shade !",
+        "error_bag_text": "Please choose your Bag!",
+        "sustain_package_title": "What makes trestique makeup sets special?",
+        "video_enable": false,
+        "video_section_title": "",
+        "video_preview": "shopify:\/\/shop_images\/Full_Routine-How_To-min.jpg",
+        "customize_routine_image": "shopify:\/\/shop_images\/y-e1Atb8.png",
+        "customize_routine_image_mob": "shopify:\/\/shop_images\/Kobgsyug.png",
+        "customize_routine_header": "Find your perfect shade match in 90 seconds with our quiz",
+        "customize_routine_description": "",
+        "customize_routine_btn_link": "https:\/\/www.trestique.com\/pages\/routine-finder"
+      }
+    }
+  },
+  "order": [
+    "essential-quiz-1",
+    "essential-quiz-2",
+    "essential-quiz-3",
+    "essential-quiz-4",
+    "essential-8-builder"
+  ]
+}

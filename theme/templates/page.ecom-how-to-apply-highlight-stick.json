@@ -1,0 +1,12 @@
+{
+  "layout": "theme",
+  "sections": {
+    "ecom-how-to-apply-highlight-stick": {
+      "type": "ecom-how-to-apply-highlight-stick-page",
+      "settings": {}
+    }
+  },
+  "order": [
+    "ecom-how-to-apply-highlight-stick"
+  ]
+}

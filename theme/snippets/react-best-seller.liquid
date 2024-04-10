@@ -1,0 +1,105 @@
+<script>
+    // Side cart best sellers variable 
+    simply.sideCart.bestseller = {};
+    simply.sideCart.bestseller.enable = {{settings.side_cart_best_seller_enable}};
+    simply.sideCart.bestseller.title = "{{settings.side_cart_best_seller_title}}";
+    simply.sideCart.bestseller.products = [];
+
+    simply.sideCart.bestseller.subscriptionTitle = "{{settings.side_cart_subscription_refill_title}}";
+    simply.sideCart.bestseller.subscriptionText = "{{settings.side_cart_subscription_refill_text}}";
+
+    simply.sideCart.bestseller.popupEnable = {{settings.side_cart_subscription_popup_enable}};
+    simply.sideCart.bestseller.popupTitle = "{{settings.side_cart_subscription_popup_title}}";
+    simply.sideCart.bestseller.popupText = "{{settings.side_cart_subscription_popup_text}}";
+    simply.sideCart.bestseller.popupDesc = "{{settings.side_cart_subscription_popup_desc}}";
+    simply.sideCart.bestseller.popupImage = "{{settings.side_cart_subscription_popup_image | img_url:'master' }}";
+
+    simply.sideCart.bestseller.productEnable = {{settings.side_cart_best_seller_product_enable}};
+    simply.sideCart.bestseller.refillEnable = {{settings.side_cart_best_seller_refills_enable}};
+    simply.sideCart.bestseller.bundleEnable = {{settings.side_cart_best_seller_bundles_enable}};
+
+    simply.sideCart.bestseller.subscriptionEnable = {{settings.side_cart_subscription_refill_enable}};
+    {% assign product_collection = collections[settings.side_cart_best_seller_product] %}
+    {% assign refill_collection = collections[settings.side_cart_best_seller_refills] %}
+    {% assign bundle_collection = collections[settings.side_cart_best_seller_bundles] %}
+    {% if product_collection != blank %}
+          {% for product in product_collection.products %}
+            {% for variant in product.variants %}
+              {% if variant.available  and variant.metafields.best_selling.available == true or  variant.available  and  product.variants.size == 1 and product.variants[0].title == "Default Title" %}
+              simply.sideCart.bestseller.products.push({
+                "id":{{variant.id}},
+                "price":"{{variant.price}}",
+                "title":"{{product.title}}",
+                "variant_title":"{{variant.title}}",
+                "image": "{% if variant.featured_image != blank %}{{variant.featured_image.src | img_url:'master'}}{% else %}{{product.featured_image.src | img_url:'master'}}{% endif %}",
+                "description":`{{ product.description | strip_html | split:"What's Included" | first }}`
+              })
+              {% endif %}
+            {% endfor %}
+          {% endfor %}
+    {% endif %}
+
+    simply.sideCart.bestseller.refills = [];
+    simply.sideCart.bestseller.allRefills = {};
+
+    {% if refill_collection != blank %}
+
+          {% for product in refill_collection.products %}
+              {% for tag in product.tags %}
+                {% if tag contains 'suggestion_' %}
+                {% assign handle = tag | remove:'suggestion_' %}
+                simply.sideCart.bestseller.allRefills["{{handle}}"] = [
+                  {% for variant in product.variants %}{
+                    "id":{{variant.id}},
+                    "price":"{{variant.price}}",
+                    "title":"{{product.title}}",
+                    "variant_title":"{{variant.title}}",
+                    "image": "{% if variant.featured_image != blank %}{{variant.featured_image.src | img_url:'master'}}{% else %}{{product.featured_image.src | img_url:'master'}}{% endif %}",
+                    "description":`{{ product.description | strip_html | split:"What's Included" | first }}`,
+                    "subscriptionPlans": [
+                    {% for selling_plan_allocation in variant.selling_plan_allocations %}
+                      {{selling_plan_allocation.selling_plan | json }}{% unless forloop.last %},{% endunless %}
+                    {% endfor %}
+                    ]
+                  }{% unless foloop.last %},{% endunless %}
+                  {% endfor %}
+                ]
+                {% endif %}
+              {% endfor %}
+          {% endfor %}          
+
+
+          {% for product in refill_collection.products %}
+            {% for variant in product.variants %}
+            {% if variant.available  and variant.metafields.best_selling.available == true or  variant.available  and  product.variants.size == 1 and product.variants[0].title == "Default Title" %}
+              simply.sideCart.bestseller.refills.push({
+                "id":{{variant.id}},
+                "price":"{{variant.price}}",
+                "title":"{{product.title}}",
+                "variant_title":"{{variant.title}}",
+                "image": "{% if variant.featured_image != blank %}{{variant.featured_image.src | img_url:'master'}}{% else %}{{product.featured_image.src | img_url:'master'}}{% endif %}",
+                "description":`{{ product.description | strip_html | split:"What's Included" | first }}`
+              })
+              {% endif %}
+            {% endfor %}
+          {% endfor %}
+    {% endif %}
+
+    simply.sideCart.bestseller.bundles = [];
+    {% if bundle_collection != blank %}
+          {% for bundle_product in bundle_collection.products %}
+            {% for variant in bundle_product.variants %}
+            {% if variant.available  and variant.metafields.best_selling.available == true or  variant.available  and  bundle_product.variants.size == 1 and bundle_product.variants[0].title == "Default Title" %}
+              simply.sideCart.bestseller.bundles.push({
+                "id":{{variant.id}},
+                "price":"{{variant.price}}",
+                "title":"{{bundle_product.title}}",
+                "variant_title":"{{variant.title}}",
+                "image": "{% if variant.featured_image != blank %}{{variant.featured_image.src | img_url:'master'}}{% else %}{{bundle_product.featured_image.src | img_url:'master'}}{% endif %}",
+                "description":`{{ bundle_product.description | strip_html | split:"What's Included" | first }}`
+              })
+              {% endif %}
+            {% endfor %}
+          {% endfor %}
+    {% endif %}
+</script>

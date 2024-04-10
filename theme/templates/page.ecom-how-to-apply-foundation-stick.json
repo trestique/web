@@ -1,0 +1,12 @@
+{
+  "layout": "theme",
+  "sections": {
+    "ecom-how-to-apply-foundation-stick": {
+      "type": "ecom-how-to-apply-foundation-stick-page",
+      "settings": {}
+    }
+  },
+  "order": [
+    "ecom-how-to-apply-foundation-stick"
+  ]
+}

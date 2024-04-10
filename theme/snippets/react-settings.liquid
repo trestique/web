@@ -1,0 +1,134 @@
+{% comment %}Side cart details{% endcomment %}
+  
+<script>
+    simply.loaderImage = "{{'trestique-loader.gif' | file_img_url:'master' }}";
+    simply.informationIcon = "{{'information-icon.svg' | file_url }}";
+    simply.reactCloseIcon = "{{'side-cart-close-icon.svg' | file_url }}";
+    simply.reactBackArrowIcon = "{{'back-arrow.svg' | file_url }}";
+    simply.sideCart = {};
+    simply.sideCart.type = "{{settings.cart_action}}";
+    simply.sideCart.title = "{{settings.side_cart_title}}";
+    simply.sideCart.empty_msg = "{{settings.side_cart_empty_msg}}";
+    simply.sideCart.progressType = "{{settings.side_cart_header_progress_type}}";
+    // Side cart shipping msg variables
+    simply.sideCart.shipping = {};
+    simply.sideCart.shipping.charge = "{{settings.side_cart_shipping_charge}}";
+    simply.sideCart.shipping.away_msg = "{{settings.side_cart_shipping_away_msg}}";
+    simply.sideCart.shipping.earned_msg = "{{settings.side_cart_shipping_earned_msg}}";
+
+    // Side cart footer variables
+    simply.sideCart.footer_image = "{{settings.side_cart_footer_image}}";
+    simply.sideCart.footer_subtotal_text = "{{settings.side_cart_footer_subtotal_text}}";
+    simply.sideCart.footer_btn_text = "{{settings.side_cart_footer_btn_text}}";
+    simply.sideCart.sideCartImg = "{{'blank-side-cart.png' | file_img_url:'master'}}";;
+    simply.sideCart.closeIcon = "{{'side-cart-close-icon.svg' | file_url }}";
+    simply.sideCart.klarnaImg = "{{settings.cart_klarna_image | img_url:'master' }}";
+    simply.sideCart.afterPayImg = "{{settings.cart_after_pay_image | img_url:'master'}}";
+    simply.sideCart.installmentText = "{{settings.side_cart_installment_text}}";
+    // Side cart Free mini variables
+    simply.sideCart.freeMini = {};
+    simply.sideCart.freeMini.charge = "{{settings.side_cart_free_mini_charge}}";
+    simply.sideCart.freeMini.away_msg ="{{settings.side_cart_free_mini_away_msg}}";
+    simply.sideCart.freeMini.away_overlay_msg = "{{settings.side_cart_free_mini_away_overlay_msg}}";
+    simply.sideCart.freeMini.earned_msg = "{{settings.side_cart_free_mini_earned_msg}}";
+    simply.sideCart.freeMini.get_product_msg = "{{settings.side_cart_free_mini_product_added_msg}}";
+    simply.sideCart.freeMini.title = "{{settings.side_cart_free_mini_title}}";
+    simply.sideCart.freeMini.lockImage = "{{'lock-trestique.png' | file_img_url:'master'}}";
+    simply.sideCart.freeMini.products = [
+      {% assign free_mini_collection = collections[settings.side_cart_free_mini_collection] %}
+      {% if free_mini_collection != blank %}
+        {% for product in free_mini_collection.products %}
+          {
+            "title":"{{product.title}}",
+            "id":"{{product.id}}", 
+            "handle":"{{product.handle}}",
+            "image":"{{product.featured_image.src | img_url:'master'}}",
+            "variants": {{product.variants | json }},
+            "options": {{product.options | json}},
+            "available": {{product.available}},
+            "selected_or_first_available_variant": {{product.selected_or_first_available_variant | json}}
+          }{% unless forloo.last %},{% endunless %}
+        {% endfor %}
+      {% endif %}
+    ];
+    //Payment option popup 
+    simply.paymentOption={};
+    simply.paymentOption.mainTitle=`{{settings.payment_option_main_title}}`;
+    simply.paymentOption.installmentTitle=`{{settings.payment_option_installments_title}}`;
+    simply.paymentOption.installmentText=`{{settings.payment_option_installments_text}}`;
+    simply.paymentOption.installmentDescriptions=`{{settings.payment_option_installments_description}}`;
+    simply.paymentOption.TBYBTitle=`{{settings.payment_option_tbyb_title}}`;
+    simply.paymentOption.TBYBText=`{{settings.payment_option_tbyb_text}}`;
+    simply.paymentOption.TBYBDescription=`{{settings.payment_option_tbyb_description}}`;
+    simply.shopByLook = {banner:{},categories:{blocks:[]}, desc:{}, grid:{}};
+
+
+    const blackFridayFreeGift = {
+      "isEnable": {{ settings.black_friday_free_gift_enable }},
+      "firstFreeGiftAmount": {{ settings.free_gift_cart_amount_1 }},
+      "secondFreeGiftAmount": {{ settings.free_gift_cart_amount_2 }},
+      "thirdFreeGiftAmount": {{ settings.free_gift_set_cart_amount }},
+      "freeMiniProducts": [
+       
+      ],
+      {% assign free_product = all_products[{{settings.free_gift_set_1}}] %}
+      {% assign free_product = free_product.variants[0] %}
+      {%- if free_product == blank -%}
+        {% assign free_product = null %}
+      {%- endif -%}
+      "freeMiniSet": {{ free_product | json }}
+    }
+    
+       {%- for i in (1..5) -%}
+          {% assign setting_id = "free_mini_product_" | append: i %}
+          {% assign product_handle = settings[setting_id] %}
+          {% assign free_product = all_products[{{product_handle}}] %}
+          {%- if free_product != blank and free_product.available -%}
+            {% for variant in free_product.variants %}
+            {% if variant.available %}
+            blackFridayFreeGift.freeMiniProducts.push({{ variant | json }})
+            {% endif %}
+            {% endfor %}
+            
+          {%- endif -%}
+        {%- endfor -%}
+      if(blackFridayFreeGift.freeMiniProducts.length < 2 || !blackFridayFreeGift.freeMiniSet){
+        blackFridayFreeGift.isEnable = false;
+      }
+    window.blackFridayFreeGift = blackFridayFreeGift 
+
+
+  </script>
+  {% render 'react-best-seller' %}
+  <style>
+      .side-cart-image-text{
+          background: {{settings.side_cart_every_product_bg}};
+      }
+      .variant-soldout label{
+          position: relative;
+      }
+      .variant-soldout label:after{
+        /* background: url("{{'soldout.png' | file_img_url:'master'}}"); */
+        background: url("https://cdn.shopify.com/s/files/1/0114/0621/3220/files/Frame_2_44ff609d-5f3a-445f-8748-bc9eb83563c4.png?v=1646053854");
+        background-position: center;
+        background-size: cover;
+        background-repeat: no-repeat;
+        content: '';
+        width: 100%;
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+      }
+      .toast-wrap .close-btn{
+        background: url("{{'white-close-icon.svg' | file_url }}");
+      }
+      .subscription-popup-bg,.subscription-popup-details{
+        display: none;
+      }
+      .essential-8-slider video{
+        width: 100%;
+        height: 100%;
+      }
+  </style>

@@ -1,0 +1,119 @@
+<!-- subscription-have-question -->
+<style>
+  .have-question-wrapper {
+    background-color: {{ section.settings.bg_color }};
+  }
+  .have-question .section-title {
+    font-size: {{ section.settings.font_size_title }}px;
+  }
+</style>
+
+<div class="have-question-wrapper">
+  <div class="section have-question">
+    <div class="image-with-text-wrapper">
+      <div class="content-wrapper">
+        {% unless section.settings.title == blank %}
+          <h5 class="section-title">{{ section.settings.title }}</h5>
+        {% endunless %}
+        {% unless section.settings.content == blank %}
+          <div class="content">{{ section.settings.content }}</div>
+        {% endunless %}
+        <div class="button-wrapper">
+          <a href="{{ section.settings.button_link }}" class="btn-shopping button button--primary">
+            {{ section.settings.button_text }}
+          </a>
+        </div>
+      </div>
+      <div class="block-wrapper">
+        {%- for block in section.blocks -%}
+          <div class="contact-block">
+            <div class="icon-wrapper">
+              {%- if block.settings.icon_Image != blank -%}
+                {%- render 'srcset', 
+                  src_alt:block.settings.icon_Image.alt,
+                  src_name:block.settings.icon_Image,
+                  load_blur:true 
+                -%}
+              {%- endif -%}
+            </div>
+            <div class="text-wrapper">
+              <h5 class="title-head">{{ block.settings.title-head }}</h5>
+              <p class="content-data">{{ block.settings.content-data }}</p>
+            </div>
+          </div>
+        {%- endfor -%}
+      </div>
+    </div>
+  </div>
+</div>
+
+
+{% schema %}
+{
+  "name": "Have question",
+  "settings": [
+      {
+        "type": "header",
+        "content": "How it works section"
+      },
+      {
+        "type":"color",
+        "id":"bg_color",
+        "label":"background_color"
+      },
+      {
+        "type": "text",
+        "id": "title",
+        "label": "Title"
+      },
+      {
+        "type": "number",
+        "id": "font_size_title",
+        "label": "Font size"
+      },
+      {
+        "type": "textarea",
+        "id": "content",
+        "label": "Content"
+      },
+      {
+        "type": "url",
+        "id": "button_link",
+        "label": "Link"
+      },
+      {
+        "type": "text",
+        "id": "button_text",
+        "label": "Button text"
+      }
+    ],
+    "blocks": [
+      {
+        "type": "contact-block",
+        "name": "contact-block",
+        "settings": [
+          {
+            "type": "image_picker",
+            "id": "icon_Image",
+            "label": "Icon Image"
+          },
+          {
+            "type": "text",
+            "id": "title-head",
+            "label": "Title"
+          },
+          {
+            "type": "textarea",
+            "id": "content-data",
+            "label": "content"
+          }
+        ]
+      }
+    ],
+    "presets": [
+    {
+      "name": "Have question"
+    }
+  ]
+}
+{% endschema %}

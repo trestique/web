@@ -1,0 +1,343 @@
+{
+  "sections": {
+    "banner_video": {
+      "type": "banner-video",
+      "disabled": true,
+      "settings": {
+        "title": "Your Routine, Your Way",
+        "content": "<p>We make your <em><strong>daily<br\/>routine<\/strong><\/em> more <strong>simple<\/strong> and <strong>sustainable<\/strong> with <strong>products<br\/>that are 2-in-1<\/strong>, <strong>travel friendly<\/strong>, <strong>refillable<\/strong> and made with <strong>clean<br\/>ingredients<\/strong>.<\/p>",
+        "max_width": 1170,
+        "video_url": "https:\/\/cdn.shopify.com\/s\/files\/1\/0114\/0621\/3220\/files\/Full_Routine.mp4?v=1645805999",
+        "video_url_lg": "https:\/\/cdn.shopify.com\/s\/files\/1\/0114\/0621\/3220\/files\/trestique-FINAL_14f20071-cf52-4d18-b05b-121231c3d244.mov?v=1645805242",
+        "video_play_btn": "shopify:\/\/shop_images\/play.png",
+        "img": "shopify:\/\/shop_images\/banner.png",
+        "btn_bg_color": "#00263a",
+        "btn_text_color": "#ffffff",
+        "btn_text": "CREATE MY SET",
+        "btn_url": "https:\/\/www.trestique.com\/products\/the-essential-mix?step=2",
+        "tagline_text": "Save 15% when you create a set of 4 products or more",
+        "tagline_bg_color": "#f3e9e2",
+        "tagline_text_color": "#b04a5a"
+      }
+    },
+    "join_hero": {
+      "type": "join-zero",
+      "disabled": true,
+      "blocks": {
+        "6b1a4f73-4db4-4b69-a4ac-d758b2aec254": {
+          "type": "block",
+          "settings": {
+            "slide_img": "shopify:\/\/shop_images\/bb-lp-2_8272f99a-d966-4219-9095-27e6f8580b74.jpg",
+            "client_review": "I love the convenience of trestique. All of the products are 2-in-1: the product is on one end and the tool is on the other!",
+            "clinet_review_color": "#00263a",
+            "client_name": "Megan",
+            "clinet_name_color": "#00263a"
+          }
+        },
+        "6f2aa91a-c4fc-41ee-af27-a755484b9869": {
+          "type": "block",
+          "settings": {
+            "slide_img": "shopify:\/\/shop_images\/Rectangle_175.png",
+            "client_review": "I'm always on the go and rely on the versatility and I take the makeup bag with me everywhere. It's so easy to travel with and has all the essentials.",
+            "clinet_review_color": "#00263a",
+            "client_name": "Erica",
+            "clinet_name_color": "#00263a"
+          }
+        },
+        "661c2138-b493-4ec9-9ab5-541e80985808": {
+          "type": "block",
+          "settings": {
+            "slide_img": "shopify:\/\/shop_images\/bb-lp-1_6c6d9e62-599e-4d3f-b1b1-e362d4755b63.jpg",
+            "client_review": "Let me tell you about my current obsession... trestique. All of their products are zero-waste and refillable!",
+            "clinet_review_color": "#00263a",
+            "client_name": "Skylar",
+            "clinet_name_color": "#00263a"
+          }
+        },
+        "c20c4c87-aa42-4e32-916c-1ae2f8de040c": {
+          "type": "block",
+          "disabled": true,
+          "settings": {
+            "slide_img": "shopify:\/\/shop_images\/hallie.png",
+            "client_review": "Trestique products are awesome. Nibh varius erat molestie tempus, eu.",
+            "clinet_review_color": "#00263a",
+            "client_name": "Hallie",
+            "clinet_name_color": "#00263a"
+          }
+        },
+        "14f002e7-4f43-478c-a78d-608d0642dca7": {
+          "type": "block",
+          "disabled": true,
+          "settings": {
+            "slide_img": "shopify:\/\/shop_images\/meghan.png",
+            "client_review": "Trestique products are awesome. Nibh varius erat molestie tempus, eu.",
+            "clinet_review_color": "#00263a",
+            "client_name": "",
+            "clinet_name_color": "#00263a"
+          }
+        }
+      },
+      "block_order": [
+        "6b1a4f73-4db4-4b69-a4ac-d758b2aec254",
+        "6f2aa91a-c4fc-41ee-af27-a755484b9869",
+        "661c2138-b493-4ec9-9ab5-541e80985808",
+        "c20c4c87-aa42-4e32-916c-1ae2f8de040c",
+        "14f002e7-4f43-478c-a78d-608d0642dca7"
+      ],
+      "settings": {
+        "bg_color": "#f0f0f0",
+        "main_title": "Join the zero-waste beauty movement",
+        "star_img": "shopify:\/\/shop_images\/five-star.png",
+        "show_arrow": true,
+        "slides_dots": true,
+        "auto_play": false,
+        "slides_to_show_lg": 2,
+        "slides_to_show_sm": 1,
+        "max_width": 1170,
+        "block_bg_color": "#f3e9e2"
+      }
+    },
+    "logo_slider": {
+      "type": "logo-slider",
+      "disabled": true,
+      "blocks": {
+        "016666b5-5d40-4f84-8728-1a7c79f8def8": {
+          "type": "block",
+          "settings": {
+            "logo_img": "shopify:\/\/shop_images\/vogue.png"
+          }
+        },
+        "15121662-b5c8-4ab3-ac94-078a21173351": {
+          "type": "block",
+          "settings": {
+            "logo_img": "shopify:\/\/shop_images\/wwd_31be0912-8b4e-4679-aee7-3f72dc3d0053.png"
+          }
+        },
+        "bc376dc9-87e6-4ff6-9356-a37b1efb3745": {
+          "type": "block",
+          "settings": {
+            "logo_img": "shopify:\/\/shop_images\/forbes_36d3e539-186c-4c5a-b029-28d2c2e07500.png"
+          }
+        },
+        "1f77fc28-c0a3-4b2f-b266-ec8c8f2eda91": {
+          "type": "block",
+          "settings": {
+            "logo_img": "shopify:\/\/shop_images\/stylecraze.png"
+          }
+        },
+        "22aa88fc-6a8d-40c8-9c3b-9024fc3d68b0": {
+          "type": "block",
+          "settings": {
+            "logo_img": "shopify:\/\/shop_images\/cosmetics.png"
+          }
+        },
+        "e5c1eefe-0373-47c8-80ed-7dd3639c9fa0": {
+          "type": "block",
+          "settings": {
+            "logo_img": "shopify:\/\/shop_images\/cew_7a8da9b2-faec-4c3d-bcf5-205894dbebca.png"
+          }
+        },
+        "993d0b47-4d10-4ea9-aa31-796a94d07485": {
+          "type": "block",
+          "settings": {
+            "logo_img": "shopify:\/\/shop_images\/wwd_31be0912-8b4e-4679-aee7-3f72dc3d0053.png"
+          }
+        },
+        "bc6c4736-3abc-451d-b590-0e976f0b4ffb": {
+          "type": "block",
+          "settings": {
+            "logo_img": "shopify:\/\/shop_images\/cew_7a8da9b2-faec-4c3d-bcf5-205894dbebca.png"
+          }
+        },
+        "eaeb988c-7bb3-4ef5-af35-bf9c8e3a9199": {
+          "type": "block",
+          "settings": {
+            "logo_img": "shopify:\/\/shop_images\/forbes_36d3e539-186c-4c5a-b029-28d2c2e07500.png"
+          }
+        }
+      },
+      "block_order": [
+        "016666b5-5d40-4f84-8728-1a7c79f8def8",
+        "15121662-b5c8-4ab3-ac94-078a21173351",
+        "bc376dc9-87e6-4ff6-9356-a37b1efb3745",
+        "1f77fc28-c0a3-4b2f-b266-ec8c8f2eda91",
+        "22aa88fc-6a8d-40c8-9c3b-9024fc3d68b0",
+        "e5c1eefe-0373-47c8-80ed-7dd3639c9fa0",
+        "993d0b47-4d10-4ea9-aa31-796a94d07485",
+        "bc6c4736-3abc-451d-b590-0e976f0b4ffb",
+        "eaeb988c-7bb3-4ef5-af35-bf9c8e3a9199"
+      ],
+      "settings": {
+        "bg_color": "#b66c6d",
+        "max_width": 1170
+      }
+    },
+    "what_makes": {
+      "type": "what-makes-it-trestique",
+      "disabled": true,
+      "blocks": {
+        "817aa1aa-fcb2-42d1-bef7-0952d74a4197": {
+          "type": "Slide",
+          "settings": {
+            "slide_img": "shopify:\/\/shop_images\/time-saving.png",
+            "slide_title": "TIME SAVING",
+            "slide_text": "Multi-tasking essentials you can apply in 5 min or less."
+          }
+        },
+        "eea651ca-fb7e-4068-87b1-5a85347cc870": {
+          "type": "Slide",
+          "settings": {
+            "slide_img": "shopify:\/\/shop_images\/product-tool.png",
+            "slide_title": "SMART 2-IN-1 PRODUCTS",
+            "slide_text": "Built-in tools deliver everything you need at your fingertips."
+          }
+        },
+        "3423c95d-206e-480a-8c23-8bbda24ee214": {
+          "type": "Slide",
+          "settings": {
+            "slide_img": "shopify:\/\/shop_images\/travel-friendly.png",
+            "slide_title": "TRAVEL-FRIENDLY",
+            "slide_text": "Compact, lightweight makeup cases with mess-free products."
+          }
+        },
+        "00e26c1a-fd65-4586-9c90-dd7df1b6834d": {
+          "type": "Slide",
+          "settings": {
+            "slide_img": "shopify:\/\/shop_images\/easy-to-carry.png",
+            "slide_title": "Easy to carry and apply",
+            "slide_text": "Mistake-proof stick makeup with quality formulas."
+          }
+        },
+        "3654e456-8228-4ac4-be43-9c949dfd59d4": {
+          "type": "Slide",
+          "settings": {
+            "slide_img": "shopify:\/\/shop_images\/endlessly.png",
+            "slide_title": "REFILLABLE & SUSTAINABLE",
+            "slide_text": "Endlessly refill your sustainable forever case."
+          }
+        },
+        "c4e48768-8e2a-4d1a-b9cf-dff5f520671e": {
+          "type": "Slide",
+          "disabled": true,
+          "settings": {
+            "slide_img": "shopify:\/\/shop_images\/travel-friendly.png",
+            "slide_title": "TRAVEL-FRIENDLY",
+            "slide_text": "Compact, lightweight makeup cases with mess-free products."
+          }
+        },
+        "ae1a3455-1fac-419d-b34b-f55e2d035a8b": {
+          "type": "Slide",
+          "disabled": true,
+          "settings": {
+            "slide_img": "shopify:\/\/shop_images\/travel-friendly.png",
+            "slide_title": "TRAVEL-FRIENDLY",
+            "slide_text": "Compact, lightweight makeup cases with mess-free products."
+          }
+        }
+      },
+      "block_order": [
+        "817aa1aa-fcb2-42d1-bef7-0952d74a4197",
+        "eea651ca-fb7e-4068-87b1-5a85347cc870",
+        "3423c95d-206e-480a-8c23-8bbda24ee214",
+        "00e26c1a-fd65-4586-9c90-dd7df1b6834d",
+        "3654e456-8228-4ac4-be43-9c949dfd59d4",
+        "c4e48768-8e2a-4d1a-b9cf-dff5f520671e",
+        "ae1a3455-1fac-419d-b34b-f55e2d035a8b"
+      ],
+      "settings": {
+        "bg_color": "#f3e9e2",
+        "text_color": "#00263a",
+        "main_heading": "What makes trestique makeup sets special?",
+        "slides_to_show_lg": 5,
+        "slides_to_show_sm": 1,
+        "margin_sm": 30,
+        "margin_lg": 30,
+        "block_title_color": "#00263a",
+        "block_text_color": "#00263a"
+      }
+    },
+    "how_it_works": {
+      "type": "how-it-works",
+      "disabled": true,
+      "blocks": {
+        "ca14f0af-f063-4589-8c66-1bf4b7784d9c": {
+          "type": "block",
+          "settings": {
+            "step_img": "shopify:\/\/shop_images\/bundle13.jpg",
+            "step_title": "Select your products"
+          }
+        },
+        "12bbe9cb-f7e3-4038-89fc-34e75bc97082": {
+          "type": "block",
+          "settings": {
+            "step_img": "shopify:\/\/shop_images\/step-2-banner.png",
+            "hover_img": "shopify:\/\/shop_images\/step-hover-img.png",
+            "step_title": "Choose your favorite makeup case"
+          }
+        },
+        "e983f339-6e5a-4b8e-a426-964d3db83745": {
+          "type": "block",
+          "settings": {
+            "step_img": "shopify:\/\/shop_images\/bundle12_ec91bed3-a701-429b-b819-994e29ee5ab5.jpg",
+            "step_title": "Enjoy your new simple and time-saving makeup set."
+          }
+        }
+      },
+      "block_order": [
+        "ca14f0af-f063-4589-8c66-1bf4b7784d9c",
+        "12bbe9cb-f7e3-4038-89fc-34e75bc97082",
+        "e983f339-6e5a-4b8e-a426-964d3db83745"
+      ],
+      "settings": {
+        "bg_color": "#f0f0f0",
+        "slides_to_show_lg": 3,
+        "slides_to_show_sm": 1,
+        "max_width": 1440,
+        "title": "How it works",
+        "next_step_img": "shopify:\/\/shop_images\/next_c21ddd57-7e38-4b6e-8ef5-77529d1aac2e.png",
+        "tagline_text": "Save 15% when you create a set of 4 products or more",
+        "tagline_bg_color": "#f3e9e2",
+        "tagline_text_color": "#b04a5a",
+        "btn_text": "CREATE MY SET",
+        "btn_bg_color": "#00263a",
+        "btn_color": "#ffffff",
+        "step_bg_color": "#f0f0f0",
+        "text_color": "#00263a"
+      }
+    },
+    "77ddf7dc-56d0-4e5a-a13d-5dcf643458b2": {
+      "type": "skimm-feature-product-2",
+      "blocks": {
+        "a77a17f9-a3d1-49f4-bff8-b249cf4ed4cc": {
+          "type": "Product",
+          "settings": {
+            "product": "cruelty-free-brow-pencil-gel"
+          }
+        }
+      },
+      "block_order": [
+        "a77a17f9-a3d1-49f4-bff8-b249cf4ed4cc"
+      ],
+      "custom_css": [
+        ".slide-product-single.swiper {display: none;}",
+        ".feature-swiper-buttons {display: none;}",
+        ".numbers-slide {display: none;}",
+        ".latte-swatch {display: none;}",
+        ".mocha-swatch {display: none;}",
+        ".swatches-custom-color-get {display: none;}",
+        ".espresso-swatch {display: block;}"
+      ],
+      "settings": {
+        "title": "Brow Pencil"
+      }
+    }
+  },
+  "order": [
+    "banner_video",
+    "join_hero",
+    "logo_slider",
+    "what_makes",
+    "how_it_works",
+    "77ddf7dc-56d0-4e5a-a13d-5dcf643458b2"
+  ]
+}

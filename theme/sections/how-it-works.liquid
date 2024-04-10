@@ -1,0 +1,205 @@
+<style>
+
+  .how-it-works-{{section.id}}::after {
+
+    background-color: {{section.settings.bg_color}};
+  }
+
+  .how-it-works-{{section.id}} {
+
+    max-width: {{section.settings.max_width}}px;
+  }
+
+  .tagline-wrapper-{{section.id}} {
+
+    background-color: {{section.settings.tagline_bg_color}};
+    color: {{sections.settings.tagline_text_color}};
+  }
+
+
+  .wrapper-{{section.id}} {
+    background-color: {{section.settings.step_bg_color}};
+  }
+
+  .my-set-btn {
+    background-color: {{section.settings.btn_bg_color}};    
+  }
+
+
+</style>
+
+<div class="how-it-works how-it-works-{{section.id}}">
+
+  <h1 class="heading">{{section.settings.title}}</h1>
+  <div class="setp-block-wrapper" 
+    data-slide-sm="{{section.settings.slides_to_show_sm}}" 
+    data-slide-md="2" 
+    data-slide-lg="{{section.settings.slides_to_show_lg}}">
+
+    {%- for block in section.blocks -%}
+    <div class="block
+      {% if forloop.last %}
+        last-child
+      {% endif %}
+    ">
+      <div class="img-wrapper">        
+        {% render 'srcset' , src_name:block.settings.step_img, src_alt:block.settings.step_img.alt, src_class:"base-img" %}
+        {% if block.settings.hover_img != blank %}        
+          {% render 'srcset' , src_name:block.settings.hover_img, src_alt:block.settings.hover_img.alt, src_class:"hover-img" %}
+          {% else %}
+            {% render 'srcset' , src_name:block.settings.step_img, src_alt:block.settings.step_img.alt, src_class:"hover-img" %}            
+        {% endif %}
+      </div>   
+      <div class="text-wrapper how-it-work-wrapper wrapper-{{section.id}}">
+        {{block.settings.step_title}}
+      </div>
+
+      {%- unless forloop.last -%}
+        <div class="next-slide">
+
+          {% render 'srcset' , src_name:section.settings.next_step_img, src_alt:block.section.next_step_img.alt %}
+        </div>  
+      {%- endunless -%}
+      <div class="steps">STEP {{forloop.index}}</div>
+    </div>
+    {%- endfor- %}  
+  </div>
+
+  <div class="tagline-wrapper tagline-wrapper-{{section.id}}">
+    {{section.settings.tagline_text}}
+  </div>
+
+  <div class="create-my-set text-center">
+    <a href="/products/the-essential-mix?step=2" class="my-set-btn button button--primary">{{section.settings.btn_text}}</a>
+  </div>
+
+</div>
+
+{% schema %}
+{
+  "name": "How it works",
+  "settings": [
+    {
+      "type": "color",
+      "id": "bg_color",
+      "label": "Background color",
+      "default": "#F0F0F0"
+    },
+    {
+      "type": "range",
+      "id": "slides_to_show_lg",
+      "label": "Slides to show in desktop",
+      "min": 1,
+      "max": 5,
+      "step": 1,
+      "default": 3
+    },
+    {
+      "type": "range",
+      "id": "slides_to_show_sm",
+      "label": "Slides to show in mobile",
+      "min": 1,
+      "max": 3,
+      "step": 1,
+      "default": 1
+    },
+    {
+      "type": "number",
+      "id": "max_width",
+      "label": "Width",
+      "default": 1440
+    },
+    {
+      "type": "text",
+      "id": "title",
+      "label": "Title"
+    },
+    {
+      "type": "image_picker",
+      "id": "next_step_img",
+      "label": "Next step img"
+    },
+    {
+      "type": "header",
+      "content": "Tagline"
+    },
+    {
+      "type": "text",
+      "id": "tagline_text",
+      "label": "Text"
+    },
+    {
+      "type": "color",
+      "id": "tagline_bg_color",
+      "label": "Background color",
+      "default": "#F3E9E2"
+    },  
+    {
+      "type": "color",
+      "id": "tagline_text_color",
+      "label": "Text color",
+      "default": "#b04A5A"
+    },
+    {
+      "type": "header",
+      "content": "Create set Button"
+    },
+    {
+      "type": "text",
+      "id": "btn_text",
+      "label": "Text"
+    },
+    {
+      "type": "color",
+      "id": "btn_bg_color",
+      "label": "Background color",
+      "default": "#00263A"
+    },
+    {
+      "type": "color",
+      "id": "btn_color",
+      "label": "Text color",
+      "default": "#FFFFFF"
+    },
+    {
+      "type": "header",
+      "content": "Step block settings"
+    },
+    {
+      "type": "color",
+      "id": "step_bg_color",
+      "label": "Background color",
+      "default": "#F0F0F0"
+    },
+    {
+      "type": "color",
+      "id": "text_color",
+      "label": "Color",
+      "default": "#00263A"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "block",
+      "name": "Stpes",
+      "settings": [
+        {
+          "type": "image_picker",
+          "id": "step_img",
+          "label": "Image"
+        },
+        {
+          "type": "image_picker",
+          "id": "hover_img",
+          "label": "Hover image"
+        },
+        {
+          "type": "text",
+          "id": "step_title",
+          "label": "Title"
+        }
+      ]
+    }
+  ]
+}
+{% endschema %}

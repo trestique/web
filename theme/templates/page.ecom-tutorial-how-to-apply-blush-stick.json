@@ -1,0 +1,12 @@
+{
+  "layout": "theme",
+  "sections": {
+    "ecom-tutorial-how-to-apply-blush-stick": {
+      "type": "ecom-tutorial-how-to-apply-blush-stick-page",
+      "settings": {}
+    }
+  },
+  "order": [
+    "ecom-tutorial-how-to-apply-blush-stick"
+  ]
+}

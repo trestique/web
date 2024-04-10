@@ -1,0 +1,264 @@
+<style>
+{% for block in section.blocks %}
+  {% if block.type == 'banner' %}
+  @media (min-width: 1024px){
+    .shop-look-banner-{{block.id}} .shop-look-content{
+          -moz-transform: translate(-{{block.settings.horizontal_alignment}}%,-{{block.settings.vertical_alignment}}%);
+          -o-transform: translate(-{{block.settings.horizontal_alignment}}%,-{{block.settings.vertical_alignment}}%);
+          -ms-transform: translate(-{{block.settings.horizontal_alignment}}%,-{{block.settings.vertical_alignment}}%);
+          -webkit-transform: translate(-{{block.settings.horizontal_alignment}}%,-{{block.settings.vertical_alignment}}%);
+          transform: translate(-{{block.settings.horizontal_alignment}}%,-{{block.settings.vertical_alignment}}%);
+          top:{{block.settings.vertical_alignment}}%;
+          left: {{block.settings.horizontal_alignment}}%;
+    }
+    .shop-look-banner-{{block.id}} .shop-look-content{
+      {% if block.settings.box_bg_color == blank %}
+              background: transparent;
+      {% else %}
+        {% assign bg_color = block.settings.box_bg_color | color_modify: 'alpha', block.settings.box_opacity %}
+        background: {{bg_color}};
+      {% endif %}
+    }
+  }
+  {% else %}
+  .shop-look-banner-{{block.id}}{
+    background: {{block.settings.bg_color}};
+  }
+  {% endif %}
+  .shop-look-banner-{{block.id}} .shop-look-content .shop-look-heading,.shop-look-banner-{{block.id}} .shop-look-content .shop-look-desc p{
+    color: {{block.settings.text_color}};
+  }
+
+  .shop-look-banner-{{block.id}} .shop-look-content .shop-look-btn a{
+        display: block;
+  }
+  
+  {% if block.settings.cta_enable == 'xs-only' %}
+  @media(min-width:1025px){
+    .shop-look-banner-{{block.id}} .shop-look-content .shop-look-btn{
+      display: none;
+    }
+  }
+  {% elsif block.settings.cta_enable == 'desk-only' %}
+    @media(max-width:1024px){
+      .shop-look-banner-{{block.id}} .shop-look-content .shop-look-btn{
+        display: none;
+      }
+    }
+  {% elsif block.settings.cta_enable == 'both-hide' %}
+    .shop-look-banner-{{block.id}} .shop-look-content .shop-look-btn{
+        display: none;
+      }
+  {% else %}
+    .shop-look-banner-{{block.id}} .shop-look-content .shop-look-btn{
+        display: block;
+    }
+  {% endif %}
+  .shop-look-banner-{{block.id}} .shop-look-content .shop-look-btn .button{
+    color: {{block.settings.cta_color}};
+    background: {{block.settings.cta_back}};
+    border: 1px solid {{block.settings.cta_back}};
+  }
+  .shop-look-banner-{{block.id}} .shop-look-content .shop-look-btn .button:hover{
+    color: {{block.settings.cta_back}};
+    background: {{block.settings.cta_color}};
+    border: 1px solid {{block.settings.cta_color}};
+  }
+{% endfor %}
+</style>
+
+<script>
+  simply.shopByLook.banner['settings'] = {{section.settings | json}};
+  simply.shopByLook.banner['blocks'] = [];
+  {% for block in section.blocks %}
+      simply.shopByLook.banner.blocks.push({...{{block.settings | json}},type:"{{block.type}}",id:"{{block.id}}"});
+  {% endfor %}
+  </script>
+
+
+{% schema %}
+{
+  "name": "Shop by look banner",
+  "settings": [
+    
+  ],
+  "blocks": [
+    {
+      "type": "banner",
+      "name": "Banner",
+      "settings": [
+      {
+        "type": "image_picker",
+        "id": "background_img_desk",
+        "label": "Banner[Desktop]"
+      },
+      {
+        "type": "image_picker",
+        "id": "background_img_mob",
+        "label": "Banner[Mobile]"
+      },
+      {
+        "type": "text",
+        "id": "heading_text",
+        "label": "Banner heading"
+      },
+      {
+        "type": "richtext",
+        "id": "heading_description",
+        "label": "Banner content"
+      },
+      {
+        "type": "color",
+        "id": "text_color",
+        "label": "Text color for title and description"
+      },
+      {
+        "type": "text",
+        "id": "button_text",
+        "label": "Button label"
+      },
+      {
+        "type": "url",
+        "id": "button_link",
+        "label": "Button link"
+      },
+      {
+        "type": "color",
+        "id": "cta_color",
+        "label": "Button color"
+      },
+      {
+        "type": "color",
+        "id": "cta_back",
+        "label": "Button background color"
+      },
+      {
+        "type": "select",
+        "id": "cta_enable",
+        "label": "Button enable",
+        "options": [
+          {
+            "value": "xs-only",
+            "label": "Show only on mobile"
+          },
+          {
+            "value": "desk-only",
+            "label": "Show only on desktop"
+          },
+          {
+            "value": "both-show",
+            "label": "Show on desktop and mobile"
+          },
+          {
+            "value": "both-hide",
+            "label": "Hide on desktop and mobile"
+          }
+        ],
+        "default": "both-show"
+      },
+      {
+        "type": "color",
+        "id": "box_bg_color",
+        "default":"#fff",
+        "label": "Box background color"
+      },
+      {
+        "label":"Caption background opacity",
+        "id":"box_opacity",
+        "type": "range",
+        "min": 0,
+        "max": 1,
+        "step":0.1,
+        "unit":"%",
+        "default": 1
+      },
+      {
+        "type": "range",
+        "id": "vertical_alignment",
+        "label": "Vertical alignment",
+        "min": 0,
+        "max": 100,
+        "default": 50,
+        "unit": "%"
+      },
+      {
+        "type": "range",
+        "id": "horizontal_alignment",
+        "label": "Horizontal alignment",
+        "min": 0,
+        "max": 100,
+        "default": 50,
+        "unit": "%"
+      }
+      ]
+    },
+    {
+      "type": "video",
+      "name": "Video",
+      "settings": [
+      {
+        "type": "color",
+        "id": "bg_color",
+        "label": "Section bg color",
+        "default":"#E0B39E"
+      },
+      {
+        "type": "text",
+        "id": "video_url",
+        "label": "Video[Desktop]"
+      },
+      {
+        "type": "text",
+        "id": "video_url_mobile",
+        "label": "Video[Mobile]"
+      },
+      {
+        "type": "image_picker",
+        "id": "background_img_desk",
+        "label": "Banner[Desktop]"
+      },
+      {
+        "type": "image_picker",
+        "id": "background_img_mob",
+        "label": "Banner[Mobile]"
+      },
+      {
+        "type": "text",
+        "id": "heading_text",
+        "label": "Banner heading"
+      },
+      {
+        "type": "richtext",
+        "id": "heading_description",
+        "label": "Text"
+      },
+      {
+        "type": "color",
+        "id": "text_color",
+        "label": "Text color for title and description"
+      },
+      {
+        "type": "text",
+        "id": "button_text",
+        "label": "Button label"
+      },
+      {
+        "type": "url",
+        "id": "button_link",
+        "label": "Button link"
+      },
+      {
+        "type": "color",
+        "id": "cta_color",
+        "label": "Button color"
+      },
+      {
+        "type": "color",
+        "id": "cta_back",
+        "label": "Button background color"
+      }
+      ]
+    }
+  ]
+}
+{% endschema %}

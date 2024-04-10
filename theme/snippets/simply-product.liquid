@@ -1,0 +1,56 @@
+<div class="simply-product">
+  {% assign current_variant = product.selected_or_first_available_variant %}
+  <div class="img">
+    <a href="{{product.url}}">
+      {% if current_variant.featured_image.src == blank %}
+      {% render 'srcset' , src_name:product.featured_image.src, src_alt:current_variant.title %}
+      {% else %}
+      {% render 'srcset' , src_name:current_variant.featured_image.src, src_alt:current_variant.title %}
+      {% endif %}
+    </a>
+  </div>
+  <div class="product-info">
+    <form action="/cart/add" data-productid="{{ product.id }}" class="common-ajax-cart">
+      <h3 class="product-title {% if product.variants.size == 1 and product.variants[0].title == "Default Title" %} no_variants{% endif %}">{{product.title}}</h3>
+      <div class="product-review">
+        {{ product.metafields.okendo.ProductListingSnippet }}
+      </div>
+      {% unless product.variants.size == 1 and product.variants[0].title == "Default Title" %} 
+      <p class="current-variant-info">{{product.metafields.product_details.info[current_variant.title]}}</p>
+      {% endunless %}
+      <div class="variants-details">
+        <ul class="swatch-wrap {% if product.variants.size == 1 and product.variants[0].title == "Default Title" %} hide{% endif %}">
+              {% for variant in product.variants %}
+              {% assign value = variant.title | handle %}
+              {%- assign color_swatch_name = value | handle | append: '.png' -%}
+              {%- assign color_swatch_image = images[color_swatch_name] -%}
+              {% if variant.featured_image.src == blank %}
+              {% assign main_img = product.featured_image.src %}
+              {% else %}
+              {% assign main_img = variant.featured_image.src %}
+              {% endif %}
+              <li data-id="{{variant.id}}" data-available="{{variant.available}}" data-price="{{variant.price | money}}" data-img="{{main_img | img_url:'master'}}" data-info="{{product.metafields.product_details.info[variant.title]}}" data-value="{{variant.title | handle}}" class="swatch-element color {{variant.title | handle}} {% if variant.available == false %} variant-soldout{% endif %} {% if variant == current_variant %} active{% endif %}">
+                    <label class="swatch-label" style="background-color: {{ value | replace: ' ', '' | downcase }}; {% if color_swatch_image != blank %}background-image: url({{ color_swatch_image | img_url: '64x64' }}){% endif %}"  data-index= '{{forloop.index0}}'>
+                        <span>{{variant.title}}</span>
+                    </label>
+                </li>
+              {% endfor %}
+          </ul>
+      </div>
+      <input type="hidden" name="id" data-productid="{{ product.id }}" value="{{current_variant.id}}" />
+      {% if product.available %}
+        <button class="add-to-cart button button--primary" type="submit"> 
+          {% if product.metafields.custom.product_button_text.value != blank %}
+            {{ product.metafields.custom.product_button_text.value }}
+          {% else %}
+             Add to cart {{current_variant.price | money }}
+          {% endif %}
+        </button>
+        {% else %}
+      <button data-add-to-cart-trigger class="soldout" disabled type="submit">Soldout</button>
+
+      {% endif %}
+    </form>
+  </div>
+</div>
+

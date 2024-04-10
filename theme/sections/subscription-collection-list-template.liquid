@@ -1,0 +1,460 @@
+<script type="text/javascript" id="subscription-collection-template">
+{ 
+  "JSON": [
+    {% for block in section.blocks %}
+      {% if block.type == "banner" %}
+      {
+        "type": "banner",
+        "heading": {{ block.settings.banner_heading | json }},
+        "content": {{ block.settings.banner_text | json }},
+        "info": {{block.settings.banner_content | json}},
+        "media": {
+        "image": {{ block.settings.banner_img | json }},
+        "video": {{ block.settings.banner_video | json }},
+        "enableImages": {{ block.settings.enable_images }},
+        "images": [
+          {% for i in (1..6) %}
+            {% assign img = "banner_img_" | append: i %}
+            {% assign img = block.settings[img] %}
+            {% if img != blank %}
+              {% unless forloop.first %},{% endunless %}
+              {{ img | json }} 
+            {% endif %}
+          {% endfor %}
+        ]
+      }
+      }
+      {% elsif block.type =="collection" %}
+        {
+        "type": "collection",
+        "showTitle": {{ block.settings.show_collection_title | json }},
+        "showDescription": {{ block.settings.show_collection_description | json }},
+        {% assign collection = collections[block.settings.collection_handle] %}
+        "collection": {
+          {% assign title = block.settings.collection_title %}
+          {% if title == blank or title == "" %}
+            {% assign title = collection.title %}
+          {% endif %}
+          "title": {{ title | json }},
+          "metafields": {
+            {% assign shortInfo = block.settings.collection_description %}
+            {% if shortInfo == blank or shortInfo == "" %}
+              {% assign shortInfo = collection.metafields.collection.short_info.value %}
+            {% endif %}
+            "shortInfo": {{ shortInfo | json}}
+          }
+        },
+        "handle": "{{ block.settings.collection_handle }}",
+        "products": [
+          {% paginate collection.products by block.settings.max_collection_product %}
+            {% for product in collection.products %}
+              {
+                "id": {{ product.id | json}},
+                "title": {{ product.title | json }},
+                "variants": {{ product.variants | json }},
+                "featured_image": {{ product.featured_image | json }},
+                "selling_plan_groups": {{ product.selling_plan_groups | json }},
+                "url": {{ product.url | json }},
+                "available": {{ product.available }},
+                "metafields": {
+                  "shortInfo": {{ product.metafields.product_details.short_info | json}},
+                  "reviews": {{ product.metafields.okendo.ProductListingSnippet | json }}
+                  {% if product.metafields.product_details.product_badge_message %}
+                    ,
+                    "badge": {{ product.metafields.product_details.product_badge_message | json }},
+                    "backgroundColor": "{{ product.metafields.product_details.product_badge_msg_background }}",
+                    "color": "{{ product.metafields.product_details.product_badge_msg_text_color.value }}"
+                  {% endif %}
+                }
+              }  
+            {% unless forloop.last %},{% endunless %}
+            {% endfor %}
+          {% endpaginate %}
+        ],
+        "media": {
+          "image": {{ block.settings.collection_img | json }},
+          "video": {{ block.settings.collection_video | json}},
+          "url": {{ block.settings.media_url | json }},
+          "alignment": {{ block.settings.media_alignment | json }}
+        }
+      }
+      {% elsif block.type == "collection-with-media" %}
+        {
+          "type": "collectionWithMedia",
+          "showTitle": {{ block.settings.show_collection_title | json }},
+          "showDescription": {{ block.settings.show_collection_description | json }},
+          {% assign collection = collections[block.settings.collection_handle] %}
+          "collection": {
+            {% assign title = block.settings.collection_title %}
+            {% if title == blank or title == "" %}
+              {% assign title = collection.title %}
+            {% endif %}
+            "title": {{ title | json }},
+            "metafields": {
+              {% assign shortInfo = block.settings.collection_description %}
+              {% if shortInfo == blank or shortInfo == "" %}
+                {% assign shortInfo = collection.metafields.collection.short_info.value %}
+              {% endif %}
+              "shortInfo": {{ shortInfo | json}}
+            }
+          },
+    "products": [
+      {% paginate collection.products by 2 %}
+        {% for product in collection.products %}
+          {
+            "id": {{ product.id | json}},
+            "title": {{ product.title | json }},
+            "variants": {{ product.variants | json }},
+            "featured_image": {{ product.featured_image | json }},
+            "selling_plan_groups": {{ product.selling_plan_groups | json }},
+            "url": {{ product.url | json }},
+            "available": {{ product.available }},
+            "metafields": {
+              "shortInfo": {{ product.metafields.product_details.short_info | json}},
+              "reviews": {{ product.metafields.okendo.ProductListingSnippet | json  }}
+              {% if product.metafields.product_details.product_badge_message %}
+                ,
+                "badge": {{ product.metafields.product_details.product_badge_message | json }},
+                "backgroundColor": "{{ product.metafields.product_details.product_badge_msg_background }}",
+                "color": "{{ product.metafields.product_details.product_badge_msg_text_color.value }}"
+              {% endif %}
+            }
+          }{% unless forloop.last %},{% endunless %}
+        {% endfor %}
+      {% endpaginate %}
+    ],
+    "handle": "{{ block.settings.collection_handle }}",
+    "media": {
+      "image": {{ block.settings.collection_img | json }},
+      "video": {{ block.settings.collection_video | json}}
+    }
+  }
+  {% elsif block.type =="collection-faq" %}
+    {
+      "type": "faq",
+      "content": {
+        "mobileOnly": {{ block.settings.mobile_only }},
+        "heading": {{ block.settings.faq_heading | json }},
+        "subHeading" : {{ block.settings.faq_subheading | json }}
+      },
+      "button": {
+        "text": {{ block.settings.faq_btn_text | json }},
+        "url": {{ block.settings.faq_btn_url | json }}
+      },
+      "images": [
+        {% for i in (1..3) %}
+          {% assign img = "faq_img_" | append: i %}
+          {% assign heading = "faq_content_heading_" | append: i %}
+          {% assign subheading = "faq_content_subheading_" | append: i %}
+          {% assign imgVal = block.settings[img] %}
+          {% assign headingVal = block.settings[heading] %}
+          {% assign subHeadingVal = block.settings[subheading] %}
+          {% if imgVal and headingVal and subHeadingVal %}
+          {% unless forloop.first %},{% endunless %}
+            {
+              "img" : {{ imgVal | json}},
+              "heading": {{ headingVal | json }},
+              "subheading": {{ subHeadingVal | json}}
+            }
+          {% endif %}
+        {% endfor %}
+      ]
+    }
+      {% endif %}
+    {% unless forloop.last %},{% endunless %}
+    {% endfor %}
+    ]
+  }
+</script>
+
+{% schema %}
+  {
+    "name": "Collection list",
+    "blocks": [
+      {
+        "type": "collection",
+        "name": "Collection",
+        "settings": [
+          {
+            "type": "header",
+            "content": "Collection"
+          },
+          {
+            "type": "collection",
+            "id": "collection_handle",
+            "label": "Select collection"
+          },
+          {
+            "type": "text",
+            "id": "collection_title",
+            "label": "Collection title"
+          },
+          {
+            "type": "checkbox",
+            "id": "show_collection_title",
+            "label": "Show title",
+            "default": true
+          },
+          {
+            "type": "text",
+            "id": "collection_description",
+            "label": "Collection description"
+          },
+          {
+            "type": "checkbox",
+            "id": "show_collection_description",
+            "label": "Show description",
+            "default": true
+          },
+          {
+            "type": "number",
+            "id": "max_collection_product",
+            "label": "Max collection product to show",
+            "default": 5
+          },
+          {
+            "type": "header",
+            "content": "Media"
+          },
+          {
+            "type": "image_picker",
+            "id": "collection_img",
+            "label": "collection image",
+            "info": "If image will be blank video will be displyed"
+          },
+          {
+            "type": "select",
+            "id": "media_alignment",
+            "label": "Media alignment",
+            "default": "left",
+            "options": [
+              {
+                "value": "left",
+                "label": "Left"
+              },
+              {
+                "value": "right",
+                "label": "right"
+              }
+            ]
+          },
+          {
+            "type": "url",
+            "id": "collection_video",
+            "label": "collection video",
+            "info": "If video url is blank empty space will be displayed"
+          },
+          {
+            "type": "url",
+            "id": "media_url",
+            "label": "Url for media"
+          }
+        ]
+      }, {
+        "type": "banner",
+        "name": "Banner",
+        "settings": [
+          {
+            "type": "header",
+            "content": "Media"
+          },
+          {
+            "type": "image_picker",
+            "id": "banner_img",
+            "label": "Banner image",
+            "info": "If image will be blank video will be displyed"
+          },
+          {
+            "type": "url",
+            "id": "banner_video",
+            "label": "Banner video",
+            "info": "If video url is blank block will not be displayed"
+          },
+          {
+            "type": "header",
+            "content": "Content"
+          }, {
+            "type": "text",
+            "id": "banner_heading",
+            "label": "Banner heading"
+          }, {
+            "type": "richtext",
+            "id": "banner_text",
+            "label": "Banner text"
+          },{
+            "type": "text",
+            "id": "banner_content",
+            "label": "Banner info"
+          }, {
+            "type": "header",
+            "content": "Images"
+          }, {
+            "type": "checkbox",
+            "id": "enable_images",
+            "label": "Enable images",
+            "default": true
+          }, {
+            "type": "image_picker",
+            "id": "banner_img_1",
+            "label": "Image 1"
+          }, {
+            "type": "image_picker",
+            "id": "banner_img_2",
+            "label": "Image 2"
+          }, {
+            "type": "image_picker",
+            "id": "banner_img_3",
+            "label": "Image 3"
+          }, {
+            "type": "image_picker",
+            "id": "banner_img_4",
+            "label": "Image 4"
+          }, {
+            "type": "image_picker",
+            "id": "banner_img_5",
+            "label": "Image 5"
+          }, {
+            "type": "image_picker",
+            "id": "banner_img_6",
+            "label": "Image 6"
+          }
+        ]
+      },
+      {
+        "type": "collection-with-media",
+        "name": "Collection with media",
+        "settings": [
+          {
+            "type": "header",
+            "content": "Collection"
+          },
+          {
+            "type": "collection",
+            "id": "collection_handle",
+            "label": "Select collection"
+          },
+          {
+            "type": "text",
+            "id": "collection_title",
+            "label": "Collection title"
+          },
+          {
+            "type": "checkbox",
+            "id": "show_collection_title",
+            "label": "Show title",
+            "default": true
+          },
+          {
+            "type": "richtext",
+            "id": "collection_description",
+            "label": "Collection description"
+          },
+          {
+            "type": "checkbox",
+            "id": "show_collection_description",
+            "label": "Show description",
+            "default": true
+          },
+          {
+            "type": "header",
+            "content": "Media"
+          },
+          {
+            "type": "image_picker",
+            "id": "collection_img",
+            "label": "collection image",
+            "info": "If image will be blank video will be displyed"
+          },
+          {
+            "type": "url",
+            "id": "collection_video",
+            "label": "collection video",
+            "info": "If video url is blank empty space will be displayed"
+          }
+        ]
+      },
+      {
+        "type": "collection-faq",
+        "name": "Footer FAQ",
+        "settings": [
+          {
+            "type": "header",
+            "content": "Footer Faq"
+          },
+          {
+            "type": "checkbox",
+            "id": "mobile_only",
+            "label": "Mobile only",
+            "info": "Show in mobile only",
+            "default": true
+          },
+          {
+            "type": "text",
+            "id": "faq_heading",
+            "label": "Heading"
+          },
+          {
+            "type": "richtext",
+            "id": "faq_subheading",
+            "label": "Sub heading"
+          },
+          {
+            "type": "text",
+            "id": "faq_btn_text",
+            "label": "Button text"
+          },
+          {
+            "type": "url",
+            "id": "faq_btn_url",
+            "label": "Button url"
+          },
+          {
+            "type": "image_picker",
+            "id": "faq_img_1",
+            "label": "Image icon"
+          },
+          {
+            "type": "text",
+            "id": "faq_content_heading_1",
+            "label": "Heading"
+          },
+          {
+            "type": "richtext",
+            "id": "faq_content_subheading_1",
+            "label": "Sub heading"
+          },
+          {
+            "type": "image_picker",
+            "id": "faq_img_2",
+            "label": "Image icon"
+          },
+          {
+            "type": "text",
+            "id": "faq_content_heading_2",
+            "label": "Heading"
+          },
+          {
+            "type": "richtext",
+            "id": "faq_content_subheading_2",
+            "label": "Sub heading"
+          },
+          {
+            "type": "image_picker",
+            "id": "faq_img_3",
+            "label": "Image icon"
+          },
+          {
+            "type": "text",
+            "id": "faq_content_heading_3",
+            "label": "Heading"
+          },
+          {
+            "type": "richtext",
+            "id": "faq_content_subheading_3",
+            "label": "Sub heading"
+          }
+        ]
+      }
+    ]
+  }
+{% endschema %}

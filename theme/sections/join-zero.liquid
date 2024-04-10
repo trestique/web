@@ -1,0 +1,165 @@
+<style>
+
+  .join-zero-{{section.id}} .join-zero-section-wrapper{
+
+    max-width: {{section.settings.max_width}}px;
+  }
+  .join-zero .join-zero-section-wrapper:after  {
+
+    background-color: {{section.settings.bg_color}};
+  }
+
+  .review {
+
+    background-color: {{section.settings.block_bg_color}};
+  }
+
+</style>
+
+<div class="join-zero join-zero-{{section.id}}">
+  <div class="join-zero-section-wrapper">
+  <h1 class="heading text-center">{{section.settings.main_title}}</h1>
+  <div class="img-wrapper text-center">
+    {% render 'srcset' , src_name:section.settings.star_img, src_alt:section.settings.star_img.alt %}
+  </div>
+
+  <div class="client-review-slider" 
+    data-slide-sm="{{section.settings.slides_to_show_sm}}" 
+    data-slide-lg="{{section.settings.slides_to_show_lg}}"
+    data-slide-md="2"
+    data-dots="{{section.settings.slides_dots}}"
+    data-arrows="{{section.settings.show_arrow}}"
+    data-auto-play="{{section.settings.auto_play}}">
+    {% for block in section.blocks %}
+      <div class="client-review-wrapper">
+        <div class="client-img-wrapper">
+          {% render 'srcset' , src_name:block.settings.slide_img, src_alt:block.settings.slide_img.alt %}
+        </div>
+        <div class="review">
+          <div class="review-wrapper">
+            <div class="client-review">{{block.settings.client_review}}</div>
+            <h3 class="client-name">{{block.settings.client_name}}</h3>
+          </div>
+          <div class="quote-img-wrapper top">
+            <img src="https://cdn.shopify.com/s/files/1/0114/0621/3220/files/quote.png?v=1645079095" alt="quote">
+          </div>
+          <div class="quote-img-wrapper bottom">
+            <img src="https://cdn.shopify.com/s/files/1/0114/0621/3220/files/quote.png?v=1645079095" alt="quote">
+          </div>
+        </div>
+      </div>
+    {% endfor %}
+  </div>
+</div>
+</div>
+
+{% schema %}
+{
+  "name": "Join the zero",
+  "settings": [
+    {
+      "type": "color",
+      "id": "bg_color",
+      "label": "Background color",
+      "default": "#F0F0F0"
+    },
+    {
+      "type": "text",
+      "id": "main_title",
+      "label": "Title"
+    },
+    {
+      "type": "image_picker",
+      "id": "star_img",
+      "label": "Rating image"
+    },
+    {
+      "type": "checkbox",
+      "id": "show_arrow",
+      "label": "Show arrows",
+      "default": true
+    },
+    {
+      "type": "checkbox",
+      "id": "slides_dots",
+      "label": "Show slides dots",
+      "default": true
+    },
+    {
+      "type": "checkbox",
+      "id": "auto_play",
+      "label": "Slide autoplay",
+      "default": true
+    },
+    {
+      "type": "range",
+      "id": "slides_to_show_lg",
+      "label": "Slides to show in desktop",
+      "min": 1,
+      "max": 5,
+      "step": 1,
+      "default": 2
+    },
+    {
+      "type": "range",
+      "id": "slides_to_show_sm",
+      "label": "Slides to show in mobile",
+      "min": 1,
+      "max": 5,
+      "step": 1,
+      "default": 1
+    },
+    {
+      "type": "number",
+      "id": "max_width",
+      "label": "Max width",
+      "default": 1440
+    },
+    {
+      "type": "header",
+      "content": "Block settings"
+    },
+    {
+      "type": "color",
+      "id": "block_bg_color",
+      "label": "Background color",
+      "default": "#F3E9E2"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "block",
+      "name": "Client review",
+      "settings": [
+        {
+          "type": "image_picker",
+          "id": "slide_img",
+          "label": "Image"
+        },   
+        {
+          "type": "textarea",
+          "id": "client_review",
+          "label": "Client review"
+        },
+        {
+          "type": "color",
+          "id": "clinet_review_color",
+          "label": "Clinet review color",
+          "default": "#00263A"
+        },
+        {
+          "type": "text",
+          "id": "client_name",
+          "label": "Client name"
+        },
+        {
+          "type": "color",
+          "id": "clinet_name_color",
+          "label": "Client name color",
+          "default": "#00263A"
+        }
+      ]
+    }
+  ]
+}
+{% endschema %}

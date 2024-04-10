@@ -1,0 +1,495 @@
+{
+  "sections": {
+    "6c63c85b-bcc3-401a-b8c7-5584d5a2700a": {
+      "type": "index__html",
+      "settings": {
+        "html_content": "<br><div style=\"text-align: center;\">\n  <h1 class=\"title\">Your Rewards<\/h1>\n <div data-lion-integrated-page=\"\"><\/div>\n<\/div>",
+        "width": "standard",
+        "padding_top": 20,
+        "padding_bottom": 20,
+        "padding_left": 0,
+        "padding_right": 0,
+        "animation": "none",
+        "css_class": "",
+        "custom_css": ".lion-earn {\n  display: none;\n}\n\n .lion-redeem {\n      display: none;\n    }\n\n.lion-tiers-overview {\n    display: none;\n}\n\n#loyaltylion .lion-header__join-today {\n    max-width: 450px;\n    text-align: center;\n    margin: 0 0 30px;\n    color: #002031;\n    font-family: FuturaBT;\n    font-size: 20px;\n    font-weight: 400;\n    font-stretch: normal;\n    font-style: normal;\n    line-height: 1.1;\n    letter-spacing: 1.2px;\n}\n\n#loyaltylion .lion-action-button {\nbackground-color: #091f2c;\n}\n\n\n#loyaltylion .lion-header__nav {\n  display: none;\n}\n\n#loyaltylion .lion-header {\n  font-size: 20px;\n}\n\nsection.section.is-width-standard.has-background {\n  background-color: #F3EAE2;\n   border-radius: 10px;\n}\n\n#loyaltylion .lion-header {\n    background: #F3EAE2;\n    color: #772C45;\n    font-size: large;\n}"
+      }
+    },
+    "e7d4e31c-e334-492f-84de-6b506cb2a19b": {
+      "type": "index__image-with-text",
+      "blocks": {
+        "template--15493242191972__e7d4e31c-e334-492f-84de-6b506cb2a19b-166620573134feceb0-0": {
+          "type": "image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/image_2_1ee3bd97-cd85-4bc5-948a-e05d7ce75a74.png",
+            "image_crop": "none",
+            "image_link": ""
+          }
+        },
+        "template--15493242191972__e7d4e31c-e334-492f-84de-6b506cb2a19b-166620573134feceb0-2": {
+          "type": "text",
+          "settings": {
+            "title": "How does it work?",
+            "heading_size": "small",
+            "text": "<p>Join trestique rewards, collect points & redeem them on future purchases!<\/p><p><br\/><strong>1. JOIN<\/strong><br\/>Collect 100 points when you create an account.<br\/><br\/><strong>2. EARN POINTS<\/strong><br\/>Earn points with every purchase and through online activities.<br\/><br\/><strong>3. REDEEM<\/strong><br\/>Turn your points into store credit, discounts or gift cards to redeem.<\/p>",
+            "button_label": "",
+            "link": "",
+            "button_style": "button--primary",
+            "background": "#ffffff",
+            "text_color": "rgba(0,0,0,0)",
+            "alignment": "left",
+            "vertical_position": "center"
+          }
+        }
+      },
+      "block_order": [
+        "template--15493242191972__e7d4e31c-e334-492f-84de-6b506cb2a19b-166620573134feceb0-0",
+        "template--15493242191972__e7d4e31c-e334-492f-84de-6b506cb2a19b-166620573134feceb0-2"
+      ],
+      "settings": {
+        "width": "standard",
+        "show_gutter": true,
+        "padding_top": 20,
+        "padding_bottom": 20,
+        "animation": "none",
+        "css_class": "",
+        "custom_css": ""
+      }
+    },
+    "8ee7d597-bb71-4cb1-b0eb-0a5a4da4b666": {
+      "type": "banner-with-text",
+      "settings": {
+        "link": "",
+        "video_url": "",
+        "video_url_mobile": "",
+        "image": "shopify:\/\/shop_images\/platinum-members-rewards.png",
+        "mobile_image": "shopify:\/\/shop_images\/rewards-banner-mobile.png",
+        "title": "Platinum members",
+        "subtitle": "<p>Only platinum members earn triple points for every purchase & get free shipping on all orders.<\/p>",
+        "pretext_color": "#000000",
+        "heading_color": "#00263a",
+        "subheading_color": "#00263a",
+        "text_alignment": "right",
+        "text_horizontal_position": "left",
+        "text_vertical_position": "middle",
+        "background_color": "#ffffff",
+        "background_opacity": 0,
+        "border_color": "#ffffff",
+        "border_width": 0,
+        "text_width": 40,
+        "button_1": "",
+        "button_text_color": "#ffffff",
+        "button_bg_color": "#000000",
+        "button_hover_bg_color": "#ffffff",
+        "button_hover_color": "#000000",
+        "button_1_link": "",
+        "button_1_style": "button--secondary",
+        "button_2": "",
+        "button_2_link": "",
+        "button_2_style": "button--secondary",
+        "pretext": "",
+        "mobile_image_crop": "none",
+        "mobile_text_below_image": true,
+        "mobile_text_position": "middle",
+        "pretext_color_mobile": "rgba(0,0,0,0)",
+        "heading_color_mobile": "rgba(0,0,0,0)",
+        "subheading_color_mobile": "rgba(0,0,0,0)",
+        "width": "wide",
+        "padding_top": 0,
+        "padding_bottom": 0,
+        "padding_left": 0,
+        "padding_right": 0,
+        "animation": "none",
+        "css_class": "",
+        "custom_css": ""
+      }
+    },
+    "840e5ada-d21f-42a3-917b-5357c91faf24": {
+      "type": "index__html",
+      "settings": {
+        "html_content": "<div class=\"rewards-title\"><h3>Our Tiers<\/h3><\/div>\n<div data-lion-tier-overview><\/div>",
+        "width": "standard",
+        "padding_top": 56,
+        "padding_bottom": 20,
+        "padding_left": 0,
+        "padding_right": 0,
+        "animation": "none",
+        "css_class": "",
+        "custom_css": "h3 {\nfont-family: AntroVectra-er;\ntext-align: center;\nfont-size: 50px;\n} \n\n#loyaltylion .lion-tier-overview {\nbackground-color: #ffffff\n}\n\n#loyaltylion .lion-tier-box  {\nbackground-color: #F3E9E2;\ntransition: background-color .3s\n}\n\n#loyaltylion .lion-tier-box__header { \nbackground-color: #F0F0F0;\ntransition: background-color .3s\n}\n\n#loyaltylion .lion-tier-box:hover {\nbackground-color: #F3E9E2\n}\n\n#loyaltylion .lion-tier-box__header:hover {\nbackground-color: #F3E9E2\n}\n\n#loyaltylion .lion-tier-box__title {\n    color: var(--lion-tier-title-color);\n    font-weight: 500;\n    font-size: 350%;\n    color: #00263A;\n    padding: 20px 0;\n    font-family: FreightDisp;\n}"
+      }
+    },
+    "865747e0-2a1d-4f68-9059-5a8a0df94ec0": {
+      "type": "index__html",
+      "settings": {
+        "html_content": "<div class=\"rewards-title\"><h3>Earn bonus points<\/h3><\/div>\n<div data-lion-rules-list><\/div>",
+        "width": "standard",
+        "padding_top": 58,
+        "padding_bottom": 20,
+        "padding_left": 0,
+        "padding_right": 0,
+        "animation": "none",
+        "css_class": "",
+        "custom_css": "h3 {\nfont-family: AntroVectra-er;\ntext-align: center;\nfont-size: 50px;\n} \n\n#loyaltylion .lion-claimed-rewards-list, #loyaltylion .lion-rewards-list, #loyaltylion .lion-rules-list {\nbackground-color: #ffffff;\n}\n\n#loyaltylion .lion-reward-item__content, #loyaltylion .lion-rule-item__content {\nbackground-color: #F3E9E2;\n}\n\n#loyaltylion .lion-reward-item__title, #loyaltylion .lion-rule-item__title {\nfont-family: FuturaBT;\n}"
+      }
+    },
+    "8bdf5e5a-b93b-4c4c-b3ea-b0351c3cba9c": {
+      "type": "index__html",
+      "settings": {
+        "html_content": "<body>\n\n\n<meta charset=\"utf-8\">\n\n\n\t\n<style>\n\t\n\t.main-div {\n\t\tdisplay: flex;\n\t\tmargin: auto;\n\t}\n\t\n\t.rewards-percentage {\n\t\twidth: 300px;\n\t\theight: auto;\n\t\tbackground-color: #F3E9E2;\n\t\tpadding: 20px 30px;\n\t\tmargin: auto;\n\t\tborder-radius: 15px;\n\t\ttext-align: center;\n\t\ttransition: background-color 1s;\n\t}\n\t\n\t.rewards-percentage:hover {\n\t\tbackground-color: #E0B39E;\n\t}\n\t\n\t.how-to-title {\n\t\tcolor: #00263A;\n\t\tfont-family: Futura BK BT;\n\t\tfont-size: 20px;\n\t\ttext-align: center;\n\t}\n\t\n\t.how-to-copy {\n\t\tcolor: #00263A;\n\t\tfont-family: futura bk bt;\n\t\tfont-size: 18px;\n\t}\n\n\t@media (max-width: 901px){\n\t.main-div {\n\t\tdisplay: block;\n\t}\n\t\t\n\t\t.rewards-percentage { \n\t\tmargin: 10px auto\n\t\t}\n}\n<\/style>\n\n\n\t\n<div class=\"rewards-title\"><h3>Claim your  Reward<\/h3><\/div>\n<br><br>\n<div class=\"main-div\">\n\t\n\t<div class=\"rewards-percentage\">\n\t\t<img src=\"https:\/\/cdn.shopify.com\/s\/files\/1\/0114\/0621\/3220\/files\/discount.png?v=1666798603\" width=\"300px\">\n\t\t<h1 class=\"how-to-title\"><b>Discount<\/b><\/h1>\n\t\t<p class=\"how-to-copy\">Turn your points into discounts. <br>That’s up to 25% off!<br>↓<br><br><\/p>\n\t\t<\/div>\n\t\n\t<div class=\"rewards-percentage\">\n\t\t<img src=\"https:\/\/cdn.shopify.com\/s\/files\/1\/0114\/0621\/3220\/files\/money-voucher.png?v=1666799123\" width=\"300px\">\n\t\t<h1 class=\"how-to-title\"><b>Store Credit<\/b><\/h1>\n    <p class=\"how-to-copy\">Redeem your points for a cash discount. <br>↓<br><br><\/p>\n\t\t\n\t\t<\/div>\n\t\n\t<div class=\"rewards-percentage\">\n\t\t<img src=\"https:\/\/cdn.shopify.com\/s\/files\/1\/0114\/0621\/3220\/files\/gift-cards.png?v=1666797670\" width=\"300px\">\n\t\t<h1 class=\"how-to-title\"><b>Gift Card<\/b><\/h1>\n\t\t<p class=\"how-to-copy\">Trade your points in for an E-Card – making it the perfect gift. <br>↓<br><br><\/p>\n\t\t<\/div>\n\t\n\t<\/div>\n\n<\/body>",
+        "width": "standard",
+        "padding_top": 20,
+        "padding_bottom": 4,
+        "padding_left": 0,
+        "padding_right": 0,
+        "animation": "none",
+        "css_class": "",
+        "custom_css": "h3 {\nfont-family: AntroVectra-er;\ntext-align: center;\nfont-size: 50px;\n}"
+      }
+    },
+    "4fd9b68d-e948-4695-9fd2-1d4b46efb35e": {
+      "type": "index__html",
+      "settings": {
+        "html_content": "<div data-lion-rewards-list><\/div>",
+        "width": "standard",
+        "padding_top": 4,
+        "padding_bottom": 20,
+        "padding_left": 0,
+        "padding_right": 0,
+        "animation": "none",
+        "css_class": "",
+        "custom_css": ""
+      }
+    },
+    "how_it_works": {
+      "type": "how-it-works",
+      "blocks": {
+        "ca14f0af-f063-4589-8c66-1bf4b7784d9c": {
+          "type": "block",
+          "settings": {
+            "step_img": "shopify:\/\/shop_images\/step1-V2.gif",
+            "step_title": "Sign up for Make the Switch to redeem your unique code."
+          }
+        },
+        "12bbe9cb-f7e3-4038-89fc-34e75bc97082": {
+          "type": "block",
+          "settings": {
+            "step_img": "shopify:\/\/shop_images\/How_it_works__Step_03.gif",
+            "step_title": "Select your products & makeup case. You'll automatically save 15% on 4+ products. Plus, an additional 15% off with your unique code."
+          }
+        },
+        "e983f339-6e5a-4b8e-a426-964d3db83745": {
+          "type": "block",
+          "settings": {
+            "step_img": "shopify:\/\/shop_images\/step-3.jpg",
+            "step_title": "Mail your hard-to-recycle beauty empties to our partners at Pact, we cover the cost of recycling for you."
+          }
+        }
+      },
+      "block_order": [
+        "ca14f0af-f063-4589-8c66-1bf4b7784d9c",
+        "12bbe9cb-f7e3-4038-89fc-34e75bc97082",
+        "e983f339-6e5a-4b8e-a426-964d3db83745"
+      ],
+      "disabled": true,
+      "settings": {
+        "bg_color": "#f5f5f5",
+        "slides_to_show_lg": 3,
+        "slides_to_show_sm": 1,
+        "max_width": 1440,
+        "title": "How it Works",
+        "next_step_img": "shopify:\/\/shop_images\/next_c21ddd57-7e38-4b6e-8ef5-77529d1aac2e.png",
+        "tagline_text": "",
+        "tagline_bg_color": "#ffffff",
+        "tagline_text_color": "#b04a5a",
+        "btn_text": "sign up & CREATE YOUR SET",
+        "btn_bg_color": "#00263a",
+        "btn_color": "#ffffff",
+        "step_bg_color": "#f6f6f6",
+        "text_color": "#ffffff"
+      }
+    },
+    "what_makes": {
+      "type": "what-makes-it-trestique",
+      "blocks": {
+        "817aa1aa-fcb2-42d1-bef7-0952d74a4197": {
+          "type": "Slide",
+          "settings": {
+            "slide_img": "shopify:\/\/shop_images\/time-saving.png",
+            "slide_title": "TIME SAVING",
+            "slide_text": "Multi-tasking essentials you can apply in 5 min or less."
+          }
+        },
+        "eea651ca-fb7e-4068-87b1-5a85347cc870": {
+          "type": "Slide",
+          "settings": {
+            "slide_img": "shopify:\/\/shop_images\/product-tool.png",
+            "slide_title": "SMART 2-IN-1 PRODUCTS",
+            "slide_text": "Built-in tools deliver everything you need at your fingertips."
+          }
+        },
+        "3423c95d-206e-480a-8c23-8bbda24ee214": {
+          "type": "Slide",
+          "settings": {
+            "slide_img": "shopify:\/\/shop_images\/travel-friendly.png",
+            "slide_title": "TRAVEL-FRIENDLY",
+            "slide_text": "Compact, lightweight makeup cases with mess-free products."
+          }
+        },
+        "00e26c1a-fd65-4586-9c90-dd7df1b6834d": {
+          "type": "Slide",
+          "settings": {
+            "slide_img": "shopify:\/\/shop_images\/easy-to-carry.png",
+            "slide_title": "Easy to carry and apply",
+            "slide_text": "Mistake-proof stick makeup with quality formulas."
+          }
+        },
+        "3654e456-8228-4ac4-be43-9c949dfd59d4": {
+          "type": "Slide",
+          "settings": {
+            "slide_img": "shopify:\/\/shop_images\/endlessly.png",
+            "slide_title": "REFILLABLE & SUSTAINABLE",
+            "slide_text": "Endlessly refill your sustainable forever case."
+          }
+        },
+        "c4e48768-8e2a-4d1a-b9cf-dff5f520671e": {
+          "type": "Slide",
+          "disabled": true,
+          "settings": {
+            "slide_img": "shopify:\/\/shop_images\/travel-friendly.png",
+            "slide_title": "TRAVEL-FRIENDLY",
+            "slide_text": "Compact, lightweight makeup cases with mess-free products."
+          }
+        },
+        "ae1a3455-1fac-419d-b34b-f55e2d035a8b": {
+          "type": "Slide",
+          "disabled": true,
+          "settings": {
+            "slide_img": "shopify:\/\/shop_images\/travel-friendly.png",
+            "slide_title": "TRAVEL-FRIENDLY",
+            "slide_text": "Compact, lightweight makeup cases with mess-free products."
+          }
+        }
+      },
+      "block_order": [
+        "817aa1aa-fcb2-42d1-bef7-0952d74a4197",
+        "eea651ca-fb7e-4068-87b1-5a85347cc870",
+        "3423c95d-206e-480a-8c23-8bbda24ee214",
+        "00e26c1a-fd65-4586-9c90-dd7df1b6834d",
+        "3654e456-8228-4ac4-be43-9c949dfd59d4",
+        "c4e48768-8e2a-4d1a-b9cf-dff5f520671e",
+        "ae1a3455-1fac-419d-b34b-f55e2d035a8b"
+      ],
+      "disabled": true,
+      "settings": {
+        "bg_color": "#f3e9e2",
+        "text_color": "#00263a",
+        "main_heading": "A lightweight makeup routine you can apply anytime, anywhere.",
+        "slides_to_show_lg": 5,
+        "slides_to_show_sm": 1,
+        "margin_sm": 30,
+        "margin_lg": 40,
+        "block_title_color": "#00263a",
+        "block_text_color": "#00263a"
+      }
+    },
+    "join_hero": {
+      "type": "join-zero",
+      "blocks": {
+        "6f2aa91a-c4fc-41ee-af27-a755484b9869": {
+          "type": "block",
+          "settings": {
+            "slide_img": "shopify:\/\/shop_images\/Group_20.png",
+            "client_review": "Beauty without guilt. I love the sustainability of zero waste. I can look good without feeling guilty of producing landfill waste.",
+            "clinet_review_color": "#00263a",
+            "client_name": "S.M, verified buyer",
+            "clinet_name_color": "#00263a"
+          }
+        },
+        "6b1a4f73-4db4-4b69-a4ac-d758b2aec254": {
+          "type": "block",
+          "settings": {
+            "slide_img": "shopify:\/\/shop_images\/Group_21.png",
+            "client_review": "Fabulous 👌👏👍. I love this kit! Already had a few other items and everything is fabulous. This kit fits perfectly in your purse or travel bag and everything you need is in here. All of the makeup you need in one lil bag!!!!",
+            "clinet_review_color": "#00263a",
+            "client_name": "Rosanna, verified buyer",
+            "clinet_name_color": "#00263a"
+          }
+        },
+        "661c2138-b493-4ec9-9ab5-541e80985808": {
+          "type": "block",
+          "settings": {
+            "slide_img": "shopify:\/\/shop_images\/Group_19.png",
+            "client_review": "So handy for this mom to grab & go! Cannot be happier with how easy it is to use this system, so much better than carrying my old makeup bag with brushes, dusty & messy makeup, etc. My second bag, love the olive color.",
+            "clinet_review_color": "#00263a",
+            "client_name": "Christine D, verified buyer",
+            "clinet_name_color": "#00263a"
+          }
+        },
+        "c20c4c87-aa42-4e32-916c-1ae2f8de040c": {
+          "type": "block",
+          "disabled": true,
+          "settings": {
+            "slide_img": "shopify:\/\/shop_images\/hallie.png",
+            "client_review": "Trestique products are awesome. Nibh varius erat molestie tempus, eu.",
+            "clinet_review_color": "#00263a",
+            "client_name": "Hallie",
+            "clinet_name_color": "#00263a"
+          }
+        },
+        "14f002e7-4f43-478c-a78d-608d0642dca7": {
+          "type": "block",
+          "disabled": true,
+          "settings": {
+            "slide_img": "shopify:\/\/shop_images\/meghan.png",
+            "client_review": "Trestique products are awesome. Nibh varius erat molestie tempus, eu.",
+            "clinet_review_color": "#00263a",
+            "client_name": "",
+            "clinet_name_color": "#00263a"
+          }
+        }
+      },
+      "block_order": [
+        "6f2aa91a-c4fc-41ee-af27-a755484b9869",
+        "6b1a4f73-4db4-4b69-a4ac-d758b2aec254",
+        "661c2138-b493-4ec9-9ab5-541e80985808",
+        "c20c4c87-aa42-4e32-916c-1ae2f8de040c",
+        "14f002e7-4f43-478c-a78d-608d0642dca7"
+      ],
+      "disabled": true,
+      "settings": {
+        "bg_color": "#f5f5f5",
+        "main_title": "Reviews from our community",
+        "show_arrow": true,
+        "slides_dots": true,
+        "auto_play": false,
+        "slides_to_show_lg": 2,
+        "slides_to_show_sm": 1,
+        "max_width": 1400,
+        "block_bg_color": "#f3e9e2"
+      }
+    },
+    "banner_video": {
+      "type": "banner-video",
+      "disabled": true,
+      "settings": {
+        "title": "Your Routine, Your Way",
+        "content": "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim venia<\/p>",
+        "max_width": 1170,
+        "video_url": "",
+        "video_url_lg": "",
+        "video_play_btn": "shopify:\/\/shop_images\/play.png",
+        "img": "shopify:\/\/shop_images\/Group_1_b69539bf-8a8d-40bf-b1c4-e96446fa3579.png",
+        "btn_bg_color": "#e32c2b",
+        "btn_text_color": "#ffffff",
+        "btn_text": "CREATE MY SET",
+        "btn_url": "shopify:\/\/collections\/essential-mix",
+        "tagline_text": "Save 15% when you create a set of 4 products or more",
+        "tagline_bg_color": "#f3e9e2",
+        "tagline_text_color": "#b04a5a"
+      }
+    },
+    "logo_slider": {
+      "type": "logo-slider",
+      "blocks": {
+        "016666b5-5d40-4f84-8728-1a7c79f8def8": {
+          "type": "block",
+          "settings": {
+            "logo_img": "shopify:\/\/shop_images\/vogue.png"
+          }
+        },
+        "15121662-b5c8-4ab3-ac94-078a21173351": {
+          "type": "block",
+          "settings": {
+            "logo_img": "shopify:\/\/shop_images\/wwd_31be0912-8b4e-4679-aee7-3f72dc3d0053.png"
+          }
+        },
+        "bc376dc9-87e6-4ff6-9356-a37b1efb3745": {
+          "type": "block",
+          "settings": {
+            "logo_img": "shopify:\/\/shop_images\/forbes_36d3e539-186c-4c5a-b029-28d2c2e07500.png"
+          }
+        },
+        "1f77fc28-c0a3-4b2f-b266-ec8c8f2eda91": {
+          "type": "block",
+          "settings": {
+            "logo_img": "shopify:\/\/shop_images\/stylecraze.png"
+          }
+        },
+        "22aa88fc-6a8d-40c8-9c3b-9024fc3d68b0": {
+          "type": "block",
+          "settings": {
+            "logo_img": "shopify:\/\/shop_images\/cosmetics.png"
+          }
+        },
+        "e5c1eefe-0373-47c8-80ed-7dd3639c9fa0": {
+          "type": "block",
+          "settings": {
+            "logo_img": "shopify:\/\/shop_images\/cew_7a8da9b2-faec-4c3d-bcf5-205894dbebca.png"
+          }
+        },
+        "993d0b47-4d10-4ea9-aa31-796a94d07485": {
+          "type": "block",
+          "settings": {
+            "logo_img": "shopify:\/\/shop_images\/wwd_31be0912-8b4e-4679-aee7-3f72dc3d0053.png"
+          }
+        },
+        "bc6c4736-3abc-451d-b590-0e976f0b4ffb": {
+          "type": "block",
+          "settings": {
+            "logo_img": "shopify:\/\/shop_images\/cew_7a8da9b2-faec-4c3d-bcf5-205894dbebca.png"
+          }
+        },
+        "eaeb988c-7bb3-4ef5-af35-bf9c8e3a9199": {
+          "type": "block",
+          "settings": {
+            "logo_img": "shopify:\/\/shop_images\/forbes_36d3e539-186c-4c5a-b029-28d2c2e07500.png"
+          }
+        }
+      },
+      "block_order": [
+        "016666b5-5d40-4f84-8728-1a7c79f8def8",
+        "15121662-b5c8-4ab3-ac94-078a21173351",
+        "bc376dc9-87e6-4ff6-9356-a37b1efb3745",
+        "1f77fc28-c0a3-4b2f-b266-ec8c8f2eda91",
+        "22aa88fc-6a8d-40c8-9c3b-9024fc3d68b0",
+        "e5c1eefe-0373-47c8-80ed-7dd3639c9fa0",
+        "993d0b47-4d10-4ea9-aa31-796a94d07485",
+        "bc6c4736-3abc-451d-b590-0e976f0b4ffb",
+        "eaeb988c-7bb3-4ef5-af35-bf9c8e3a9199"
+      ],
+      "disabled": true,
+      "settings": {
+        "bg_color": "#b66c6d",
+        "max_width": 1170
+      }
+    },
+    "e5d08de2-9afe-4575-b522-747ea5a9175b": {
+      "type": "index__html",
+      "settings": {
+        "html_content": "<body>\n<meta charset=\"utf-8\">\n<style>\n.referr-desktop { \ntext-align: center;\nfont-size: 20px;\n}\n\t\t\n.referr-mobile {\ntext-align: center;\n\tdisplay: none;\n\t\t}\n\n.img-refer-desk {\nmax-width: 50%;\nwidth: auto;\nheight: auto;\npadding: auto;\n}\n\n\t\n@media (max-width: 850px){\n\t.referr-desktop {\n\t\tdisplay: none;\n\t}\n\t\n\t.referr-mobile { \n\tdisplay: block;\n\t}\n\t\n\t.img-refer-mob {\n\t\tmax-width: 90%;\n\t}\n}\n    <\/style>\n\n\n\t\n\t<div id=\"start-referral\">\n<div class=\"referr-desktop\">\n\n<a href=\"#\" data-lion-refer><img class=\"img-refer-desk\" src=\"https:\/\/cdn.shopify.com\/s\/files\/1\/0114\/0621\/3220\/files\/refer-desk.jpg?v=1686576580\"><\/a>\n<\/div>\n\t\t\n<div class=\"referr-mobile\">\n\n<a href=\"#\" data-lion-refer><img class=\"img-refer-mob\" src=\"https:\/\/cdn.shopify.com\/s\/files\/1\/0114\/0621\/3220\/files\/refer-mobile.jpg?v=1686576580\"><\/a>\n<\/div>\n<\/div>\n<\/body>",
+        "width": "wide",
+        "padding_top": 0,
+        "padding_bottom": 20,
+        "padding_left": 0,
+        "padding_right": 0,
+        "animation": "none",
+        "css_class": "",
+        "custom_css": ""
+      }
+    }
+  },
+  "order": [
+    "6c63c85b-bcc3-401a-b8c7-5584d5a2700a",
+    "e7d4e31c-e334-492f-84de-6b506cb2a19b",
+    "8ee7d597-bb71-4cb1-b0eb-0a5a4da4b666",
+    "840e5ada-d21f-42a3-917b-5357c91faf24",
+    "865747e0-2a1d-4f68-9059-5a8a0df94ec0",
+    "8bdf5e5a-b93b-4c4c-b3ea-b0351c3cba9c",
+    "4fd9b68d-e948-4695-9fd2-1d4b46efb35e",
+    "how_it_works",
+    "what_makes",
+    "join_hero",
+    "banner_video",
+    "logo_slider",
+    "e5d08de2-9afe-4575-b522-747ea5a9175b"
+  ]
+}

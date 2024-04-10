@@ -1,0 +1,226 @@
+{% liquid 
+  assign collection_handles = product.collections | map: 'handle'
+
+    case product.id 
+        when 6578644484196 
+            assign subtitle = "2-IN-1 FOUNDATION + BLENDING SPONGE"
+            assign body = "A buildable, medium coverage skin-first foundation for a radiant, flawless finish. Helps to protect from the harmful effects of blue light. Comes with a built-in blending sponge to seamlessly blend on the go."
+            assign img_small = "https://cdn.shopify.com/s/files/1/0114/0621/3220/files/img-1_85c19591-d063-443f-b7d7-02821e5dec11.png?v=1637086007"
+            assign img_full = "https://cdn.shopify.com/s/files/1/0114/0621/3220/files/trestique-01-FOUNDATION-THE-SKIMM.jpg?v=1636744699"
+            assign numer_reviews = "143"
+            assign text_review = "I am speechless!!! I've never been able to find a foundation that feels so natural to look at! Perfect!!!"
+        when 6580015333476 
+            assign subtitle = "BUILDABLE DEFINITION, MATTE FINISH"
+            assign body = "A skin-sculpting bronzer that contours and defines with a sun-kissed finish. Comes with a built-in brush to diffuse color and create definition."
+            assign img_small = "https://cdn.shopify.com/s/files/1/0114/0621/3220/files/IMG_2.png?v=1636670421"
+            assign img_full = "https://cdn.shopify.com/s/files/1/0114/0621/3220/files/trestique-02-BRONZER-THE-SKIMM.jpg?v=1636744699__"
+            assign numer_reviews = "46"
+            assign text_review = "This product has improved my routine. The color is great and it blends beautifully! It gives me that summer sun kissed glow without being greasy."
+        when 6580203880548 
+            assign subtitle = "RICHLY PIGMENTED COLOR IN JUST ONE SWIPE"
+            assign body = "A long-wearing, crease-free eyeshadow pencil in a shimmer or matte finish. Comes with a built-in blending brush so you have everything you need at your fingertips."
+            assign img_small = "https://cdn.shopify.com/s/files/1/0114/0621/3220/files/IMG_3.png?v=1636670421"
+            assign img_full = "https://cdn.shopify.com/s/files/1/0114/0621/3220/files/trestique-03-SHADOW-THE-SKIMM.jpg?v=1636744699"
+            assign numer_reviews = "141"
+            assign text_review = "I love them because the color lasts all day on me and they are quick and easy to use! I also use them as my eyeliner!!"
+        when 6580206698596 
+            assign subtitle = "THE FIRST EVER MASCARA + CURLER IN ONE"
+            assign body = "A lash-boosting, clinically-tested mascara for long, lush lashes with a +186% increase in curve.* Comes with a built-in half lash curler for a custom lash lift."
+            assign img_small = "https://cdn.shopify.com/s/files/1/0114/0621/3220/files/IMG_4.png?v=1636670421"
+            assign img_full = "https://cdn.shopify.com/s/files/1/0114/0621/3220/files/trestique-04-MASCARA-THE-SKIMM.jpg?v=1636744699"
+            assign numer_reviews = "102"
+            assign text_review = "Love this mascara curler combo. It’s genius! Great formula that lasts without smudging."
+        when 6580199587940 
+            assign subtitle = "DEFINING COLOR, NATURAL FINISH"
+            assign body = "A unique, dual-ended brow pencil and built-in brow gel for sculpting and setting the perfect arch."
+            assign img_small = "https://cdn.shopify.com/s/files/1/0114/0621/3220/files/IMG_5.png?v=1636670421"
+            assign img_full = "https://cdn.shopify.com/s/files/1/0114/0621/3220/files/trestique-05-BROW-THE-SKIMM.jpg?v=1636744699"
+            assign numer_reviews = "96"
+            assign text_review = "This is the best!!! No sharpening, it goes on easy, the shape of it works well to fill in your brows."
+        when 6580187332708 
+            assign subtitle = "VIVID COLOR, MODERN MATTE FINISH"
+            assign body = "A dual-ended matte lip color and built-in conditioning lip balm that delivers silky smooth, pigment-rich color."
+            assign img_small = "https://cdn.shopify.com/s/files/1/0114/0621/3220/files/IMG_6.png?v=1636670421"
+            assign img_full = "https://cdn.shopify.com/s/files/1/0114/0621/3220/files/trestique-06-MATTE-LIP-THE-SKIMM.jpg?v=1636744699"
+            assign numer_reviews = "85"
+            assign text_review = "Rich color with staying power. The color stays on through mask wearing, eating and drinking."
+            
+    endcase 
+
+    assign ctpre = "For light or medium"
+
+    if product.metafields.global.color_text_pre
+      assign ctpre = product.metafields.global.color_text_pre
+    endif
+
+    assign ctpost = "air" 
+
+    if product.metafields.global.color_text_post
+      assign ctpost = product.metafields.global.color_text_post
+    endif
+
+    assign cf = ""
+
+%}
+
+{% capture colorData %}
+  {% if product.metafields.global.color_frase %}
+
+    {% liquid
+
+      assign cf = product.metafields.global.color_frase       
+      assign cfs = cf | split: ";" 
+      assign indice = 0 
+      
+      %}
+
+  <div class="colores">
+    {% for colo in cfs %}  				
+      <input class="color_sel" value="{{ colo }}" />
+    {% endfor %}
+  </div>
+
+
+  <div class="color-main" hidden>
+    {% for colo in cfs %}  				
+    <input data-variant-id="{{ forloop.index }}" class="color_sel_custom" value="{{ colo }}" />
+    {% endfor %}
+  </div>
+
+  {% endif %} 
+{% endcapture %}
+
+    
+{% capture starIcon %}
+<div class="icon-custom">
+    <svg width="26" height="24" viewBox="0 0 26 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path fill-rule="evenodd" clip-rule="evenodd" d="M12.7424 0L15.6799 9.10018L25.2424 9.08178L17.4954 14.6876L20.4679 23.7764L12.7424 18.1408L5.01702 23.7764L7.98945 14.6876L0.242432 9.08178L9.8049 9.10018L12.7424 0Z" fill="#B04A5A"/>
+    </svg>
+</div>
+{% endcapture %}
+
+{% capture starContent %}
+    <div class="review-stars-container">
+        <div class="top-stars">
+            <div class="star-icons">
+                {{ starIcon }}
+                {{ starIcon }}
+                {{ starIcon }}
+                {{ starIcon }}
+                {{ starIcon }}
+            </div>
+            <span>{{ numer_reviews }} Reviews</span>
+        </div>
+        <div class="bottom-stars">
+            <p>“{{ text_review }}”</p>
+        </div>
+    </div>
+{% endcapture %}
+
+<section class="card-featured-product">
+    <div class="wrapper_card">
+        <div class="col col-1">
+            {% if slide_number != blank and length != blank %}
+                <span class="numbers-slide">{{ slide_number }} / {{ length }}</span>
+            {% endif %}
+
+            <div class="h4 product-title">{{ product.title }}</div>
+            <div class="product-subtitle">{{ subtitle }}</div>
+            <div class="product-content-description">
+                <p>{{ body }}</p>
+            </div>
+
+            <div class="product-star-reviews"> {{ starContent }}</div>
+
+            {% form 'product', product, data-productid: product.id %}
+
+            <h5 class="select-shade">select your shade</h5>
+
+            {% if product.variants.size > 1 %}
+              {% if product.options.size > 1 %}
+                <div class="select-container">
+                    {% if context == 'quickshop' %}
+                      <div class="select">
+                    {% endif %}
+                    <select id="product-select-{{ product.id }}{{ product-form }}{{ object.id }}{{ block.id }}" name="id" data-productid="{{ product.id }}" class="multi_select" data-variant-selector>
+                      {% for v in product.variants %}
+                        <option {% if v == variant %}selected="selected"{% endif %} value="{{ v.id }}" data-image-id="{{ v.featured_media.id }}" data-sku="{{ v.sku }}">{{ v.title }}</option>
+                      {% endfor %}
+                    </select>
+                    {% if context == 'quickshop' %}
+                      </div>
+                    {% endif %}
+                </div>
+              {% elsif product.options.size == 1 and product.variants.size > 1 or product.options.size == 1 and product.options[0] != "Title" %}
+                <div class="select-container">
+                  <label class="label">{{ product.options[0] }}</label>
+                  <div>
+                    {% if context == 'quickshop' %}
+                      <div class="select">
+                    {% endif %}
+                    <select id="product-select-{{ product.id }}{{ product-form }}{{ object.id }}{{ block.id }}" name="id" data-productid="{{ product.id }}" data-variant-selector>
+                      {% for v in product.variants %}
+                        <option {% if v == variant %}selected="selected"{% endif %} value="{{ v.id }}" data-image-id="{{ v.featured_media.id }}" data-sku="{{ v.sku }}">{{ v.title }}</option>
+                      {% endfor %}
+                    </select>
+                    {% if context == 'quickshop' %}
+                      </div>
+                    {% endif %}
+                  </div>
+                </div>
+              {% endif %}
+            {% else %}
+              <input type="hidden" name="id" data-productid="{{ product.id }}" value="{{ product.first_available_variant.id }}" />
+            {% endif %}
+            
+            
+            {% if settings.product_form_style == "swatches"  or settings.product_form_style == "swatches" and product.options[1] != "Title" %}
+
+              <div class="swatch_options_container">
+               
+                <div class="swatch_options collection_swatches">
+                  {{ colorData }}
+                  
+                  <div class="swatches-custom-color-get">
+                    <p class="text-variation-main"></p>
+                    <p class="information-variation-main"></p>
+                  </div>
+
+                  <div class="normal-product-selected-variants-details xs-hide">
+                      <p class="show_c"><strong></strong></p>
+                      <p class="show_c1">{{ ctpre }}</p>
+                      <p class="cambia_color"></p>
+                      <p class="show_c3">{{ ctpost }}</p>
+                  </div>
+
+                  {% if product.variants.size > 1 %}
+                    {% for option in product.options %}
+                      {% render 'product__swatch',
+                              product: product,
+                              option: option
+                      %}
+                    {% endfor %}
+                  {% endif %}
+
+                </div>
+              </div>
+            {% endif %}  
+
+            {% if product.available %}
+                <button  type="submit" name="add" class="button action_button button--add-to-cart cart-featured-async" data-label="Add to cart" data-add-to-cart-trigger="">
+                    Add to bag <span>{{ product.price | money  }}</span>
+                </button>
+            {% endif %}
+
+          {% endform %}
+            
+        </div>
+        <div class="col col-1 {% if img_full %}no-bg-force {% endif %}">
+            {% if img_full %}
+              <img src="{{ img_full }}" alt="{{ product.title }}" class="main-image">
+            {% else %}
+              <img src="{{ product.featured_image | img_url: 'master' }}" alt="{{ product.title }}" class="main-image">
+            {% endif %}
+        </div>
+    </div>
+</section>

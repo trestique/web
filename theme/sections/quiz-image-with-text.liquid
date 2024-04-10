@@ -1,0 +1,152 @@
+<div class="quiz-image-with-text">
+  {% for block in section.blocks %}
+    {% if block.type == 'image_with_text' %}
+      <div class="collection-list-imagee-with-text" style="background-color: {{ block.settings.background_color }};">
+        <ul class="collection-list-imagee-with-text-data">
+          <li class="col-sm-6 col-xs-12">
+            <div class="img xs-hide">
+              {% if block.settings.shade_image != blank %}
+              {% render 'srcset' , src_name:block.settings.shade_image , src_alt: block.settings.shade_image %}
+              {% else %}
+              {{ 'lifestyle-2' | placeholder_svg_tag: 'placeholder-svg' }}
+              {% endif %}
+            </div>
+            <div class="img xs-show">
+              {% if block.settings.shade_image_mob != blank %}
+              {% render 'srcset' , src_name:block.settings.shade_image_mob , src_alt:block.settings.shade_image_mob %}
+              {% else %}
+              {{ 'lifestyle-2' | placeholder_svg_tag: 'placeholder-svg' }}
+              {% endif %}
+            </div>
+          </li>
+          <li class="col-sm-6 col-xs-12">
+            <div class="shade-banner-content">
+              <div class="shade-banner-desc">
+                <h3 class="title">{{block.settings.shade_title}}</h3>
+                {% if block.settings.shade_button_title != blank %}
+                  <a class="button button--secondary" href="{{block.settings.shade_button_url}}" style="background-color: {{block.settings.btn_back_color}}; color: {{ block.settings.btn_text_color }}">{{block.settings.shade_button_title}}</a>
+                {% endif %}
+              </div>
+            </div>
+          </li>
+        </ul>
+      </div>
+  {% elsif block.type == 'text' %}
+  {% if block.settings.section_info != blank %}
+    <div class="shop-by-look-desc" style="background-color: {{block.settings.background_color}};">
+      <div class="shop-by-look-desc-block">
+  
+        <div class="desc">{{ block.settings.section_info }}</div>
+        <a class="btn" href={{block.settings.cta_url}} style="color: {{ block.settings.cta_text_color }};">
+          {{ block.settings.cta_text }}
+        </a>
+      </div>
+    </div>
+  {% endif %}
+  {% endif %}
+  {% endfor %}
+</div>
+
+
+{% schema %}
+{
+  "name": "Quiz image with text",
+  "settings": [],
+  "blocks": [
+    {
+      "type": "image_with_text",
+      "name": "Image with text",
+      "settings": [
+        {
+          "type": "color",
+          "id": "background_color",
+          "label": "Background color"
+        },
+        {
+          "type": "image_picker",
+          "id": "shade_image",
+          "label": "Image[Desktop]"
+        },
+        {
+          "type": "image_picker",
+          "id": "shade_image_mob",
+          "label": "Image[Mobile]"
+        },
+        {
+          "type": "textarea",
+          "id": "shade_title",
+          "label": "Title"
+        },
+        {
+          "type": "color",
+          "id": "btn_text_color",
+          "label": "Button text color"
+        },
+        {
+          "type": "color",
+          "id": "btn_back_color",
+          "label": "Button background color"
+        },
+        {
+          "type": "url",
+          "id": "shade_button_url",
+          "label": "Button link"
+        },
+        {
+          "type": "text",
+          "id": "shade_button_title",
+          "label": "Button title",
+          "default": "Find Your Shades"
+        }
+      ]
+    },
+    {
+      "type": "text",
+      "name": "Text",
+      "settings": [
+        {
+          "type": "color",
+          "id": "background_color",
+          "label": "Background color"
+        },
+        {
+          "type": "richtext",
+          "id": "section_info",
+          "label": "Banner content"
+        },
+        {
+          "type": "header",
+          "content": "Cta link"
+        },
+        {
+          "type": "color",
+          "id": "cta_background_color",
+          "label": "Background color"
+        },
+        {
+          "type": "color",
+          "id": "cta_text_color",
+          "label": "Text color"
+        },
+        {
+          "type": "text",
+          "id": "cta_text",
+          "label": "Cta text"
+        },
+        {
+          "type": "url",
+          "id": "cta_url",
+          "label": "Url"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Quiz image with text",
+      "category": "Quiz image with text"
+    }
+  ]
+}
+{% endschema %}
+    

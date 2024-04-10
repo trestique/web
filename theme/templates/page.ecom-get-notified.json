@@ -1,0 +1,12 @@
+{
+  "layout": "theme",
+  "sections": {
+    "ecom-get-notified-page": {
+      "type": "ecom-get-notified-page",
+      "settings": {}
+    }
+  },
+  "order": [
+    "ecom-get-notified-page"
+  ]
+}

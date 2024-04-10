@@ -1,0 +1,52 @@
+<!-- subscription favorites -->
+<style>
+  .subscription-favorites .section-title {
+    font-size: {{ section.settings.font_size_title }}px;
+  }
+</style>
+<script src="{{ 'simply-collection.js' | asset_url }}" defer></script>
+<section class="section subscription-favorites">
+  {% unless section.settings.section_title == blank %}
+    <h5 class="section-title">{{ section.settings.section_title }}</h5>
+  {% endunless %}
+  <ul class="collection-top-products product-list-ul clearfix">
+    {% assign collection = collections[section.settings.collection] %}
+    {% for product in collection.products %}
+      <li class="product-li col-sm-3 col-xs-6" data-value="0" data-xs-value="0">
+        {% render 'simply-collection-product', product:product, switch_img:true %}
+      </li>
+    {% endfor %}
+  </ul>
+</section>
+
+{% schema %}
+{
+  "name": "Subscription favorites",
+  "settings": [
+      {
+        "type": "header",
+        "content": "Easy to manage"
+      },
+      {
+        "type":"text",
+        "id":"section_title",
+        "label":"Title"
+      },
+      {
+        "type": "number",
+        "id": "font_size_title",
+        "label": "Font size"
+      },
+      {
+        "type": "collection",
+        "id": "collection",
+        "label": "Collection"
+      }
+    ],
+    "presets": [
+      {
+        "name": "Subscription favorites"
+      }
+    ]
+  }
+{% endschema %}

@@ -1,0 +1,12 @@
+{
+  "layout": "theme",
+  "sections": {
+    "ecom-trestique-ambassador-program": {
+      "type": "ecom-trestique-ambassador-program-page",
+      "settings": {}
+    }
+  },
+  "order": [
+    "ecom-trestique-ambassador-program"
+  ]
+}

@@ -1,0 +1,66 @@
+<style>
+{% if collection.metafields.collection.collection_title_desk_size != blank %} 
+#collection-page .collection-page-container .collection-page-wrapper .product-list .collection-details .collection-title{
+font-size : {{collection.metafields.collection.collection_title_desk_size}}px;
+}
+{% endif %}
+{% if collection.metafields.collection.collection_title_mob_size != blank %} 
+@media(max-width:767px){
+    #collection-page .collection-page-container .collection-page-wrapper .product-list .collection-details .collection-title{
+        font-size : {{collection.metafields.collection.collection_title_mob_size}}px;
+    }
+}
+{% endif %}
+</style>
+
+<ul class="collection-details">
+    <li class="li">
+        <h1 class="collection-title">
+            {% if collection.metafields.collection.collection_title != blank %}    
+            {{collection.metafields.collection.collection_title}}
+            {% else %}
+            {{collection.title}}
+            {% endif %}
+        </h1>
+        {% unless collection.metafields.collection.short_info == blank %}
+        <div class="collection-short-info">{{collection.metafields.collection.short_info}}</div>
+        {% endunless %}
+        <ul class="collection-top-products product-list-ul">
+            {% for product in collection.products limit:2 %}
+            <li class="product-li col-sm-6 col-xs-6" data-value="0" data-xs-value="0">
+                {% render 'simply-collection-product', product:product, switch_img:section.settings.switch_image %}
+            </li>
+            {% endfor %}
+        </ul>
+    </li>
+    <li class="li mobile-hide">
+        <div class="collection-media-info">
+            {% if collection.metafields.collection.media_video != blank  %}
+            <video loop controls muted autoplay playsinline width="100%" height="100%">
+                <source src="{{collection.metafields.collection.media_video}}" type="video/mp4" />
+            </video>
+            {% elsif collection.metafields.collection.media_image != blank %}
+            {% assign media_image =collection.metafields.collection.media_image | split: '/' | last %}
+            {% render 'srcset' , src_name:media_image ,file_url:true, src_alt:current_variant.title %}
+            {% endif %}
+        </div>
+    </li>
+</ul>
+
+<ul class="product-list-ul">
+    {% assign count = 1 %}
+    {% assign xs_count = 1 %}
+    {% for product in collection.products offset:2 %}
+        {% assign desk_index = forloop.index | modulo: 4 %}
+        {% assign mob_index = forloop.index | modulo: 2 %}
+        <li data-value="{{count}}" data-xs-value="{{xs_count}}" class="product-li col-sm-3 col-xs-6">
+            {% render 'simply-collection-product', product:product, switch_img:section.settings.switch_image %}
+        </li>
+        {% if desk_index == 0 %}
+        {% assign count = count | plus: 1 %}
+        {% endif %}
+        {% if mob_index == 0 %}
+        {% assign xs_count = xs_count | plus: 1 %}
+        {% endif %}
+    {% endfor %}
+</ul>

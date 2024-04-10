@@ -1,0 +1,186 @@
+{
+  "sections": {
+    "165532190269191edd": {
+      "type": "banner-with-text",
+      "settings": {
+        "link": "",
+        "video_url": "",
+        "video_url_mobile": "",
+        "image": "shopify:\/\/shop_images\/Frame_2_5543d550-857c-4d64-bbae-89a5c4c356f6.png",
+        "mobile_image": "shopify:\/\/shop_images\/Group_28.png",
+        "pretext": "",
+        "title": "Win free refills for a year",
+        "subtitle": "<p>We want to hear from you – submit a short 30-60 second video speaking about why you love trestique. You will be entered to win a <strong>FREE 1-year refill subscription<\/strong> of your favorite product.<\/p>",
+        "pretext_color": "#000000",
+        "heading_color": "#00263a",
+        "heading_font_desk": 55,
+        "subheading_color": "#00263a",
+        "text_alignment": "center",
+        "text_horizontal_position": "left",
+        "text_vertical_position": "middle",
+        "background_color": "#ffffff",
+        "background_opacity": 0,
+        "border_color": "#ffffff",
+        "border_width": 0,
+        "text_width": 45,
+        "button_1": "",
+        "button_text_color": "#f9ebe3",
+        "button_bg_color": "#00263a",
+        "button_hover_bg_color": "#f9ebe3",
+        "button_hover_color": "#00263a",
+        "button_1_link": "",
+        "button_1_style": "button--primary",
+        "button_2": "",
+        "button_2_link": "",
+        "button_2_style": "button--secondary",
+        "mobile_image_crop": "none",
+        "mobile_text_below_image": true,
+        "mobile_text_position": "middle",
+        "pretext_color_mobile": "rgba(0,0,0,0)",
+        "heading_font_xs": 45,
+        "heading_color_mobile": "rgba(0,0,0,0)",
+        "subheading_color_mobile": "rgba(0,0,0,0)",
+        "width": "wide",
+        "padding_top": 0,
+        "padding_bottom": 0,
+        "padding_left": 0,
+        "padding_right": 0,
+        "animation": "none",
+        "css_class": "",
+        "custom_css": ".block__image-with-overlay .caption-content, .image-with-text-overlay .caption-content, .image-slideshow .caption-content {\n padding: 20px 0px 20px 150px;\n}"
+      }
+    },
+    "16553256724c19e900": {
+      "type": "index__image-with-text",
+      "blocks": {
+        "16553256726f26b559-0": {
+          "type": "image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Rectangle_3_f8dd866c-2be0-479b-95e4-33fac5f51c0f.png",
+            "image_crop": "none",
+            "image_link": ""
+          }
+        },
+        "16553256726f26b559-1": {
+          "type": "image",
+          "disabled": true,
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Group_27.png",
+            "image_crop": "none",
+            "image_link": ""
+          }
+        },
+        "16553256726f26b559-2": {
+          "type": "text",
+          "settings": {
+            "title": "How to enter",
+            "heading_size": "regular",
+            "text": "<p><strong>Step 1<\/strong> Choose your favorite trestique products or trestique set;<\/p><p><strong>Step 2 <\/strong>Create a 30-60 second video about your experience;<\/p><p><strong>Step 3 <\/strong>Submit your video!<\/p>",
+            "button_label": "",
+            "link": "",
+            "button_style": "button--primary",
+            "background": "rgba(0,0,0,0)",
+            "text_color": "#00263a",
+            "alignment": "left",
+            "vertical_position": "center"
+          }
+        }
+      },
+      "block_order": [
+        "16553256726f26b559-0",
+        "16553256726f26b559-1",
+        "16553256726f26b559-2"
+      ],
+      "settings": {
+        "width": "standard",
+        "show_gutter": true,
+        "padding_top": 0,
+        "padding_bottom": 20,
+        "animation": "none",
+        "css_class": "",
+        "custom_css": ""
+      }
+    },
+    "1658160486918546fc": {
+      "type": "index__html",
+      "disabled": true,
+      "settings": {
+        "html_content": "<iframe height=\"600\" allowtransparency=\"true\" frameborder=\"0\" scrolling=\"no\" style=\"width:100%;border:none;\" src=\"https:\/\/forms.pabbly.com\/form\/share\/Ewld-488862\"> UGC contest <\/iframe>",
+        "width": "standard",
+        "padding_top": 0,
+        "padding_bottom": 0,
+        "padding_left": 0,
+        "padding_right": 0,
+        "animation": "none",
+        "css_class": "p",
+        "custom_css": "{\nfont-family: FuturaBT;\n}"
+      }
+    },
+    "1658155523794839b8": {
+      "type": "index__html",
+      "settings": {
+        "html_content": "<div data-tf-widget=\"sY4M17RL\" data-tf-hide-headers data-tf-iframe-props=\"title=UGC Contest\" data-tf-medium=\"snippet\" style=\"width:100%;height:500px;\"><\/div><script src=\"\/\/embed.typeform.com\/next\/embed.js\"><\/script>",
+        "width": "standard",
+        "padding_top": 0,
+        "padding_bottom": 0,
+        "padding_left": 0,
+        "padding_right": 0,
+        "animation": "none",
+        "css_class": "",
+        "custom_css": ""
+      }
+    },
+    "1655330413d7297bc3": {
+      "type": "index__html",
+      "disabled": true,
+      "settings": {
+        "html_content": "<body>\n\n\n<meta charset=\"utf-8\">\n<title>UGC contest<\/title>\n\n\n\t<style>\n\t\n\t\t.button--secondary {\n\tpadding: 5px 40px 5px 40px;\n\tbackground-color: #00263A;\n\t}\n\t\n\t.center {\n\t\ttext-align: center;\n\t}\n\t\t\n\t\t#submit {\n\t\t\tfont-family: FuturaBT; \n\t\t\tfont-size:15px; \n\t\t\tline-height:15px; \n\t\t\ttext-align:center;\n\t\t}\n\t\n\t\t.submit-copy {\n\t\t\tmargin: 10px 30%;\n\t\t}\n\t\t\n\t\n@media (max-width: 500px){\n\t.submit-copy {\n\t\tmargin: 10px 20px;\n\t}\n\t#submit {\n\t\tfont-size: 10px;;\n\t}\n}\n    <\/style>\n\t\n\n\t<div class=\"container is-flex is-justify-center\">\n\t<h2 style=\"font-family: FuturaBT; font-size:30px; line-height:30px; text-align:center;\">Submit your video in .MP4, .M4V or .MOV format.<\/h2>\n\t<\/div>\n<br><br>\n\t<div class=\"center\"><a class=\"button button--secondary is-justify-center\" href=\"mailto:hello@trestique.com?Subject=UGC%20Contest\">ENTER TO WIN<\/a><\/div>\n\t<div class=\"submit-copy\">\n\t\t<p id=\"submit\">trestique has the right to use the video content submitted on our website, social channels and other marketing initiatives. By submitting this content you are giving trestique permission to use. <\/p>\n\t<\/div>\n\t\n\n<\/body>",
+        "width": "wide",
+        "padding_top": 0,
+        "padding_bottom": 0,
+        "padding_left": 0,
+        "padding_right": 0,
+        "animation": "none",
+        "css_class": "",
+        "custom_css": ""
+      }
+    },
+    "1655395568eca5c4db": {
+      "type": "index__html",
+      "settings": {
+        "html_content": "<body>\n\n\n<meta charset=\"utf-8\">\n<title>best practices<\/title>\n\n\t\n<style>\n\n\t#parent {\n\tbackground-color: #F3E9E2;\n\t}\n\t\n\t#main-box {\n\twidth: 100%;\n\tdisplay: inline-flex;\n\tjustify-content: center;\n\t}\n\t\n\t.icons1, .icons2, .icons3, .icons4 {\n\tpadding: 20px;\n\ttext-align: center;\n\tmax-width: 220px;\n\t}\n\t\n\t#title {\n\ttext-align: center;\n\tpadding-top:15px;\n\tfont-size: 2.5rem;\n\tfont-family: FreightDisp;\n\tcolor: #00263A;\n\t}\n\t\n\t.img-icon {\n\tmax-height: 80px;\n\twidth: auto;\n\tpadding-bottom: 10px;\n\t}\n\t\n\t.sub2 {\n\tfont-family: FuturaBT;\n\ttext-align: center;\n\tfont-size: 1.2rem;\n\tline-height: 1.3rem;\n\tcolor: #00263A;\n\ttext-transform: uppercase;\n\t}\n\t\n@media (min-width: 501px){\n\t#main-mobile {\n\t\tdisplay: none;\n\t}\n\t}\n\n@media (max-width: 799px){\n\t#main-box {\n\tdisplay: flex;\n\tjustify-content: center;\n\t}\n\t\n\t.img-icon {\n\tmax-height: 50px;\n\tpadding-bottom: 5px;\n\t}\n\t\n\t#title {\n\tfont-size: 2rem;\n\t}\n\t\n\t.sub2 {\n\tfont-size: .9rem;\n\tline-height: 1rem;\n\t}\n}\n\t\n\n@media (max-width: 500px){\n\t#main-box {\n\t\tdisplay: none;\n\t}\n\t\n\t#main-mobile {\n\t\tdisplay: inline-flex;\n\t}\n\n\t}\n\n}\n\t\n\t\n<\/style>\n\n\n\t\n\t<div id=\"parent\">\n\t  <h1 id=\"title\">Video recording best practices<\/h1>\n\t\t<div id=\"main-box\">\n\t\t\t<div class=\"icons1\">\n\t\t\t<img class=\"img-icon\" src=\"https:\/\/i.ibb.co\/JqvhX2P\/sun.png\">\n\t\t\t<h2 class=\"sub2\">make sure you are in a bright spot<\/h2>\n\t\t\t<\/div>\n\n\t\t\t<div class=\"icons4\">\n\t\t\t<img class=\"img-icon\" src=\"https:\/\/i.ibb.co\/Twyg7Rg\/file-format.png\">\n\t\t\t<h2 class=\"sub2\">Video format must be .m4v, .mp4 or .mov<\/h2>\n\t\t\t<\/div>\n\t\t\n\t\t\t<div class=\"icons2\">\n\t\t\t<img class=\"img-icon\" src=\"https:\/\/i.ibb.co\/dMvCyw6\/horizontal.png\">\n\t\t\t<h2 class=\"sub2\">RECORD HORIZONTALLY<\/h2>\n\t\t\t<\/div>\n\t\n\t\t\t<div class=\"icons3\">\n\t\t\t<img class=\"img-icon\" src=\"https:\/\/i.ibb.co\/MNsV2p2\/camera.png\">\n\t\t\t<h2 class=\"sub2\">LOOK STRAIGHT TO THE CAMERA<\/h2>\n\t\t\t<\/div>\n\t\t\n\t\t<\/div>\n\t\n\t\t<div id=\"main-mobile\">\n\t\t\t<div id=\"mob1\">\n\t\t\t\t<div class=\"icons1\">\n\t\t\t\t<img class=\"img-icon\" src=\"https:\/\/i.ibb.co\/JqvhX2P\/sun.png\">\n\t\t\t\t<h2 class=\"sub2\">make sure you are in a bright spot<\/h2>\n\t\t\t\t<\/div>\n\n\t\t\t\t<div class=\"icons4\">\n\t\t\t\t<img class=\"img-icon\" src=\"https:\/\/i.ibb.co\/Twyg7Rg\/file-format.png\">\n\t\t\t\t<h2 class=\"sub2\">Video format must be .m4v, .mp4 or .mov<\/h2>\n\t\t\t\t<\/div>\n\t\t\t<\/div>\n\t\t\t\n\t\t\t<div id=\"mob2\">\n\t\t\t\t<div class=\"icons2\">\n\t\t\t\t<img class=\"img-icon\" src=\"https:\/\/i.ibb.co\/dMvCyw6\/horizontal.png\">\n\t\t\t\t<h2 class=\"sub2\">position phone\/camera horizontally<\/h2>\n\t\t\t\t<\/div>\n\t\n\t\t\t\t<div class=\"icons3\">\n\t\t\t\t<img class=\"img-icon\" src=\"https:\/\/i.ibb.co\/MNsV2p2\/camera.png\">\n\t\t\t\t<h2 class=\"sub2\">LOOK STRAIGHT TO THE CAMERA<\/h2>\n\t\t\t\t<\/div>\n\t\t\t<\/div>\n\t\t\n\t\t<\/div>\n\t<\/div>\n\t\n\n<\/body>",
+        "width": "wide",
+        "padding_top": 0,
+        "padding_bottom": 19,
+        "padding_left": 0,
+        "padding_right": 0,
+        "animation": "none",
+        "css_class": "",
+        "custom_css": ""
+      }
+    },
+    "165783037737b14006": {
+      "type": "index__html",
+      "settings": {
+        "html_content": "<body>\n\n\n<meta charset=\"utf-8\">\n<title>client reviews<\/title>\n\n<style>\n\t.main-copy {\n\t\tmargin: 2% 10%;\n\t\ttext-align:center;\n\t}\n\t\n\t.main-title {\n\t\tfont-family: FreightDisp;\n\t\tfont-size: 2.5rem;\n\t}\n\t\n\t.main-sub {\n\t\tfont-family: FuturaBT;\n\t\tfont-size: 1.5rem;\n\t}\n\n\t\n\t.creview {\n\t\tbackground-color: #E0B39E;\n\t\tmax-width: 350px;\n\t\theight: inherit;\n\t\tborder-radius: 15px;\n\t\tpadding: 10px 30px 20px;\n\t\tmargin: 5px 20px;\n\t\tbox-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);\n\t}\n\t\n\t.aspas {\n\t\tmax-height: 70px;\n\t\twidth: auto;\n\t}\n\t\n\t.reviewt {\n\t\tfont-family: FuturaBT;\n\t\tfont-weight: 800;\n\t\tfont-size: 20px;\n\t\tletter-spacing: 1px;\n\t}\n\t\n\t.reviewp {\n\t\tfont-family: FuturaBT;\n\t\tfont-weight: 500;\n\t\tfont-size: 18px;\n\t}\n\t\n\t.cname {\n\t\tfont-family: FuturaBT;\n\t\tfont-size: 15px;\n\t\tfont-weight: 600;\n\t\tmargin-left: 10px;\n\t}\n\t\n\t.cimg {\n\t\tmax-height: 50px;\n\t\twidth: auto;\n\t}\n\t\n\n@media (max-width: 901px){\n\t.main-clients {\n\t\tdisplay: block;\n\t}\n\t\n\t.creview {\n\t\tmargin: 10px auto 30px;\n\t}\n\t\n\t.main-title {\n\t\tfont-size: 2rem;\n\t\tline-height: 1.8rem;\n\t}\n\t\n\t.main-sub {\n\t\tfont-size: 1.2rem;\n\t\tline-height: 1rem;\n\t\tmargin-top: 30px;\n\t\tmargin-bottom: 30px;\n\t}\n}\n\t\n@media (min-width: 900px){\n\t.main-clients {\n\t\tdisplay: flex;\n\t\tjustify-content: center\n\t}\n}\n\t\n<\/style>\n\n\n\t<div class=\"main-copy\">\n\t\t<h1 class=\"main-title\">Not sure what to say?<\/h1>\n\t\t<h2 class=\"main-sub\">Here's some inspiration from our favorite testimonials!<\/h2>\n\t<\/div>\n\t\n\t<div class=\"main-clients\">\n\t\t<div class=\"creview\">\n\t\t\t<img class=\"aspas\" src=\"https:\/\/cdn.shopify.com\/s\/files\/1\/0114\/0621\/3220\/files\/quotation_icon_117ec151-25bb-461c-9d18-cef54c82631f.png?v=1657829420\">\n\t\t\t<h3 class=\"reviewt\">So smooth and easy<\/h3>\n\t\t\t<p class=\"reviewp\">Recently went on a holiday trip to Europe and I was fascinated with the easiness of carrying all my make up needs on the go- the product is smooth and rich in color- perfect for my mixed skin<\/p>\n\t\t\t<br>\n\t\t\t<p class=\"cname\">Tamara M, Verified Buyer<\/p>\n\t\t<\/div>\n\t\n\t\t<div class=\"creview\">\n\t\t\t<img class=\"aspas\" src=\"https:\/\/cdn.shopify.com\/s\/files\/1\/0114\/0621\/3220\/files\/quotation_icon_117ec151-25bb-461c-9d18-cef54c82631f.png?v=1657829420\">\n\t\t\t<h3 class=\"reviewt\">Smart Makeup Case<\/h3>\n\t\t\t<p class=\"reviewp\">This is such a fun and smart way to travel and carry around your makeup. Love the fact that it has an adjustable handle and built in mirror for convenience when you’re on the go. The olive color is absolutely gorgeous as well!<\/p>\n\t\t\t<br>\n\t\t\t<p class=\"cname\">Maddy, Verified Buyer<\/p>\n\t\t<\/div>\n\t\t\n\t\t<div class=\"creview\">\n\t\t\t<img class=\"aspas\" src=\"https:\/\/cdn.shopify.com\/s\/files\/1\/0114\/0621\/3220\/files\/quotation_icon_117ec151-25bb-461c-9d18-cef54c82631f.png?v=1657829420\">\n\t\t\t<h3 class=\"reviewt\">I love this kit!<\/h3>\n\t\t\t<p class=\"reviewp\">Already had a few other items and everything is fabulous. This kit fits perfectly in your purse or travel bag and everything you need is in here. All of the makeup you need in one lil bag!!!<\/p>\n\t\t\t<br>\n\t\t\t<p class=\"cname\">Rosanna, Verified Buyer<\/p>\n\t\t<\/div>\n\t<\/div>\n\n<\/body>",
+        "width": "standard",
+        "padding_top": 0,
+        "padding_bottom": 32,
+        "padding_left": 0,
+        "padding_right": 0,
+        "animation": "none",
+        "css_class": "",
+        "custom_css": ""
+      }
+    }
+  },
+  "order": [
+    "165532190269191edd",
+    "16553256724c19e900",
+    "1658160486918546fc",
+    "1658155523794839b8",
+    "1655330413d7297bc3",
+    "1655395568eca5c4db",
+    "165783037737b14006"
+  ]
+}

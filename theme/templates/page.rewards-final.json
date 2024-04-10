@@ -1,0 +1,661 @@
+{
+  "sections": {
+    "16509006205ca78969": {
+      "type": "index__image-with-text-overlay",
+      "disabled": true,
+      "settings": {
+        "link": "",
+        "image": "shopify:\/\/shop_images\/Sem-Titulo-2.png",
+        "mobile_image": "shopify:\/\/shop_images\/IMAGE_3edcb3c7-5bc1-4d0c-9ad0-2e4ffd93bdbf.png",
+        "pretext": "",
+        "title": "<h1 style=\"font-family: AntroVectra-er; font-size:65px; line-height:60px;\">Make the Switch<br>\n<\/h1>",
+        "subtitle": "<p>Introducing trestique’s exclusive trade-in program. Recycle your non-refillable trestique empties or empties from any other brand & earn up to 30% off to make the switch to a sustainable makeup routine you can buy once and refill forever. <\/p>",
+        "pretext_color": "#00263a",
+        "heading_color": "#00263a",
+        "subheading_color": "#00263a",
+        "text_alignment": "center",
+        "text_horizontal_position": "right",
+        "text_vertical_position": "middle",
+        "background_color": "#ffffff",
+        "background_opacity": 0,
+        "border_color": "#ffffff",
+        "border_width": 0,
+        "text_width": 48,
+        "button_1": "",
+        "button_1_link": "",
+        "button_1_style": "button--secondary",
+        "button_2": "",
+        "button_2_link": "",
+        "button_2_style": "button--secondary",
+        "mobile_image_crop": "none",
+        "mobile_text_below_image": true,
+        "pretext_color_mobile": "rgba(0,0,0,0)",
+        "heading_color_mobile": "rgba(0,0,0,0)",
+        "subheading_color_mobile": "rgba(0,0,0,0)",
+        "width": "wide",
+        "padding_top": 0,
+        "padding_bottom": 0,
+        "padding_left": 0,
+        "padding_right": 0,
+        "animation": "none",
+        "css_class": "p",
+        "custom_css": "p {\nfont-size: 25px;\nline-height: 30px;\n}"
+      }
+    },
+    "1660859867626b4444": {
+      "type": "banner-with-text",
+      "settings": {
+        "link": "",
+        "video_url": "https:\/\/cdn.shopify.com\/videos\/c\/o\/v\/d88d6dabf83c4c70822999253661a63c.mp4",
+        "video_url_mobile": "https:\/\/cdn.shopify.com\/videos\/c\/o\/v\/5a6c5932b1334b72b9e0f5bfb3c6a525.mp4",
+        "pretext": "",
+        "title": "<h1 style=\"font-family: AntroVectra-er; font-size:65px; line-height:60px;\">Make the Switch<br>\n<\/h1>",
+        "subtitle": "<p>Introducing trestique’s exclusive trade-in program. Recycle your non-refillable trestique empties or empties from any other brand & earn up to 30% off to make the switch to a sustainable makeup routine you can buy once and refill forever. <\/p>",
+        "pretext_color": "#000000",
+        "heading_color": "#00263a",
+        "subheading_color": "#00263a",
+        "text_alignment": "left",
+        "text_horizontal_position": "right",
+        "text_vertical_position": "middle",
+        "background_color": "#FFFFFF",
+        "background_opacity": 77,
+        "border_color": "#FFFFFF",
+        "border_width": 0,
+        "text_width": 40,
+        "button_1": "",
+        "button_text_color": "#ffffff",
+        "button_bg_color": "#000000",
+        "button_hover_bg_color": "#ffffff",
+        "button_hover_color": "#000000",
+        "button_1_link": "",
+        "button_1_style": "button--secondary",
+        "button_2": "",
+        "button_2_link": "",
+        "button_2_style": "button--secondary",
+        "mobile_image_crop": "none",
+        "mobile_text_below_image": true,
+        "mobile_text_position": "middle",
+        "pretext_color_mobile": "rgba(0,0,0,0)",
+        "heading_color_mobile": "rgba(0,0,0,0)",
+        "subheading_color_mobile": "rgba(0,0,0,0)",
+        "width": "wide",
+        "padding_top": 0,
+        "padding_bottom": 0,
+        "padding_left": 0,
+        "padding_right": 0,
+        "animation": "none",
+        "css_class": "",
+        "custom_css": ""
+      }
+    },
+    "16535043263a32c6d0": {
+      "type": "index__html",
+      "settings": {
+        "html_content": "<body>\n<a id=\"signup_switch\"> <\/a>\n\n\n\n\n<meta charset=\"utf-8\">\n<title>Documento sem título<\/title>\n\n<style>\n\thr.rounded {\n  border-top: 3px solid #bbb;\n  border-radius: 10px;\n}\n\t@media only screen and (min-width: 483px) {\n\t\t.rounded {\n\t\t\tdisplay: none;\n\t}\n}\n\t\n<\/style>\n\n\n\t<hr class=\"rounded\">\n\n<\/body>",
+        "width": "standard",
+        "padding_top": 0,
+        "padding_bottom": 0,
+        "padding_left": 0,
+        "padding_right": 0,
+        "animation": "none",
+        "css_class": "",
+        "custom_css": ""
+      }
+    },
+    "1650901179da8c8326": {
+      "type": "index__html",
+      "settings": {
+        "html_content": "<body>\n\n<div class=\"container is-flex is-justify-center\"><p style=\"font-family: FuturaBT; font-size:30px; line-height:30px; text-align:center;\">Save up to 30% when you sign up – we'll give you an unique discount code!<\/p><\/div>\n<div class=\"klaviyo-form-RM4h3a\"><\/div>\n<\/body>",
+        "width": "standard",
+        "padding_top": 41,
+        "padding_bottom": 11,
+        "padding_left": 0,
+        "padding_right": 0,
+        "animation": "none",
+        "css_class": "",
+        "custom_css": ".my-set-btn {\n    display: none;\n}"
+      }
+    },
+    "16536586287c1140b4": {
+      "type": "index__image-with-text",
+      "blocks": {
+        "1653658628af103375-1": {
+          "type": "image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/JRVjhVIo.jpg",
+            "image_crop": "none",
+            "image_link": ""
+          }
+        },
+        "1653658628af103375-2": {
+          "type": "text",
+          "settings": {
+            "title": "<p style=\"font-family: FreightDisp; font-size:50px; line-height:50px;\">We stand for simplicity & sustainability<\/p>",
+            "heading_size": "regular",
+            "text": "<p>From our formulas to our packaging, our zero-waste system was developed through a lens of sustainability. We are committed to reducing consumption, waste and the use of single-use plastics—for your health and the health of our planet.<\/p>",
+            "button_label": "",
+            "link": "",
+            "button_style": "button--primary",
+            "background": "rgba(0,0,0,0)",
+            "text_color": "rgba(0,0,0,0)",
+            "alignment": "left",
+            "vertical_position": "center"
+          }
+        }
+      },
+      "block_order": [
+        "1653658628af103375-1",
+        "1653658628af103375-2"
+      ],
+      "settings": {
+        "width": "standard",
+        "show_gutter": true,
+        "padding_top": 20,
+        "padding_bottom": 20,
+        "animation": "none",
+        "css_class": "",
+        "custom_css": "background-color: #EFDDCD"
+      }
+    },
+    "how_it_works": {
+      "type": "how-it-works",
+      "blocks": {
+        "ca14f0af-f063-4589-8c66-1bf4b7784d9c": {
+          "type": "block",
+          "settings": {
+            "step_img": "shopify:\/\/shop_images\/step1-V2.gif",
+            "step_title": "Sign up for Make the Switch to redeem your unique code."
+          }
+        },
+        "12bbe9cb-f7e3-4038-89fc-34e75bc97082": {
+          "type": "block",
+          "settings": {
+            "step_img": "shopify:\/\/shop_images\/How_it_works__Step_03.gif",
+            "step_title": "Select your products & makeup case. You'll automatically save 15% on 4+ products. Plus, an additional 15% off with your unique code."
+          }
+        },
+        "e983f339-6e5a-4b8e-a426-964d3db83745": {
+          "type": "block",
+          "settings": {
+            "step_img": "shopify:\/\/shop_images\/step-3.jpg",
+            "step_title": "Mail your hard-to-recycle beauty empties to our partners at Pact, we cover the cost of recycling for you."
+          }
+        }
+      },
+      "block_order": [
+        "ca14f0af-f063-4589-8c66-1bf4b7784d9c",
+        "12bbe9cb-f7e3-4038-89fc-34e75bc97082",
+        "e983f339-6e5a-4b8e-a426-964d3db83745"
+      ],
+      "settings": {
+        "bg_color": "#f5f5f5",
+        "slides_to_show_lg": 3,
+        "slides_to_show_sm": 1,
+        "max_width": 1440,
+        "title": "<h1 style=\"font-family: FreighDisp; font-size:3rem; text-align: center;\">How it Works<\/h1>",
+        "next_step_img": "shopify:\/\/shop_images\/next_c21ddd57-7e38-4b6e-8ef5-77529d1aac2e.png",
+        "tagline_text": "",
+        "tagline_bg_color": "#ffffff",
+        "tagline_text_color": "#b04a5a",
+        "btn_text": "sign up & CREATE YOUR SET",
+        "btn_bg_color": "#00263a",
+        "btn_color": "#ffffff",
+        "step_bg_color": "#f6f6f6",
+        "text_color": "#ffffff"
+      }
+    },
+    "what_makes": {
+      "type": "what-makes-it-trestique",
+      "blocks": {
+        "817aa1aa-fcb2-42d1-bef7-0952d74a4197": {
+          "type": "Slide",
+          "settings": {
+            "slide_img": "shopify:\/\/shop_images\/time-saving.png",
+            "slide_title": "TIME SAVING",
+            "slide_text": "Multi-tasking essentials you can apply in 5 min or less."
+          }
+        },
+        "eea651ca-fb7e-4068-87b1-5a85347cc870": {
+          "type": "Slide",
+          "settings": {
+            "slide_img": "shopify:\/\/shop_images\/product-tool.png",
+            "slide_title": "SMART 2-IN-1 PRODUCTS",
+            "slide_text": "Built-in tools deliver everything you need at your fingertips."
+          }
+        },
+        "3423c95d-206e-480a-8c23-8bbda24ee214": {
+          "type": "Slide",
+          "settings": {
+            "slide_img": "shopify:\/\/shop_images\/travel-friendly.png",
+            "slide_title": "TRAVEL-FRIENDLY",
+            "slide_text": "Compact, lightweight makeup cases with mess-free products."
+          }
+        },
+        "00e26c1a-fd65-4586-9c90-dd7df1b6834d": {
+          "type": "Slide",
+          "settings": {
+            "slide_img": "shopify:\/\/shop_images\/easy-to-carry.png",
+            "slide_title": "Easy to carry and apply",
+            "slide_text": "Mistake-proof stick makeup with quality formulas."
+          }
+        },
+        "3654e456-8228-4ac4-be43-9c949dfd59d4": {
+          "type": "Slide",
+          "settings": {
+            "slide_img": "shopify:\/\/shop_images\/endlessly.png",
+            "slide_title": "REFILLABLE & SUSTAINABLE",
+            "slide_text": "Endlessly refill your sustainable forever case."
+          }
+        },
+        "c4e48768-8e2a-4d1a-b9cf-dff5f520671e": {
+          "type": "Slide",
+          "disabled": true,
+          "settings": {
+            "slide_img": "shopify:\/\/shop_images\/travel-friendly.png",
+            "slide_title": "TRAVEL-FRIENDLY",
+            "slide_text": "Compact, lightweight makeup cases with mess-free products."
+          }
+        },
+        "ae1a3455-1fac-419d-b34b-f55e2d035a8b": {
+          "type": "Slide",
+          "disabled": true,
+          "settings": {
+            "slide_img": "shopify:\/\/shop_images\/travel-friendly.png",
+            "slide_title": "TRAVEL-FRIENDLY",
+            "slide_text": "Compact, lightweight makeup cases with mess-free products."
+          }
+        }
+      },
+      "block_order": [
+        "817aa1aa-fcb2-42d1-bef7-0952d74a4197",
+        "eea651ca-fb7e-4068-87b1-5a85347cc870",
+        "3423c95d-206e-480a-8c23-8bbda24ee214",
+        "00e26c1a-fd65-4586-9c90-dd7df1b6834d",
+        "3654e456-8228-4ac4-be43-9c949dfd59d4",
+        "c4e48768-8e2a-4d1a-b9cf-dff5f520671e",
+        "ae1a3455-1fac-419d-b34b-f55e2d035a8b"
+      ],
+      "settings": {
+        "bg_color": "#f3e9e2",
+        "text_color": "#00263a",
+        "main_heading": "A lightweight makeup routine you can apply anytime, anywhere.",
+        "slides_to_show_lg": 5,
+        "slides_to_show_sm": 1,
+        "margin_sm": 30,
+        "margin_lg": 40,
+        "block_title_color": "#00263a",
+        "block_text_color": "#00263a"
+      }
+    },
+    "join_hero": {
+      "type": "join-zero",
+      "blocks": {
+        "6f2aa91a-c4fc-41ee-af27-a755484b9869": {
+          "type": "block",
+          "settings": {
+            "slide_img": "shopify:\/\/shop_images\/Group_20.png",
+            "client_review": "Beauty without guilt. I love the sustainability of zero waste. I can look good without feeling guilty of producing landfill waste.",
+            "clinet_review_color": "#00263a",
+            "client_name": "S.M, verified buyer",
+            "clinet_name_color": "#00263a"
+          }
+        },
+        "6b1a4f73-4db4-4b69-a4ac-d758b2aec254": {
+          "type": "block",
+          "settings": {
+            "slide_img": "shopify:\/\/shop_images\/Group_21.png",
+            "client_review": "Fabulous 👌👏👍. I love this kit! Already had a few other items and everything is fabulous. This kit fits perfectly in your purse or travel bag and everything you need is in here. All of the makeup you need in one lil bag!!!!",
+            "clinet_review_color": "#00263a",
+            "client_name": "Rosanna, verified buyer",
+            "clinet_name_color": "#00263a"
+          }
+        },
+        "661c2138-b493-4ec9-9ab5-541e80985808": {
+          "type": "block",
+          "settings": {
+            "slide_img": "shopify:\/\/shop_images\/Group_19.png",
+            "client_review": "So handy for this mom to grab & go! Cannot be happier with how easy it is to use this system, so much better than carrying my old makeup bag with brushes, dusty & messy makeup, etc. My second bag, love the olive color.",
+            "clinet_review_color": "#00263a",
+            "client_name": "Christine D, verified buyer",
+            "clinet_name_color": "#00263a"
+          }
+        },
+        "c20c4c87-aa42-4e32-916c-1ae2f8de040c": {
+          "type": "block",
+          "disabled": true,
+          "settings": {
+            "slide_img": "shopify:\/\/shop_images\/hallie.png",
+            "client_review": "Trestique products are awesome. Nibh varius erat molestie tempus, eu.",
+            "clinet_review_color": "#00263a",
+            "client_name": "Hallie",
+            "clinet_name_color": "#00263a"
+          }
+        },
+        "14f002e7-4f43-478c-a78d-608d0642dca7": {
+          "type": "block",
+          "disabled": true,
+          "settings": {
+            "slide_img": "shopify:\/\/shop_images\/meghan.png",
+            "client_review": "Trestique products are awesome. Nibh varius erat molestie tempus, eu.",
+            "clinet_review_color": "#00263a",
+            "client_name": "",
+            "clinet_name_color": "#00263a"
+          }
+        }
+      },
+      "block_order": [
+        "6f2aa91a-c4fc-41ee-af27-a755484b9869",
+        "6b1a4f73-4db4-4b69-a4ac-d758b2aec254",
+        "661c2138-b493-4ec9-9ab5-541e80985808",
+        "c20c4c87-aa42-4e32-916c-1ae2f8de040c",
+        "14f002e7-4f43-478c-a78d-608d0642dca7"
+      ],
+      "settings": {
+        "bg_color": "#f5f5f5",
+        "main_title": "Reviews from our community",
+        "show_arrow": true,
+        "slides_dots": true,
+        "auto_play": false,
+        "slides_to_show_lg": 2,
+        "slides_to_show_sm": 1,
+        "max_width": 1400,
+        "block_bg_color": "#f3e9e2"
+      }
+    },
+    "banner_video": {
+      "type": "banner-video",
+      "disabled": true,
+      "settings": {
+        "title": "Your Routine, Your Way",
+        "content": "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim venia<\/p>",
+        "max_width": 1170,
+        "video_url": "",
+        "video_url_lg": "",
+        "video_play_btn": "shopify:\/\/shop_images\/play.png",
+        "img": "shopify:\/\/shop_images\/Group_1_b69539bf-8a8d-40bf-b1c4-e96446fa3579.png",
+        "btn_bg_color": "#e32c2b",
+        "btn_text_color": "#ffffff",
+        "btn_text": "CREATE MY SET",
+        "btn_url": "shopify:\/\/collections\/essential-mix",
+        "tagline_text": "Save 15% when you create a set of 4 products or more",
+        "tagline_bg_color": "#f3e9e2",
+        "tagline_text_color": "#b04a5a"
+      }
+    },
+    "logo_slider": {
+      "type": "logo-slider",
+      "disabled": true,
+      "blocks": {
+        "016666b5-5d40-4f84-8728-1a7c79f8def8": {
+          "type": "block",
+          "settings": {
+            "logo_img": "shopify:\/\/shop_images\/vogue.png"
+          }
+        },
+        "15121662-b5c8-4ab3-ac94-078a21173351": {
+          "type": "block",
+          "settings": {
+            "logo_img": "shopify:\/\/shop_images\/wwd_31be0912-8b4e-4679-aee7-3f72dc3d0053.png"
+          }
+        },
+        "bc376dc9-87e6-4ff6-9356-a37b1efb3745": {
+          "type": "block",
+          "settings": {
+            "logo_img": "shopify:\/\/shop_images\/forbes_36d3e539-186c-4c5a-b029-28d2c2e07500.png"
+          }
+        },
+        "1f77fc28-c0a3-4b2f-b266-ec8c8f2eda91": {
+          "type": "block",
+          "settings": {
+            "logo_img": "shopify:\/\/shop_images\/stylecraze.png"
+          }
+        },
+        "22aa88fc-6a8d-40c8-9c3b-9024fc3d68b0": {
+          "type": "block",
+          "settings": {
+            "logo_img": "shopify:\/\/shop_images\/cosmetics.png"
+          }
+        },
+        "e5c1eefe-0373-47c8-80ed-7dd3639c9fa0": {
+          "type": "block",
+          "settings": {
+            "logo_img": "shopify:\/\/shop_images\/cew_7a8da9b2-faec-4c3d-bcf5-205894dbebca.png"
+          }
+        },
+        "993d0b47-4d10-4ea9-aa31-796a94d07485": {
+          "type": "block",
+          "settings": {
+            "logo_img": "shopify:\/\/shop_images\/wwd_31be0912-8b4e-4679-aee7-3f72dc3d0053.png"
+          }
+        },
+        "bc6c4736-3abc-451d-b590-0e976f0b4ffb": {
+          "type": "block",
+          "settings": {
+            "logo_img": "shopify:\/\/shop_images\/cew_7a8da9b2-faec-4c3d-bcf5-205894dbebca.png"
+          }
+        },
+        "eaeb988c-7bb3-4ef5-af35-bf9c8e3a9199": {
+          "type": "block",
+          "settings": {
+            "logo_img": "shopify:\/\/shop_images\/forbes_36d3e539-186c-4c5a-b029-28d2c2e07500.png"
+          }
+        }
+      },
+      "block_order": [
+        "016666b5-5d40-4f84-8728-1a7c79f8def8",
+        "15121662-b5c8-4ab3-ac94-078a21173351",
+        "bc376dc9-87e6-4ff6-9356-a37b1efb3745",
+        "1f77fc28-c0a3-4b2f-b266-ec8c8f2eda91",
+        "22aa88fc-6a8d-40c8-9c3b-9024fc3d68b0",
+        "e5c1eefe-0373-47c8-80ed-7dd3639c9fa0",
+        "993d0b47-4d10-4ea9-aa31-796a94d07485",
+        "bc6c4736-3abc-451d-b590-0e976f0b4ffb",
+        "eaeb988c-7bb3-4ef5-af35-bf9c8e3a9199"
+      ],
+      "settings": {
+        "bg_color": "#b66c6d",
+        "max_width": 1170
+      }
+    },
+    "165486513165039af3": {
+      "type": "banner-with-text",
+      "disabled": true,
+      "settings": {
+        "link": "",
+        "video_url": "",
+        "video_url_mobile": "",
+        "image": "shopify:\/\/shop_images\/Start_Shopping_-_1800_x_600.png",
+        "mobile_image": "shopify:\/\/shop_images\/Start_Shopping_-_1800_x_601.png",
+        "pretext": "",
+        "title": "Refresh your routine with trestique. Finally, a clean & high-performing makeup system that is compact and mess-free.",
+        "subtitle": "",
+        "pretext_color": "#000000",
+        "heading_color": "#f9ebe3",
+        "heading_font_desk": 25,
+        "subheading_color": "#000000",
+        "text_alignment": "center",
+        "text_horizontal_position": "right",
+        "text_vertical_position": "middle",
+        "background_color": "#ffffff",
+        "background_opacity": 0,
+        "border_color": "#ffffff",
+        "border_width": 0,
+        "text_width": 40,
+        "button_1": "CREATE YOUR SET",
+        "button_text_color": "#00263a",
+        "button_bg_color": "#f9ebe3",
+        "button_hover_bg_color": "#00263a",
+        "button_hover_color": "#f9ebe3",
+        "button_1_link": "shopify:\/\/products\/the-essential-mix",
+        "button_1_style": "button--primary",
+        "button_2": "",
+        "button_2_link": "",
+        "button_2_style": "button--secondary",
+        "mobile_image_crop": "none",
+        "mobile_text_below_image": true,
+        "mobile_text_position": "middle",
+        "pretext_color_mobile": "rgba(0,0,0,0)",
+        "heading_font_xs": 25,
+        "heading_color_mobile": "#00263a",
+        "subheading_color_mobile": "rgba(0,0,0,0)",
+        "width": "wide",
+        "padding_top": 0,
+        "padding_bottom": 0,
+        "padding_left": 0,
+        "padding_right": 0,
+        "animation": "none",
+        "css_class": "",
+        "custom_css": ".title em, .title span, .subtitle em, .subtitle span {\nfont-family: FuturaBT;\n}\n\n.image-with-text-overlay__buttons.buttons.is-justify-center>a {\nborder: none;\n}"
+      }
+    },
+    "16535038257e7b3813": {
+      "type": "index__image-with-text-overlay",
+      "disabled": true,
+      "settings": {
+        "link": "",
+        "image": "shopify:\/\/shop_images\/Start_Shopping_-_1800_x_600.png",
+        "pretext": "",
+        "title": "<h1>Refresh your routine with trestique. Finally, a clean & high-performing makeup system that is compact and mess-free.<\/h1>",
+        "subtitle": "",
+        "pretext_color": "#00263a",
+        "heading_color": "#f9ebe3",
+        "subheading_color": "#000000",
+        "text_alignment": "center",
+        "text_horizontal_position": "right",
+        "text_vertical_position": "middle",
+        "background_color": "#ffffff",
+        "background_opacity": 0,
+        "border_color": "#ffffff",
+        "border_width": 0,
+        "text_width": 40,
+        "button_1": "",
+        "button_1_link": "",
+        "button_1_style": "button--primary",
+        "button_2": "create your set",
+        "button_2_link": "shopify:\/\/products\/the-essential-mix",
+        "button_2_style": "button--primary",
+        "mobile_image_crop": "none",
+        "mobile_text_below_image": true,
+        "pretext_color_mobile": "rgba(0,0,0,0)",
+        "heading_color_mobile": "#00263a",
+        "subheading_color_mobile": "rgba(0,0,0,0)",
+        "width": "wide",
+        "padding_top": 0,
+        "padding_bottom": 0,
+        "padding_left": 0,
+        "padding_right": 0,
+        "animation": "none",
+        "css_class": "",
+        "custom_css": "h1 {\nfont-size: 25px;\nline-height:30px;\n}\n\n.button--primary, .button--primary:link, .button--primary:visited, a.button--primary.button, a.button--primary.button:link, a.button--primary.button:visited {\ncolor: #00263a;\nbackground-color: #F9EBE3;\n}"
+      }
+    },
+    "16535039735ae37f34": {
+      "type": "index__image-with-text-overlay",
+      "settings": {
+        "link": "",
+        "image": "shopify:\/\/shop_images\/Ready-to-Recycle---1800-x-600-3.gif",
+        "mobile_image": "shopify:\/\/shop_images\/gi2f.gif",
+        "pretext": "",
+        "title": "<h1 style=\"font-family: FreightDispMedium; font-size:50px; line-height:40px; color: ##00263A;\">Ready to recycle?<br>\n<\/h1>",
+        "subtitle": "<p>Now that you've signed up, get ready to mail back your hard-to-recycle beauty empties and earn $5 back in store credit.<\/p>",
+        "pretext_color": "#000000",
+        "heading_color": "#000000",
+        "subheading_color": "#000000",
+        "text_alignment": "center",
+        "text_horizontal_position": "left",
+        "text_vertical_position": "middle",
+        "background_color": "#ffffff",
+        "background_opacity": 0,
+        "border_color": "#ffffff",
+        "border_width": 0,
+        "text_width": 50,
+        "button_1": "Learn more",
+        "button_1_link": "https:\/\/pact-collective.myshopify.com\/products\/trestique-mail-back-collection-program",
+        "button_1_style": "button--primary",
+        "button_2": "",
+        "button_2_link": "",
+        "button_2_style": "button--secondary",
+        "mobile_image_crop": "none",
+        "mobile_text_below_image": true,
+        "pretext_color_mobile": "rgba(0,0,0,0)",
+        "heading_color_mobile": "rgba(0,0,0,0)",
+        "subheading_color_mobile": "rgba(0,0,0,0)",
+        "width": "wide",
+        "padding_top": 0,
+        "padding_bottom": 0,
+        "padding_left": 0,
+        "padding_right": 0,
+        "animation": "none",
+        "css_class": "",
+        "custom_css": ".button--primary, .button--primary:link, .button--primary:visited, a.button--primary.button, a.button--primary.button:link, a.button--primary.button:visited {\ncolor: #F9EBE3;\nbackground-color: #00263a;;\n}\n\n.image-with-text-overlay__buttons .button {\n  padding-right: 50px !important;\npadding-left: 50px !important;\n}\n\np {\nfont-size: 25px\n}"
+      }
+    },
+    "1655924509f394bbb9": {
+      "type": "index__image-with-text",
+      "disabled": true,
+      "blocks": {
+        "1655924509630aaa9e-0": {
+          "type": "image",
+          "disabled": true,
+          "settings": {
+            "image_crop": "none",
+            "image_link": ""
+          }
+        },
+        "1655924509630aaa9e-1": {
+          "type": "image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/ezgif-5-759699cb3d.gif",
+            "image_crop": "none",
+            "image_link": ""
+          }
+        },
+        "1655924509630aaa9e-2": {
+          "type": "text",
+          "settings": {
+            "title": "Heading text here",
+            "heading_size": "regular",
+            "text": "<p>Use this text to share information about your brand with your customers. Describe a product, share announcements, or welcome customers to your store.<\/p>",
+            "button_label": "View all",
+            "link": "",
+            "button_style": "button--primary",
+            "background": "rgba(0,0,0,0)",
+            "text_color": "rgba(0,0,0,0)",
+            "alignment": "left",
+            "vertical_position": "center"
+          }
+        }
+      },
+      "block_order": [
+        "1655924509630aaa9e-0",
+        "1655924509630aaa9e-1",
+        "1655924509630aaa9e-2"
+      ],
+      "settings": {
+        "width": "standard",
+        "show_gutter": true,
+        "padding_top": 20,
+        "padding_bottom": 20,
+        "animation": "none",
+        "css_class": "",
+        "custom_css": ""
+      }
+    }
+  },
+  "order": [
+    "16509006205ca78969",
+    "1660859867626b4444",
+    "16535043263a32c6d0",
+    "1650901179da8c8326",
+    "16536586287c1140b4",
+    "how_it_works",
+    "what_makes",
+    "join_hero",
+    "banner_video",
+    "logo_slider",
+    "165486513165039af3",
+    "16535038257e7b3813",
+    "16535039735ae37f34",
+    "1655924509f394bbb9"
+  ]
+}

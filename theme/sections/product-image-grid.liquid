@@ -1,0 +1,64 @@
+<div class="product-image-grid product-image-grid-section--{{section.id}}">
+
+  <div class="row">
+
+    {% for block in section.blocks %}
+      <div class="col-xs-6 col-lg-3">
+
+        <div class="wrapper">          
+        <a class="block-wrapper" target="_blank" href="{{block.settings.url}}">
+          <img src="https://cdn.shopify.com/s/files/1/0114/0621/3220/files/external-link.png?v=1645621801" class="external-link-icon" alt="external-link">          
+          {% render 'srcset' , 
+            src_name:block.settings.slide_img, 
+            src_alt:block.settings.slide_img.alt,
+            src_class: 'img'
+          %}
+          {% render 'srcset' , 
+            src_name:block.settings.slide_img_hover, 
+            src_alt:block.settings.slide_img_hover.alt,
+            src_class: 'hover-img'
+          %}
+          <p class="product-title">{{block.settings.slide_title}}</p>
+        </a>
+      </div>
+
+      </div>
+    {% endfor %}
+
+  </div>
+
+</div>
+
+{% schema %}
+{
+  "name": "Product image grid",
+  "blocks": [
+    {
+      "name": "Product",
+      "type": "slide",
+      "settings": [
+        {
+          "type": "image_picker",
+          "id": "slide_img",
+          "label": "Image"
+        },
+        {
+          "type": "image_picker",
+          "id": "slide_img_hover",
+          "label": "Hover image"
+        },
+        {
+          "type": "text",
+          "id": "slide_title",
+          "label": "Title"
+        },
+        {
+          "type": "url",
+          "id": "url",
+          "label": "Url"
+        }
+      ]
+    }
+  ]
+}
+{% endschema %}

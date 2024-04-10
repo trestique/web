@@ -1,0 +1,51 @@
+<!-- best-seller-section -->
+
+<section  class="product-grid section best-sellers">
+  <div class="section-wrapper">
+    <div class="main-heading product-grid-part">
+      {% unless section.settings.section_title == blank%}
+        <h5 class="section-title"><span>{{section.settings.section_title}}</span></h5>
+      {% endunless %}
+      {% unless section.settings.content == blank%}
+        <p class="content">{{section.settings.content}}</p>
+      {% endunless %}
+      <div class="collection-wrapper">
+        {% for product in collections[section.settings.collection].products limit:4 %}
+          {% render 'simply-product',product:product %}
+        {% endfor%}
+      </div>
+    </div>
+  </div>
+</section>
+{% schema %}
+{
+  "name": "best-seller-product",
+  "settings": [
+      {
+        "type": "header",
+        "content": "Left part"
+      },
+      {
+        "type":"text",
+        "id":"section_title",
+        "label":"Title"
+      },
+      {
+        "type":"textarea",
+        "id":"content",
+        "label":"Content"
+      },
+      {
+        "type":"collection",
+        "id":"collection",
+        "label":"Select collection"
+      }
+    ],
+    "presets": [
+      {
+        "name": "best-seller-product",
+        "category": "Product"
+      }
+    ]
+  }
+{% endschema %}

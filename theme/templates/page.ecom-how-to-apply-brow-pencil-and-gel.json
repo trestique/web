@@ -1,0 +1,12 @@
+{
+  "layout": "theme",
+  "sections": {
+    "ecom-how-to-apply-brow-pencil-and-gel": {
+      "type": "ecom-how-to-apply-brow-pencil-and-gel-page",
+      "settings": {}
+    }
+  },
+  "order": [
+    "ecom-how-to-apply-brow-pencil-and-gel"
+  ]
+}

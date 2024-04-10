@@ -1,0 +1,541 @@
+{
+  "sections": {
+    "banner_video": {
+      "type": "banner-video",
+      "disabled": true,
+      "settings": {
+        "title": "Win it all (placement only)",
+        "content": "",
+        "max_width": 1000,
+        "video_url": "",
+        "video_url_lg": "",
+        "img": "shopify:\/\/shop_images\/win_it.png",
+        "btn_bg_color": "#e32c2b",
+        "btn_text_color": "#ffffff",
+        "btn_text": "",
+        "btn_url": "#",
+        "tagline_text": "",
+        "tagline_bg_color": "#ffffff",
+        "tagline_text_color": "#b04a5a"
+      }
+    },
+    "join_hero": {
+      "type": "join-zero",
+      "disabled": true,
+      "blocks": {
+        "6b1a4f73-4db4-4b69-a4ac-d758b2aec254": {
+          "type": "block",
+          "settings": {
+            "slide_img": "shopify:\/\/shop_images\/bb-lp-2_8272f99a-d966-4219-9095-27e6f8580b74.jpg",
+            "client_review": "I love the convenience of trestique. All of the products are 2-in-1: the product is on one end and the tool is on the other!",
+            "clinet_review_color": "#00263a",
+            "client_name": "Megan",
+            "clinet_name_color": "#00263a"
+          }
+        },
+        "6f2aa91a-c4fc-41ee-af27-a755484b9869": {
+          "type": "block",
+          "settings": {
+            "slide_img": "shopify:\/\/shop_images\/Rectangle_175.png",
+            "client_review": "I'm always on the go and rely on the versatility and I take the makeup bag with me everywhere. It's so easy to travel with and has all the essentials.",
+            "clinet_review_color": "#00263a",
+            "client_name": "Erica",
+            "clinet_name_color": "#00263a"
+          }
+        },
+        "661c2138-b493-4ec9-9ab5-541e80985808": {
+          "type": "block",
+          "settings": {
+            "slide_img": "shopify:\/\/shop_images\/bb-lp-1_6c6d9e62-599e-4d3f-b1b1-e362d4755b63.jpg",
+            "client_review": "Let me tell you about my current obsession... trestique. All of their products are zero-waste and refillable!",
+            "clinet_review_color": "#00263a",
+            "client_name": "Skylar",
+            "clinet_name_color": "#00263a"
+          }
+        },
+        "c20c4c87-aa42-4e32-916c-1ae2f8de040c": {
+          "type": "block",
+          "disabled": true,
+          "settings": {
+            "slide_img": "shopify:\/\/shop_images\/hallie.png",
+            "client_review": "Trestique products are awesome. Nibh varius erat molestie tempus, eu.",
+            "clinet_review_color": "#00263a",
+            "client_name": "Hallie",
+            "clinet_name_color": "#00263a"
+          }
+        },
+        "14f002e7-4f43-478c-a78d-608d0642dca7": {
+          "type": "block",
+          "disabled": true,
+          "settings": {
+            "slide_img": "shopify:\/\/shop_images\/meghan.png",
+            "client_review": "Trestique products are awesome. Nibh varius erat molestie tempus, eu.",
+            "clinet_review_color": "#00263a",
+            "client_name": "",
+            "clinet_name_color": "#00263a"
+          }
+        }
+      },
+      "block_order": [
+        "6b1a4f73-4db4-4b69-a4ac-d758b2aec254",
+        "6f2aa91a-c4fc-41ee-af27-a755484b9869",
+        "661c2138-b493-4ec9-9ab5-541e80985808",
+        "c20c4c87-aa42-4e32-916c-1ae2f8de040c",
+        "14f002e7-4f43-478c-a78d-608d0642dca7"
+      ],
+      "settings": {
+        "bg_color": "#f0f0f0",
+        "main_title": "Join the zero-waste beauty movement",
+        "star_img": "shopify:\/\/shop_images\/five-star.png",
+        "show_arrow": true,
+        "slides_dots": true,
+        "auto_play": false,
+        "slides_to_show_lg": 1,
+        "slides_to_show_sm": 1,
+        "max_width": 1170,
+        "block_bg_color": "#f3e9e2"
+      }
+    },
+    "what_makes": {
+      "type": "what-makes-it-trestique",
+      "disabled": true,
+      "blocks": {
+        "817aa1aa-fcb2-42d1-bef7-0952d74a4197": {
+          "type": "Slide",
+          "settings": {
+            "slide_img": "shopify:\/\/shop_images\/time-saving.png",
+            "slide_title": "TIME SAVING",
+            "slide_text": "Multi-tasking essentials you can apply in 5 min or less."
+          }
+        },
+        "eea651ca-fb7e-4068-87b1-5a85347cc870": {
+          "type": "Slide",
+          "settings": {
+            "slide_img": "shopify:\/\/shop_images\/product-tool.png",
+            "slide_title": "SMART 2-IN-1 PRODUCTS",
+            "slide_text": "Built-in tools deliver everything you need at your fingertips."
+          }
+        },
+        "3423c95d-206e-480a-8c23-8bbda24ee214": {
+          "type": "Slide",
+          "settings": {
+            "slide_img": "shopify:\/\/shop_images\/travel-friendly.png",
+            "slide_title": "TRAVEL-FRIENDLY",
+            "slide_text": "Compact, lightweight makeup cases with mess-free products."
+          }
+        },
+        "00e26c1a-fd65-4586-9c90-dd7df1b6834d": {
+          "type": "Slide",
+          "settings": {
+            "slide_img": "shopify:\/\/shop_images\/easy-to-carry.png",
+            "slide_title": "Easy to carry and apply",
+            "slide_text": "Mistake-proof stick makeup with quality formulas."
+          }
+        },
+        "3654e456-8228-4ac4-be43-9c949dfd59d4": {
+          "type": "Slide",
+          "settings": {
+            "slide_img": "shopify:\/\/shop_images\/endlessly.png",
+            "slide_title": "REFILLABLE & SUSTAINABLE",
+            "slide_text": "Endlessly refill your sustainable forever case."
+          }
+        },
+        "c4e48768-8e2a-4d1a-b9cf-dff5f520671e": {
+          "type": "Slide",
+          "disabled": true,
+          "settings": {
+            "slide_img": "shopify:\/\/shop_images\/travel-friendly.png",
+            "slide_title": "TRAVEL-FRIENDLY",
+            "slide_text": "Compact, lightweight makeup cases with mess-free products."
+          }
+        },
+        "ae1a3455-1fac-419d-b34b-f55e2d035a8b": {
+          "type": "Slide",
+          "disabled": true,
+          "settings": {
+            "slide_img": "shopify:\/\/shop_images\/travel-friendly.png",
+            "slide_title": "TRAVEL-FRIENDLY",
+            "slide_text": "Compact, lightweight makeup cases with mess-free products."
+          }
+        }
+      },
+      "block_order": [
+        "817aa1aa-fcb2-42d1-bef7-0952d74a4197",
+        "eea651ca-fb7e-4068-87b1-5a85347cc870",
+        "3423c95d-206e-480a-8c23-8bbda24ee214",
+        "00e26c1a-fd65-4586-9c90-dd7df1b6834d",
+        "3654e456-8228-4ac4-be43-9c949dfd59d4",
+        "c4e48768-8e2a-4d1a-b9cf-dff5f520671e",
+        "ae1a3455-1fac-419d-b34b-f55e2d035a8b"
+      ],
+      "settings": {
+        "bg_color": "#f3e9e2",
+        "text_color": "#00263a",
+        "main_heading": "What makes trestique makeup sets special?",
+        "slides_to_show_lg": 5,
+        "slides_to_show_sm": 1,
+        "margin_sm": 30,
+        "margin_lg": 30,
+        "block_title_color": "#00263a",
+        "block_text_color": "#00263a"
+      }
+    },
+    "how_it_works": {
+      "type": "how-it-works",
+      "disabled": true,
+      "blocks": {
+        "ca14f0af-f063-4589-8c66-1bf4b7784d9c": {
+          "type": "block",
+          "settings": {
+            "step_img": "shopify:\/\/shop_images\/bundle13.jpg",
+            "step_title": "Select your products"
+          }
+        },
+        "12bbe9cb-f7e3-4038-89fc-34e75bc97082": {
+          "type": "block",
+          "settings": {
+            "step_img": "shopify:\/\/shop_images\/step-2-banner.png",
+            "hover_img": "shopify:\/\/shop_images\/step-hover-img.png",
+            "step_title": "Choose your favorite makeup case"
+          }
+        },
+        "e983f339-6e5a-4b8e-a426-964d3db83745": {
+          "type": "block",
+          "settings": {
+            "step_img": "shopify:\/\/shop_images\/bundle12_ec91bed3-a701-429b-b819-994e29ee5ab5.jpg",
+            "step_title": "Enjoy your new simple and time-saving makeup set."
+          }
+        }
+      },
+      "block_order": [
+        "ca14f0af-f063-4589-8c66-1bf4b7784d9c",
+        "12bbe9cb-f7e3-4038-89fc-34e75bc97082",
+        "e983f339-6e5a-4b8e-a426-964d3db83745"
+      ],
+      "settings": {
+        "bg_color": "#f0f0f0",
+        "slides_to_show_lg": 3,
+        "slides_to_show_sm": 1,
+        "max_width": 1440,
+        "title": "How it works",
+        "next_step_img": "shopify:\/\/shop_images\/next_c21ddd57-7e38-4b6e-8ef5-77529d1aac2e.png",
+        "tagline_text": "Save 15% when you create a set of 4 products or more",
+        "tagline_bg_color": "#f3e9e2",
+        "tagline_text_color": "#b04a5a",
+        "btn_text": "CREATE MY SET",
+        "btn_bg_color": "#00263a",
+        "btn_color": "#ffffff",
+        "step_bg_color": "#f0f0f0",
+        "text_color": "#00263a"
+      }
+    },
+    "1651587213ecf7bf12": {
+      "type": "index__rich-text",
+      "settings": {
+        "title": "<h1 style=\"font-family: AntroVectra-er; font-size: 70px; line-height:1px;\"><strong>Tutorials<\/strong><\/h1>",
+        "heading_font": "open_sans_n4",
+        "heading_color": "rgba(0,0,0,0)",
+        "heading_alignment": "center",
+        "heading_size": 20,
+        "text": "",
+        "text_font": "open_sans_n4",
+        "text_color": "rgba(0,0,0,0)",
+        "text_alignment": "left",
+        "text_size": 8,
+        "columns": 1,
+        "button_label": "",
+        "button_link": "",
+        "button_alignment": "center",
+        "button_style": "button--primary",
+        "background": "#ffffff",
+        "gradient": "#ffffff",
+        "gradient_rotation": 0,
+        "width": "wide",
+        "padding_top": 33,
+        "padding_bottom": 0,
+        "padding_left": 0,
+        "padding_right": 0,
+        "animation": "none",
+        "css_class": "",
+        "custom_css": ""
+      }
+    },
+    "1651587404f8a8beff": {
+      "type": "index__rich-text",
+      "settings": {
+        "title": "<h2 style=\"font-family: FreightDisp; font-size: 35px; line-height:10px;\"><strong>Face tutorials<\/strong><\/h2>",
+        "heading_font": "open_sans_n4",
+        "heading_color": "rgba(0,0,0,0)",
+        "heading_alignment": "left",
+        "heading_size": 20,
+        "text": "",
+        "text_font": "open_sans_n4",
+        "text_color": "rgba(0,0,0,0)",
+        "text_alignment": "left",
+        "text_size": 8,
+        "columns": 1,
+        "button_label": "",
+        "button_link": "",
+        "button_alignment": "left",
+        "button_style": "button--primary",
+        "background": "#ffffff",
+        "gradient": "#ffffff",
+        "gradient_rotation": 180,
+        "width": "wide",
+        "padding_top": 0,
+        "padding_bottom": 0,
+        "padding_left": 0,
+        "padding_right": 0,
+        "animation": "none",
+        "css_class": "",
+        "custom_css": ""
+      }
+    },
+    "1651587165e793fa97": {
+      "type": "index__slideshow-with-text",
+      "blocks": {
+        "165158716555b730d6-0": {
+          "type": "image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Frame_250.png",
+            "pretext": "<p>HOW TO APPLY<\/p>",
+            "title": "Foundation Stick",
+            "text": "<p>1) Apply Foundation Stick directly onto your face. Apply starting the in center of your face & build outward: the forehead, cheeks, chin and bridge of the nose. <\/p><p>2) Flip your product to the opposite side & use the Foundation Blending Sponge to buff the formula into the skin in an upward and outward motion.<\/p><p>3) When refill is finished, pull cartridge out & recycle. Click the new refill into your Forever Case, enjoy!<\/p>",
+            "button_label": "",
+            "button_link": ""
+          }
+        },
+        "b449d6dd-31c2-4796-bc72-dad13727fcac": {
+          "type": "image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Group_4_eebcfd95-f56f-4416-b93b-93c861eb4fc5.png",
+            "pretext": "<p>HOW TO APPLY<\/p>",
+            "title": "Blush Stick",
+            "text": "<p>1) Apply Blush Stick directly onto cheek area and build to desired intensity.<\/p><p>2) Flip your product to the opposite side & use the Contour Brush to blend the blush into skin in light, circular motions. <\/p><p>3) When refill is finished, pull cartridge out & recycle. Click the new refill into your Forever Case, enjoy!<\/p>",
+            "button_label": "",
+            "button_link": ""
+          }
+        },
+        "41ee5c2d-0c73-4bbc-8e98-524533ea802b": {
+          "type": "image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Group_7.png",
+            "pretext": "<p>HOW TO APPLY<\/p>",
+            "title": "Highlight Stick",
+            "text": "<p>1) Glide the Highlight Stick directly onto face where the light naturally accentuates your features: the brow bone, top of the cheekbones, bridge of the nose and cupid’s bow. <\/p><p>2) Flip your product to the opposite side & use the Highlighter Blending Sponge in a dabbing motion to delicately blend. <\/p><p>3) When refill is finished, pull cartridge out & recycle. Click the new refill into your Forever Case, enjoy!<\/p>",
+            "button_label": "",
+            "button_link": ""
+          }
+        }
+      },
+      "block_order": [
+        "165158716555b730d6-0",
+        "b449d6dd-31c2-4796-bc72-dad13727fcac",
+        "41ee5c2d-0c73-4bbc-8e98-524533ea802b"
+      ],
+      "settings": {
+        "background_color": "#f9ebe3",
+        "text_color": "#00263a",
+        "text_alignment": "center",
+        "text_transition": "fadeIn",
+        "button_style": "button--primary",
+        "show_nav_buttons": true,
+        "image_position": "right",
+        "image_transition": "slide",
+        "image_slideshow_speed": 12,
+        "show_arrows": false,
+        "width": "standard",
+        "show_gutter": true,
+        "padding_top": 0,
+        "padding_bottom": 40,
+        "css_class": "",
+        "custom_css": ""
+      }
+    },
+    "16515882405581c996": {
+      "type": "index__rich-text",
+      "settings": {
+        "title": "<h2 style=\"font-family: FreightDisp; font-size: 35px; line-height:10px;\"><strong>Eyes tutorials<\/strong><\/h2>",
+        "heading_font": "open_sans_n4",
+        "heading_color": "#00263a",
+        "heading_alignment": "left",
+        "heading_size": 20,
+        "text": "",
+        "text_font": "open_sans_n4",
+        "text_color": "rgba(0,0,0,0)",
+        "text_alignment": "left",
+        "text_size": 8,
+        "columns": 1,
+        "button_label": "",
+        "button_link": "",
+        "button_alignment": "center",
+        "button_style": "button--primary",
+        "background": "#ffffff",
+        "gradient": "#ffffff",
+        "gradient_rotation": 180,
+        "width": "wide",
+        "padding_top": 0,
+        "padding_bottom": 0,
+        "padding_left": 0,
+        "padding_right": 0,
+        "animation": "none",
+        "css_class": "",
+        "custom_css": ""
+      }
+    },
+    "1651588300c84de072": {
+      "type": "index__slideshow-with-text",
+      "blocks": {
+        "16515883006b4cc95f-0": {
+          "type": "image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Frame_250_1.png",
+            "pretext": "<p>HOW TO APPLY<\/p>",
+            "title": "Eyeliner",
+            "text": "<p>1) Using short, even strokes, glide the Eyeliner along upper and lower lash line as desired. Flip your product to the opposite side & use the Smudger for a smoky effect. <\/p><p>2) Need to sharpen things up? Remove the Smudger & use the Sharpener inside—just twist gently at the tip of the liner.<\/p><p>3) When refill is finished, pull cartridge out & recycle. Click the new refill into your Forever Case, enjoy!<\/p>",
+            "button_label": "",
+            "button_link": ""
+          }
+        },
+        "df99cb95-e055-414c-a3ee-1e6047e2e312": {
+          "type": "image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Group_5_8cbaa770-b3f3-48ff-b875-27323987d9ac.png",
+            "pretext": "<p>HOW TO APPLY<\/p>",
+            "title": "Brow Pencil + Gel",
+            "text": "<p>1) Define the brow shape by using the flat edge of the Brow Pencil's tip to outline the bottom of the brow from arch to tail. Detail the front of the brow by creating hairlike strokes with the fine tip. <\/p><p>2) Flip your product to the opposite side & brush the Brow Gel through the brow, using the shorter bristles for the front of the brow and longer bristles for the rest of the brow.<\/p><p>3) When refill is finished, pull cartridge out & recycle. Click the new refill into your Forever Case, enjoy!<\/p>",
+            "button_label": "",
+            "button_link": ""
+          }
+        },
+        "92773850-e1f6-4c9e-b9f5-5e904def50be": {
+          "type": "image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Group_8_122abc74-90fe-4f14-9bb5-d25b3f14ad1c.png",
+            "pretext": "<p>HOW TO APPLY<\/p>",
+            "title": "Shadow Crayon",
+            "text": "<p>1) Apply the Shadow Crayon directly on the eyelid and blend into crease line. You may also use shadow as an eyeliner along top and\/or bottom lashline.<\/p><p>2) Flip your product to the opposite side and use the Shadow Blending Brush to shape and blend out as desired. <\/p><p>3)When refill is finished, pull cartridge out & recycle. Click the new refill into your Forever Case, enjoy!<\/p>",
+            "button_label": "",
+            "button_link": ""
+          }
+        }
+      },
+      "block_order": [
+        "16515883006b4cc95f-0",
+        "df99cb95-e055-414c-a3ee-1e6047e2e312",
+        "92773850-e1f6-4c9e-b9f5-5e904def50be"
+      ],
+      "settings": {
+        "background_color": "#f9ebe3",
+        "text_color": "#00263a",
+        "text_alignment": "center",
+        "text_transition": "fadeIn",
+        "button_style": "button--primary",
+        "show_nav_buttons": true,
+        "image_position": "left",
+        "image_transition": "slide",
+        "image_slideshow_speed": 12,
+        "show_arrows": false,
+        "width": "standard",
+        "show_gutter": true,
+        "padding_top": 0,
+        "padding_bottom": 40,
+        "css_class": "",
+        "custom_css": ""
+      }
+    },
+    "1651605584745b9fc3": {
+      "type": "index__rich-text",
+      "settings": {
+        "title": "<h2 style=\"font-family: FreightDisp; font-size: 35px; line-height:10px;\"><strong>Lips tutorials<\/strong><\/h2>",
+        "heading_font": "open_sans_n4",
+        "heading_color": "rgba(0,0,0,0)",
+        "heading_alignment": "left",
+        "heading_size": 20,
+        "text": "",
+        "text_font": "open_sans_n4",
+        "text_color": "rgba(0,0,0,0)",
+        "text_alignment": "left",
+        "text_size": 8,
+        "columns": 1,
+        "button_label": "",
+        "button_link": "",
+        "button_alignment": "center",
+        "button_style": "button--primary",
+        "background": "#ffffff",
+        "gradient": "#ffffff",
+        "gradient_rotation": 180,
+        "width": "wide",
+        "padding_top": 0,
+        "padding_bottom": 0,
+        "padding_left": 0,
+        "padding_right": 0,
+        "animation": "none",
+        "css_class": "",
+        "custom_css": ""
+      }
+    },
+    "1651605628eaa86d13": {
+      "type": "index__slideshow-with-text",
+      "blocks": {
+        "1651605628b5b726dc-0": {
+          "type": "image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Group_3_3ca74fea-1b1e-4d39-b215-a39bae7f76f8.png",
+            "pretext": "<p>HOW TO APPLY<\/p>",
+            "title": "Matte Lip Crayon + Balm",
+            "text": "<p>1) Swipe Matte Lip Crayon directly onto lips for lightweight, vivid matte color. Layer for more intense color. <\/p><p>2) Flip your product to the opposite side & use the Balm to nourish lips or over matte color for a high-shine effect.<\/p><p>3) When refill is finished, pull cartridge out & recycle. Click the new refill into your Forever Case, enjoy!<\/p>",
+            "button_label": "",
+            "button_link": ""
+          }
+        },
+        "7390b582-686c-473d-bd9d-13ab5e034c56": {
+          "type": "image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Group_6.png",
+            "pretext": "<p>HOW TO APPLY<\/p>",
+            "title": "Prime + Shine Lip Crayon",
+            "text": "<p>1) Apply the Primer to your pout for a smoothing, soft-focus effect — the perfect canvas for color-extending wear. <\/p><p>2) Flip your product to the opposite end & apply the Shiny Lip Color directly to your lips. Layer for more intense color.<\/p><p>3) When refill is finished, pull cartridge out & recycle. Click the new refill into your Forever Case, enjoy!<\/p>",
+            "button_label": "",
+            "button_link": ""
+          }
+        }
+      },
+      "block_order": [
+        "1651605628b5b726dc-0",
+        "7390b582-686c-473d-bd9d-13ab5e034c56"
+      ],
+      "settings": {
+        "background_color": "#f9ebe3",
+        "text_color": "#00263a",
+        "text_alignment": "center",
+        "text_transition": "fadeIn",
+        "button_style": "button--primary",
+        "show_nav_buttons": true,
+        "image_position": "right",
+        "image_transition": "slide",
+        "image_slideshow_speed": 12,
+        "show_arrows": false,
+        "width": "standard",
+        "show_gutter": true,
+        "padding_top": 0,
+        "padding_bottom": 40,
+        "css_class": "",
+        "custom_css": ""
+      }
+    }
+  },
+  "order": [
+    "banner_video",
+    "join_hero",
+    "what_makes",
+    "how_it_works",
+    "1651587213ecf7bf12",
+    "1651587404f8a8beff",
+    "1651587165e793fa97",
+    "16515882405581c996",
+    "1651588300c84de072",
+    "1651605584745b9fc3",
+    "1651605628eaa86d13"
+  ]
+}

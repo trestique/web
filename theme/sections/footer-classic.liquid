@@ -1,0 +1,480 @@
+{% comment %}
+** Footer - classic - static **
+- Static section
+- Uses blocks
+{% endcomment %}
+
+{% assign id = section.id %}
+
+{% comment %} Advanced {% endcomment %}
+{% assign css_class = section.settings.css_class %}
+{% assign custom_css = section.settings.custom_css %}
+
+{%- assign locale_selector = false -%}
+{%- assign currency_selector = false -%}
+
+{%- if section.settings.show_currency_selector == true and shop.enabled_currencies.size > 1 -%}
+  {%- assign currency_selector = true -%}
+{%- endif -%}
+
+{%- if section.settings.show_locale_selector == true and shop.published_locales.size > 1 -%}
+  {%- assign locale_selector = true -%}
+{%- endif -%}
+
+{% style %}
+  {% render 'css-loop',
+          css: custom_css,
+          id: id
+  %}
+{% endstyle %}
+
+{% comment %} HTML markup {% endcomment %}
+
+
+<div id="shopify-section-1618845684c3ce9a9c" class="shopify-section newsletter" style="padding: 0;">
+<style data-shopify="">
+  #shopify-section-1618845684c3ce9a9c {
+    {% unless template == 'index' or template == 'page.lastobject-landing-page' %}
+    padding-top: 34px;
+    {% endunless %}
+    padding-bottom: 0px;
+    padding-left: 0px;
+    padding-right: 0px;    
+      width: 100%;    
+  }
+  #shopify-section-1618845684c3ce9a9c .newsletter__wrapper {    
+  }  
+#shopify-section-1618845684c3ce9a9c 
+  .section {
+    background-color: #6ad1e3;
+   }#shopify-section-1618845684c3ce9a9c 
+  .newsletter-container {    
+    width: 100%;    
+   }#shopify-section-1618845684c3ce9a9c 
+  .newsletter__text {
+    color: #000000
+   }
+</style>
+</div>
+
+<footer class="footer__container {{ css_class }}">
+  <section class="footer__content
+                  section
+                  is-width-wide
+                  has-background
+                  has-padding-top
+                  has-padding-bottom">
+    <div class="container has-limit is-justify-space-between">
+      {% for block in section.blocks %}
+        <div id="shopify-section-{{ block.id }}" class="footer__block block__{{ block.id }} block__{{ block.type | downcase | replace: '_', '-' }}
+                    {% render 'column-width', value: section.blocks.size %}
+                    medium-down--one-whole column"
+                    {{ block.shopify_attributes }}>
+          {% if block.type == 'logo' %}
+            {% comment %} Logo and text {% endcomment %}            
+          {% elsif block.type == 'html' %}
+
+            {{ block.settings.html_content }}
+
+          {% elsif block.type == 'link_list' %}
+            {% comment %} Menu {% endcomment %}
+            {% render 'footer__menu', menu_link: block.settings.menu %}
+
+            
+
+          {% elsif block.type == 'text' %}
+            {% comment %} Text {% endcomment %}
+            {% if block.settings.title != blank %}
+              <p class="footer__heading">{{ block.settings.title }}</p>
+            {% endif %}
+            {% if block.settings.content != blank %}
+              {{ block.settings.content }}
+            {% endif %}
+
+            {% if block.settings.social_icons_footer %}
+              <div class="has-padding-bottom has-padding-top">
+                {% render 'social-icons' %}
+              </div>
+            {% endif %}
+
+            {% elsif block.type == 'newsletter' %}
+              {% comment %} Newsletter {% endcomment %}
+              {% if block.settings.newsletter_title != blank %}
+                <p class="footer__heading">
+                  {{ block.settings.newsletter_title }}
+                </p>
+              {% endif %}
+
+              {% if block.settings.newsletter_richtext != blank %}
+                <div class="content">
+                  {{ block.settings.newsletter_richtext }}
+                </div>
+              {% endif %}
+
+              {% render 'newsletter-form',
+                      type: 'block',
+                      display_first_name: block.settings.display_first_name,
+                      display_last_name: block.settings.display_last_name
+              %}
+              
+          {% endif %}
+        </div>
+      {% endfor %}
+    </div>      
+  </section>  
+  <section class="footer__extra-content section">
+    <div class="container has-padding-top has-padding-bottom">      
+
+      <!--<div class="div_menu_footer"> 
+        <ul class="ul_menu_footer">       
+          <li> 
+            <a href="https://www.trestique.com/pages/accessibility" title="Accesibility" rel="me" target="_blank" class="enlace_footer">                
+              Accesibility                  		  
+            </a>
+          </li> 
+          <li> 
+            <a href="https://www.trestique.com/pages/privacy-policy" title="Privacy Policy" rel="me" target="_blank" class="enlace_footer">                
+              Privacy Policy
+            </a>
+          </li>
+          <li> 
+            <a href="https://www.trestique.com/pages/cookies-policy" title="Cookies Policy" rel="me" target="_blank" class="enlace_footer">                
+              Cookies Policy
+            </a>
+          </li>
+          <li> 
+            <a href="https://www.trestique.com/pages/terms-of-service" title="Term and Conditions" rel="me" target="_blank" class="enlace_footer">                
+              Terms &amp Conditions
+            </a>
+          </li> 
+          <li> 
+            <a href="https://www.trestique.com/pages/site-map" title="Site Map" rel="me" target="_blank" class="enlace_footer enlace_footer_final">                
+              Site Map
+            </a>
+          </li>
+        </ul>
+      </div>-->
+      
+      <div class="div_footer2">
+        <div class="footer_caja footer_caja1"> 
+ <a href="https://www.trestique.com/pages/accessibility">                
+              Accessibility &nbsp;               		  
+            </a>
+        </div>
+        <div class="footer_caja footer_caja2">
+<a href="https://www.trestique.com/pages/privacy-policy">                
+              Privacy Policy &nbsp;
+            </a>
+        </div>
+        <div class="footer_caja footer_caja3">
+<a href="https://www.trestique.com/pages/cookies-policy">                
+              Cookies Policy &nbsp;
+            </a>
+        </div>
+        <div class="footer_caja footer_caja4">
+<a href="https://www.trestique.com/pages/terms-of-service">                
+              Terms &amp Conditions &nbsp;
+            </a>
+        </div>
+        <div class="footer_caja footer_caja5">
+<a href="https://www.trestique.com/pages/site-map">                
+              &nbsp; Site Map
+            </a>
+        </div>
+      </div>
+      
+      <div class="footer__credits {% if section.settings.display_payment_methods %}two-thirds {% else %} one-whole {% endif %} column small-down--one-whole">
+        <p class="p_credits">© Copyright Trestique 2024</p>        
+      </div>
+      {% if section.settings.display_payment_methods %}
+        <div class="footer__payment-methods one-third column small-down--one-whole is-flex is-justify-end is-flex-wrap">
+          <div class="payment-methods">
+            {% for type in shop.enabled_payment_types %}
+              {{ type | payment_type_svg_tag: class:'payment-icon' }}
+            {% endfor %}
+          </div>
+        </div>
+      {% endif %}
+    </div>
+  </section>
+  <script>
+    var sif = document.getElementById("shopify-section-1557855119364");
+    var tmp = sif.getElementsByClassName("footer__menu")[0].getElementsByTagName("ul")[0];
+    var fml = tmp.getElementsByClassName("footer__menu-link")[0];
+    fml.innerHTML='<a href="mailto:hello@trestique.com?subject=Mail from Trestique Site" class="is-active"><img class="icon_footer2 icon_footer2_1" src="https://cdn.shopify.com/s/files/1/0114/0621/3220/files/footer_email_256x256.jpg?v=1627248161"/><p class="p_footer_edit">Email us</p></a>';
+    var fml1 = tmp.getElementsByClassName("footer__menu-link")[1];
+    fml1.innerHTML='<a onclick="GorgiasChat.open();" class="is-active"><img class="icon_footer2 icon_footer2_2" src="https://cdn.shopify.com/s/files/1/0114/0621/3220/files/footer-icon-chat-2.jpg?v=1630074172"/><p class="p_footer_edit">Live chat</p></a>';
+    var fml2 = tmp.getElementsByClassName("footer__menu-link")[2];
+    fml2.innerHTML='<a href="https://www.trestique.com/pages/consultation" class="is-active"><img class="icon_footer2 icon_footer2_3" src="https://cdn.shopify.com/s/files/1/0114/0621/3220/files/footer_phone_256x256_crop_center.jpg?v=1627248176"/><p class="p_footer_edit">Video consultation</p></a>';
+    //alert(fml.innerHTML);
+    
+    
+    function show_p(){    
+      var sp = document.querySelectorAll("#show_p");
+      
+      if($(".separador_show").length > 0){
+        var ss = $(".separador_show");
+        if(ss.css('display') =="none"){          
+          ss.css("display", "block");
+          $(sp).text("Show Less");
+        }else if(ss.css('display')==""){          
+          ss.css("display", "block");
+          $(sp).text("Show Less");
+        }else if(ss.css('display')=="block"){
+          ss.css("display", "none");
+          $(sp).text("Show More");
+        }
+      }
+      
+      /*var des = document.getElementsByClassName("description")[0];
+      var cad = des.classList;
+      var band_p=false;
+      for (var ii=0;ii<cad.length;ii++){
+        console.log(cad[ii]);
+        if(cad[ii]=="show"){
+          band_p=true;
+        }
+      }
+      if(band_p){
+      	des.classList.remove("show");
+        sp.innerHTML="Show More";
+      }else{
+        des.classList.add("show");
+        sp.innerHTML="Show Less";
+      }*/
+    }       
+    
+    
+  </script>
+  
+</footer>
+
+{% schema %}
+
+{
+  "name": "Footer",
+  "class": "footer footer--classic",
+  "max_blocks": 5,
+  "settings": [
+    {
+      "type": "richtext",
+      "id": "copyright_text",
+      "label": "Copyright text"
+    },
+    {
+      "type": "checkbox",
+      "id": "display_designed_by",
+      "label": "Show theme designer credits",
+      "default": true
+    },
+    {
+      "type": "checkbox",
+      "id": "display_shopify",
+      "label": "Show Powered by Shopify",
+      "default": true
+    },
+    {
+      "type": "checkbox",
+      "id": "display_payment_methods",
+      "label": "Show payment method icons",
+      "default": true
+    },
+    {
+      "type": "header",
+      "content": "Language selector",
+      "info": "To add a language, go to your [language settings.](/admin/settings/languages)"
+    },
+    {
+      "type": "checkbox",
+      "id": "show_locale_selector",
+      "label": "Show language selector",
+      "default": true
+    },
+    {
+      "type": "header",
+      "content": "Currency selector",
+      "info": "To add a currency, go to your [payment settings.](/admin/settings/payments)"
+    },
+    {
+      "type": "checkbox",
+      "id": "show_currency_selector",
+      "label": "Show currency selector",
+      "default": true
+    },
+    {
+      "type": "header",
+      "content": "Advanced"
+    },
+    {
+      "type": "paragraph",
+      "content": "[Learn more](https://help.outofthesandbox.com/hc/en-us/articles/360022329373)"
+    },
+    {
+      "type": "text",
+      "id": "css_class",
+      "label": "CSS Class"
+    },
+    {
+      "type": "textarea",
+      "id": "custom_css",
+      "label": "Custom CSS"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "html",
+      "name": "Custom HTML",
+      "settings": [
+        {
+          "type": "textarea",
+          "id": "html_content",
+          "label": "HTML",
+          "default": "<h2 class='footer__heading'>Your own custom HTML</h2>"
+        }
+      ]
+    },
+    {
+      "type": "logo",
+      "name": "Logo and text",
+      "settings": [
+        {
+          "type": "header",
+          "content": "Logo"
+        },
+        {
+          "type": "image_picker",
+          "id": "logo",
+          "label": "Logo",
+          "info": "500 x 200px recommended"
+        },
+        {
+          "type": "select",
+          "id": "size",
+          "label": "Logo size",
+          "default": "small",
+          "options": [
+            {
+              "value": "small",
+              "label": "Small"
+            },
+            {
+              "value": "medium",
+              "label": "Medium"
+            },
+            {
+              "value": "large",
+              "label": "Large"
+            }
+          ]
+        },
+        {
+          "type": "richtext",
+          "id": "text",
+          "label": "Text"
+        },
+        {
+          "type": "checkbox",
+          "id": "social_icons_footer",
+          "label": "Show social media icons",
+          "default": false
+        }
+      ]
+    },
+    {
+      "type": "link_list",
+      "name": "Menu",
+      "settings": [
+        {
+          "type": "link_list",
+          "id": "menu",
+          "label": "Menu",
+          "info": "This menu won't show drop-down items.",
+          "default": "footer"
+        },
+        {
+          "type": "checkbox",
+          "id": "social_icons_footer",
+          "label": "Show social media icons",
+          "default": false
+        }
+      ]
+    },
+    {
+      "type": "newsletter",
+      "name": "Newsletter",
+      "limit": 1,
+      "settings": [
+        {
+          "type": "text",
+          "id": "newsletter_title",
+          "label": "Heading",
+          "default": "Subscribe"
+        },
+        {
+          "type": "richtext",
+          "id": "newsletter_richtext",
+          "label": "Text",
+          "default": "<p>Sign up to get the latest on sales, new releases and more …</p>"
+        },
+        {
+          "type": "checkbox",
+          "id": "display_first_name",
+          "label": "Show first name"
+        },
+        {
+          "type": "checkbox",
+          "id": "display_last_name",
+          "label": "Show last name"
+        }
+      ]
+    },
+    {
+      "type": "text",
+      "name": "Text",
+      "settings": [
+        {
+          "type": "text",
+          "id": "title",
+          "label": "Heading",
+          "default": "Title"
+        },
+        {
+          "type": "richtext",
+          "id": "content",
+          "label": "Text",
+          "default": "<p>Use this text to share information about your brand with your customers. Describe a product, share announcements, or welcome customers to your store.</p>"
+        },
+        {
+          "type": "checkbox",
+          "id": "social_icons_footer",
+          "label": "Show social media icons",
+          "default": false
+        }
+      ]
+    },
+    {
+      "type": "empty",
+      "name": "Empty column",
+      "settings": [
+      ]
+    }
+  ],
+  "default": {
+    "blocks": [
+      {
+        "type": "logo"
+      },
+      {
+        "type": "link_list",
+        "settings": {
+          "menu": "main-menu"
+        }
+      },
+      {
+        "type": "text"
+      }
+    ]
+  }
+}
+
+{% endschema %}

@@ -1,0 +1,47 @@
+<script>
+    simply.shopByLook.desc['settings'] = {{section.settings | json}};
+</script>
+    
+    {% schema %}
+    {
+      "name": "Shop by look Description",
+      "settings": [
+        {
+            "type": "color",
+            "id": "text_color",
+            "label": "Text color"
+        },
+        {
+            "type": "color",
+            "id": "back_color",
+            "label": "Background color"
+        },
+        {
+            "type": "richtext",
+            "id": "description",
+            "label": "Description"
+        },
+        {
+            "type": "url",
+            "id": "button_url",
+            "label": "Button link"
+        },
+        {
+            "type": "text",
+            "id": "button_title",
+            "label": "Button title",
+            "default" : "Learn more"
+        },
+        {
+            "type": "color",
+            "id": "btn_text_color",
+            "label": "Button text color"
+        },
+        {
+            "type": "color",
+            "id": "btn_back_color",
+            "label": "Button background color"
+        }
+      ]
+    }
+    {% endschema %}

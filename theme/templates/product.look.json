@@ -1,0 +1,92 @@
+{
+  "sections": {
+    "look-product": {
+      "type": "look-product",
+      "blocks": {
+        "a9f4d3e0-e141-43c5-bd68-9b28a2a6f09b": {
+          "type": "service",
+          "disabled": true,
+          "settings": {
+            "service_icon": "shopify:\/\/shop_images\/trestique-product-icons-Aug-2021_3.png",
+            "service_text": "<p>Free Shipping on<\/p><p>future refills<\/p>"
+          }
+        },
+        "1cca1555-9fe4-4d9a-a8b2-b37bd0fd7939": {
+          "type": "service",
+          "settings": {
+            "service_icon": "shopify:\/\/shop_images\/AfterPay-Logo_023b0fa1-4a15-4eb5-abf4-53ee39694267.png",
+            "service_text": "<p>Pay in 4 easy <\/p><p>installments<\/p>"
+          }
+        },
+        "6965dbc2-a211-4f86-be21-512195746a1a": {
+          "type": "service",
+          "settings": {
+            "service_icon": "shopify:\/\/shop_images\/trestique-product-icons-Aug-2021_5.png",
+            "service_text": "<p>Free Returns &<br\/>Exchanges<\/p>"
+          }
+        }
+      },
+      "block_order": [
+        "a9f4d3e0-e141-43c5-bd68-9b28a2a6f09b",
+        "1cca1555-9fe4-4d9a-a8b2-b37bd0fd7939",
+        "6965dbc2-a211-4f86-be21-512195746a1a"
+      ],
+      "settings": {}
+    },
+    "16523598207b3c33ed": {
+      "type": "apps",
+      "blocks": {
+        "95b6a238-8c92-4d5a-b532-1a602b87e3ba": {
+          "type": "shopify:\/\/apps\/okendo-product-reviews-ugc\/blocks\/reviews-widget\/bb689e69-ea70-4661-8fb7-ad24a2e23c29",
+          "settings": {
+            "product": "{{product}}",
+            "widget_type": "reviews_widget"
+          }
+        }
+      },
+      "block_order": [
+        "95b6a238-8c92-4d5a-b532-1a602b87e3ba"
+      ],
+      "settings": {}
+    },
+    "1652782446186f314d": {
+      "type": "quiz-image-with-text",
+      "blocks": {
+        "8d0dea0d-2726-4e12-be8c-43d7862ff102": {
+          "type": "image_with_text",
+          "settings": {
+            "background_color": "#e0b39e",
+            "shade_image": "shopify:\/\/shop_images\/Group_517.png",
+            "shade_image_mob": "shopify:\/\/shop_images\/Group_517_651f4ce7-9f88-4413-9bda-958f13c50973.png",
+            "shade_title": "Not sure what you need?\nTake the quiz to find your shades",
+            "btn_text_color": "#ffffff",
+            "btn_back_color": "#00263a",
+            "shade_button_url": "shopify:\/\/collections\/customize-your-essentials",
+            "shade_button_title": "Find Your Shades"
+          }
+        },
+        "0a15b3b9-131b-40f4-95e2-1a1b9caba3c4": {
+          "type": "text",
+          "settings": {
+            "background_color": "#f9ebe3",
+            "section_info": "<p>Product performance and safety are our top priorities. We’re committed to health and safety standards that go far beyond the US and surpass the high bar of the EU guidelines. We will never formulate with harmful ingredients, including parabens, phthalates, sulfates, PEGs, BHA, Gluten, fragrance, mineral oil, formaldehyde, triclosan\/ tricarbon, among many other ingredients that are potentially hazardous. We are PETA-certified, cruelty-free and vegan.<\/p>",
+            "cta_background_color": "",
+            "cta_text_color": "#000000",
+            "cta_text": "LEARN MORE",
+            "cta_url": "shopify:\/\/products\/eco-friendly-makeup-bronzer-stick"
+          }
+        }
+      },
+      "block_order": [
+        "8d0dea0d-2726-4e12-be8c-43d7862ff102",
+        "0a15b3b9-131b-40f4-95e2-1a1b9caba3c4"
+      ],
+      "settings": {}
+    }
+  },
+  "order": [
+    "look-product",
+    "16523598207b3c33ed",
+    "1652782446186f314d"
+  ]
+}
