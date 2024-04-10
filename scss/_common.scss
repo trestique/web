@@ -1,0 +1,84 @@
+.responsive-image {
+  width: 100%;
+}
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  -webkit-clip-path: inset(50%);
+  clip-path: inset(50%);
+  border: 0;
+}
+
+.custom-container{
+  max-width: 1330px;
+  padding: 0 15px;
+  margin: 0 auto;
+}
+
+.react-loader{
+     position: fixed;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    top: 0;
+    background: rgba(255,255,255,0.5);
+    transition: 0.3s all;
+    z-index: 100;
+    display: none;
+    .react-loader-wrap{
+      height: 100%;
+      @include flexbox();
+      @include justify-content(center);
+      @include align-items(center);
+      img{
+        width: 100%;
+        max-width: 150px;
+      }
+    }
+    &.active{
+      display: block; 
+    }
+} 
+
+.toast-wrap {
+  position: fixed;
+  bottom: 100px;
+  background-color: $color_fulldarkpink;
+  color: $color_white;
+  right: 100px;
+  left: unset;
+  padding: 12px 15px;
+  max-width: 250px;
+  border-radius: 4px;
+  z-index: 100000000000;
+  .toast-inner-wrap {
+    @include flexbox();
+    @include justify-content(center);
+    p {
+      letter-spacing: 0.6px;
+      font-size: 16px;
+      font-family: $futura_fonts;
+      line-height: 15px;
+      margin-right: 5px;
+      line-height: 1.2;
+    }
+    .close-btn {
+      display: block;
+      width: 15px;
+      height: 15px;
+      text-align: end;
+      cursor: pointer;
+      background-size: cover;
+      background-repeat: no-repeat;
+    }
+  }
+}
+
+
+

@@ -1,0 +1,213 @@
+$slider_color : #fff;
+.slick-slider {
+    position: relative;
+    display: block;
+    box-sizing: border-box;
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    -ms-touch-action: pan-y;
+    touch-action: pan-y;
+    -webkit-tap-highlight-color: transparent;
+  }
+  .slick-dots {
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 10px;
+    text-align: center;
+    > li {
+      button {
+        padding: 0;
+        background: #fff;
+        border-radius: 30px;
+        border: 1px solid #fff;
+        display: inline-block;
+        height: 8px;
+        overflow: hidden;
+        text-indent: -999em;
+        width: 8px;
+        position: relative;
+        z-index: 10;
+        -webkit-transition: all 0.5s linear 0s;
+        -moz-transition: all 0.5s linear 0s;
+        -o-transition: all 0.5s linear 0s;
+        transition: all 0.5s linear 0s;
+      }
+      cursor: pointer;
+      display: inline-block;
+      padding: 0 5px;
+      &.slick-active {
+        button {
+          background: transparent;
+        }
+        @include transform(scale(1.3));
+      }
+    }
+  }
+  .slick-list {
+    position: relative;
+    overflow: hidden;
+    display: block;
+    margin: 0;
+    padding: 0;
+  
+    &:focus {
+      outline: none;
+    }
+  
+    &.dragging {
+      cursor: pointer;
+      cursor: hand;
+    }
+  }
+  .slick-slider .slick-track,
+  .slick-slider .slick-list {
+    -webkit-transform: translate3d(0, 0, 0);
+    -moz-transform: translate3d(0, 0, 0);
+    -ms-transform: translate3d(0, 0, 0);
+    -o-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+  }
+  
+  .slick-track {
+    position: relative;
+    left: 0;
+    top: 0;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+  
+    &:before,
+    &:after {
+      content: "";
+      display: table;
+    }
+  
+    &:after {
+      clear: both;
+    }
+  
+    .slick-loading & {
+      visibility: hidden;
+    }
+  }
+  .slick-slide {
+    float: left;
+    height: 100%;
+    min-height: 1px;
+    [dir="rtl"] & {
+      float: right;
+    }
+    img {
+      display: block;
+      &.xs-hide {
+        @media (max-width: 767px) {
+          display: none;
+        }
+      }
+      &.xs-show {
+        @media (min-width: 768px) {
+          display: none;
+        }
+      }
+    }
+    &.slick-loading img {
+      display: none;
+    }
+  
+    display: none;
+  
+    &.dragging img {
+      pointer-events: none;
+    }
+  
+    .slick-initialized & {
+      display: block;
+    }
+  
+    .slick-loading & {
+      visibility: hidden;
+    }
+  
+    .slick-vertical & {
+      display: block;
+      height: auto;
+      border: 1px solid transparent;
+    }
+  }
+  .slick-arrow.slick-hidden {
+    display: none;
+  }
+  .slick-next,
+  .slick-prev {
+    font-size: 0;
+    line-height: 0;
+    position: absolute;
+    top: 50%;
+    display: block;
+    width: 20px;
+    height: 20px;
+    padding: 0;
+    -webkit-transform: translate(0, -50%);
+    -ms-transform: translate(0, -50%);
+    transform: translate(0, -50%);
+    cursor: pointer;
+    color: transparent;
+    border: none;
+    outline: none;
+    background: transparent;
+  }
+  .slick-prev {
+    left: 0;
+    &:before {
+      content: "\e80e";
+    }
+  }
+  .slick-next {
+    right: 0;
+    &:before {
+      content: "\e804";
+    }
+  }
+  .slick-next,
+  .slick-prev {
+    @include background-opacity($slider_color, 0.5);
+  }
+  
+  .slider-wrapper {
+    position: relative;
+    @include mq("tablet-and-up") {
+      padding: 0 25px;
+    }
+    * {
+      outline: none;
+    }
+    .arrow-left {
+      left: 0;
+    }
+    .arrow-right {
+      right: 0;
+    }
+    .arrow-left,
+    .arrow-right {
+      position: absolute;
+      top: 50%;
+      @include transform(translateY(-50%));
+      background: $slider_color;
+      cursor: pointer;
+      box-shadow: 2px 3px 4px 1px #222;
+      width: 50px;
+      height: 50px;
+      line-height: 60px;
+      text-align: center;
+      border-radius: 100%;
+      svg {
+        fill: #000;
+      }
+    }
+  }
+  

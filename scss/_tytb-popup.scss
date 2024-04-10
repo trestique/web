@@ -1,0 +1,86 @@
+.tytb-popup{
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(255,255,255,0.5);
+    z-index: 100;
+    width: 100%;
+    height: 100%;
+    @include flexbox();
+    @include justify-content(center);
+    @include align-items(center);
+    .tytb-popup-content{
+        width: 100%;
+        max-width: 450px;
+        background: #F3E9E2;
+        box-shadow: -9px 109px 44px rgba(0, 0, 0, 0.01), -5px 61px 37px rgba(0, 0, 0, 0.05), -2px 27px 27px rgba(0, 0, 0, 0.09), -1px 7px 15px rgba(0, 0, 0, 0.1), 0px 0px 0px rgba(0, 0, 0, 0.1);
+        border-radius: 8px;
+        padding: 20px;
+        text-align: center;
+        @include mq('phone'){
+            width: calc(100% - 30px);
+        }
+        .title{
+            text-transform: uppercase;
+        }
+        .title,p, ul li{
+            text-align: center;
+            letter-spacing: 0.05em;
+            margin-bottom: 15px;
+            font-family: 'Futura';
+            font-style: normal;
+            font-weight: 400;
+            font-size: 14px;
+            line-height: 17px;
+            color: $navy-color;
+        }
+        ul {
+            margin-bottom: 15px;
+            li{
+                color: #535353;
+                margin: 0;
+            }
+        }
+        .confirm-btns-wrapper{
+            @include flexbox();
+            @include justify-content(center);
+            .btn{
+                max-width: 50%;
+                margin-inline: 10px;
+                @include mq('phone'){
+                    margin-inline: 5px;
+                }
+                &.second-bg{
+                    background: #A5A5A5;
+                    border-color: #A5A5A5;
+                }
+            }
+        }
+        .inform-btns-wrapper{
+            @include flexbox();
+            @include justify-content(center);
+            .btn{
+                max-width: 120px;
+                text-transform: uppercase;
+                letter-spacing: 1px;
+                margin-top: 15px;
+            }
+        }
+        .btn{
+            background: $navy-color;
+            border-radius: 8px;
+            padding: 8px 5px;
+            width: 100%;
+            max-width: 50%;
+            color: $color-white;
+            text-transform: uppercase;
+            cursor: pointer;
+            border: 1px solid;
+            @include mq('phone'){
+                font-size: 12px;
+            }
+        }
+    }
+}

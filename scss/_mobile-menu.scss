@@ -1,0 +1,37 @@
+/* mobile menu */
+.mobile-submenu__list {
+  .mega-menu__section {
+    .mega-menu__block {
+      .mega-menu__content {
+        a {
+          font-family: $font_FreightDisp;
+        }
+        .mega-menu__linklist {
+          ul {
+            @include mq("phone") {
+              margin-left: 15%;
+            }
+            li {
+              .mega-menu__linklist-link {
+                @include mq("phone") {
+                  line-height: 1.5 !important;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+    .mega-menu__banner  {
+      @include mq("phone") {
+        padding: 5px 10px;
+      }
+      .mega-menu__sticker-text {
+        @include mq("phone") {
+          padding: 0;
+          font-size: 14px;
+        }
+      }
+    }
+  }
+}

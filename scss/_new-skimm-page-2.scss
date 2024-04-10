@@ -1,0 +1,103 @@
+.page-new-skimm-2{
+  .block__image-with-overlay{
+    .image-with-text-overlay__banner{
+      .button--secondary{
+        &:hover{
+          background: 0 0 !important;
+          color: $color_navy !important;
+          border-color: $color_navy;
+        }
+      }
+    }
+  }
+  #shopify-section-content-new_skimm-5{
+    .image-with-text__column{
+      @include mq('phone'){
+        width: 100%!important;
+        margin: 0!important;
+        padding: 20px 0!important;
+      }
+    }
+    #shopify-section-content-new_skimm-5-1{
+      .image-with-text__text-column{
+        @include mq('phone'){
+          padding-top: 0!important;
+          .image-with-text__wrapper{
+            padding: 0 30px;
+          }
+        }
+      }
+    }
+    .section{
+      @include mq('phone'){
+        width: 100%;
+      }
+    }
+    .block__image-with-text{
+      @include mq('phone'){
+        padding: 0!important;
+      }
+    }
+    @include mq('phone'){
+      #shopify-section-content-new_skimm-5-2, #shopify-section-content-new_skimm-5-3{
+        .image-with-text__image-column{
+          padding: 0!important;
+        }
+        .image-with-text__wrapper{
+          padding: 0 30px;
+        }
+        .image-with-text__text p{
+          color: $color_navy;
+          font-size: 16px;
+          line-height: 22px;
+        }
+        .image-with-text__heading{
+          @include mq('phone'){
+            font-size: 42px!important;
+            line-height: 42px!important;
+          }
+        }
+      }
+    }
+    #shopify-section-content-new_skimm-5-4{
+      @include mq('phone'){
+        .image-with-text-overlay__banner{
+          .caption{
+            margin: 0 auto;
+            left: 8%;
+            .caption-content{
+              width: 100%;
+              padding: 0;
+              .banner__heading{
+                font-size: 48px!important;
+                line-height: 36px!important;
+                margin: 10px 0 30px;
+                padding: 10px 20px 0;
+              }
+              .image-with-text-overlay__subheading{
+                font-size: 14px;
+                padding: 10px 20px 0;
+              }
+              .image-with-text-overlay__buttons{
+                padding: 0 20px;
+                margin-bottom: 40px;
+              }
+            }
+            .is-hidden-desktop-only{
+              display: none;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+.image-with-text-overlay__banner{
+  .caption{
+    .is-hidden-desktop-only{
+      @include mq('phone'){
+        display: none;
+      }
+    }
+  }
+}

@@ -1,0 +1,59 @@
+.look-bundle-products{
+    margin-bottom: 50px;
+    @include mq('phone'){
+        border-top: 0.2px solid #000000;
+        padding-top: 25px;
+    }
+    .swiper-wrapper{
+        @include flexbox();
+        .swiper-slide{
+            @include flexbox();
+            height: auto;
+        }
+    }
+    .look-bundle-product{
+        width: 100%;
+        // height: 100%;
+        padding: 5px;
+        background: #F7F7F7;
+        border-radius: 8px;
+        text-align: center;
+        @include flexbox();
+        @include flex-direction(column);
+        @include justify-content(space-between);
+        // min-height: 210px;
+        @include mq('phone-and-tablet'){
+            background: #fff;
+        }
+        .shade-details,.product-image-details{
+            // @include flexbox();
+            // @include flex-direction(column);
+            // @include justify-content(space-between);
+        }
+        .product-title{
+            font-size: 12px;
+            font-family: $futura_bt;
+            margin-bottom: 4px;
+            min-height: 36px;
+        }
+        .img{
+            margin-bottom: 4px;
+            img{
+                width: 100%;
+                max-width: 100%;
+                height: auto;
+            }
+        }
+        .variant-title{
+            margin-bottom: 4px;
+            font-size: 10px;
+            font-family: $futura_bt;
+            min-height: 36px;
+        }
+        .change-shade-btn{
+            cursor: pointer;
+            font-size: 10px;
+            font-family: $futura_bt;
+        }
+      }
+}

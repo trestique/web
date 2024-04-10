@@ -1,0 +1,96 @@
+.model-look-img-text {
+    background-color: $color_update_btn;
+    @include flexbox();
+    @include align-items(stretch);
+    @include flex-wrap(wrap);
+    margin-top: 10px;
+    .perfect-shade-banner {
+      flex: 0 0 100%;
+      @include mq("tablet-and-up") {
+        @include flexbox();
+        @include align-items(center);
+      }
+      background-color: $shop-look-color;
+      @include mq("phone") {
+        display: block;
+        margin-bottom: 24px;
+        text-align: center;
+      }
+      .shade-banner-images {
+        width: 50%;
+        @include mq("phone") {
+          width: 100%;
+        }
+        img {
+          max-width: 100%;
+          display: block;
+        }
+      }
+      .shade-banner-content {
+        flex: 1;
+        max-width: 100%;
+        @include mq("phone") {
+          width: 100%;
+        }
+        @include mq("tablet-and-up") {
+          width: 50%;
+          height: 100%;
+        }
+        padding: 25px 32px 30px 70px;
+        @include mq("lap-and-below") {
+          padding-left: 32px;
+        }
+        @include mq("phone") {
+          padding: 16px;
+        }
+        .shade-banner-desc,
+        .shade-banner-desc > p {
+          font-family: $font_FreightDisp;
+          font-weight: 500;
+          font-size: 48px;
+          line-height: 60px;
+          letter-spacing: 0.03em;
+          @include mq("lap-and-below") {
+            font-size: 40px;
+          }
+          @include mq("phone") {
+            line-height: 32px;
+            font-size: 24px;
+            letter-spacing: 0;
+          }
+        }
+        .shade-banner-desc {
+          p {
+            @include mq("phone") {
+              display: inline;
+            }
+          }
+        }
+        .shade-banner-btn {
+          margin-top: 38px;
+          @include mq("phone") {
+            margin-top: 16px;
+          }
+          .button {
+            font-weight: 400;
+            font-size: 24px;
+            line-height: 40px;
+            letter-spacing: 0.03em;
+            text-transform: uppercase;
+            border-radius: 8px;
+            border: none;
+            outline: none;
+            @include mq("desk-and-up") {
+              display: block;
+              max-width: 363px;
+            }
+            @include mq("phone") {
+              max-width: 100%;
+              font-size: 16px;
+              display: block;
+            }
+          }
+        }
+      }
+    }
+  }

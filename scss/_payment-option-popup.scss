@@ -1,0 +1,127 @@
+.payment-option-popup {
+  // opacity: 0;
+  // visibility: hidden;
+  display: none;
+  position: fixed;
+  background-color: rgba(0, 0, 0, 0.4);
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  z-index: 1000;
+  padding: 25px;
+  transition: 0.3s all;
+  &.active{
+      display: block;
+  }
+  .payment-option-popup-close {
+    cursor: pointer;
+    position: absolute;
+    top: 60px;
+    right: 25px;
+    color: $color_black;
+    background-color: $color_white;
+    img{
+        display: block;
+    }
+    @include mq('phone'){
+        top: 28px;
+        right: 5px;
+    }
+  }
+  .payment-option-popup-content {
+    position: relative;
+    background-color: #fefefe;
+    margin: auto;
+    padding: 50px;
+    border: 1px solid #908e8e;
+    width: 100%;
+    height: auto;
+    overflow-x: hidden;
+    overflow-y: auto;
+    max-width: 1000px;
+    height: auto;
+    max-height: 100%;
+    @include mq('phone'){
+        padding: 25px;
+    }
+    .main-title {
+      display: block;
+      margin-bottom: 25px;
+      color: $color_activeBlue;
+      span {
+        font-size: 40px;
+        font-weight: bold;
+        text-transform: uppercase;
+        font-family: $heading_font;
+        @include mq('phone'){
+            font-size: 24px
+        }
+      }
+    }
+    .payment-option-popup-block {
+      @include flexbox();
+      @include justify-content(center);
+      @include align-items(center);
+      @include flex-wrap(wrap);
+      height: 100%;
+      margin: 0 -30px;
+      @include mq('phone'){
+            margin: 0 -15px;
+      }
+      .payment-option-block {
+        border-right: 1px solid $color_navy;
+        width: 50%;
+        padding: 0 30px;
+        height: auto;
+        @include mq('phone'){
+            width: 100%;
+            padding: 0 15px;
+            border: none;
+        }
+        &:last-child{
+            border: none;
+        }
+        .title {
+            img{
+                max-height: 20px;
+            }
+          span {
+              font-family: $futura_fonts;
+            font-size: 30px;
+            text-transform: uppercase;
+            color: $color_navy;
+            @include mq('phone'){
+                font-size: 20px;
+            }
+          }
+        }
+        .text {
+          span {
+            font-size: 17px;
+            color: $gray-shade;
+            color: $color_navy;
+            font-family: $futura_fonts;
+          }
+        }
+        .description {
+          background-color: $sustain-bg;
+          margin-top: 25px;
+          padding: 30px;
+          padding-right: 15px;
+          ul,ol {
+            list-style-type: upper-greek;
+            padding: 10px;
+            font-size: 20px;
+            font-family: $futura_fonts;
+            color: $color_navy;
+            img{
+                max-height: 15px;
+                vertical-align: middle;
+            }
+          }
+        }
+      }
+    }
+  }
+}

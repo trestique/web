@@ -1,0 +1,14 @@
+@import './shop-by-look-banner';
+@import './shop-by-look-banner-video';
+@import './shop-by-look-category-slider';
+@import './shop-by-look-grid';
+@import './shop-by-look-image-with-text';
+@import'./shop-by-look-para';
+@import './shop-by-look-popup';
+@import './quiz-image-with-text';
+.shop-by-look {
+  .perfect-shade-banner {
+    max-width: 1170px;
+    margin: 0 auto;
+  }
+}

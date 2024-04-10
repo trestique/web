@@ -1,0 +1,86 @@
+.look-product-details-wrapper{
+    box-sizing: border-box;
+    width: 369px;
+    max-width: 100%;
+    padding-left: 16px;
+    @include mq('phone-and-tablet'){
+        width: 100%;
+        padding: 0 15px;
+        margin-bottom: 16px;
+    }
+    .look-product-details{
+        height: auto;
+        background: #FFFFFF;
+        border: 1px solid #E9E9E9;
+        box-shadow: 0px 9px 22px rgba(0, 0, 0, 0.1);
+        border-radius: 8px;
+        padding: 16px;
+        @include mq('phone-and-tablet'){
+            width: 100%;
+            padding: 0;
+            margin-bottom: 16px;
+            box-shadow: none;
+            border: none;
+            background: #fff;
+        }
+        .product-title{
+            font-family: $font_FreightDisp;
+            font-style: normal;
+            font-weight: 500;
+            font-size: 20px;
+            letter-spacing: 0.05em;
+            color: #082D41;
+            margin-bottom: 8px;
+        }
+        .product-review{
+            margin-bottom: 35px;
+        }
+        .product-description{
+            margin-bottom: 32px;
+        }
+        form{
+            .add-to-cart{
+                background: $color_navy;
+                border-radius: 8px;
+                height: 40px;
+                width: 100%;
+                @include flexbox();
+                @include justify-content(center);
+                @include align-items(center);
+                color: $color_white;
+                cursor: pointer;
+                span.compare-price{
+                    text-decoration: line-through;
+                    margin-left: 5px;
+                    display: inline-block;
+                }
+            }
+        }
+        .services-list{
+            @include flexbox();
+            @include flex-wrap(wrap);
+            margin-top: 20px;
+            li{
+                width: 33.333%;
+                @include flexbox();
+                @include flex-direction(column);
+                @include justify-content(space-between);
+                .img{
+                    margin-bottom: 5px;
+                    img{
+                        max-width: 52px;
+                        display: block;
+                        margin: 0 auto;
+                    }
+                }
+                .service-text{
+                    p{
+                        font-size: 12px;
+                        text-align: center;
+                        margin-bottom: 2px;
+                    }
+                }
+            }
+        }
+    }
+}

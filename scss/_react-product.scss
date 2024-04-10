@@ -1,0 +1,1571 @@
+.react-product-page {
+  padding-top: 50px;
+  .react-product-template {
+    max-width: 1250px;
+    margin: 0 auto 25px;
+    padding: 0 15px;
+    .image-details {
+      max-width: calc(100% - 530px);
+      padding: 15px 0;
+      width: 100%;
+      @include mq("phone") {
+        max-width: 100%;
+      }
+    }
+    .react-product-details {
+      max-width: 530px;
+      width: 100%;
+      padding: 0 15px;
+      padding-left: 30px;
+      &.subscribe-product {
+        @include mq("phone") {
+          .variants-text-info {
+            display: none;
+          }
+        }
+      }
+      @include mq("phone") {
+        padding: 0;
+      }
+    }
+    .react-product-wrapper {
+      @include flexbox();
+      @include flex-wrap(wrap);
+      > div[class^="col"] {
+        @include mq("phone") {
+          padding: 0;
+        }
+      }
+      .product-slider {
+        @include flexbox();
+        @include flex-wrap(wrap);
+        @include mq("phone") {
+          margin-bottom: 25px;
+        }
+        .main-slider {
+          width: calc(100% - 75px);
+          padding-left: 15px;
+          @include mq("phone") {
+            width: 100%;
+            padding-left: 0;
+            padding-bottom: 30px;
+          }
+          position: relative;
+          .product-floating-img {
+            position: absolute;
+            top: 0;
+            z-index: 1;
+            left: 0;
+            .float-img {
+              img {
+                width: 100%;
+                max-width: 100px;
+                @include mq("phone") {
+                  max-width: 70px;
+                }
+              }
+            }
+          }
+          .slick-dots {
+            bottom: -30px;
+            z-index: 1;
+            li {
+              &.slick-active {
+                @include transform(scale(1));
+                button {
+                  background: $color_navy;
+                  border-color: $color_navy;
+                }
+              }
+              button {
+                border-color: #888;
+                background: #888;
+                height: 10px;
+                width: 10px;
+              }
+            }
+          }
+        }
+        .thumb-slider {
+          width: 75px;
+          @include flexbox();
+          @include align-items(flex-end);
+          @include mq("phone") {
+            display: none;
+          }
+          .thumb-images {
+            max-height: 340px;
+            width: 100%;
+          }
+          .thumb-slide {
+            margin-bottom: 15px;
+          }
+        }
+      }
+      .react-product-details {
+        .product-title {
+          line-height: 1;
+          font-size: 42px;
+          margin-bottom: 10px;
+          @include mq("phone") {
+            font-size: 32px;
+          }
+        }
+        .product-review {
+          margin-bottom: 10px;
+        }
+        .short-info {
+          margin-bottom: 10px;
+          &.extra-margin {
+            margin-bottom: 25px;
+          }
+        }
+        .selected-variant-details {
+          margin-bottom: 25px;
+          .variant-title {
+            font-family: $futura_book;
+            font-size: 15px;
+            font-weight: bold;
+          }
+        }
+        .variants-details {
+          .option-name {
+            font-family: $futura_bt;
+            font-size: 18px;
+            margin-bottom: 12px;
+            font-weight: 700;
+          }
+          ul.swatch-wrap {
+            @include flexbox();
+            @include justify-content(left);
+            @include flex-wrap(wrap);
+            @include mq('phone-and-tablet') {
+              padding-top: 12px
+            }
+            &.review-swatch-wrap {
+              @include justify-content(flex-start);
+            }
+            &.swatch-type-normal {
+              margin-bottom: 15px;
+              li.swatch-element {
+                background: #f3e9e2;
+                color: $color_navy;
+                border-radius: 100%;
+                font-family: $futura_bt;
+                border-color: #f3e9e2;
+                &.active {
+                  background: #b04a5a;
+                  border-color: #b04a5a;
+                  color: $color_white;
+                }
+                label {
+                  height: 45px;
+                  width: 45px;
+                  @include flexbox();
+                  @include align-items(center);
+                  @include justify-content(center);
+                  span {
+                    font-size: 14px;
+                  }
+                }
+              }
+            }
+            li.swatch-element {
+              min-width: auto;
+              min-height: auto;
+              cursor: pointer;
+              border: none;
+              margin-right: 8px;
+              border: 2px solid transparent;
+              margin-bottom: 15px;
+              position: relative;
+              &.color {
+                padding: 0;
+              }
+              &.active {
+                border: 2px solid $color_navy;
+              }
+              &:hover {
+                .variant-color-tag {
+                  display: block;
+                }
+              }
+              label {
+                width: 28px;
+                height: 28px;
+                display: block;
+                cursor: pointer;
+                border: none;
+                span {
+                  font-size: 0;
+                }
+              }
+              .variant-color-tag {
+                position: absolute;
+                top: -22px;
+                font-size: 12px;
+                left: 50%;
+                padding: 1px 8px;
+                display: block;
+                line-height: 1.4;
+                transform: translateX(-50%);
+                // display: none;
+                @include mq('phone-and-tablet') {
+                  top: -23px
+                }
+              }
+            }
+          }
+        }
+        .variants-text-info {
+          @include flexbox();
+          @include justify-content(left);
+          margin-bottom: 10px;
+          p {
+            margin-right: 5px;
+            font-family: $futura_bt;
+            font-size: 14px;
+            a {
+              color: $color_blue;
+              text-decoration: underline;
+            }
+          }
+        }
+        .product-selling-plans {
+          border: 1px solid #6c6c6c;
+          margin-bottom: 15px;
+          position: relative;
+          @include mq("phone") {
+            border: 1px solid #dedede;
+            background: #f1f1f1;
+          }
+          .purchase-type {
+            padding: 15px;
+            @include mq("phone") {
+              padding: 10px 15px;
+              padding-right: 30px;
+              gap: 10px;
+              border-bottom: 1px solid #dedede;
+            }
+            &.subscribe-type {
+              border-bottom: 1px solid #e9e9e9;
+            }
+            &.active {
+              .left-side-label-wrap {
+                .label-item {
+                  .outer-circle {
+                    .inner-circle {
+                      opacity: 1;
+                    }
+                  }
+                  .plan-title {
+                    font-weight: bold;
+                    font-family: "Futura";
+                  }
+                }
+              }
+            }
+            &.subscribe-type {
+              .left-side-label-wrap {
+                width: calc(100% - 40px);
+                @include mq("phone") {
+                  width: 100%;
+                }
+                .label-item {
+                  @include flexbox();
+                  @include justify-content(space-between);
+                  @include align-items(center);
+                }
+                .item {
+                  width: calc(100% - 50px);
+                  max-width: 100%;
+                }
+                .subscribe-option {
+                  width: calc(100% - 138px);
+                }
+                .subscribe-info {
+                  @include mq("phone") {
+                    padding-left: 8px;
+                    width: 138px;
+                  }
+                }
+                .select-box-wrap {
+                  @include mq("phone") {
+                    opacity: 0;
+                    @include flexbox();
+                    @include flex-wrap(wrap);
+                    background: #f1f1f1;
+                    position: absolute;
+                    background: #f1f1f1;
+                    z-index: 5;
+                    bottom: 0;
+                    visibility: hidden;
+                    transform: 0.3s all;
+                    left: 0;
+                    right: 0;
+                    padding: 0 15px;
+                    &.active {
+                      opacity: 1;
+                      visibility: visible;
+                    }
+                  }
+                }
+              }
+            }
+            @include flexbox();
+            @include justify-content(space-between);
+            @include align-items(center);
+            .badge-wrap {
+              position: absolute;
+              right: 15px;
+              top: 0;
+              background-color: $color_navy;
+              color: $color_white;
+              padding: 9px 15px;
+              border-radius: 0 0 8px 8px;
+              @include mq("phone") {
+                display: none;
+              }
+            }
+            .left-side-label-wrap {
+              .label-item {
+                position: relative;
+                .item {
+                  cursor: pointer;
+                  @include flexbox();
+                  @include flex-wrap(wrap);
+                  @include align-items(center);
+                  font-size: 16px;
+                  font-family: $futura_bt;
+                  max-width: 285px;
+                  @include mq("phone") {
+                    font-size: 14px;
+                    max-width: 100%;
+                  }
+                  @media (max-width: 410px) {
+                    font-size: 12px;
+                  }
+                  @media (max-width: 365px) {
+                    font-size: 10px;
+                  }
+                  .subscribe-text-wrap {
+                    // @include flexbox();
+                    // @include align-items(center);
+                    .subscribe-offer {
+                      margin-left: 5px;
+                      .edit-subscribe {
+                        cursor: pointer;
+                        display: inline-block;
+                        margin-left: 5px;
+                        font-size: 14px;
+                        text-decoration: underline;
+                      }
+                    }
+                  }
+                }
+                .outer-circle {
+                  width: 22px;
+                  height: 22px;
+                  border: 1px solid;
+                  border-radius: 100%;
+                  text-align: center;
+                  @include flexbox();
+                  @include justify-content(center);
+                  @include align-items(center);
+                  margin-right: 10px;
+                  .inner-circle {
+                    opacity: 0;
+                    width: 18px;
+                    height: 18px;
+                    border-radius: 100%;
+                    text-align: center;
+                    background: $color_activeBlue;
+                  }
+                }
+              }
+            }
+            .right-side-wrap {
+              width: 60px;
+              @include mq("phone") {
+                // width: 50px;
+                text-align: right;
+                padding-left: 8px;
+              }
+              .price-wrap {
+                font-size: 18px;
+                @include mq("phone") {
+                  display: inline-block;
+                  font-size: 18px;
+                }
+                p {
+                  display: block;
+                  text-align: center;
+                  font-size: 18px;
+                  &.compare-price {
+                    text-decoration: line-through;
+                  }
+                  &.sale-price {
+                    color: #ed2020;
+                  }
+                }
+              }
+              &.pdp-right-price-wrapper {
+                .price-wrap {
+                  @include mq("tablet-and-up") {
+                    position: relative;
+                    top: 20px;
+                  }
+                }
+              }
+            }
+            .close-subscibe-xs {
+              display: none;
+              @include mq("phone") {
+                display: inline-block;
+                width: 18px;
+                height: 18px;
+                cursor: pointer;
+                opacity: 0;
+                visibility: hidden;
+                transition: 0.3s all;
+                position: absolute;
+                right: -24px;
+                top: 5px;
+                &.active {
+                  visibility: visible;
+                  opacity: 1;
+                }
+                img {
+                  display: block;
+                  width: 100%;
+                  max-width: 100%;
+                  height: auto;
+                }
+              }
+            }
+          }
+          .subscribe-option {
+            width: 100%;
+            max-width: 330px;
+            font-size: 12px;
+            padding: 5px;
+            cursor: pointer;
+            outline: none;
+            margin: 3px 0;
+            background-color: $color_white;
+            border: 1px solid $color_navy;
+            color: $color_navy;
+            @include mq("phone") {
+              font-size: 10px;
+              padding: 5px 0;
+            }
+            @media (min-width: 400px) {
+              font-size: 12px;
+            }
+          }
+        }
+        .purchase-type-wrapper {
+          @include flexbox();
+          @include align-items(center);
+          background-color: $Dawn_Pink;
+          padding: 14px;
+          margin-bottom: 14px;
+          @include mq("phone") {
+            position: fixed;
+            width: 100%;
+            left: 0;
+            margin-bottom: 0;
+            z-index: 12;
+            bottom: 65px;
+            padding-bottom: 6px;
+            padding-top: 6px;
+            @include justify-content(center);
+            text-align: center;
+          }
+          .wrapper {
+            @include mq("phone") {
+              width: 100%;
+            }
+            .plan-title {
+              font-size: 16px;
+              font-weight: 700;
+              line-height: 20px;
+              margin-bottom: 10px;
+              @include mq("phone") {
+                font-weight: 600;
+                font-size: 19px;
+                line-height: 24px;
+                margin-bottom: 5px;
+              }
+            }
+            .discount-info {
+              @include mq("phone") {
+                display: inline-block;
+                font-size: 14px;
+                position: absolute;
+                width: max-content;
+                top: 42%;
+              }
+            }
+            .select-wrapper {
+              position: relative;
+              @include mq("phone") {
+                display: inline-block;
+                margin-right: 7px;
+              }
+              .select-input {
+                text-align: center;
+                background-image: url($down_arrow);
+                background-position: 95%;
+                background-repeat: no-repeat;
+                background-size: 14px;
+                border: 0.9px solid $color_navy;
+                background-color: $color_white;
+                color: $color_navy;
+                font-size: 13px;
+                line-height: 15px;
+                letter-spacing: 0.03rem;
+                padding: 5px;
+                display: block;
+                cursor: pointer;
+                @include mq("phone") {
+                  padding-left: 30px;
+                  padding-right: 30px;
+                }
+              }
+              .options-wrapper {
+                display: none;
+                position: absolute;
+                width: 100%;
+                color: $color_white;
+                background-color: $Dark_blue;
+                text-align: center;
+                font-size: 12px;
+                line-height: 16x;
+                letter-spacing: 0.03em;
+                @include mq("phone") {
+                  bottom: 100%;
+                }
+                &.active {
+                  display: block;
+                }
+                .option {
+                  cursor: pointer;
+                  padding-top: 4px;
+                  padding-bottom: 4px;
+                }
+              }
+            }
+            .extra-info {
+              margin-top: 7px;
+              font-size: 11px;
+              line-height: 13px;
+              a {
+                text-decoration: underline;
+              }
+            }
+          }
+          .discount-info {
+            flex-grow: 1;
+            text-align: right;
+            text-transform: uppercase;
+            font-size: 17px;
+            line-height: 21px;
+            color: $color_navy;
+            @include mq("tablet-and-up") {
+              padding-right: 50px;
+            }
+          }
+        }
+        .error-message {
+          color: $color_red;
+          font-size: 13px;
+          line-height: 20px;
+          margin: 10px 0;
+        }
+        .subscribe-info {
+          font-size: 14px;
+          @include mq("phone") {
+            font-size: 12px;
+          }
+          .shipping-info-learn-more {
+            display: inline-block;
+            padding-left: 5px;
+            cursor: pointer;
+            text-decoration: underline;
+          }
+          img {
+            width: 20px;
+            margin-left: 5px;
+            vertical-align: middle;
+            cursor: pointer;
+            @include mq("phone") {
+              width: 15px;
+            }
+          }
+        }
+        .add-to-cart {
+          padding: 0px 30px;
+          @include flexbox();
+          @include justify-content(space-between);
+          @include align-items(center);
+          color: $color_white;
+          background: $color_navy;
+          opacity: 1;
+          font-family: $futura_bt;
+          cursor: pointer;
+          font-size: 18px;
+          text-transform: uppercase;
+          @include mq("phone") {
+            max-width: 100%;
+            padding: 0 15px;
+          }
+          .text {
+            letter-spacing: 1.2px;
+            position: relative;
+            // &::after{
+            // content:"";
+            // position: absolute;
+            // border-left: 1px solid $color_white;
+            // height: 35px;
+            // width: 2px;
+            // right: 0;
+            // top: 50%;
+            // @include transform(translateY(-50%));
+            // }
+          }
+          .price {
+            padding-left: 30px;
+          }
+          .compare-price {
+            text-decoration: line-through;
+          }
+          &.soldout {
+            background: #888;
+            border-color: #888;
+          }
+        }
+        .GiftWizard-gift-button.add-to-cart.gwbutton {
+          // display: none !important;
+        }
+        .gift-cart-add-to-cart.add-to-cart {
+          // display: none;
+          padding: 10px 20px;
+        }
+        .gift-cart-add-to-cart.add-to-cart.gwbutton {
+          display: block;
+          height: 46px;
+        }
+        .mobile-bottom-bar {
+          position: fixed;
+          bottom: 0;
+          left: 0;
+          right: 0;
+          z-index: 11;
+          background-color: $color_white;
+        }
+        .quantity-cart-btn-wrap {
+          @include flexbox();
+          @include justify-content(space-between);
+          margin-bottom: 0;
+          position: relative;
+          @include mq("phone") {
+            gap: 16px;
+            width: 100%;
+            margin: 15px auto;
+            max-width: calc(100% - 30px);
+          }
+          &.subscription-plan {
+            .spinner {
+              opacity: 0;
+              visibility: hidden;
+            }
+            .add-to-cart {
+              border-radius: 8px;
+              max-width: 100%;
+              @include justify-content(space-between);
+            }
+          }
+          .spinner {
+            transition: 0.3s all;
+            @include flexbox();
+            @include align-items(center);
+            border: 2px solid $color_navy;
+            width: 130px;
+            @include mq("phone") {
+              width: 80px;
+            }
+            input {
+              height: 35px;
+              width: 50px;
+              outline: none;
+              text-align: center;
+              border: none;
+              @include mq("phone") {
+                width: 40px;
+              }
+              &::-webkit-outer-spin-button,
+              &::-webkit-inner-spin-button {
+                -webkit-appearance: none;
+                margin: 0;
+              }
+            }
+            .min,
+            .plus {
+              height: 40px;
+              width: 40px;
+              font-size: 24px;
+              cursor: pointer;
+              vertical-align: middle;
+              line-height: 40px;
+              font-family: $futura_bt;
+              font-weight: 700;
+              text-align: center;
+              @include mq("phone") {
+                width: 30px;
+                height: 36px;
+                line-height: 36px;
+              }
+            }
+          }
+          .add-to-cart {
+            position: absolute;
+            right: 0;
+            top: 0;
+            z-index: 5;
+            width: 100%;
+            bottom: 0;
+            transition: 0.3s all;
+            max-width: 300px;
+            @include mq("phone") {
+              max-width: calc(100% - 95px);
+            }
+          }
+        }
+
+        .product-buy-together {
+          .main-title {
+            font-size: 16px;
+            font-family: $futura_bt;
+            margin-bottom: 15px;
+          }
+          .product-buy-together-details {
+            @include flexbox();
+            @include flex-wrap(wrap);
+            @include justify-content(space-between);
+            .items {
+              @include flexbox();
+              @include justify-content(space-between);
+              width: 100%;
+              margin-bottom: 25px;
+              @include mq("phone") {
+                width: 100%;
+              }
+              li {
+                flex: 1;
+                width: 100%;
+                position: relative;
+                cursor: pointer;
+                display: inline-block;
+                @include mq("phone") {
+                  width: 33.333%;
+                }
+                &:nth-child(2),
+                &:nth-child(3) {
+                  margin-left: 30px;
+                  .img::before {
+                    position: absolute;
+                    content: "+";
+                    top: 50%;
+                    @include transform(translateY(-50%));
+                    left: -22px;
+                    font-size: 25px;
+                  }
+                }
+                .img {
+                  position: relative;
+                  img {
+                    width: 100%;
+                    border: 1px solid $color_navy;
+                  }
+                  .check-mark {
+                    position: absolute;
+                    top: 5px;
+                    right: 5px;
+                    z-index: 1;
+                    opacity: 1;
+                    svg {
+                      width: 20px;
+                      height: 20px;
+                      background: #6ad1e3;
+                      border-radius: 100%;
+                      vertical-align: middle;
+                      line-height: 20px;
+                      padding: 2px;
+                    }
+                  }
+                }
+                .combo-product-title {
+                  font-size: 13px;
+                  font-family: $futura_bt;
+                }
+              }
+            }
+            .total-prices {
+              @include mq("phone") {
+                width: 100%;
+                text-align: center;
+              }
+              .price-wrap {
+                display: block;
+                .price {
+                  display: inline-block;
+                  font-size: 22px;
+                  font-family: $futura_bt;
+                  padding-bottom: 5px;
+                  border-bottom: 1px solid;
+                  text-transform: uppercase;
+                  margin-bottom: 8px;
+                  @include mq("phone") {
+                    font-size: 21px;
+                  }
+                }
+              }
+              .buy-together-btn {
+                outline: none;
+                color: $color_white;
+                cursor: pointer;
+                text-transform: uppercase;
+                padding: 7px 20px;
+                background: $color_darkpink;
+                border-color: $color_darkpink;
+                @include mq("tablet-and-up") {
+                  width: 100%;
+                }
+                &:disabled {
+                  opacity: 0.5;
+                }
+              }
+            }
+          }
+        }
+
+        .gift-suggestion-product {
+          .gift-suggest-title {
+            font-size: 16px;
+            font-family: $futura_bt;
+            margin-bottom: 15px;
+          }
+          .gift-product-items {
+            @include flexbox();
+            @include flex-wrap(wrap);
+            padding: 0;
+            margin: 0 -10px;
+            @include mq("phone") {
+              margin: 0 -5px;
+            }
+            li {
+              max-width: 150px;
+              padding: 0 10px;
+              @include mq("phone") {
+                width: 33.333%;
+                max-width: 100%;
+                padding: 0 5px;
+              }
+              .img {
+                border: 1px solid #c4c4c4;
+                margin-bottom: 10px;
+                img {
+                  width: 100%;
+                  max-width: 100%;
+                  height: auto;
+                  background: #f3e9e2;
+                }
+              }
+              .suggest-product-title {
+                font-size: 14px;
+                font-family: $futura_bt;
+                text-align: center;
+                @include mq("phone") {
+                  font-size: 12px;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+.product-page-videos {
+  padding: 25px 0;
+  iframe,
+  video {
+    width: 100%;
+    max-width: 100%;
+    height: 100%;
+  }
+}
+.image-grid-with-title {
+  @include mq("phone") {
+    &.section.has-background {
+      width: 100%;
+    }
+  }
+  .title {
+    font-family: $futura_bt;
+    font-size: 34px;
+    @include mq("phone") {
+      font-size: 24px;
+      text-align: center;
+    }
+  }
+}
+.product-review-slider {
+  padding: 25px 0;
+  .review-items {
+    max-width: 500px;
+    margin: 0 auto 70px;
+    .slick-arrow {
+      display: none;
+      background-repeat: no-repeat;
+      background-position: center;
+      width: 30px;
+      height: 40px;
+      @include mq("phone") {
+        display: block;
+      }
+      &.slick-next {
+        background-image: url(https://cdn.shopify.com/s/files/1/0114/0621/3220/files/right-product-arrow.png?v=1637253328);
+      }
+      &.slick-prev {
+        background-image: url(https://cdn.shopify.com/s/files/1/0114/0621/3220/files/left-product-arrow.png?v=1637253328);
+      }
+    }
+    .slick-dots {
+      bottom: -50px;
+      li {
+        &.slick-active {
+          @include transform(scale(1));
+          button {
+            background: $color_navy;
+            border-color: $color_navy;
+          }
+        }
+        button {
+          border-color: #888;
+          background: #888;
+          height: 10px;
+          width: 10px;
+        }
+      }
+    }
+    .review-item {
+      text-align: center;
+      .review-text {
+        font-size: 24px;
+        font-family: $futura_bt;
+        margin-bottom: 15px;
+        text-align: center;
+        p {
+          line-height: 1.3;
+        }
+      }
+      .review-author {
+        text-align: center;
+        font-size: 18px;
+        font-family: $futura_bt;
+        margin-bottom: 20px;
+      }
+      .img {
+        text-align: center;
+        img {
+          margin: 0 auto;
+          display: block;
+          max-width: 150px;
+        }
+      }
+    }
+  }
+}
+.product-image-with-text {
+  .items {
+    .item {
+      @include flexbox();
+      @include justify-content(center);
+      @include align-items(center);
+      @include flex-wrap(wrap);
+      padding: 15px 0;
+      @include mq("phone-and-tablet") {
+        display: block;
+        padding-top: 0;
+      }
+      &.right {
+        @include mq("tablet-and-up") {
+          @include flex-direction(row-reverse);
+        }
+      }
+      .img {
+        width: 50%;
+        padding: 0 15px;
+        img {
+          width: 100%;
+          max-width: 100%;
+          height: auto;
+        }
+        @include mq("tablet") {
+          margin: 0 auto;
+        }
+        @include mq("phone") {
+          width: 100%;
+          margin-bottom: 30px;
+          padding: 0px;
+        }
+      }
+      .details {
+        width: 50%;
+        padding: 0 75px;
+        @include mq("phone-and-tablet") {
+          width: 100%;
+        }
+        @include mq("phone") {
+          width: 100%;
+          padding: 0 25px;
+        }
+        .title {
+          font-size: 70px;
+          font-family: $font_FreightDisp;
+          line-height: 1;
+          margin-bottom: 15px;
+          @include mq("phone") {
+            font-size: 30px;
+            margin-bottom: 10px;
+          }
+          span {
+            text-align: center;
+            display: block;
+          }
+        }
+        .desc {
+          font-size: 25px;
+          text-align: left;
+          font-family: $futura_bt;
+          margin-bottom: 20px;
+          @include mq("phone") {
+            font-size: 20px;
+            margin-bottom: 30px;
+          }
+          p {
+            text-align: left;
+          }
+        }
+        .main-icons {
+          @include flexbox();
+          @include align-items(center);
+          @include justify-content(center);
+          margin: 0 auto 10px;
+          &.position-left {
+            @include justify-content(left);
+            @include mq("phone-and-tablet") {
+              @include justify-content(center);
+            }
+          }
+          &.position-center {
+            @include justify-content(center);
+            @include mq("phone-and-tablet") {
+              @include justify-content(center);
+            }
+          }
+          &.position-right {
+            @include justify-content(right);
+            @include mq("phone-and-tablet") {
+              @include justify-content(center);
+            }
+          }
+          .main-icon {
+            width: 100%;
+            max-width: 100px;
+            margin: 0 25px;
+            @include mq("phone") {
+              max-width: 120px;
+            }
+            &:last-child {
+              margin-right: 0;
+            }
+            &:first-child {
+              margin-left: 0;
+            }
+            img {
+              width: 100%;
+              max-width: 100%;
+            }
+          }
+        }
+        .text-wrapper {
+          font-size: 25px;
+          @include mq("phone-and-tablet") {
+            text-align: center;
+          }
+        }
+        .others-info {
+          @include flexbox();
+          @include align-items(center);
+          @include justify-content(space-between);
+          margin-bottom: 30px;
+          .texts-list {
+            .list {
+              @include flexbox();
+              @include align-items(center);
+              margin-bottom: 10px;
+              .logo {
+                text-align: left;
+                margin-right: 15px;
+                @include mq("phone") {
+                  margin-right: 0;
+                }
+                .logo-img {
+                  text-align: center;
+                  img {
+                    width: 100%;
+                    max-width: 60px;
+                  }
+                }
+                h3 {
+                  font-size: 65px;
+                  line-height: 1;
+                  margin: 0;
+                  text-align: center;
+                  font-family: $font_FreightDisp;
+                  @include mq("phone") {
+                    font-size: 24px;
+                  }
+                }
+              }
+              .list-text {
+                font-size: 20px;
+                flex: 1;
+                @include mq("phone") {
+                  font-size: 14px;
+                  padding-left: 15px;
+                }
+              }
+            }
+          }
+        }
+        .btn-wrap {
+          margin-top: 20px;
+          @include mq("phone-and-tablet") {
+            text-align: center;
+          }
+          a {
+            text-transform: uppercase;
+            font-family: $futura_book;
+            font-size: 18px;
+            text-decoration: underline;
+          }
+        }
+      }
+    }
+  }
+}
+.template-product {
+  .image-with-text-overlay {
+    .banner__heading.title {
+      font-family: $font_FreightDisp;
+      font-size: 74px;
+      @include mq("phone") {
+        font-size: 32px;
+      }
+    }
+    .mobile-text--below-media .caption {
+      @include mq("phone") {
+        position: absolute;
+        @include transform(translateY(-50%));
+      }
+    }
+  }
+
+  .okeReviews-widget-holder {
+    max-width: 1440px;
+    margin: 0 auto;
+    padding: 0 15px;
+  }
+}
+
+.subscription-popup-bg {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.5);
+  z-index: 1000;
+  display: none;
+}
+.subscription-popup-details {
+  display: none;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  padding: 50px 20px 30px;
+  background: #fff;
+  bottom: 0;
+  z-index: 1010;
+  @include transform(translate(-50%, -50%));
+  max-width: calc(100% - 20px);
+  width: 420px;
+  overflow-y: auto;
+  height: 440px;
+  max-height: calc(100vh - 10vh);
+  @include mq("phone") {
+    height: 480px;
+  }
+  .close-popup {
+    width: 16px;
+    height: 16px;
+    position: absolute;
+    right: 16px;
+    top: 16px;
+    cursor: pointer;
+    img {
+      width: 100%;
+      max-width: 100%;
+      height: auto;
+    }
+  }
+  ul {
+    position: relative;
+    margin-bottom: 35px;
+    &:before {
+      content: "";
+      position: absolute;
+      top: 5px;
+      bottom: 0;
+      left: 7px;
+      border-left: 2px solid $color_navy;
+    }
+    li {
+      margin-bottom: 16px;
+      padding-left: 30px;
+      position: relative;
+      &:before {
+        content: "";
+        position: absolute;
+        top: 4px;
+        left: 0;
+        width: 16px;
+        height: 16px;
+        background: $color_navy;
+      }
+      &:last-child:after {
+        content: "";
+        position: absolute;
+        top: 20px;
+        border-left: 2px solid #fff;
+        bottom: 0;
+        z-index: 1;
+        left: 7px;
+      }
+    }
+  }
+  .btn-wrap {
+    button {
+      width: 300px;
+      max-width: 100%;
+      font-size: 18px;
+      background: $color_navy;
+      color: $color_white;
+      height: 45px;
+      text-transform: uppercase;
+      line-height: 40px;
+      border: 2px solid $color_black;
+    }
+    text-align: center;
+  }
+}
+.product-tabs {
+  margin-bottom: 20px;
+  .tabs-items {
+    li.tab-item {
+      border-bottom: 1px solid #c4c4c4;
+      padding: 15px 15px 0;
+      &.active {
+        background: $color_lightpink;
+        .title .plus-icon {
+          display: none;
+        }
+        .title .minus-icon {
+          display: block;
+        }
+      }
+      .title {
+        font-family: $font_FreightDisp;
+        font-size: 24px;
+        margin-bottom: 15px;
+        font-weight: 500;
+        cursor: pointer;
+        color: $color_navy;
+        position: relative;
+        .minus-icon,
+        .plus-icon {
+          position: absolute;
+          top: 50%;
+          right: 0;
+          @include transform(translateY(-50%));
+        }
+        .minus-icon {
+          display: none;
+        }
+      }
+      .tab-info {
+        display: none;
+        margin-bottom: 15px;
+        font-family: $futura_bt;
+        font-size: 16px;
+        color: $color_navy;
+        .metafield-multi_line_text_field {
+          font-size: 14px;
+        }
+        p {
+          margin-bottom: 10px;
+        }
+        ul {
+          list-style: disc;
+          padding-left: 18px;
+        }
+      }
+    }
+  }
+}
+.product-services {
+  margin-bottom: 20px;
+  &.subscribe-plan {
+    .service-items {
+      @include justify-content(space-evenly);
+      li {
+        @include justify-content(center);
+        width: initial;
+        margin-bottom: unset;
+        img {
+          max-width: 60px;
+          margin-right: 0;
+          @include mq("phone") {
+            max-height: 65px;
+          }
+        }
+      }
+    }
+  }
+  .service-items {
+    @include flexbox();
+    @include justify-content(space-between);
+    @include flex-wrap(wrap);
+    list-style: none;
+    @include align-items(center);
+    min-height: 54px;
+    li {
+      @include flexbox();
+      @include align-items(center);
+      font-family: $futura_bt;
+      font-size: 12px;
+      width: 33.333%;
+      @include mq("phone") {
+        width: 100%;
+        margin-bottom: 20px;
+        @include justify-content(flex-start);
+        &:last-child {
+          margin-bottom: 0;
+        }
+      }
+      img {
+        max-width: 50px;
+        width: 100%;
+        margin-right: 5px;
+        @include mq("phone") {
+          margin-right: 15px;
+        }
+      }
+      p {
+        @include mq("phone") {
+          display: inline-block;
+        }
+      }
+      .service-learn-more {
+        display: none;
+        padding-left: 5px;
+        cursor: pointer;
+        text-decoration: underline;
+        @include mq("phone") {
+          display: inline-block;
+        }
+      }
+    }
+  }
+}
+.product-reviews-wrap {
+  padding: 30px;
+  background-color: $color_review_bg;
+  margin-top: 110px;
+  padding-bottom: 50px;
+  @include mq("phone") {
+    padding: 15px;
+    margin-top: 40px;
+    padding-bottom: 30px;
+  }
+  .product-reviews-slide {
+    .review-inner-wrap {
+      .review-inner {
+        @include flexbox();
+        padding: 0 50px;
+        padding-left: 75px;
+        @include mq("phone") {
+          padding: 0 25px;
+        }
+        .author-img {
+          width: 120px;
+          @include mq("phone") {
+            width: 60px;
+          }
+          img {
+            width: 100%;
+          }
+        }
+        .review-text-wrap {
+          width: calc(100% - 120px);
+          padding-inline: 30px;
+          @include mq("phone") {
+            width: calc(100% - 50px);
+            padding-inline: 10px;
+          }
+          .author-name-country {
+            @include flexbox();
+            @include align-items(center);
+            gap: 32px;
+            margin-bottom: 15px;
+            .author-name {
+              font-size: 18px;
+            }
+            .author-country {
+              img {
+                width: 32px;
+              }
+            }
+          }
+          .author-review {
+            font-size: 18px;
+            font-style: italic;
+            @include mq("phone") {
+              font-size: 14px;
+            }
+          }
+        }
+      }
+    }
+    .slick-arrow {
+      width: 30px;
+      height: 30px;
+      z-index: 10;
+      @include mq("phone") {
+        width: 20px;
+        height: 20px;
+      }
+      &::before {
+        display: none;
+      }
+    }
+    .slick-prev {
+      background: url("https://cdn.shopify.com/s/files/1/0114/0621/3220/files/prev.png?v=1644825454");
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: contain;
+      left: 0;
+    }
+    .slick-next {
+      right: 0;
+      background: url("https://cdn.shopify.com/s/files/1/0114/0621/3220/files/next.png?v=1644825454");
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: contain;
+      background-position: right;
+    }
+    .slick-dots {
+      bottom: -30px;
+      z-index: 1;
+      @include mq("phone") {
+        bottom: -25px;
+      }
+      li {
+        &.slick-active {
+          @include transform(scale(1));
+          button {
+            background: $color_navy;
+            border-color: $color_navy;
+          }
+        }
+        button {
+          border-color: #888;
+          background: #888;
+          height: 10px;
+          width: 10px;
+          cursor: pointer;
+        }
+      }
+    }
+  }
+}
+
+@include mq("phone") {
+  body:has(.purchase-type-wrapper) {
+    #shopify-section-header-centered__top-bar .top-bar.navbar {
+      display: none;
+    }
+    .react-product-page {
+      padding-top: 0;
+      .react-product-template {
+        padding: 0 25px;
+        .subscribe-product {
+          .variants-text-info {
+            display: none;
+          }
+          .product-title {
+            font-size: 36px;
+            line-height: 46px;
+            letter-spacing: 0.1em;
+            font-family: $font_FreightDisp;
+            margin-bottom: 0;
+          }
+          .variants-details ul.swatch-wrap li.swatch-element {
+            margin-bottom: 11px;
+            label {
+              width: 20px;
+              height: 20px;
+            }
+          }
+        }
+        .image-details {
+          padding-top: 0;
+          padding-bottom: 12px;
+        }
+        .mobile-bottom-bar {
+          padding-left: 40px;
+          padding-right: 40px;
+          @include mq("phone-small") {
+            padding-left: 20px;
+            padding-right: 20px;
+          }
+        }
+        .product-slider {
+          margin-bottom: 0;
+          .main-slider .slick-dots {
+            bottom: -25px;
+            li button {
+              width: 15px;
+              height: 15px;
+              color: $color_gray;
+            }
+          }
+        }
+      }
+    }
+  }
+}

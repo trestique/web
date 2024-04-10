@@ -1,0 +1,22 @@
+.shop-by-look-desc{
+    .shop-by-look-desc-block{
+        max-width: 768px;
+        margin: 0 auto;
+        padding: 108px 15px;
+        text-align: center;
+        @include mq('phone'){
+            padding: 50px 15px;
+        }
+        .desc{
+            margin-bottom: 50px;
+            font-size: 18px;
+            line-height: 28px;
+            letter-spacing: 0.5px;
+        }
+        a.btn{
+            font-size: 18px;
+            text-transform: uppercase;
+            padding-bottom: 5px;
+        }
+    }
+}

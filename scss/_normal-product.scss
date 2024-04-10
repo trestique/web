@@ -1,0 +1,55 @@
+.order-groove-subsription{
+    display: block;
+    &:empty{
+        display: none;
+    }
+    .subscription-main{
+        padding: 15px;
+        border: 1px solid #00263a;
+        margin-bottom: 15px;
+        display: block;
+        max-width: 700px;
+        .multi-time-purchase{
+            padding-left: 25px;
+        }
+        .subsribe-info{
+            padding-left: 25px;
+            @include mq('phone'){
+                padding: 0;
+                font-size: 14px;
+            }
+        }
+        p.item{ 
+            font-weight: bold; 
+            margin-bottom: 10px;
+        }
+        span.red-item{
+            color: #ba0c2f;
+        }
+        .subscribe-item{
+            font-weight: bold; 
+            margin-bottom: 10px;
+            @include mq('phone'){
+                font-size: 14px;
+                font-weight: 500;
+                margin-bottom: 15px;
+            }
+            .subscribtion-select{
+                border-radius: 0;
+                font-weight: 500;
+                border: 1px solid #00263a;
+                @include mq('phone'){
+                    width: 80%;
+                    padding: 5px;
+                    font-size: 14px;
+                }
+                span,og-select span{
+                    display: none;
+                }
+                og-select{
+                    display: none;
+                }
+            }
+        }
+    }
+}

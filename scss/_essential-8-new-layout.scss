@@ -1,0 +1,906 @@
+@import './mixin.scss';
+
+.essential-8-new-layout {
+    display: flex;
+    max-width: 1240px;
+    justify-content: start;
+    width: 100%;
+    margin: 0 auto;
+    padding: 40px 72px;
+    gap: 0;
+    @include mq('phone-and-tablet') {
+        justify-content: space-between;
+        flex-direction: column;
+        padding: 0 0 15px;
+    }
+    .product-es8-title-wrapper{
+        @include mq('phone-and-tablet') {
+            padding: 0 15px;
+        }
+        .product-es8-new-offer-badge {
+            width: fit-content;
+            // padding: 10px 10px;
+            text-transform: uppercase;
+
+
+            font-size: 14px;
+            padding: 6px 11px;
+
+            @include mq('phone-and-tablet') {
+                font-size: 10px;
+                padding: 4px 18px;
+            }
+        }
+
+        .product-es8-details-text-title-price {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            @include mq('phone-and-tablet') {
+                margin-bottom: 5px;
+            }
+
+            .product-es8-details-text-title {
+                font-size: 45px;
+                font-weight: 500;
+                color: #091F2C;
+
+                @include mq('phone-and-tablet') {
+                    font-size: 32px;
+                    width: 100%;
+                    line-height: 1;
+                }
+            }
+
+
+            .product-es8-details-text-priceContainer {
+                display: flex;
+                gap: 15px;
+                &.xs-show{
+                    display: none;
+                }
+                @include mq('phone-and-tablet') {
+                    width: 45%;
+                    &.xs-show{
+                        display: flex;
+                    }
+                    &.xs-hide{
+                        display: none;
+                    }
+                }
+
+                .product-es8-details-text-originalPrice {
+                    color: var(--www_trestique_com_products_essential-8_375x830_default-Silver, #CCC);
+                    font-size: 22.216px;
+                    font-style: normal;
+                    font-weight: 400;
+                    line-height: 26.659px;
+                    /* 120% */
+                    letter-spacing: 0.93px;
+                    text-decoration: line-through;
+                    @include mq('phone-and-tablet') {
+                        font-size: 16px;
+                        line-height: 1;
+                    }
+                }
+
+                .product-es8-details-text-discoutedPrice {
+                    color: var(--www_trestique_com_products_essential-8_375x830_default-Firefly, #091F2C);
+                    font-size: 22.216px;
+                    font-style: normal;
+                    font-weight: 400;
+                    line-height: 26.659px;
+                    letter-spacing: 0.93px;
+                    @include mq('phone-and-tablet') {
+                        font-size: 16px;
+                        line-height: 1;
+                    }
+                }
+            }
+
+            .product-es8-details-text-reviews {
+                display: flex;
+                gap: 3px;
+                padding: 5px 0 2px;
+                margin-bottom: 0;
+                width: 100%;
+                &.full{
+                    width: 100%;
+                }
+                @include mq('phone-and-tablet') {
+                    padding: 0;
+                    justify-content: right;
+                    width: 55%;
+                    &.full{
+                        justify-content: left;
+                    }
+                    .okeReviews-reviewsSummary-ratingCount>span{
+                        font-size: 14px;
+                    }
+                }
+            }
+        }
+    }
+
+    .layout-left {
+        width: 40%;
+
+        @include mq('phone-and-tablet') {
+            width: 100%;
+            padding: 0 15px;
+        }
+
+        .full-images{
+            margin : 30px 0px ; 
+            .swiper-pagination{
+                padding: 0;
+                padding-left: 15px;
+                text-align: center;
+                .swiper-pagination-bullet.swiper-pagination-bullet-active {
+                    opacity: 1;
+                    background: #00263A;
+                }
+            }
+        }
+        .half-images{
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            margin : 30px 0px ; 
+            @include mq('phone-and-tablet') {
+                width: 100%;
+                flex-wrap: wrap;
+                // padding: 0 15px;
+            }
+            .half-image-item{
+                width: calc(50% - 12.5px);
+                @include mq('phone-and-tablet') {
+                    width: 100%;
+                    margin-bottom: 25px;
+                    &:last-child{
+                        margin-bottom: 0;
+                    }
+                }
+            }
+        }
+
+        .image-slider {
+            max-width: 500px;
+
+            @include mq('phone-and-tablet') {
+                max-width: 100%;
+                // margin: 0 -15px;
+            }
+
+            .swiper-pagination {
+                text-align: left;
+                padding: 0;
+                bottom: 15px;
+                left: 15px;
+                .swiper-pagination-bullet {
+                    height: 10px !important;
+                    width: 10px !important;
+                    &.swiper-pagination-bullet-active{
+                        opacity: 1;
+                        background: $color_navy;
+                    }
+                }
+            }
+        }
+
+        .product-benefits {
+            margin-top: 30px;
+            display: flex;
+            justify-content: space-between;
+            background-color: rgba(243, 233, 226, 0.5);
+            padding: 13px 0;
+            border-radius: 10px;
+            @include mq('phone'){
+                padding: 10px 0;
+                border-radius: 0;
+                margin: 0 -15px 0;
+            }
+
+            .benefits-bar {
+                width: 25%;
+                text-align: center;
+                font-size: 16px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                border-right: 1px solid black;
+                font-family: $futura_bt;
+                font-weight: 700;
+                padding: 0 15px;
+                @include mq('phone'){
+                    font-size: 14px;
+                }
+                img{
+                    max-width: 50px;
+                    width: 100%;
+                }
+                &:last-child{
+                    border: none;
+                }
+            }
+        }
+
+        .accordian-wrapper {
+            width: 100%;
+            padding: 30px 0px;
+
+
+            .accordianContainer {
+                width: 100%;
+
+                &.showBorder {
+                    border-bottom: 1px solid black;
+                }
+
+                .accordianContainerShown {
+                    width: 100%;
+                    display: flex;
+                    justify-content: space-between;
+                    align-items: center;
+                    color: #00263A;
+
+                    font-size: 18.203px;
+                    font-style: normal;
+                    font-weight: 500;
+                    line-height: 20.479px;
+                    /* 112.5% */
+                    letter-spacing: 0.758px;
+                    padding: 11px 12px;
+                    cursor: pointer;
+
+                }
+
+                .accordiandetailsHidden {
+                    overflow: hidden;
+                    height: 0px;
+
+
+                    &.showDetail {
+                        height: auto;
+                        padding: 11px 12px;
+                    }
+                }
+
+
+            }
+        }
+
+        .review-slider {
+            width: 100%;
+            margin: auto;
+            .swiper-slide-active{
+                z-index: 1;
+            }
+
+            .review-wrapper {
+
+                background: var(--Trestique-Cream, #F3E9E2);
+                display: flex;
+                flex-direction: row;
+                justify-content: start;
+                width: 100%;
+                flex-wrap: wrap;
+                margin: auto;
+                padding-right: 5px;
+                position: relative;
+                align-items: center;
+                .review-left {
+                    width: 110px;
+                    &::after{
+                        content: "";
+                        position: absolute;
+                        left: 0;
+                        width: 15%;
+                        background: #fff;
+                        top: 0;
+                        bottom: 0;
+                    }
+                    .reviewer-image-wrapper {
+                        background-color: white;
+                        border-radius: 100%;
+                        position: relative;
+                        width: 100%;
+                        z-index: 1;
+                        img {
+                            border-radius: 100%;
+                            box-shadow: 2px 3px 3px #C6BEB8;
+                        }
+                    }
+                }
+
+                .review-right {
+                    display: flex;
+                    width: calc(100% - 130px);
+                    flex-direction: column;
+                    padding: 10px;
+                    p {
+                        font-family: $futura_bt;
+                        color: #00263A;
+                        text-align: center;
+                        font-size: 14px;
+                        font-style: normal;
+                        font-weight: 400;
+                        line-height: normal;
+
+                    }
+
+                    .reviewer-name {
+                        color: #00263A;
+                        font-family: FreightDispMedium;
+                        text-align: center;
+                        font-size: 14.644px;
+                        font-style: normal;
+                        font-weight: 500;
+                        line-height: 1;
+                        /* 186.965% */
+                        padding: 8px 0px 0px;
+                    }
+                }
+
+
+            }
+        }
+
+        .product-features {
+            margin: 20px 0px;
+
+            .product-services {
+                margin-bottom: 20px;
+
+                &.subscribe-plan {
+                    .service-items {
+                        @include justify-content(space-evenly);
+
+                        li {
+                            @include justify-content(center);
+                            width: initial;
+                            margin-bottom: unset;
+
+                            img {
+                                max-width: 60px;
+                                margin-right: 0;
+
+                                @include mq("phone") {
+                                    max-height: 65px;
+                                }
+                            }
+                        }
+                    }
+                }
+
+                .service-items {
+                    @include flexbox();
+                    @include justify-content(space-between);
+                    @include flex-wrap(wrap);
+                    list-style: none;
+                    @include align-items(center);
+                    min-height: 54px;
+
+                    li {
+                        @include flexbox();
+                        @include align-items(center);
+                        font-family: $futura_bt;
+                        font-size: 12px;
+                        width: 33.333%;
+
+                        @include mq("phone") {
+                            width: 100%;
+                            margin-bottom: 20px;
+                            @include justify-content(flex-start);
+
+                            &:last-child {
+                                margin-bottom: 0;
+                            }
+                        }
+
+                        img {
+                            max-width: 50px;
+                            width: 100%;
+                            margin-right: 5px;
+
+                            @include mq("phone") {
+                                margin-right: 15px;
+                            }
+                        }
+
+                        p {
+                            @include mq("phone") {
+                                display: inline-block;
+                            }
+                        }
+
+                        .service-learn-more {
+                            display: none;
+                            padding-left: 5px;
+                            cursor: pointer;
+                            text-decoration: underline;
+
+                            @include mq("phone") {
+                                display: inline-block;
+                            }
+                        }
+                    }
+                }
+            }
+
+        }
+    }
+
+    .product-es8-details {
+
+
+        width: 60%;
+        display: flex;
+        flex-direction: column;
+        padding-left: 80px;
+        @include mq('phone-and-tablet') {
+            width: 100%;
+            padding-left: 0;
+        }
+
+        .product-es8-details-text-description {
+            color: #091F2C;
+            font-size: 14.996px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: 22.494px;
+            padding: 20px 0px;
+            @include mq('phone-and-tablet') {
+                padding: 20px 15px;
+            }
+        }
+
+        .product-es8-details-text {
+            
+
+            .product-es8-details-text-showButton {
+                width: fit-content;
+                color: #B14C59;
+                font-size: 14.059px;
+                font-style: normal;
+                font-weight: 400;
+                padding: 3px 0px 0px 0px;
+                line-height: 22.494px;
+                /* 160% */
+                text-decoration-line: underline;
+                cursor: pointer;
+
+            }
+
+
+        }
+
+        .product-es8-details-display {
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            gap: 0;
+            padding: 33px 0px 0;
+            @include mq('phone-and-tablet') {
+                padding: 15px 15px 0;
+            }
+            .choose-your-shade-title{
+                color: #00263A;
+                text-align: center;
+                font-family: $futura_bt;
+                font-size: 18px;
+                font-style: normal;
+                font-weight: 400;
+                margin-bottom: 20px;
+            }
+            .product-es8-details-display-product {
+                margin-bottom: 40px;
+                box-sizing: border-box;
+                // border : 1px solid black ; 
+                display: flex;
+                justify-content: space-between;
+                &:last-child{
+                    margin-bottom: 0;
+                }
+                @include mq('phone-and-tablet') {
+                    flex-direction: column;
+                    // gap: 20px;
+                }
+
+                .product-display-image {
+                    width: 25%;
+
+                    @include mq('phone-and-tablet') {
+                        width: 50%;
+                    }
+                }
+
+                .product-display-details {
+                    width: calc(75% - 15px);
+                    box-sizing: border-box;
+                    display: flex;
+                    flex-direction: column;
+
+                    @include mq('phone-and-tablet') {
+                        display: flex;
+                        width: 100%;
+                        gap: 0;
+                        flex-direction: initial;
+                        align-items: center;
+                        flex-wrap: wrap;
+                    }
+
+                    .product-display-name {
+                        display: flex;
+                        width: 100%;
+
+                        @include mq('phone-and-tablet') {
+                            display: flex;
+                            width: 100%;
+                            height: 51px;
+                            margin-bottom: 15px;
+                        }
+
+                        .product-display-name-index {
+                            color: #FFF;
+                            padding: 5px 13px;
+                            font-size: 12px;
+                            font-family: FuturaBT;
+                            font-style: normal;
+                            font-weight: 400;
+                            width: 60px;
+                            min-height: 40px;
+                            display: flex;
+                            justify-content: center;
+                            align-items: center;
+                            /* 101.869% */
+                            letter-spacing: 0.715px;
+                            border-radius: 13px 0 0 13px;
+                            background: #00263A;
+                            text-align: center;
+
+                            @include mq('phone-and-tablet') {
+                                padding: 13px 22px;
+                                font-size: 14px;
+                                font-style: normal;
+                                line-height: 15.999px;
+                                border-radius: 6.918px 0px 0px 6.918px;
+                                width: 80px;
+                                display: flex;
+                                align-items: center;
+                                justify-content: center;
+                            }
+                        }
+
+                        .product-display-name-indexValue {
+                            width: 60%;
+                            font-family: FuturaBT;
+                            max-width: 100%;
+                            font-weight: 700;
+                            padding: 5px 5px;
+                            padding-left: 8px;
+                            color: #00263a;
+                            font-size: 13px;
+                            font-style: normal;
+                            font-weight: 400;
+                            line-height: 15.999px;
+                            letter-spacing: .715px;
+                            border-radius: 0px 10.666px 10.666px 0px;
+                            background: var(--Trestique-Digital, #F0F0F0);
+                            display: flex;
+                            justify-content: start;
+                            align-items: center;
+                            text-transform: uppercase;
+                            width: 100%;
+
+                            @include mq('phone-and-tablet') {
+                                width: calc(100% - 80px);
+                                padding: 13px 10px;
+                                color: #00263a;
+                                font-size: 13px;
+                                font-style: normal;
+                                font-weight: 400;
+                                line-height: 15.999px;
+                                letter-spacing: .715px;
+                                border-radius: 0px 10.666px 10.666px 0px;
+                                background: var(--Trestique-Digital, #F0F0F0);
+                                display: flex;
+                                justify-content: start;
+                                align-items: center;
+                                text-transform: uppercase;
+                            }
+
+                        }
+                    }
+
+                    .product-display-options {
+                        width: 100%;
+                        display: flex;
+                        padding: 15px 0;
+                        align-items: center;
+
+                        @include mq('phone-and-tablet') {
+                            width: 50%;
+                            display: flex;
+                            flex-direction: column;
+                            align-items: center;
+                            gap: 20px;
+                        }
+
+                        .product-display-options-zoomedImage {
+                            display: flex;
+                            justify-content: center;
+                            align-items: center;
+                            margin-right: 15px;
+                            @include mq('phone-and-tablet') {
+                                width: 100%;
+                                display: flex;
+                                margin: 0;
+                                justify-content: center;
+                                align-items: center;
+                            }
+
+                            img {
+                                border-radius: 100%;
+                                width: 100%;
+                                height: 58px;
+                                width: 58px;
+                                @include mq('phone-and-tablet') {
+                                    border-radius: 100%;
+                                    width: 90px;
+                                    height: 90px;
+                                }
+                            }
+                        }
+
+                        .product-display-options-image {
+                            width: 25%;
+                        }
+
+                        .product-display-options-selector {
+                            display: flex;
+                            gap: 5px;
+                            flex-wrap: wrap;
+                            width: 30%;
+                            justify-content: start;
+                            align-items: center;
+
+                        }
+
+                        .product-display-options-detail {
+                            color: #00263a;
+                            width: calc(100% - 226px);
+                            margin-left: 15px;
+                            padding: 12px 5px;
+                            text-align: center;
+                            font-size: 12px;
+                            font-style: normal;
+                            font-weight: 400;
+                            min-height: 78px;
+                            border-radius: 7.289px;
+                            background: #F0F0F0;
+                            display: flex;
+                            justify-content: center;
+                            align-items: center;
+                            @include mq('phone-and-tablet') {
+                                width: 100%;
+                                margin: 0;
+                                padding: 10px 5px;
+                                border-radius: 9.566px;
+                                background: #F0F0F0;
+                            }
+                            .selected-variant-name{
+                                font-family: $futura_bt;
+                                color: $color_navy;
+                                text-align: center;
+                                font-size: 16px;
+                                font-style: normal;
+                                font-weight: 400;
+                                line-height: 1.4; /* 110.788% */
+                                @include mq('phone-and-tablet') {
+                                    font-size: 14px;
+                                    display: none;
+                                }
+                            }
+                        }
+                        .swatches-wrapper {
+                            width: 136px;
+                            max-width: 100%;
+                            @include flexbox();
+                            @include flex-wrap(wrap);
+
+                            @include mq('phone-and-tablet') {
+                                // @include justify-content(start);
+                                width: 100%;
+                                align-items: center;
+                                justify-content: center;
+                            }
+                            .swatches-dropdown {
+                                text-transform: uppercase;
+                                padding: 10px 20px;
+                                color: #00263A;
+                                text-align: center;
+                                font-family: Futura Md BT;
+                                font-size: 12px;
+                                font-style: normal;
+                                font-weight: 400;
+                                letter-spacing: 0.572px;
+                                border-radius: 5.215px;
+                                border: 0.521px solid #00263A;
+                                display: flex;
+                                align-items: center;
+                                gap: 8px;
+                                position: relative;
+                                @include mq('phone-and-tablet') {
+                                    width: 100%;
+                                    justify-content: center;
+                                }
+                                @include mq('phone') {
+                                    width: 100%;
+                                    font-size: 10px;
+                                    padding: 8px 7px;
+                                    justify-content: center;
+                                }
+                                &.active {
+                                  border-bottom: 0px;
+                                  border-radius: 5.215px 5.215px 0 0;
+                                }
+              
+                                .dropdown-arrow {
+                                  transition: 0.3s;
+                                  transform: rotate(180deg);
+              
+                                  &.active {
+                                    transform: rotate(0deg);
+                                  }
+                                }
+              
+              
+                                .dropdown-options {
+                                  position: absolute;
+                                  width: calc(100% + 2px);
+                                  left: -1px;
+                                  top: 100%;
+                                  background-color: #fff;
+                                  padding: 8px;
+                                  border-radius: 0 0 5.215px 5.215px;
+                                  border: 0.521px solid #00263A;
+                                  border-top-color: #CCC;
+                                }
+                              }
+                            .color-swatch {
+                                display: inline-block;
+                                margin-right: 6px;
+                                margin-bottom: 6px;
+                                .swatch-image {
+                                    width: 16px;
+                                    height: 16px;
+                                    border-radius: 50%;
+                                    cursor: pointer;
+                                    @include mq('phone-and-tablet') {
+                                        width: 24px;
+                                        height: 24px;
+                                    }
+                                }
+
+                                &.active {
+                                    .swatch-image {
+                                        padding: 1px;
+                                        border: 2px solid $color_navy;
+                                    }
+                                }
+
+                                &.out_of_stock {
+                                    position: relative;
+
+                                    &:after,
+                                    &:before {
+                                        position: absolute;
+                                        left: 7px;
+                                        content: ' ';
+                                        height: 16px;
+                                        width: 2px;
+                                        background-color: #333;
+                                        z-index: 6;
+                                        right: 0;
+                                        top: 1px;
+                                        bottom: 0;
+                                        opacity: .3;
+                                    }
+
+                                    &:after {
+                                        transform: rotate(-45deg);
+                                    }
+
+                                    &:before {
+                                        transform: rotate(45deg);
+                                    }
+                                }
+                            }
+                        }
+                    }
+
+                    .select-your-shade-error{
+                        color : red
+                    }
+
+                }
+
+
+            }
+        }
+        .es8-new-layout-form{
+            @include mq('phone-and-tablet') {
+                height: 51px;
+                margin-bottom: 15px;
+            }   
+        }
+        .product-es8-details-add-to-cart-btn-wrapper {
+            width: 100%;
+            margin-top: 50px;
+            @include mq('phone-and-tablet') {
+                margin: 0;
+                padding: 0 15px;
+                // position: fixed;
+                bottom: 0;
+                left: 0;
+                right: 0;
+                background: #fff;
+                z-index: 100;
+                &.active{
+                    position: fixed;
+                    padding: 15px;
+                }
+            }
+            &.upsell-exit{
+                margin: 0;
+            }
+            .add-to-cart-button {
+                text-align: center;
+                width: 336px;
+                max-width: 100%;
+                padding: 5.18px 15px;
+                justify-content: center;
+                align-items: center;
+                gap: 8px;
+                border-radius: 12.951px;
+                background: #00263A;
+                color: white;
+                text-transform: uppercase;
+                cursor: pointer;
+                height: 51px;
+                display: flex;
+                .add-to-cart-button-price{
+                    display: inline-block;
+                }
+                @include mq('phone-and-tablet') {
+                    width: 100%;
+                    border-radius: 0;
+                }
+            }
+
+            .sold-out {
+                cursor: pointer;
+                width: 336px;
+                max-width: 100%;
+                height: 51px;
+                font-size: 14px;
+                display: flex;
+                background: #7F929C;
+                color: $cream-color;
+                justify-content: space-around;
+                align-items: center;
+                margin-bottom: 20px;
+                border-radius: 8px;
+                padding: 6px 83px;
+                border: 1px solid;
+                @include mq('phone-and-tablet') {
+                    width: 100%;
+                    border-radius: 0;
+                }
+            }
+        }
+
+    }
+}

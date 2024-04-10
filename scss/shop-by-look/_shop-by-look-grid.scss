@@ -1,0 +1,193 @@
+.model-look-card {
+    padding-top: 32px;
+    .category-list {
+        h3 {
+            font-family: $futura_bt;
+            width: 100%;
+            border-bottom: 1px solid $color_gray;
+            line-height: 0.1em;
+            margin: 10px 0 55px;
+            text-transform: uppercase;
+            font-size: 32px;
+            span {
+                background: $color_white;
+                padding: 0 10px;
+            }
+        }
+        .categories-list-items {
+            .single-category-items{
+                padding-left: 136px;
+                margin-bottom: 50px;
+                @include mq("tab-and-down") {
+                    padding-left: 16px;
+                }
+                .product-list-ul {
+                    margin-top: 20px;
+                    .swiper-slide {
+                        height: auto;
+                    }
+                    li {
+                        padding: 0 15px;
+                        @include mq("tab-and-down") {
+                            padding: 0 10px;
+                            height: 100%;
+                        }
+                        .look-card-item {
+                            background: $shop-look-hover-color;
+                            border-radius: 8px;
+                            margin-bottom: 32px;
+                            @include flexbox();
+                            box-sizing: border-box;
+                            height: 100%;
+                            @include mq("tab-and-down") {
+                                @include flex-wrap(wrap);
+                                margin-bottom: 0;
+                            }
+                            .look-card-images {
+                                width: 100%;
+                                @include flexbox();
+                                @include justify-content(center);
+                                @include align-items(center);
+                                @include mq("lap-and-up") {
+                                    width: 50%;
+                                }
+                                &.image-fix-height {
+                                    @include mq("tablet-portrait") {
+                                        height: 440px;
+                                    }
+                                    @include mq("phone") {
+                                        height: 370px;
+                                    }
+                                }
+                                a{
+                                    @include flexbox();
+                                    @include justify-content(center);
+                                    @include align-items(center);
+                                    width: 100%;
+                                    height: 100%;
+                                    position: relative;
+                                }
+                                video {
+                                  position: absolute;
+                                  width: 100%;
+                                  height: 100%;
+                                  object-fit: cover;
+                                  border-top-left-radius: 8px;
+                                  border-bottom-left-radius: 8px;
+                                  opacity: 0;
+                                  &.active {
+                                    opacity: 1;
+                                  }
+                                  @include mq('phone-and-tablet'){
+                                      border-top-right-radius: 8px;
+                                      border-bottom-left-radius: 0px;
+                                  }
+                                }
+                                img {
+                                    display: block;
+                                    width: 100%;
+                                    height: 100%;
+                                    max-width: 100%;
+                                    border-top-left-radius: 8px;
+                                    border-bottom-left-radius: 8px;
+                                    object-fit: cover;
+                                    @include mq('phone-and-tablet'){
+                                        border-top-right-radius: 8px;
+                                        border-bottom-left-radius: 0px;
+                                    }
+                                }
+                            }
+        
+                            .look-card-content {
+                                position: relative;
+                                width: 100%;
+                                @include flexbox();
+                                @include flex-direction(column);
+                                @include justify-content(space-between);
+                                padding: 16px 30px 32px;
+                                @include mq("lap-and-up") {
+                                    width: 50%;
+                                    padding: 16px;
+                                }
+                                .product-content-details{
+                                    margin-bottom: 15px;
+                                    .product-content {
+                                        margin-bottom: 16px;
+                                        @include flexbox();
+                                        @include justify-content(space-between);
+                                        @include align-items(center);
+                                        .img {
+                                            width: 64px;
+                                            height: 64px;
+                                            margin-right: 10px;
+                                            img{
+                                                width: 100%;
+                                                display: block;
+                                                border-radius: 50%;
+                                                height: 100%;
+                                                object-fit: cover;
+                                            }
+                                        }
+                                        .product-details{
+                                            width: calc(100% - 64px);
+                                            .product-title {
+                                                font-size: 24px;
+                                                line-height: 1.2;
+                                                color: $color_navy;
+                                                font-family: $font_FreightDisp;
+                                            }
+                                            .author-name {
+                                                font-size: 16px;
+                                                margin: 5px 0px 0;
+                                                font-family: auto;
+                                            }
+                                            .insta-icon {
+                                                display: inline-block;
+                                                margin-right: 8px;
+                                                vertical-align: sub;
+                                            }
+                                            span.insta-followers {
+                                                font-size: 12px;
+                                                line-height: 1;
+                                            }
+                                        }
+                                    }
+                                    .desc {
+                                        font-size: 14px;
+                                        line-height: 1.2;
+                                        p {
+                                            font-size: 13px;
+                                        }
+                                    }
+                                }
+                                .btn-details{
+                                    text-align: center;
+                                    a.button {
+                                        @include flexbox();
+                                        @include justify-content(center);
+                                        @include align-items(center);
+                                        margin: 0 auto;
+                                        border-radius: 8px;
+                                        font-size: 14.31px;
+                                        border: none;
+                                        height: 42px;
+                                        text-transform: uppercase;
+                                        color: $color_white;
+                                        background-color: $color_navy;
+                                        width: 100%;
+                                        outline: none;
+                                        max-width: 183px;
+                                        @include mq("phone") {
+                                          max-width: 100%;
+                                          font-size: 16px;
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

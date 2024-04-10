@@ -1,0 +1,13 @@
+.look-product-template{
+    max-width: 1266px;
+    padding: 0 15px;
+    margin: 0 auto;
+    @include mq('phone'){
+        padding: 0;
+        margin-top: -50px;
+    }
+    .look-product-wrapper{
+        @include flexbox();
+        @include flex-wrap(wrap);
+    }
+}

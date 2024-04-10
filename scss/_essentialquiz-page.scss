@@ -1,0 +1,917 @@
+
+.essential-shade-quiz-main{
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0,0,0,0.25);
+  z-index: 999;
+  @include flexbox();
+  @include align-items(center);
+  @include justify-content(center);
+  .btn-wrapper {
+    @include flexbox();
+    width: 100%;
+    text-align: center;
+    max-width: 736px;
+    width: 100%;
+    margin: 0 auto;
+    .ai-quiz-next-btn {
+      width: 50%;
+      padding: 14px;
+      border-radius: 5px;
+      border: none;
+      background: $color_darkpink;
+      color: $color_white;
+      font-size: 16px;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      margin: 0 10px;
+      outline: none;
+      @include mq('phone'){
+        margin: 0;
+        border-radius: 0;
+        font-size: 14px;
+        padding: 17px;
+      }
+    }
+    .second-btn-container {
+      background-color: $color_fulldarkpink;
+    }
+  }
+  .essential-shade-quiz-main-details {
+      position: relative;
+      background-color: $quiz-bg-color;
+      border-radius: 24px;
+      overflow-x: hidden;
+      width: 1000px;
+      margin: 0 auto;
+      height: 90%;
+      max-height: 90%;
+      padding: 50px 25px;
+      overflow-y: auto;
+      @include mq('phone'){
+        max-height: 100%;
+        height: 100%;
+        border-radius: 0;
+        padding: 25px 0;
+        width: 100%;
+      }
+      .close-quiz {
+        position: absolute;
+        top: 18px;
+        right: 0;
+        width: 100%;
+        @include flexbox();
+        @include justify-content(space-between);
+        padding: 0 15px;
+        .back-arrow {
+          @include mq("phone") {
+            display: block;
+            width: 24px;
+            height: 24px;
+          }
+        }
+        img {
+          cursor: pointer;
+          width: 16px;
+          height: auto;
+        }
+      }
+      .title-wrap{
+        text-align: center;
+        margin-bottom: 32px;
+        @include mq("phone") {
+          margin-bottom: 40px;
+        }
+        h2 {
+          @include mq("phone") {
+            letter-spacing: 0px;
+          }
+        }
+        .essential-quiz-title{
+          font-size: 30px;
+          margin-bottom: 8px;
+          font-family: $font_FreightDisp;
+          line-height: 1;
+          @include mq("phone") {
+            font-size: 28px;
+          }
+        }
+        .essential-quiz-text{
+          font-size: 16px;
+          line-height: 22px;
+          max-width: 477px;
+          margin: 0 auto;
+        }
+      }
+      .btn-wrapper-bg {
+        border-top: 1px solid $navy-color;
+        margin: 32px auto 0;
+        padding-top: 32px;
+        @include mq('phone') {
+          position: fixed;
+          bottom: 0;
+          left: 0;
+          right: 0;
+          margin: 0;
+          padding-top: 13px;
+        }
+        .btn-wrapper {
+          @include flexbox();
+          width: 100%;
+          text-align: center;
+          .ai-quiz-next-btn {
+            width: 50%;
+            padding: 14px;
+            border-radius: 5px;
+            border: none;
+            background: $color_darkpink;
+            color: $color_white;
+            font-size: 16px;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+            margin: 0 10px;
+            outline: none;
+            @include mq('phone'){
+              margin: 0;
+              border-radius: 0;
+              font-size: 14px;
+              padding: 17px;
+            }
+          }
+          .second-btn-container {
+            background-color: $color_fulldarkpink;
+          }
+        }
+      }
+    }
+    .btn-wrapper-bg {
+      max-width: 736px;
+      width: 100%;
+      margin: 32px auto 0;
+    }
+}
+.essential-main {
+  .react-loader-wrap{
+    background: $color_white;
+  }
+  .essential-quiz-step-1 {
+    .close-quiz {
+      @include justify-content(right);
+      .back-arrow {
+        @include mq("phone") {
+          display: none;
+        }
+      }
+    }
+    .essential-quiz-step-1-details {
+      @include flexbox();
+      @include align-items(center);
+      @include justify-content(center);
+      height: 100%;
+      .image-loader{
+        text-align: center;
+      }
+      .essential-quiz-step-1-block {
+        max-width: 736px;
+        width: 100%;
+        margin: 0 auto;
+        @include mq('phone'){
+          max-width: 100%;
+        }
+        .essential-quiz-step-1-options {
+          @include flexbox();
+          @include justify-content(space-between);
+          @include mq('phone'){
+            @include flex-wrap(wrap);
+            padding: 0 15px;
+          }
+          li {
+            position: relative;
+            @include mq('phone'){
+              width: calc(50% - 5px);
+              margin-bottom: 20px;
+            }
+            &:first-child{
+              padding-left: 0;
+            }
+            .img {
+              img {
+                height: 220px;
+                object-fit: contain;
+              }
+            }
+            .text {
+              position: absolute;
+              width: 100%;
+              text-align: center;
+              bottom: 17px;
+              left: 0;
+              padding: 0 10px;
+              text-transform: uppercase;
+              font-size: 14px;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .essential-quiz-step-2,.essential-quiz-step-3 {
+    text-align: center;
+    width: 100%;
+    .essential-quiz-step-2-block,.essential-quiz-step-3-block {
+      max-width: 100%;
+      margin: 0 auto 0;
+      text-align: center;
+      .essential-quiz-step-2-options,.essential-quiz-step-3-options {
+        width: 100%;
+        margin: 0 auto 0;
+        @include mq("phone") {
+          max-width: 100%;
+          margin-bottom: 0;
+          @include justify-content(flex-start);
+        }
+        li {
+          cursor: pointer;
+          position: relative;
+          padding: 0 4px;
+          &.active {
+            .img{
+              border: 8px solid $color-seperator;
+            }
+            .select-text{
+              background: $color-seperator;
+              color: $color_navy;
+            }
+          }
+          .select-text{
+            background: $icon-bg-color;
+            color: $color_white;
+            width: 145px;
+            position: absolute;
+            left: 5px;
+            top: 0;
+            padding: 4px 0;
+            text-transform: uppercase;
+          }
+          .img {
+            transition: 0.3s all;
+            img {
+              display: block;
+              width: 100%;
+              max-width: 100%;
+              object-fit: cover;
+              max-height: 320px;
+            }
+          }
+          .text-box{
+            height: 80px;
+            @include flexbox();
+            @include justify-content(center);
+            @include align-items(center);
+            @include flex-direction(column);
+            p {
+              color: inherit;
+              letter-spacing: 0.6px;
+              font-size: 16px;
+              line-height: 1.07;
+              font-weight: 500;
+              text-align: center;
+              margin-bottom: 9px;
+            }
+            span{
+              color: inherit;
+              font-size: 14px;
+            }
+          }
+        }
+      }
+      .swatches-quiz{
+        @include flexbox();
+        @include justify-content(center);
+        @include align-items(center);
+        @include flex-wrap(wrap);
+        height: 60px;
+        @include mq('phone'){
+          margin-top: 30px;
+        }
+        li{
+          display: inline-block;
+          height: 24px;
+          width: 24px;
+          min-width: 24px;
+          cursor: pointer;
+          margin: 0 5px;
+          &.active img{
+            border-color: $color_navy;
+          }
+          img{
+            border-radius: 100%;
+            border: 2px solid transparent;
+          }
+        }
+      }
+      .ai-quiz-next-btn{
+        @include mq('phone'){
+          position: fixed;
+          left: 0;
+          right: 0;
+          bottom: 0;
+          z-index: 10;
+          width: 100%;
+        }
+      }
+    }
+  }
+
+  .essential-quiz-step-4 {
+    text-align: center;
+    width: 100%;
+    @include mq("phone") {
+      margin-bottom: 0;
+    } 
+    .essential-quiz-step-4-block {
+      max-width: 100%;
+      margin: 0 auto 0;
+      text-align: center;
+      padding: 0 20px;
+      @include flexbox();
+      @include justify-content(center);
+      @include align-items(center);
+      @include flex-wrap(wrap);
+      @include mq('phone'){
+        padding-right: 0;
+      }
+      .title-wrap {
+        @include mq("phone") {
+          margin: 40px 0;
+        }
+      }
+      .essential-quiz-step-4-options {
+        width: 100%;
+        max-width: 1067px;
+        margin: 0 auto 0;
+        @include mq("phone") {
+          max-width: 100%;
+          .slick-list{padding:0 20px 0 0 !important;}
+        }
+        li {
+          cursor: pointer;
+          font-size: 16px;
+          text-align: left;
+          max-width: 100%;
+          transition: 0.3s all;
+          &.active {
+            .img {
+              border: 5px solid $color_sky;
+              @include mq("phone") {
+                border: 3px solid $color_sky;
+              }
+              .floating-icon{
+                .icon{
+                  background: $color_sky;
+                }
+              }
+            }
+          }
+          .img {
+            transition: 0.3s all;
+            margin-bottom: 15px;
+            border: 5px solid transparent;
+            position: relative;
+            @include mq("phone") {
+              border: 3px solid transparent;
+            }
+            .floating-icon{
+              text-align: left;
+              padding: 0 10px 15px;
+              position: absolute;
+              left: 0;
+              top: 15px;
+              z-index: 1;
+              @include mq('phone'){
+                padding: 0 5px 10px;
+              }
+              .icon{
+                height: 28px;
+                border-radius: 100%;
+                width: 28px;
+                background: $icon-bg-color;
+                display: inline-block;
+                text-align: center;
+                vertical-align: middle;
+                @include mq('phone'){
+                  width: 20px;
+                  height: 20px;
+                  display: inline-flex;
+                  justify-content: center;
+                  align-items: center;
+                }
+                svg{
+                  height: 18px;
+                  width: 16px;
+                  vertical-align: middle;
+                  @include mq('phone'){
+                    height: 14px;
+                    width: 12px;
+                  }
+                }
+              }
+              .text{
+                padding: 0;
+                display: inline-block;
+                margin: 0;
+                margin-left: 8px;
+                color: $color-popup-txt;
+                font-size: 12px;
+                font-family: $futura_bt;
+                text-transform: uppercase;
+                @include mq('phone'){
+                  font-size: 12px;
+                }
+                @include mq('small-phone'){
+                  font-size: 10px;
+                }
+              }
+            }
+            img {
+              display: block;
+              width: 100%;
+              max-width: 100%;
+              height: 400px;
+              object-fit: cover;
+            }
+          }
+          p {
+            color: $color_navy;
+            letter-spacing: 0.6px;
+            font-size: 16px;
+            line-height: 1.07;
+            font-weight: 500;
+            text-align: center;
+            @include mq('phone'){
+              font-size: 14px;
+            }
+          }
+        }
+      }
+    }
+    .btn-wrapper {
+      text-align: center;
+      @include mq("phone") {
+        padding: 0 15px;
+      }
+    }
+    &.essential-step-4-wrapper {
+      .close-quiz {
+        right: 0;
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        padding: 0 20px;
+      }
+    }
+  }
+
+  .essential-quiz-step-3 {
+    .essential-quiz-step-3-shadow-block {
+      max-width: 100%;
+      margin: 0 auto;
+      .essential-quiz-step-3-shadow-options {
+        max-width: 524px;
+        margin: 0 auto;
+        height: 100%;
+        @include flexbox();
+        @include justify-content(space-between);
+        @include align-items(center);
+        @include flex-wrap(wrap);
+        li {
+          cursor: pointer;
+          width: 254px;
+          font-size: 16px;
+          text-align: left;
+          max-width: 100%;
+          transition: 0.3s all;
+          @include mq("phone") {
+            width: 50%;
+            padding: 0 5px;
+            margin: 0;
+          }
+          &.active {
+            .img {
+              border: 5px solid $color_sky;
+              @include mq("phone") {
+                border: 3px solid $color_sky;
+              }
+              .floating-icon{
+                .icon{
+                  background: $color_sky;
+                }
+              }
+            }
+          }
+          .img {
+            transition: 0.3s all;
+            margin-bottom: 10px;
+            border: 5px solid transparent;
+            position: relative;
+            .floating-icon{
+              text-align: left;
+              padding: 0 10px 15px;
+              position: absolute;
+              top: 15px;
+              left: 0px;
+              z-index: 1;
+              @include mq('phone'){
+                padding: 0 5px 10px;
+              }
+              .icon{
+                height: 28px;
+                border-radius: 100%;
+                width: 28px;
+                background: $icon-bg-color;
+                display: inline-block;
+                text-align: center;
+                vertical-align: middle;
+                @include mq('phone'){
+                  width: 20px;
+                  height: 20px;
+                  display: inline-flex;
+                  justify-content: center;
+                  align-items: center;
+                }
+                svg{
+                  height: 18px;
+                  width: 16px;
+                  vertical-align: middle;
+                  @include mq('phone'){
+                    height: 14px;
+                    width: 12px;
+                  }
+                }
+              }
+              .text{
+                padding: 0;
+                display: inline-block;
+                margin: 0;
+                margin-left: 8px;
+                color: $color-popup-txt;
+                font-size: 12px;
+                font-family: $futura_bt;
+                text-transform: uppercase;
+                @include mq('phone'){
+                  font-size: 12px;
+                }
+                @include mq('small-phone'){
+                  font-size: 10px;
+                }
+              }
+            }
+            img {
+              display: block;
+              width: 100%;
+              max-width: 100%;
+              height: 300px;
+              object-fit: cover;
+            }
+          }
+          .text {
+            color: $color_navy;
+            letter-spacing: 0.6px;
+            font-size: 16px;
+            line-height: 1.07;
+            font-weight: 500;
+            margin-bottom: 10px;
+            font-family: $futura_bt;
+            text-align: center;
+            display: block;
+            text-transform: capitalize;
+            @include mq("phone") {
+              font-size: 14px;
+              font-family: $color_navy;
+              letter-spacing: 0;
+            }
+          }
+        }
+      }
+    }
+    &.essential-quiz-step-3-crayon-wrapper,.lip-care-wrapper-class {
+      .btn-wrapper-bg {
+        .btn-wrapper {
+          .light-color {
+            @include mq("phone") {
+              display: none;
+            }
+          }
+          .second-btn-container {
+            @include mq("phone") {
+              width: 100%;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+.essential-quiz-step-5 {
+  text-align: center;
+  width: 100%;
+  height: 100%;
+  // position: relative;
+  @include mq("phone") {
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    &.no-margin{
+      margin-bottom: 0;
+    }
+  }
+  .essential-shade-quiz-main-details {
+    position: relative;
+    @include mq("phone") {
+      padding: 50px 0;
+    }
+  }
+  .essential-quiz-step-5-block {
+    max-width: 100%;
+    text-align: center;
+    .title-wrap {
+      .essential-quiz-text {
+        width: 100%;
+        max-width: 70%;
+        @include mq("phone") {
+          max-width: 100%;
+          padding: 0px 15px;
+          font-size: 16px;
+        }
+      }
+    }
+    .bags {
+      li {  
+        cursor: pointer;
+        font-size: 16px;
+        text-align: left;
+        max-width: 100%;
+        height: 100%;
+        transition: 0.3s all;
+        &.active {
+          .img {
+            background-color: $bg-color;
+            border: 5px solid $color_sky;
+            @include mq("phone") {
+              border: 3px solid $color_sky;
+            }
+          }
+        }
+        .img {
+          transition: 0.3s all;
+          background: $bg-color !important;
+          border: 2px solid $border-bg-img;
+          height: calc(100% - 6px);
+          img {
+            object-fit: contain;
+            width: 100%;
+            height: 220px;
+            // @include mq('phone'){
+            //   width: 100%;
+            //   height: 100%;
+            // }
+          }
+        }
+        p.bag-title {
+          color: $color_navy;
+          letter-spacing: 0.6px;
+          font-size: 16px;
+          font-weight: 500;
+          background: $bg-title;
+          text-align: center;
+          height: 60px;
+          line-height: 60px;
+        }
+      }
+    }
+  }
+  .swatches-quiz-wrap{
+    // margin: 10px 0;
+    .swatches-quiz{
+      background: $bg-title;
+      @include flexbox();
+      @include justify-content(center);
+      @include align-items(center);
+      @include flex-wrap(wrap);
+      height: 60px;
+      .swiper {
+        @include mq("phone") {
+          margin-top: -20px;
+        }
+      }
+      li{
+        display: inline-block;
+        height: 24px;
+        width: 24px;
+        min-width: 24px;
+        cursor: pointer;
+        margin: 0 5px;
+        &.active{
+          img{
+            border-color: $color_navy;
+          }
+        }
+        img{
+          border-radius: 100%;
+          border: 2px solid transparent;
+          height: 24px;
+          width: 24px;
+        }
+      }
+    }
+  }
+  .btn-wrapper-bg {
+    @include mq("phone") {
+      z-index: 1;
+    }
+    .light-color {
+      @include mq("phone") {
+        display: none;
+      }
+    }
+    .second-btn-container {
+      @include mq("phone") {
+        width: 100% !important;
+      }
+    }
+  }
+}
+
+.essential-quiz-step-6 {
+  //essential-6 step css start
+  .title-wrap {
+    @include mq("phone") {
+      margin: 40px 0;
+    }
+  }
+  .swatches-wrapper {
+    @include flexbox();
+    @include justify-content(space-between);
+    @include align-items(center);
+    @include flex-wrap(wrap);
+    width: 100%;
+    ul.swatch-wrap {
+      @include flexbox();
+      @include justify-content(center);
+      @include flex-wrap(wrap);
+      &.review-swatch-wrap {
+        @include justify-content(flex-start);
+      }
+      li.swatch-element {
+        min-width: auto;
+        min-height: auto;
+        cursor: pointer;
+        border: none;
+        margin-right: 4px;
+        border: 2px solid transparent;
+        margin-bottom: 15px;
+        &.color {
+          padding: 0;
+        }
+        &.active {
+          border: 2px solid $color_activeBlue;
+        }
+        label {
+          width: 16px;
+          height: 16px;
+          display: block;
+          cursor: pointer;
+          border: none;
+          span {
+            font-size: 0;
+          }
+        }
+      }
+    }
+  }
+  //essential-6 step css end
+  .products {
+    margin: 0 auto;
+    padding: 0;
+    .item {
+      padding: 0 10px;
+      .img {
+        display: flex;
+        background: $bg-color;
+        border: 5px solid $icon-bg-color;
+        height: auto;
+        margin-bottom: 8px;
+        img{
+          width:100%;
+          max-width: 100%;
+          height: auto;
+        }
+      }
+      .details {
+        .current-swatch {
+          margin-bottom: 8px;
+          font-family: $futura_bt;
+        }
+        .product-title-wrap {
+          @include flexbox();
+          @include justify-content(space-between);
+          @include align-items(center);
+          margin-bottom: 5px;
+          .product-title {
+            font-size: 13px;
+            color: $color_navy;
+            font-weight: 500;
+            font-family: $futura_bt;
+          }
+          .product-price-wrap {
+            @include flexbox();
+            @include justify-content(flex-end);
+            @include mq('phone'){
+              min-width: 100;
+            }
+            p {
+              font-size: 14px;
+              &.compare-price {
+                margin-right: 5px;
+                text-decoration: line-through;
+              }
+            }
+          }
+        }
+        .variant-info {
+          font-size: 11px;
+          margin-bottom: 10px;
+        }
+        .remove-btn {
+          text-decoration: underline;
+          font-family: $futura_bt;
+          cursor: pointer;
+        }
+        .swatch-wrap {
+          margin-bottom: 10px;
+          .swatch-element {
+            margin-bottom: 10px;
+          }
+        }
+        .option-selector {
+          .selected-swatch {
+            margin-bottom: 10px;
+          }
+        }
+      }
+    }
+  }
+  .review-bottom-bar {
+    width: 100%;
+    max-width: 100%;
+    z-index: 11;
+    margin-top: 30px;
+    @include mq("phone") {
+      position: fixed;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      margin: 0;
+      padding-top: 13px;
+    }
+    .flex-view-xs {
+      .btn {
+        @include aiButton();
+        height: 50px;
+        margin: 0;
+        border-radius: 7px;
+      }
+      .start-over {
+        background: $color_darkpink;
+        border-color: $color_darkpink;
+        width: 100%;
+        color: $color_navy;
+        max-width: 300px;
+        margin-right: 20px;
+        @include mq("phone") {
+          display: none;
+        }
+      }
+      .add-to-cart {
+        width: 100%;
+        max-width: 300px;
+        background: $color_activeBlue;
+        border-color: $color_activeBlue;
+        margin-left: 20px;
+        margin-bottom: 0;
+        @include mq("phone") {
+          width: 100%;
+          max-width: 100%;
+          border-radius: 0;
+          margin-left: 0;
+        }
+      }
+    }
+  }
+}
+//essential quiz page css end

@@ -1,0 +1,386 @@
+
+.banner-with-text-overlay {
+  .banner-with-text-section{
+    &.mobile-text--over-media{
+      .caption{
+        position: absolute;
+        width: 100%;
+        top: 50%;
+        display: block;
+        padding: 1%;
+        &.caption-xs-vertical-top{
+          top: 15px;
+          bottom: auto;
+          left: 0;
+          right: 0;
+          @include transform(translateY(0));
+        }
+        &.caption-xs-vertical-middle{
+          top: 50%;
+          left: 0;
+          right: 0;
+          @include transform(translateY(-50%));
+        }
+        &.caption-xs-vertical-bottom{
+          top: auto;
+          left: 0;
+          right: 0;
+          bottom: 15px;
+          @include transform(translateY(0));
+        }
+      }
+    }
+    .banner__heading{
+      font-family: $font_FreightDisp;
+    }
+    .caption{
+      .banner__subheading{
+        font-family: $futura_bt;
+        font-size: 20px;
+      }
+      a.button{
+        max-width: 300px;
+        flex: 1;
+      }
+    }
+  }
+}
+.image-with-text-and-icons{
+  max-width: 1440px;
+  margin: 0 auto;
+  @include flexbox();
+  @include align-items(center);
+  @include flex-wrap(wrap);
+  @include justify-content(space-between);
+  position: relative;
+  .img{
+    width: 40%;
+    padding: 0 50px;
+    @include mq('phone'){
+      width: 100%;
+      padding: 0;
+    }
+    img{
+      width: 100%;
+      max-width: 100%;
+    }
+  }
+  .text-wrapper{
+    width: 50%;
+    text-align: center;
+    padding: 0 50px;
+    @include mq('phone'){
+      position: absolute;
+      top: 10%;
+      padding: 0 15px;
+      left: 0;
+      right: 0;
+      width: 100%;
+    }
+    h2{
+      font-size: 80px;
+      font-family: $font_FreightDisp;
+      @include mq('phone'){
+        font-size: 40px;
+        margin-bottom: 30px;
+      }
+      @include mq('small-phone'){
+        font-size: 28px;
+      }
+    }
+    .desc{
+      font-size: 22px;
+      max-width: 90%;
+      margin: 0 auto 25px;
+      font-family: $futura_bt;
+      @include mq('phone'){
+        margin-bottom: 60px;
+      }
+    }
+    a.button--secondary.button{
+      border: 1px solid transparent;
+      background: $color_navy;
+      color: $color_white;
+      width: 100%;
+      max-width: 300px;
+      &:hover{
+        border: 1px solid transparent;
+        background: $color_navy;
+        color: $color_white !important;
+      }
+    }
+  }
+  .main-icons{
+    @include justify-content(center);
+    @include flexbox();
+    margin-bottom: 15px;
+    .main-icon{
+      max-width: 130px;
+      padding: 0 10px;
+    }
+  }
+}
+.product-grid {
+    .section-wrapper {
+      @include flexbox();
+      position: relative;
+      @include mq("tab-and-down") {
+        flex-flow: column;
+      }
+      .section-title {
+        display: inline-flex;
+        span {
+          border-bottom: 1px solid $color_navy;
+          font-family: $futura_fonts;
+          text-transform: capitalize;
+          font-weight: 500;
+          font-size: 48px;
+          color: $color_navy;
+          @include mq("lap-and-desk") {
+            font-size: 30px;
+          }
+          @include mq("phone-and-tablet") {
+            font-size: 30px;
+          }
+        }
+      }
+      .content {
+        font-size: 18px;
+        color: $color_navy;
+        text-transform: uppercase;
+        font-family: $futura_bt;
+        margin-top: 12px;
+        font-weight: 400;
+        @include mq("lap-and-desk") {
+          font-size: 16px;
+        }
+        @include mq("phone-and-tablet") {
+          font-size: 16px;
+        }
+      }
+      .product-grid-part {
+        flex: 1;
+        margin-right: 60px;
+        @include mq("lap-and-desk") {
+          margin-right: 30px;
+        }
+        @include mq("phone-and-tablet") {
+          margin-right: 30px;
+        }
+        @include mq("tab-and-down") {
+          margin-right: 0px;
+        }
+      }
+      .right-part {
+        flex: 1;
+        .image-grid {
+          position: relative;
+          @include flexbox();
+          @include flex-wrap(wrap);
+          height: 100%;
+          @include mq("tab-and-down") {
+            margin-top: 30px;
+          }
+          .image-full-width {
+            @include mq("tab-and-down") {
+              width: 100%;
+              img {
+                width: 100%;
+              }
+            }
+            @include mq('lap-and-up'){
+              img{
+                height: 100%;
+                object-fit: cover;
+              }
+            }
+          }
+          .text-overlay {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%,-50%);
+            width: 500px;
+            text-align: center;
+            max-width: 100%;
+            padding: 0 20px;
+            .title-overlay {
+              font-size: 54px;
+              color: $color_white;
+              @include mq("lap-and-desk") {
+                font-size: 30px;
+              }
+              @include mq("phone-and-tablet") {
+                font-size: 30px;
+              }
+            }
+            .find-my-shade-btn {
+              padding: 15px 20px;
+              &:hover{
+                border: 1px solid transparent;
+                background: $color_navy;
+                color: $color_white;
+              }
+            }
+          }
+        }
+      }
+      &.reverse {
+        @include flex-direction(row-reverse);
+        @include mq("tab-and-down") {
+          @include flex-direction(column-reverse);
+        }
+        .product-grid-part {
+          margin-right: 0;
+          margin-left: 60px;
+          @include mq("lap-and-desk") {
+            margin-left: 30px;
+          }
+          @include mq("phone-and-tablet") {
+            margin-left: 30px;
+          }
+          @include mq("tab-and-down") {
+            margin-left: 0px;
+          }
+        }
+      }
+    }
+  }
+  .better-together-section {
+    margin: 90px 0;
+    .simply-product{
+      width: 50%;
+    }
+    @include mq('phone'){
+      margin: 50px 0;
+    }
+  }
+
+  /* Image with text slider start */
+.image-with-text-slider {
+    padding:30px 0px;
+    @include mq('phone'){
+        margin: 0 0 25px;
+    }
+    .section {
+        @include mq("lap-and-desk") {
+            width:100%;
+            padding:0px 30px;
+        }
+    }
+    .slick-track{
+      @include flexbox();
+      @include align-items(center);
+    }
+    .text-wrapper-block {
+        @include flexbox();
+        flex-wrap:wrap;
+        .blocks {
+            padding:0 30px;
+            text-align:center;
+            .title {
+                font-size:20px;
+                font-family: $font_FreightDisp;
+                font-weight: 500;
+            }
+            .subtext {
+                font-size:20px;                 
+                margin-top:20px;
+                font-family: $font_FreightDisp;
+            }
+        }
+    }
+    button.slick-prev {
+        top: 50%;
+        height: 50px;
+        width: 14px;
+        position: absolute;
+        font-size: 0;
+        cursor: pointer;
+        background-color: transparent;
+        border: none;
+        z-index:9;
+    }
+    button.slick-next {
+        top: 50%;
+        height: 50px;
+        width: 14px;
+        position: absolute;
+        font-size: 0;
+        cursor: pointer;
+        background-color: transparent;
+        border: none;
+        background-size: contain;
+        z-index:9;
+    }
+}
+/* Image with text slider end */
+
+.image-with-video-grid {
+    padding:50px 0px;
+    .section {
+        @include mq("phone") {
+            width:100%;
+        }
+    }
+    .text-wrapper-block {
+        @include flexbox();
+        width:100%;
+        gap:70px;
+        @include mq("phone") {
+            display:block;
+        }
+        .image-video-wrapper {
+            width:50%;
+            position: relative;
+            &.active{
+              .image{
+                .video-wrapper{
+                  opacity: 1;
+                  visibility: visible;
+                }
+              }
+            }
+            @include mq("phone") {
+                width:100%;
+                margin-bottom:20px;
+            }
+            .image{
+              position: relative;
+              .video-wrapper{
+                opacity: 0;
+                z-index: 2;
+                visibility: hidden;
+                position: absolute;
+                top: 0;
+                left: 0;
+                right: 0;
+                bottom: 0;
+                height: 100%;
+                object-fit: cover;
+                video{
+                  object-fit: cover;
+                  height: 100%;
+                }
+              }
+            }
+            .button-wrapper {
+                margin-top:10px;
+                @include mq("phone") {
+                    margin-top:0px;
+                }
+                a.button {
+                    width:100%;
+                    &:hover {
+                      border: 1px solid transparent;
+                      background: $color_navy;
+                      color: $color_white;
+                    }
+                }
+            }
+            .image-element__wrap {
+                max-width:100% !important;
+            }
+        }
+    }    
+}

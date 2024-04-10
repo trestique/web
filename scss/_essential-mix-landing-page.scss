@@ -1,0 +1,682 @@
+// .page-essential-mix-landing {
+
+  .essential-mix-slider {
+
+    margin: 30px auto 32px;
+    padding-top: 30px;
+    padding-bottom: 30px;
+    overflow: hidden;
+    white-space: nowrap;
+    @include mq('phone') {
+
+      padding-left: 20px;
+    }
+    .slick-list {
+      .slick-track {
+
+        @include flexbox();
+        @include align-items(center);
+        .slick-slide {
+          margin-right: 50px;
+
+          @include mq('phone') {
+            margin-right: 25px;
+          }
+        }
+      }
+    }
+  }
+
+  .trestique-special {
+
+    padding-top: 24px;
+    padding-bottom: 32px;
+    margin-bottom: 32px;
+
+    @include mq('phone') {
+
+      padding-top: 32px;
+    }
+
+    .heading {
+      font-family: $font_FreightDisp;
+      text-align: center;
+      font-size: 36px;
+      font-weight: 500;
+      line-height: 36px;
+      margin-bottom: 32px;
+
+      @include mq('phone') {
+
+        font-size: 24px;
+        font-weight: 500;
+        line-height: 24px;
+        padding-inline: 56px;
+      }
+    }
+
+    .special-block-wrapper {
+
+      padding: 0 75px;
+
+      @include mq('phone') {
+        .slick-list{padding:0 20% 0 0 !important;}
+        padding: 0;
+      }
+
+      .slick-slide {
+
+        padding-left: 10px;
+        padding-right: 10px;
+      }
+
+
+      .block {
+
+        display: flex !important;
+        @include flex-direction(column);
+        border-radius: 20px;
+        height: 100%;
+        padding: 24px 40px 16px;
+        // background: linear-gradient(180deg, rgba(240, 240, 240, 0) 0%, #F0F0F0 73.44%);
+        background: #F0F0F0;
+        // box-shadow: 0px 22.2222px 27.7778px rgba(0, 0, 0, 0.06);
+        text-align: center;
+
+        /*
+          *Hide animation for now
+        */
+        // @include mq('tablet-and-up') {
+        //   &:hover {
+        //     .img-wrapper {
+  
+        //       @include transform(scale(1.1))
+        //     }
+        //   }
+  
+        //   &.animation {
+  
+  
+        //     .img-wrapper,
+        //     .block-text,
+        //     .block-heading {
+  
+        //       animation: animation 1s ease-in backwards;
+        //     }
+        //   }
+        // }
+
+        @include mq('phone') {
+          padding-left: 24px;
+          padding-right: 24px;
+        }
+
+        .img-wrapper {
+          @include transition(1.5s ease-in-out all);
+
+          img {
+
+            margin: 0 auto;
+          }
+        }
+
+        .block-heading {
+
+          font-family: $futura_bt;
+          font-size: 16px;
+          line-height: 20px;
+          font-weight: 400;
+          margin-top: 30px;
+        }
+
+        .block-text {
+
+          text-align: center;
+          font-size: 12px;
+          line-height: 16px;
+          margin-top: 12px;
+          letter-spacing: 0.04em;
+        }
+      }
+    }
+  }
+
+  .how-it-works {
+
+    position: relative;
+    margin: auto;
+    padding-top: 24px;
+
+    &::after {
+
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 300px;
+      z-index: -69;
+
+      @include mq('phone') {
+
+        width: calc(100% - 16px);
+        left: 50%;
+        @include transform(translateX(-50%));
+      }
+    }
+
+    @include mq('phone') {
+      padding-top: 16px;
+    }
+
+    .img-wrapper {
+
+      .hover-img {
+
+        display: none;
+      }
+
+      &:hover {
+
+        .base-img {
+          display: none;
+        }
+
+        .hover-img {
+          display: block;
+        }
+      }
+    }
+
+    .heading {
+
+      font-family: $font_FreightDisp;
+      font-size: 36px;
+      line-height: 36px;
+      text-align: center;
+      margin-bottom: 14px;
+
+      @include mq('phone') {
+
+        font-size: 24px;
+        margin-bottom: 24px;
+      }
+    }
+
+    .setp-block-wrapper {
+
+      .slick-slide {
+
+        @include mq('phone') {
+
+          padding-left: 30px;
+          padding-right: 30px;
+        }
+      }
+
+      .block {
+
+        position: relative;
+
+        .steps {
+
+          position: absolute;
+          top: 8px;
+          left: 8px;
+          background-color: #F3E9E2;
+          font-size: 18px;
+          line-height: 22px;
+          font-weight: 500;
+          padding: 4px 15px;
+          border-radius: 23px;
+        }
+
+        .next-slide {
+
+          position: absolute;
+          top: 122px;
+          right: -40px;
+          z-index: 11;
+
+          @include mq('phone') {
+
+            right: -25px;
+            max-width: 30px;
+            width: 100%;
+            top: 150px;
+            height: auto;
+          }
+        }
+
+        .img-wrapper {
+
+          img {
+
+            width: 100%;
+          }
+        }
+
+        .text-wrapper {
+
+          font-size: 24px;
+          line-height: 30px;
+          font-weight: 500;
+          padding: 30px 68px;
+          text-align: center;
+
+          @include mq('phone') {
+            padding: 20px 30px;
+          }
+        }
+      }
+    }
+
+    .tagline-wrapper {
+
+      padding: 14px 100px;
+      text-align: center;
+      font-size: 18px;
+      margin: auto;
+      width: fit-content;
+      margin-top: 40px;
+      color: #B04A5A;
+
+      @include mq('phone') {
+
+        margin: 32px 16px 0;
+        padding: 15px;
+        width: inherit;
+      }
+    }
+
+    .create-my-set {
+
+      .my-set-btn {
+
+        padding: 15px 40px;
+        margin-top: 24px;
+        font-size: 18px;
+        font-weight: 500;
+
+        @include mq('phone') {
+
+          position: fixed;
+          bottom: 0;
+          left: 0;
+          width: 100%;
+          z-index: 1111;
+        }
+
+        &:hover {
+
+          background: $color_navy;
+          color: $color_white;
+        }
+      }
+    }
+
+    @include mq('tablet-and-up') {
+    .slick-list {
+        
+        margin-right: -30px;  
+        .slick-slide {
+          
+          margin-right: 30px;
+        }
+      }
+
+    }
+  }
+
+  .join-zero {
+
+    position: relative;
+    padding: 0 30px;
+    width: 100%;
+    @include mq('phone') {
+      padding: 0 15px;
+    }
+    .join-zero-section-wrapper{
+      padding: 30px 0;
+      margin: 0 auto;
+      position: relative;
+      @include mq('phone') {
+        padding: 15px 0 0;
+      }
+      &::after {
+          content: '';
+          position: absolute;
+          width: 100%;
+          top: 0;
+          bottom: 25%;
+          right: 0;
+          left: 0;
+          z-index: -1;
+        }
+    }
+
+
+    .heading {
+
+      font-family: FreightDispMedium;
+      font-size: 36px;
+      font-weight: 500;
+      padding-bottom: 16px;
+
+      @include mq('phone') {
+
+        font-size: 24px;
+        line-height: 24px;
+        font-weight: 500;
+      }
+    }
+
+    .client-review-slider {
+      padding: 50px 0 0;
+      .slick-next,
+      .slick-prev {
+
+        max-width: 20px;
+        width: 100%;
+        height: auto;
+
+        @include mq('phone') {
+          display: none !important;
+        }
+      }
+
+      .slick-next {
+        right: -35px;
+      }
+
+      .slick-prev {
+        left: -35px;
+        z-index: 11;
+      }
+
+      .slide-dots {
+
+        @include flexbox();
+        @include justify-content(center);
+        margin-top: 10px;
+
+        @include mq('tablet-and-up') {
+
+          display: none !important;
+        }
+
+        li {
+
+          &.slick-active {
+
+            button {
+
+              background-color: #00263A;
+            }
+          }
+
+          button {
+
+            background-color: #F0F0F0;
+            color: transparent;
+            border: 1px solid #F0F0F0;
+            border-radius: 50%;
+            font-size: 0;
+            margin-right: 10px;
+            width: 15px;
+            height: 15px;
+          }
+        }
+      }
+
+      @include mq('phone') {
+
+        padding-top: 32px;
+      }
+
+      .client-review-wrapper {
+
+        display: flex !important;
+        @include flexbox();
+        @include mq('phone'){
+          padding: 15px 0;
+          @include align-items(center);
+        }
+        .client-img-wrapper {
+
+          width: 50%;
+          @include mq('phone') {
+            @include transform(0);
+            width: 50%;
+          }
+          img {
+            width: 100%;
+          }
+        }
+
+        .review {
+
+          position: relative;
+          @include flexbox();
+          @include justify-content(center);
+          @include align-items(center);
+          @include transform(scale(0.9));
+          margin-right: 15px;
+          width: 50%;
+          @include mq('phone') {
+            @include transform(scale(1));
+            margin: 0  ;
+            width: 50%;
+            min-height: 300px;
+            padding: 10px;
+          }
+
+          .quote-img-wrapper {
+
+            max-width: 30px;
+            position: absolute;
+
+            &.top {
+
+              top: -10px;
+              left: 0;
+              @include transform(rotate(180deg));
+            }
+
+            &.bottom {
+
+              bottom: -10px;
+              right: 0;
+            }
+          }
+        }
+
+        .review-wrapper {
+
+          margin-left: 10px;
+
+          .client-review {
+
+            max-height: 300px;
+            text-overflow: ellipsis;
+            overflow: hidden;
+            font-size: 18px;
+            padding-right: 4px;
+
+            @include mq('phone') {
+
+              max-height: 260px;
+              overflow: auto;
+            }
+            &:hover {
+
+              overflow: auto;
+            }
+            &::-webkit-scrollbar-track{
+              -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+              border-radius: 10px;
+              background-color: #F5F5F5; 
+            }
+
+            &::-webkit-scrollbar {
+
+              width: 3px;
+              background-color: #00263A;
+            }
+
+            &::-webkit-scrollbar-thumb {
+
+              border-radius: 10px;
+              -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,.3);
+	            background-color: #00263A;
+            }
+          }
+
+          .client-name {
+
+            margin-top: 14px;
+            font-weight: 300;
+            line-height: 20px;
+            font-size: 16px;
+          }
+        }
+      }
+
+    }
+  }
+
+  .banner-video {
+
+    padding-top: 24px;
+    padding-bottom: 32px;
+    margin-left: auto;
+    margin-right: auto;
+
+    @include mq('tablet') {
+      padding-inline: 30px;
+    }
+    @include mq('phone'){
+      padding-inline: 15px;
+    }
+
+    .heading {
+
+      font-size: 36px;
+      font-weight: 500;
+      font-family: $font_FreightDisp;
+      padding-bottom: 32px;
+
+      @include mq('phone') {
+
+        font-size: 30px;
+        padding-bottom: 24px;
+      }
+    }
+
+    .media-wrapper {
+      position: relative;
+
+      video {
+        margin-bottom: 48px;
+        width: 100%;
+      }
+      .video-wrapper-essential-mix{
+        position: relative;
+      }
+      .play-btn-wrapper {
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        @include flexbox();
+        @include justify-content(center);
+        @include align-items(center);
+        z-index: 5;
+        img{
+          max-width: 80px;
+        }
+        &.active{
+          opacity: 0;
+        }
+        // top: 50%;
+        // left: 50%;
+        // @include transform(translate(-50%, -50%) scale(0.8));
+      }
+    }
+
+    .img-wrapper {
+
+      margin-top: 32px;
+      margin-bottom: 48px;
+
+      img {
+        width: 100%;
+      }
+    }
+
+    .text-wrapper {
+
+      .section-content {
+
+        font-family: $futura_bt;
+        font-size: 24px;
+
+        @include mq('phone') {
+          
+          font-weight: 300;
+          font-size: 17px;
+        }
+      }
+
+      .tagline-wrapper {
+
+        width: fit-content;
+        margin-inline: auto;
+        font-size: 18px;
+        font-weight: 500;
+        padding: 13px 100px;
+        margin-top: 16px;
+        color: #B04A5A;
+
+        @include mq('phone') {
+
+          padding: 23px 30px;
+          margin-top: 16px;
+        }
+      }
+
+      .my-set-btn {
+
+        padding: 15px 40px;
+        margin-top: 16px;
+        font-size: 18px;
+        font-weight: 500;
+
+        @include mq('phone') {
+
+          display: none;
+        }
+
+        &:hover {
+
+          background: $color_navy;
+          color: $color_white;
+        }
+      }
+    }
+
+  }
+// }
+
+@keyframes animation {
+
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+
+    opacity: 1;
+  }
+}

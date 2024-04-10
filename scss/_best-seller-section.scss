@@ -1,0 +1,21 @@
+.best-sellers {
+  .product-grid-part {
+    margin-right: 0 !important;
+  }
+  .collection-wrapper {
+    @include mq("tab-and-down") {
+      flex-wrap: wrap;
+    }
+    .simply-product {
+      width: 25%;
+      @include mq("tab-and-down") {
+        width: calc(50% - 10px);
+      }
+      .product-info {
+        .current-variant-info {
+          margin: 0 0 10px;
+        }
+      }
+    }
+  }   
+}

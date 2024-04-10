@@ -1,0 +1,95 @@
+.quiz-image-with-text {
+margin-top: 50px;
+  position: relative;
+
+  .collection-list-imagee-with-text {
+    @include flexbox();
+    .collection-list-imagee-with-text-data {
+      
+      margin: 0 auto;
+      max-width: 1170px;
+      @include flexbox();
+      @include align-items(center); 
+      @include mq('phone') {
+        @include flex-direction(column);
+      }
+      .shade-banner-content {
+        flex: 1;
+        max-width: 100%;
+        padding: 25px 32px 30px 70px;
+  
+        @include mq('phone') {
+          width: 100%;
+          padding: 50px 15px;
+          height: 100%;
+        }
+        .shade-banner-desc {
+          .button {
+            &.button--secondary{
+              font-weight: 400;
+              font-size: 24px;
+              line-height: 40px;
+              letter-spacing: 0.03em;
+              text-transform: uppercase;
+              border-radius: 8px;
+              border: none;
+              outline: none;
+              @include mq("desk-and-up") {
+                display: block;
+                max-width: 363px;
+              }
+              @include mq("phone") {
+                max-width: 100%;
+                font-size: 16px;
+                display: block;
+              }
+            }
+          }
+          .title {
+
+            font-family: $font_FreightDisp;
+            font-weight: 500;
+            font-size: 48px;
+            line-height: 60px;
+            letter-spacing: .03em;
+            @include mq('phone') {
+              line-height: 32px;
+              font-size: 24px;
+              letter-spacing: 0;
+            }
+          }
+        }
+      }
+      img {
+        display: block;
+      }
+    }
+  }
+
+  .shop-by-look-desc {
+    .shop-by-look-desc-block {
+      max-width: 768px;
+      margin: 0 auto;
+      padding: 108px 15px;
+      text-align: center;
+
+      @include mq('phone') {
+        padding: 50px 15px;
+      }
+
+      .desc {
+        margin-bottom: 50px;
+        font-size: 18px;
+        line-height: 28px;
+        letter-spacing: 0.5px;
+      }
+
+      a.btn {
+        font-size: 18px;
+        border-bottom: 3px solid;
+        text-transform: uppercase;
+        padding-bottom: 5px;
+      }
+    }
+  }
+}

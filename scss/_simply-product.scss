@@ -1,0 +1,145 @@
+.collection-wrapper{
+  @include flexbox();
+  gap: 80px;
+  @include mq("lap-and-desk") {
+    gap: 30px;
+  }
+  @include mq("phone-and-tablet") {
+    gap: 30px;
+  }
+  @include mq("tab-and-down") {
+    gap: 20px;
+  }
+  .simply-product {
+    .img {
+      border: 1px solid rgba(0, 0, 0, 0.15);
+      margin-bottom: 10px;
+      img{
+        width: 100%;
+        max-width: 100%;
+        height: auto;
+      }
+    }
+    .product-info {
+      .product-title {
+        font-size: 18px;
+        font-family: $futura_bt;
+        text-transform: uppercase;
+        @include mq('phone'){
+          font-size: 14px;
+          &.no_variants{
+            margin-bottom: 10px;
+          }
+        }
+      }
+      .product-review {
+        span {
+          font-size: 16px;
+          font-weight: 400;
+        }
+      }
+      .current-variant-info {
+        margin: 15px 0;
+        @include mq('phone'){
+          font-size: 13px;
+          min-height: 41px;
+        }
+      }
+      .variants-details{
+          ul.swatch-wrap {
+              @include flexbox();
+              @include justify-content(left);
+              @include flex-wrap(wrap);
+              &.review-swatch-wrap {
+                @include justify-content(flex-start);
+              }
+              li.swatch-element {
+                min-width: auto;
+                min-height: auto;
+                cursor: pointer;
+                border: none;
+                margin-right: 8px;
+                border: 2px solid transparent;
+                margin-bottom: 15px;
+                &.color {
+                  padding: 0;
+                }
+                &.active {
+                  border: 2px solid $color_navy;
+                }
+                label {
+                  width: 25px;
+                  height: 25px;
+                  display: block;
+                  cursor: pointer;
+                  border: none;
+                  span {
+                    font-size: 0;
+                  }
+                }
+              }
+          }
+      }
+      .add-to-cart,.soldout {
+        width: 100%;
+        border: 1px solid transparent;
+        padding: 6px 15px;
+        height: 36px;
+        @include mq("tab-and-down") {
+          font-size: 14px !important;
+        }
+        @include mq("phone") {
+          font-size: 11px !important;
+          padding: 6px 5px;
+        }
+        @include mq('small-phone'){
+          font-size: 10px !important;
+        }
+        &:hover {
+          border: 1px solid transparent;
+          background: $color_navy;
+          color: $color_white;
+        }
+      }
+      .soldout{
+        opacity: 0.5;
+      }
+    }
+    
+    .variants-details {
+      ul.swatch-wrap {
+        @include flexbox();
+        @include justify-content(left);
+        @include flex-wrap(wrap);
+        &.review-swatch-wrap {
+          @include justify-content(flex-start);
+        }
+        li.swatch-element {
+          min-width: auto;
+          min-height: auto;
+          cursor: pointer;
+          border: none;
+          margin-right: 8px;
+          border: 2px solid transparent;
+          margin-bottom: 15px;
+          &.color {
+            padding: 0;
+          }
+          &.active {
+            border: 2px solid $color_navy;
+          }
+          label {
+            width: 30px;
+            height: 30px;
+            display: block;
+            cursor: pointer;
+            border: none;
+            span {
+              font-size: 0;
+            }
+          }
+        }
+      }
+    }
+  }
+}

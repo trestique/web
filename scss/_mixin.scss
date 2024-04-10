@@ -1,0 +1,284 @@
+// common mixins
+@mixin transform($transforms) {
+  -moz-transform: $transforms;
+  -o-transform: $transforms;
+  -ms-transform: $transforms;
+  -webkit-transform: $transforms;
+  transform: $transforms;
+}
+
+@mixin transition($transition) {
+  -moz-transition: $transition;
+  -o-transition: $transition;
+  -ms-transition: $transition;
+  -webkit-transition: $transition;
+  transition: $transition;
+}
+
+@mixin keyframes($animationName) {
+  @-webkit-keyframes #{$animationName} {
+    @content;
+  }
+  @-moz-keyframes #{$animationName} {
+    @content;
+  }
+  @-o-keyframes #{$animationName} {
+    @content;
+  }
+  @keyframes #{$animationName} {
+    @content;
+  }
+}
+
+@mixin background-opacity($color, $opacity: 0.5) {
+  background: $color;
+  background: rgba($color, $opacity);
+}
+
+@mixin font_size($sizeValue: 1.6) {
+  font-size: ($sizeValue * 10) + px;
+  font-size: $sizeValue + rem;
+}
+
+/* MIXIN : MEDIA QUERIES
+   *    EX : @include mq( 'lap-and-up' ) { CODE }
+   * ------------------------------------------------------------------------- */
+$small-phone: "screen and (max-width: 320px)";
+$phone: "screen and (max-width: 767px)";
+$phone-portrait: "screen and (max-width: 551px)";
+$phone-landscape: "screen and (min-width: 552px) and (max-width: 767px)";
+$tablet: "screen and (min-width: 768px) and (max-width: 1024px)";
+$phone-and-tablet: "screen and (max-width: 1024px)";
+$tablet-and-up: "screen and (min-width: 768px)";
+$tablet-portrait: "screen and (min-width: 768px) and (max-width: 991px)";
+$tablet-landscape: "screen and (min-width: 992px) and (max-width: 1024px)";
+$lap: "screen and (min-width: 1025px) and (max-width: 1199px)";
+$lap-and-below: "screen and (max-width: 1199px)";
+$lap-and-below-extended : "screen and (max-width: 1240px)";
+$lap-and-up: "screen and (min-width: 1025px)";
+$desk-and-up: "screen and (min-width: 1200px)";
+$large-desk-and-up: "screen and (min-width: 1400px)";
+$lap-and-desk: "screen and (min-width: 1025px) and (max-width: 1679px)";
+$tab-and-down: "screen and (max-width: 991px)";
+$tab-and-down-mob: "screen and (max-width: 798px)";
+$phone-small: "screen and (max-width: 420px)";
+
+@mixin mq($alias) {
+  @if $alias == "small-phone" {
+    @media #{$small-phone} {
+      @content;
+    }
+  }@else if $alias == "phone" {
+    @media #{$phone} {
+      @content;
+    }
+  } @else if $alias == "phone-portrait" {
+    @media #{$phone-portrait} {
+      @content;
+    }
+  } @else if $alias == "phone-landscape" {
+    @media #{$phone-landscape} {
+      @content;
+    }
+  } @else if $alias == "tablet" {
+    @media #{$tablet} {
+      @content;
+    }
+  } @else if $alias == "phone-and-tablet" {
+    @media #{$phone-and-tablet} {
+      @content;
+    }
+  } @else if $alias == "tablet-and-up" {
+    @media #{$tablet-and-up} {
+      @content;
+    }
+  } @else if $alias == "tablet-portrait" {
+    @media #{$tablet-portrait} {
+      @content;
+    }
+  } @else if $alias == "tablet-landscape" {
+    @media #{$tablet-landscape} {
+      @content;
+    }
+  } @else if $alias == "lap" {
+    @media #{$lap} {
+      @content;
+    }
+  } @else if $alias == "lap-and-up" {
+    @media #{$lap-and-up} {
+      @content;
+    }
+  } @else if $alias == "desk-and-up" {
+    @media #{$desk-and-up} {
+      @content;
+    }
+  } @else if $alias == "lap-and-desk" {
+    @media #{$lap-and-desk} {
+      @content;
+    }
+  } @else if $alias == "large-desk-and-up" {
+    @media #{$large-desk-and-up} {
+      @content;
+    }
+  } @else if $alias == "lap-and-below" {
+    @media #{$lap-and-below} {
+      @content;
+    }
+  } @else if $alias == "tab-and-down" {
+    @media #{$tab-and-down} {
+      @content;
+    }
+  } @else if $alias == "tab-and-down-mob" {
+    @media #{$tab-and-down-mob} {
+      @content;
+    }
+  } @else if $alias == "phone-small" {
+    @media #{$phone-small} {
+      @content;
+    }
+  }
+  @else if $alias == "lap-and-below-extended" {
+    @media #{$lap-and-below-extended} {
+      @content;
+    }
+  }
+  @else {
+    @media (#{$alias}) {
+      @content;
+    }
+  }
+}
+
+// flex mixins
+@mixin flexbox() {
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+}
+
+@mixin flex($flexnumber) {
+  -webkit-flex: $flexnumber;
+  -ms-flex: $flexnumber;
+  flex: $flexnumber;
+}
+
+@mixin justify-content($justifycontent) {
+  -webkit-justify-content: $justifycontent;
+  justify-content: $justifycontent;
+}
+
+@mixin align-items($align) {
+  -webkit-box-align: $align;
+  -webkit-flex-align: $align;
+  -ms-flex-align: $align;
+  -webkit-align-items: $align;
+  align-items: $align;
+}
+
+@mixin align-self($value: auto) {
+  // No Webkit Box Fallback.
+  -webkit-align-self: $value;
+  @if $value == flex-start {
+    -ms-flex-item-align: start;
+  } @else if $value == flex-end {
+    -ms-flex-item-align: end;
+  } @else {
+    -ms-flex-item-align: $value;
+  }
+  align-self: $value;
+}
+
+@mixin flex-direction($direction) {
+  -webkit-flex-direction: $direction;
+  -ms-flex-direction: $direction;
+  flex-direction: $direction;
+}
+@mixin flex-wrap($wrap) {
+  -webkit-flex-wrap: $wrap;
+  flex-wrap: $wrap;
+}
+
+// other
+@mixin perspective($perspective) {
+  -webkit-perspective: $perspective;
+  perspective: $perspective;
+}
+
+@mixin box-shadow($value) {
+  -webkit-box-shadow: $value;
+  -moz-box-shadow: $value;
+  box-shadow: $value;
+}
+@mixin border-radius($content) {
+  -webkit-border-radius: $content;
+  -moz-border-radius: $content;
+  -ms-border-radius: $content;
+  border-radius: $content;
+}
+
+@mixin backface-visibility($value) {
+  -webkit-backface-visibility: $value;
+  -moz-backface-visibility: $value;
+  -ms-backface-visibility: $value;
+  -o-backface-visibility: $value;
+  backface-visibility: $value;
+}
+
+@mixin appearance($content) {
+  -webkit-appearance: $content;
+  -moz-appearance: $content;
+  appearance: $content;
+}
+
+// placeholder mixin -- can be used at root or nested
+
+// example
+// @include placeholder {
+//   color: red;
+// }
+// .foo {
+//   @include placeholder {
+//     color: green;
+//   }
+// }
+
+@mixin optional-at-root($sel) {
+  @at-root #{if(not &, $sel, selector-append(&, $sel))} {
+    @content;
+  }
+}
+
+@mixin placeholder {
+  @include optional-at-root("::-webkit-input-placeholder") {
+    @content;
+  }
+
+  @include optional-at-root(":-moz-placeholder") {
+    @content;
+  }
+
+  @include optional-at-root("::-moz-placeholder") {
+    @content;
+  }
+
+  @include optional-at-root(":-ms-input-placeholder") {
+    @content;
+  }
+}
+
+// spinner loader css
+@keyframes btnSpinner {
+  to {transform: rotate(360deg);}
+}
+// Skeleton loader
+@keyframes skeletonShimmerAnimation {
+  0% {
+      opacity: .45
+  }
+
+  to {
+      opacity: .9
+  }
+}

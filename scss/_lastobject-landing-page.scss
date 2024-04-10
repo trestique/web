@@ -1,0 +1,569 @@
+.page-lastobject-landing-page {
+
+  .row{
+    
+    @include mq('phone') {
+
+      margin-left: 0;
+      margin-right: 0;
+      .col-xs-6,.col-lg-3,
+      .col-xs-12,.col-md-6,.col-lg-6 {
+        padding: 0;
+      }
+    }
+  }
+
+  .banner-wrapper {
+
+    margin-inline: auto;
+    padding-top: 32px;
+    padding-bottom: 64px;
+
+    @include mq('phone-and-tablet') {
+
+      padding-inline: 16px;
+    }
+
+    .heading {
+      font-size: 40px;
+      line-height: 48px;
+      font-weight: 400;
+      font-family: $futura_bt;
+      margin-bottom: 32px;
+
+      @include mq('phone') {
+
+        font-size: 26px;
+        line-height: 32px;
+        margin-bottom: 16px;
+      }
+    }
+
+    .text-wrapper {
+
+      font-size: 20px;
+      line-height: 24px;
+      font-family: $futura_bt;
+      width: 50%;
+      margin-top: 24px;
+      margin-inline: auto;
+
+      @include mq('phone') {
+
+        width: 100%;
+        font-size: 16px;
+        line-height: 20px;
+      }
+    }
+
+
+    .media-wrapper {
+
+      position: relative;
+
+      .video-wrapper-essential-mix{
+        position: relative;
+      }
+      .play-btn-wrapper {
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        @include flexbox();
+        @include justify-content(center);
+        @include align-items(center);
+        z-index: 5;
+        &.active{
+          opacity: 0;
+        }
+        img{
+          max-width: 80px;
+        }
+        // top: 50%;
+        // left: 50%;
+        // @include transform(translate(-50%, -50%) scale(0.8));
+      }
+    }
+  }
+
+  .image-text-with-slider {
+
+    .image-with-text-section {
+
+      .text-block {
+
+        @include flexbox();
+        @include justify-content(center);
+        @include align-items(center);
+
+        &.right {
+          padding-right: 60px;
+          padding-left: 135px;
+
+          @include mq('tablet') {
+
+            padding-right: 50px;
+            padding-left: 50px;
+          }
+
+          @include mq('phone') {
+            padding: 0;
+          }
+        }
+
+        &.left {
+          padding-left: 100px;
+          padding-right: 100px;
+          order: 2;
+
+          @include mq('tablet') {
+
+            padding-right: 50px;
+            padding-left: 50px;
+          }
+
+          @include mq('phone') {
+            padding: 0;
+          }
+        }
+
+        @include mq('phone') {
+
+          order: 2;
+        }
+      }
+
+      .image-wrapper {
+
+        width: 100%;
+
+        img {
+          width: 100%;
+        }
+      }
+
+      .text-wrapper {
+
+        .heading {
+
+          font-size: 32px;
+          line-height: 48px;
+          font-weight: 400;
+          margin-bottom: 32px;
+          color: $color_navy;
+          font-family: $futura_bt;
+
+          @include mq('large-desk-and-up') {
+
+            font-size: 40px;
+          }
+
+          @include mq('phone') {
+
+            margin: 32px 20px 16px;
+            font-size: 22px;
+            line-height: 48px;
+          }
+        }
+
+        .content-text {
+
+          font-size: 20px;
+          line-height: 24px;
+          font-family: $futura_bt;
+          font-weight: 400;
+          color: $color_navy;
+
+          @include mq('phone') {
+
+            margin-inline: 16px;
+            font-size: 16px;
+            line-height: 20px;
+          }
+        }
+
+        .cta-btn {
+
+          width: fit-content;
+          display: block;
+          font-size: 16px;
+          line-height: 20px;
+          font-weight: 400;
+          font-family: $futura_bt;
+          padding: 18px 94px;
+          margin-top: 50px;
+
+          @include mq('phone') {
+            margin-left: auto;
+            margin-right: auto;
+            margin-top: 32px;
+            padding-left: 70px;
+            padding-right: 70px;
+          }
+        }
+      }
+    }
+
+    .block-wrapper {
+
+      margin-top: 58px;
+      padding-bottom: 48px;
+
+      .lastobject-block-slider {
+
+        padding: 0 135px;
+
+        @include mq('tablet') {
+
+          padding: 0 80px;
+        }
+
+        @include mq('phone') {
+          padding: 0;
+          // padding-left: 16px;
+        }
+
+
+        /* the slides */
+        .slick-slide {
+          margin-right: 30px;
+
+          @include mq('phone') {
+
+            margin-right: 16px;
+          }
+        }
+
+        /* the parent */
+        .slick-list {
+          @include mq('tablet-and-up') {
+
+            margin-right: -30px;
+          }
+        }
+
+        .block {
+
+          background-color: $color_background;
+          border-radius: 24px;
+          padding: 16px 16px 0;
+          padding-bottom: 40px;
+
+          .img-wrapper-block {
+            img {
+              width: 100%;
+            }
+          }
+
+          .text-wrapper-block {
+
+            a{
+              text-decoration: underline;
+            }
+            text-align: center;
+
+            .block-heading {
+              font-family: $futura_bt;
+              font-size: 24px;
+              line-height: 28px;
+              font-weight: 400;
+              margin-top: 16px;
+              margin-bottom: 16px;
+
+              @include mq('phone') {
+
+                font-size: 20px;
+                line-height: 28px;
+              }
+            }
+
+            .block-content {
+
+              font-size: 16px;
+              line-height: 20px;
+
+              @include mq('phone') {
+
+                font-size: 16px;
+                line-height: 20px;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .product-image-grid {
+
+    padding: 0 135px;
+
+    @include mq('tablet') {
+
+      padding: 0 60px;
+    }
+
+    @include mq('phone') {
+
+      padding: 0 16px;
+    }
+
+    .row {
+
+      padding-right: 16px;
+      margin-bottom: 0;
+
+      @include mq('phone') {
+        .col-xs-6 {
+
+          padding-left: 16px;
+          padding-right: 0;
+
+
+          &:nth-child(n+3) {
+
+            margin-top: 16px;
+          }
+        }
+      }
+    }
+
+    .block-wrapper {
+
+      position: relative;
+      display: block;
+      .external-link-icon{
+
+        display: none;
+        position: absolute;
+        top: 15px;
+        right: 15px;
+        max-width: 20px;
+        width: 100%;
+        height: auto;
+        z-index: 1111;
+      }
+      @include mq('tablet-and-up') {
+
+        &:hover {
+
+          cursor: pointer;
+          .img {
+
+            display: none;
+          }
+
+          .external-link-icon{ 
+
+            display: block;
+          }
+
+          .hover-img {
+
+            display: block;
+            filter: drop-shadow(0px 4px 15px rgba(0, 0, 0, 0.25));
+          }
+        }
+      }
+
+      img {
+
+        width: 100%;
+
+        &.hover-img {
+          display: none;
+        }
+      }
+
+      .product-title {
+
+        position: absolute;
+        bottom: 9px;
+        left: 18px;
+        font-size: 20px;
+        line-height: 24px;
+        font-weight: 400;
+        font-family: $futura_bt;
+        color: $color_navy;
+
+        @include mq('phone') {
+
+          font-size: 14px;
+          line-height: 16px;
+        }
+      }
+    }
+  }
+
+  .image-with-text {
+
+    .row{
+      margin-bottom: 0;
+    }
+
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+
+    @include mq('phone') {
+
+      background-image: unset;
+    }
+
+    .banner-xs {
+
+      display: none;
+
+      @include mq('phone') {
+
+        display: block;
+
+        img {
+          width: 100%;
+        }
+      }
+    }
+
+    .brand-logo-wrapper {
+
+      @include flexbox();
+      @include align-items(center);
+      padding-top: 120px;
+      padding-bottom: 33px;
+      padding-left: 192px;
+
+      @include mq('tablet') {
+
+        padding-left: 100px;
+      }
+
+      .cross {
+        display: block;
+        width: 20px;
+        background-repeat: no-repeat;
+        height: 20px;
+        margin-inline: 24px;
+        background-image: url('https://cdn.shopify.com/s/files/1/0114/0621/3220/files/X.png?v=1645613393');
+      }
+
+      @include mq('phone') {
+
+        padding: 0 52px;
+      }
+    }
+
+    .banner-text {
+
+      font-size: 20px;
+      line-height: 24px;
+      font-weight: 400;
+      padding-bottom: 32px;
+      margin-left: 156px;
+      font-family: $futura_bt;
+
+      @include mq('tablet') {
+
+        margin-left: 100px;
+      }
+
+      @include mq('phone') {
+        padding-bottom: 0;
+        text-align: center;
+        margin: 16px 27px 32px;
+      }
+    }
+
+    .banner_subtext {
+
+      font-size: 20px;
+      padding: 12px 60px 16px 200px;
+      line-height: 24px;
+      font-family: $futura_bt;
+      color: $color_navy;
+      font-weight: 400;
+      background-color: #F3E9E1;
+
+      @include mq('tablet') {
+
+        padding-left: 100px;
+      }
+
+      @include mq('phone') {
+
+        padding: 16px 14px;
+        margin: 0 18px 32px;
+      }
+    }
+
+    .disclaimer-text {
+
+      font-size: 12px;
+      line-height: 16px;
+      font-weight: 400;
+      margin-top: 167px;
+      padding-left: 135px;
+      margin-bottom: 32px;
+      font-family: $futura_bt;
+
+      @include mq('tablet') {
+
+        padding-left: 100px;
+      }
+
+      @include mq('phone') {
+
+        margin-top: 32px;
+        padding-left: 16px;
+      }
+    }
+  }
+
+  .text-slider {
+
+    border: transparent;
+    border-top: 1px solid $color_navy;
+    border-bottom: 1px solid $color_navy;
+    font-size: 62px;
+    line-height: 62px;
+    font-weight: 500;
+    color: $color_navy;
+    margin: 16px 0 48px;
+    padding-block: 22px 15px;
+
+    .track {
+
+      will-change: transform;
+      white-space: nowrap;
+      overflow: hidden;
+      p{
+
+        font-family: $font_FreightDisp;
+      }
+
+      .text-1 {
+        display: inline-block;
+        animation: marquee 40s linear infinite;
+      }
+
+      .text-2 {
+        display: inline-block;
+        animation: marquee 40s linear infinite;
+
+      }
+    }
+
+    @include mq('phone') {
+
+      font-size: 27px;
+      line-height: 27px;
+    }
+  }
+}
+
+@keyframes marquee {
+  100% { 
+
+    @include transform(translateX(-100%));
+  }
+}

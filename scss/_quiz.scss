@@ -1,0 +1,1797 @@
+$quiz-header-padding: 78px;
+.quiz-template-html,.page-quiz{
+  height: 100%;
+  .locale-selectors__container {
+    display: none;
+  }
+}
+.page-quiz #trestique-react-root{
+  height: 100%;
+  .app-container + div{
+    height: 100%;
+  }
+  .app-container{
+    height: 100%;
+    .app-container-block{
+      height: 100%;
+    }
+    .main-react-content{
+      height: 100%;
+    }
+  }
+}
+.quiz-image-loader {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 11111;
+  @include flexbox();
+  @include justify-content(center);
+  @include align-items(center);
+  @include flex-wrap(wrap);
+  img {
+    max-width: 150px;
+  }
+}
+.page-quiz {
+  overflow: hidden;
+  .react-loader {
+    background: rgba(255, 255, 255, 0.9);
+  }
+  .swatches-wrapper {
+    @include flexbox();
+    @include justify-content(space-between);
+    @include align-items(center);
+    @include flex-wrap(wrap);
+    width: 100%;
+    ul.swatch-wrap {
+      @include flexbox();
+      @include justify-content(center);
+      @include flex-wrap(wrap);
+      &.review-swatch-wrap {
+        @include justify-content(flex-start);
+      }
+      li.swatch-element {
+        min-width: auto;
+        min-height: auto;
+        cursor: pointer;
+        border: none;
+        margin-right: 8px;
+        border: 2px solid transparent;
+        margin-bottom: 15px;
+        &.color {
+          padding: 0;
+        }
+        &.active {
+          border: 2px solid $color_activeBlue;
+        }
+        label {
+          width: 25px;
+          height: 25px;
+          display: block;
+          cursor: pointer;
+          border: none;
+          span {
+            font-size: 0;
+          }
+        }
+      }
+    }
+  }
+}
+@mixin aiButton() {
+  width: 207px;
+  font-family: $futura_bt;
+  height: 65px;
+  // box-shadow: 0 -12px 21px 0 rgba(9, 31, 44, 0.15);
+  background-color: #00263A;
+  border: 1px solid #00263A;
+  max-width: 100%;
+  @include flexbox();
+  @include justify-content(center);
+  @include align-items(center);
+  color: #fff;
+  text-transform: uppercase;
+  font-size: 15px;
+  font-weight: 500;
+  border-radius: 0;
+  letter-spacing: 1px;
+  text-align: center;
+  margin: 0 auto;
+  outline: none;
+  cursor: pointer;
+  @include mq("phone") {
+    width: 100%;
+    height: 50px;
+    font-size: 13px;
+  }
+}
+.ai-quiz-page {
+  border-top: 1px solid rgba(9, 31, 44, 0.3);
+  @include flexbox();
+  // @include align-items(center);
+  @include flex-wrap(wrap);
+  @include justify-content(center);
+  overflow-y: auto;
+  height: 100%;
+  max-height: 100%;
+  .btn-wrap,.btn-wrapper{
+    button.light-color{
+      background: #F3E9E2;
+      color: #00263A;
+      border-color: #F3E9E2;
+    }
+  }
+  .quiz-header {
+    width: 100%;
+    background: #F3E9E2;
+    height: 100px;
+    @include flexbox();
+    @include justify-content(space-between);
+    @include align-items(center);
+    padding: 0 30px;
+    @include mq('phone'){
+      padding: 0 15px;
+    }
+    .quiz-header-title{
+      font-size: 32px;
+      font-family: $font_FreightDisp;
+      @include mq('phone'){
+        font-size: 24px;
+      }
+    }
+    .quiz-header-text{
+      font-size: 14px;
+    }
+    .back{
+      display: inline-block;
+      cursor: pointer;
+      img{
+        max-width: 25px;
+      }
+    }
+    .close-quiz,.quiz-trestique-logo{
+      img{
+        @include mq('phone'){
+          max-width: 15px;
+        }
+      }
+    }
+  }
+  /* Common css of the page */
+  .title {
+    font-size: 75px;
+    color: $color_activeBlue;
+    margin-bottom: 25px;
+    font-family: $font_FreightDisp;
+    line-height: 0.82;
+    line-height: 1;
+    @include mq("phone") {
+      font-size: 32px;
+      line-height: 30px;
+      letter-spacing: 0.14px;
+      text-align: center;
+    }
+  }
+  .text-wrap {
+    max-width: 380px;
+    margin: 0 auto;
+    @include mq("phone") {
+      max-width: 100%;
+    }
+    .text {
+      margin-bottom: 35px;
+      @include mq("phone") {
+        max-width: 280px;
+        text-align: center;
+        margin: 0 auto 35px;
+      }
+      p {
+        font-size: 16px;
+        font-family: $futura_bt;
+        color: $color_navy;
+        line-height: 22px;
+        @include mq("phone") {
+          color: $color_activeBlue;
+          font-size: 14px;
+        }
+      }
+    }
+  }
+  button.ai-quiz-next-btn {
+    @include aiButton();
+  }
+  /* Common css of the page */
+  .quiz-step-1 {
+    text-align: center;
+    @include flexbox();
+    @include align-items(center);
+    @include flex-wrap(wrap);
+    @include justify-content(center);
+    width: 100%;
+    height: 100%;
+    position: relative;
+    @include mq('phone'){
+      @include flex-direction(column-reverse);
+    }
+    .close-quiz {
+      position: absolute;
+      top: 35px;
+      right: 85px;
+      cursor: pointer;
+      @include mq("phone") {
+        top: 15px;
+        right: 15px;
+      }
+    }
+    .quiz-step-1-block {
+      width: 50%;
+      max-width: 100%;
+      position: relative;
+      height: 100%;
+      &.w-full {
+        width: 100%;
+        height: 100%;
+        .text-wrap {
+          right: 12%;
+          top: 30%;
+          color: $Copper_Red;
+          @include mq('phone') {
+            top: 15%;
+            right: 25%;
+            color: #fff;
+          }
+        }
+      }
+      @include mq('phone'){
+        width: 100%;
+        height: 50%;
+      }
+      .img{
+        height: 100%;
+        img{
+          width: 100%;
+          max-width: 100%;
+          display: block;
+          height: 100%;
+          object-fit: cover;
+        }
+      }
+      &:not(.w-full):last-child{
+        .text-wrap{
+          left: 25px;
+          right: auto;
+          color:#C07450;
+          @include mq('phone'){
+            left: 10px;
+            width: auto;
+          }
+        }  
+      }
+      .text-wrap{
+        width: 100%;
+        max-width: 280px;
+        color: #fff;
+        position: absolute;
+        right: 25px;
+        top: 20%;
+        @include mq('phone'){
+          top: 30%;
+          right: 10px;
+          width: auto;
+        }
+        .title {
+          font-family: $antro_vectra_bolder_fonts;
+          letter-spacing: 0.34px;
+          margin-bottom: 0;
+          color: inherit;
+          line-height: 1.2;
+          padding: 0 15px;
+          text-align: center;
+          left: 0;
+          right: 0;
+          font-size: 32px;
+          @include transform(translateY(-50%) rotate(-5deg));
+          @include mq('phone'){
+            font-size: 23px;
+            padding-left: 0;
+            color: white;
+          }
+        }
+        .text {
+          font-size: 14px;
+          text-align: center;
+          max-width: 175px;
+          margin: 0 auto 32px;
+          @include mq('phone'){
+            margin-left: 0;
+            text-align: left;
+            margin-bottom: 20px;
+            color: white;
+          }
+          p{
+            color: inherit;
+            font-size: 14px;
+            line-height: 22px;
+          }
+        }
+        .btn-wrap{
+          max-width: 208px;
+          margin: 0 auto;
+          .left-quiz-step-1-btn{
+            color: #fff;
+            border: 1px solid #fff;
+            background: transparent;
+            box-shadow: none;
+          }
+          .right-quiz-step-1-btn{
+            background: transparent;
+            color: #C07450;
+            box-shadow: none;
+            border: 1px solid #C07450;
+            @include mq('phone'){
+              color: white;
+              border: 1px solid white;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .quiz-step-3{
+    text-align: center;
+    display: block;
+    width: 100%;
+    .image-loader {
+      margin-top: 50px;
+      margin: 0;
+      height: calc(100% - 215px);
+      @include flexbox();
+      @include justify-content(center);
+      @include align-items(center);
+      @include flex-wrap(wrap);
+      @include mq("tablet-and-up") {
+        height: calc(100% - 415px);
+      }
+      img {
+        max-width: 100px;
+      }
+      .loading-text{
+        margin-top: 20px;
+      }
+    }
+    @include mq("phone") {
+      margin-bottom: 0;
+    }
+    .quiz-step-3-details{
+      @include flexbox();
+      @include justify-content(center);
+      @include align-items(center);
+      height: calc(100% - 100px - 81px);
+      overflow-y: auto;
+      @include mq('phone'){
+        height: calc(100% - 100px - 50px);
+      }
+    }
+    .quiz-step-3-block {
+      max-width: 800px;
+      margin: 0 auto 0;
+      text-align: center;
+      padding: 0 20px;
+      width: 100%;
+      .user-image {
+        max-width: 250px;
+        margin: 0 auto 0;
+        img{
+          width: 100%;
+          max-width: 100%;
+          height: auto;
+        }
+      }
+      .images{
+        @include flexbox();
+        @include justify-content(space-between);
+        max-width: 627px;
+        margin: 0 auto;
+        margin-bottom: 30px;
+        .img{
+          max-width: 193px;
+          width: 100%;
+          @include mq('phone'){
+            max-width: calc(33.333% - 5px);
+          }
+          img{
+            width: 100%;
+            max-width: 100%;
+            height: auto;
+          }
+        }
+      }
+      .quiz-step-3-options {
+        @include flexbox();
+        @include justify-content(space-between);
+        @include align-items(center);
+        @include flex-wrap(wrap);
+        max-width: 100%;
+        width: 100%;
+        margin: 0 auto;
+        li {
+          cursor: pointer;
+          width: 100%;
+          font-size: 16px;
+          text-align: left;
+          max-width: 50%;
+          margin-bottom: 30px;
+          @include flexbox();
+          @include align-items(center);
+          @include mq('phone'){
+            max-width: 100%;
+            margin-bottom: 10px;
+          }
+          &:nth-child(3),&:nth-child(4){
+            margin-bottom: 0;
+          }
+          .img {
+            max-width: 46px;
+            margin-right: 12px;
+            img{
+              width: 100%;
+              max-width: 100%;
+              height: auto;
+            }
+          }
+          p {
+            color: $color_navy;
+            letter-spacing: 0.6px;
+            font-size: 18px;
+            font-family: $futura_bt;
+            text-transform: uppercase;
+            line-height: 1.4;
+            @include mq("phone") {
+              font-size: 16px;
+              letter-spacing: 0;
+              color: $color_activeBlue;
+            }
+          }
+        }
+      }
+      .btn-wrapper-bg {
+        position: fixed;
+        left: 0;
+        right: 0;
+        z-index: 10;
+        bottom: 0;
+        width: 100%;
+        background: #E0B39E;
+        padding: 8px 0;
+        @include mq('phone'){
+          padding: 0;
+        }
+        .btn-wrapper{
+          @include flexbox();
+          @include justify-content(center);
+          @include align-items(center);
+          @include flex-wrap(wrap);
+          max-width: 478px;
+          margin: 0 auto;
+          button.ai-quiz-next-btn {
+            @include mq("phone") {
+              width: 50%;
+              letter-spacing: 0;
+              font-size: 12px;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .quiz-step-4,.quiz-step-5 {
+    text-align: center;
+    display: block;
+    width: 100%;
+    .quiz-step-4-block,.quiz-step-5-block {
+      max-width: 100%;
+      margin: 0 auto 0;
+      text-align: center;
+      height: calc(100% - 100px);
+      @include mq('lap-and-up'){
+        height: calc(100vh - 100px);
+      }
+      .quiz-step-4-options,.quiz-step-5-options {
+        width: 100%;
+        margin: 0 auto 0;
+        height: calc(100% - 60px);
+        .step-4-main-slider,.step-5-main-slider, .step-4-main-slider .slick-track,.step-5-main-slider .slick-track{
+          height: 100%;
+        }
+        .step-4-main-slider .slick-slide > div:first-child,.step-5-main-slider .slick-slide > div:first-child{
+          height: 100%;
+        }
+        .step-5-main-slider .slick-list,.step-4-main-slider .slick-list{
+          height: 100% !important;
+        }
+        @include mq("phone") {
+          max-width: 100%;
+          margin-bottom: 0;
+          @include justify-content(flex-start);
+        }
+        li {
+          cursor: pointer;
+          position: relative;
+          height: 100%;
+          &.active {
+            .img{
+              border: 3px solid #BFEBF3;
+            }
+            .select-text{
+              background: #BFEBF3;
+              color: $color_navy;
+            }
+          }
+          .select-text{
+            background: #D9D9D9;
+            color: #fff;
+            width: 145px;
+            position: absolute;
+            left: 0;
+            top: 0;
+            padding: 4px 0;
+            text-transform: uppercase;
+          }
+          .img {
+            transition: 0.3s all;
+            height: calc( 100% - 80px);
+            img {
+              display: block;
+              width: 100%;
+              max-width: 100%;
+              height: 100%;
+              object-fit: cover;
+            }
+          }
+          .text-box{
+            height: 80px;
+            @include flexbox();
+            @include justify-content(center);
+            @include align-items(center);
+            @include flex-direction(column);
+            p {
+              color: inherit;
+              letter-spacing: 0.6px;
+              font-size: 16px;
+              line-height: 1.07;
+              font-weight: 500;
+              text-align: center;
+              margin-bottom: 9px;
+            }
+            span{
+              color: inherit;
+              font-size: 14px;
+            }
+          }
+        }
+      }
+      .swatches-quiz{
+        @include flexbox();
+        @include justify-content(center);
+        @include align-items(center);
+        @include flex-wrap(wrap);
+        height: 60px;
+        li{
+          display: inline-block;
+          height: 24px;
+          width: 24px;
+          min-width: 24px;
+          cursor: pointer;
+          margin: 0 5px;
+          &.active img{
+            border-color: #00263A;
+          }
+          img{
+            border-radius: 100%;
+            border: 2px solid transparent;
+          }
+        }
+      }
+      .ai-quiz-next-btn{
+        @include mq('phone'){
+          position: fixed;
+          left: 0;
+          right: 0;
+          bottom: 0;
+          z-index: 10;
+          width: 100%;
+        }
+      }
+    }
+  }
+  .quiz-step-6 {
+    text-align: center;
+    display: block;
+    width: 100%;
+    .quiz-step-6-shadow-block {
+      max-width: 100%;
+      margin: 0 auto;
+      height: calc(100% - 100px - 81px);
+      @include mq('phone'){
+        height: calc(100% - 100px - 50px);
+      }
+      .quiz-step-6-shadow-options {
+        max-width: 524px;
+        margin: 0 auto;
+        height: 100%;
+        @include flexbox();
+        @include justify-content(space-between);
+        @include align-items(center);
+        @include flex-wrap(wrap);
+        li {
+          cursor: pointer;
+          width: 254px;
+          font-size: 16px;
+          text-align: left;
+          max-width: 100%;
+          transition: 0.3s all;
+          @include mq("phone") {
+            width: 50%;
+            padding: 0 5px;
+            margin: 0;
+          }
+          &.active {
+            .img {
+              border: 5px solid $color_sky;
+              @include mq("phone") {
+                border: 3px solid $color_sky;
+              }
+              .floating-icon{
+                .icon{
+                  background: #6AD1E3;
+                }
+              }
+            }
+          }
+          .img {
+            transition: 0.3s all;
+            margin-bottom: 10px;
+            border: 5px solid transparent;
+            position: relative;
+            .floating-icon{
+              text-align: left;
+              padding: 0 10px 15px;
+              position: absolute;
+              top: 15px;
+              left: 0px;
+              z-index: 1;
+              @include mq('phone'){
+                padding: 0 5px 10px;
+              }
+              .icon{
+                height: 28px;
+                border-radius: 100%;
+                width: 28px;
+                background: #D9D9D9;
+                display: inline-block;
+                text-align: center;
+                vertical-align: middle;
+                @include mq('phone'){
+                  width: 20px;
+                  height: 20px;
+                  display: inline-flex;
+                  justify-content: center;
+                  align-items: center;
+                }
+                svg{
+                  height: 18px;
+                  width: 16px;
+                  vertical-align: middle;
+                  @include mq('phone'){
+                    height: 14px;
+                    width: 12px;
+                  }
+                }
+              }
+              .text{
+                padding: 0;
+                display: inline-block;
+                margin: 0;
+                margin-left: 8px;
+                color: #c2c2c2;
+                font-size: 12px;
+                font-family: $futura_bt;
+                text-transform: uppercase;
+                @include mq('phone'){
+                  font-size: 12px;
+                }
+                @include mq('small-phone'){
+                  font-size: 10px;
+                }
+              }
+            }
+            img {
+              display: block;
+              width: 100%;
+              max-width: 100%;
+              height: auto;
+            }
+          }
+          .text {
+            color: $color_navy;
+            letter-spacing: 0.6px;
+            font-size: 16px;
+            line-height: 1.07;
+            font-weight: 500;
+            margin-bottom: 10px;
+            font-family: $futura_bt;
+            text-align: center;
+            display: block;
+            text-transform: capitalize;
+            @include mq("phone") {
+              font-size: 14px;
+              font-family: $color_navy;
+              letter-spacing: 0;
+            }
+          }
+        }
+      }
+      .btn-wrapper {
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        z-index: 1;
+        padding: 8px 135px;
+        background: #E0B39E;
+        text-align: right;
+        @include mq('phone'){
+          padding: 0;
+        }
+        .ai-quiz-next-btn{
+          margin-right: 0;
+        }
+      }
+    }
+    .step-6-save-msg{
+      color: #B14C59;
+      text-align: center;
+      margin-bottom: 15px;
+      p{
+        color: #B14C59;
+        font-size: 14px;
+      }
+    }
+    .quiz-step-6-block {
+      margin: 0 auto 50px;
+      text-align: center;
+      padding: 30px $quiz-header-padding;
+      padding-bottom: 0;
+      margin-bottom: 0;
+      &.list-blocks{
+        max-width: 1230px;
+        margin: 30px auto 100px;
+        padding: 0 15px;
+        @include mq('phone'){
+          padding: 0;
+          margin: 6px auto 100px;
+        }
+      }
+      @include mq("phone") {
+        margin-bottom: 25px;
+        padding: 0;
+        .title {
+          margin-bottom: 10px;
+          padding: 0 20px;
+        }
+        .text {
+          padding: 0 20px;
+          margin-bottom: 30px;
+          max-width: 100%;
+        }
+      }
+      .quiz-step-6-options {
+        width: 100%;
+        margin: 0 auto 35px;
+        max-width: 1300px;
+        li {
+          font-size: 16px;
+          text-align: left;
+          max-width: 100%;
+          margin-bottom: 75px;
+          transition: 0.3s all;
+          width: 100%;
+          @include flexbox();
+          @include justify-content(space-between);
+          // @include align-items(center);
+          @include flex-wrap(wrap);
+          @include mq("phone") {
+            margin-bottom: 15px;
+            @include flex-direction(column-reverse);
+          }
+          &:nth-of-type(even) {
+            @include mq('tablet-and-up'){
+              @include flex-direction(row-reverse);
+              .img.product-img .img-wrap .img-relative{
+                margin-right: auto;
+                margin-left: 0;
+              }
+            }
+          }
+          &.active {
+            .img.product-img img {
+              border: 3px solid $color_navy;
+            }
+          }
+          .item-top-text {
+            margin: 0 auto;
+            max-width: 600px;
+            font-size: 19px;
+            font-family: $futura_bt;
+            letter-spacing: 1.25px;
+            text-transform: uppercase;
+            margin-bottom: 25px;
+            font-weight: 600;
+            @include mq("phone") {
+              padding: 0px;
+              text-align: center;
+              font-size: 13px;
+              margin-bottom: 15px;
+              letter-spacing: 0;
+            }
+          }
+          .item-bottom-text {
+            margin: 0 auto;
+            max-width: 600px;
+            font-size: 44px;
+            letter-spacing: 0.64px;
+            line-height: 1.04;
+            font-family: $font_FreightDisp;
+            @include mq("phone") {
+              padding: 0 20px;
+              font-size: 24px;
+              margin-bottom: 25px;
+              letter-spacing: 0.29px;
+            }
+          }
+          .img {
+            transition: 0.3s all;
+            width: 50%;
+            @include mq("phone") {
+              width: 100%;
+            }
+            img {
+              display: block;
+              width: 100%;
+              max-width: 100%;
+              height: auto;
+            }
+            &.item-img {
+              img {
+                width: 100%;
+                height: auto;
+                margin: 0 auto;
+                max-width: 600px;
+                margin-bottom: 25px;
+                @include mq('phone'){
+                  margin-bottom: 50px;
+                  &.img-xs-hide {
+                    display: none;
+                  }
+                }
+              }
+            }
+            &.product-img {
+              @include mq("phone") {
+                padding: 0 20px;
+                margin-bottom: 15px;
+              }
+              &.active {
+                .img-wrap .img-relative{
+                  border: 4px solid $color_sky;
+                  .check-mark{
+                    display: block;
+                  }
+                }
+                .img-wrap .select-text{
+                  display: none;
+                }
+              }
+              .img-wrap {
+                cursor: pointer;
+                max-width: 600px;
+                margin: 55px auto 0;
+                text-align: center;
+                position: relative;
+                position: relative;
+                z-index: 1;
+                @include mq("phone") {
+                  max-width: 75%;
+                  margin-top: 0;
+                }
+                .img-relative{
+                  max-width: 300px;
+                  border: 4px solid transparent;
+                  margin-right: 0;
+                  margin-left: auto;
+                  position: relative;
+                }
+                .select-text{
+                  font-family: $futura_bt;
+                  font-size: 14px;
+                  font-weight: 500;
+                  letter-spacing: 0.6px;
+                  text-align: center;
+                  color: $color_activeBlue;
+                  line-height: 1;
+                  text-transform: uppercase;
+                  position: absolute;
+                  top: 10px;
+                  left: 10px;
+                  text-align: center;
+                  z-index: 1;
+                }
+                .check-mark{
+                  display: none;
+                  position: absolute;
+                  background: $color_sky;
+                  top: 15px;
+                  border-radius: 100%;
+                  left: 15px;
+                  height: 30px;
+                  width: 30px;
+                  vertical-align: middle;
+                  line-height: 30px;
+                  svg{
+                    vertical-align: middle;
+                  }
+                }
+                .product-title {
+                  font-family: $futura_bt;
+                  font-size: 14px;
+                  font-weight: 600;
+                  letter-spacing: 0.6px;
+                  text-align: center;
+                  color: $color_activeBlue;
+                  line-height: 1;
+                  line-height: 1;
+                  text-transform: uppercase;
+                  position: absolute;
+                  bottom: 15px;
+                  left: 0;
+                  right: 0;
+                  text-align: center;
+                  z-index: 1;
+                  @include mq("phone") {
+                    bottom: 10px;
+                  }
+                }
+              }
+              img {
+                width: 100%;
+                height: auto;
+                margin: 0 auto;
+                cursor: pointer;
+                max-width: 100%;
+              }
+            }
+          }
+          p.text {
+            color: $color_navy;
+            letter-spacing: 0.6px;
+            font-size: 16px;
+            line-height: 1.07;
+            font-weight: 500;
+            text-transform: uppercase;
+            margin-bottom: 10px;
+          }
+          p.info {
+            color: $color_navy;
+            letter-spacing: 0.6px;
+            font-size: 14px;
+            line-height: 1.07;
+            font-weight: 500;
+          }
+        }
+      }
+    }
+    .collection-list{
+      .collection-title{
+        font-size: 28px;
+        margin-bottom: 35px;
+        text-align: left;
+        font-family: $font_FreightDisp;
+        position: relative;
+        @include mq('phone'){
+          font-size: 24px;
+          padding: 0 15px;
+          margin-bottom: 24px;
+        }
+        span{
+          position: relative;
+          z-index: 1;
+          background: #fff;
+          padding-right: 40px;
+        }
+        &:after{
+          position: absolute;
+          content: '';
+          width: 100%;
+          height: 2px;
+          border-bottom: 1px solid rgba(0, 0, 0, 0.2);;
+          right: 0;
+          top: 50%;
+          @include transform(translateY(-50%));
+        }
+      }
+      .products-list{
+        margin: 0 -12px 35px;
+        .slick-track{
+            margin-left: 0;
+        }
+        @include mq('phone'){
+          padding-left: 15px;
+          margin: 0 0 24px;
+          // .slick-list{padding:0 20% 0 0 !important;}
+          .slick-list{ padding-left: 0px!important;}
+        }
+        .product{
+          padding: 0 12px;
+          @include mq('phone'){
+            padding: 0 5px;
+          }
+          .product-item{
+            cursor: pointer;
+            position: relative;
+            padding-top: 25px;
+            &.active .img{
+              border-color: #6AD1E3;
+              .floating-icon{
+                .icon{
+                  background: #6AD1E3;
+                }
+              }
+            }
+            .col-product-badge-msg{
+              position: absolute;
+              left: 0;
+              padding: 2px 5px;
+              text-transform: uppercase;
+              font-family: $futura_bt;
+              display: inline-block;
+              z-index: 2;
+              font-size: 13px;
+              top: 1px;
+            }
+            .img{
+              padding-top: 15px;
+              background: #F0F0F0;
+              border: 5px solid #D9D9D9;  
+              position: relative;
+              margin-bottom: 10px;
+              .floating-icon{
+                text-align: left;
+                padding: 0 10px 15px;
+                @include mq('phone'){
+                  padding: 0 5px 10px;
+                }
+                .icon{
+                  height: 28px;
+                  border-radius: 100%;
+                  width: 28px;
+                  background: #D9D9D9;
+                  display: inline-block;
+                  text-align: center;
+                  vertical-align: middle;
+                  @include mq('phone'){
+                    width: 20px;
+                    height: 20px;
+                    display: inline-flex;
+                    justify-content: center;
+                    align-items: center;
+                  }
+                  svg{
+                    height: 18px;
+                    width: 16px;
+                    vertical-align: middle;
+                    @include mq('phone'){
+                      height: 14px;
+                      width: 12px;
+                    }
+                  }
+                }
+                .text{
+                  padding: 0;
+                  display: inline-block;
+                  margin: 0;
+                  margin-left: 8px;
+                  color: #c2c2c2;
+                  font-size: 12px;
+                  font-family: $futura_bt;
+                  text-transform: uppercase;
+                  @include mq('phone'){
+                    font-size: 12px;
+                  }
+                  @include mq('small-phone'){
+                    font-size: 10px;
+                  }
+                }
+              }
+            }
+            .title{
+              font-family: $futura_bt;
+              text-align: left;
+              font-size: 16px;
+              padding: 0;
+              text-transform: uppercase;
+              margin-bottom: 10px;
+              line-height: 1.1;
+              @include mq('phone'){
+                font-size: 11px;
+              }
+            }
+            .short-info{
+              text-align: left;
+              font-size: 14px;
+              @include mq('phone'){
+                font-size: 11px;
+              }
+            }
+          }
+        }
+      }
+    }
+    .btn-wrapper-bg {
+      position: fixed;
+      left: 0;
+      right: 0;
+      z-index: 10;
+      bottom: 0;
+      width: 100%;
+      background: #E0B39E;
+      padding: 8px 135px;
+      @include mq('phone'){
+        padding: 0;
+      }
+      .btn-wrapper{
+        max-width: 414px;
+        margin-left: auto;
+        button.ai-quiz-next-btn {
+          display: inline-block;
+          @include mq("phone") {
+            width: 50%;
+            letter-spacing: 0;
+            font-size: 12px;
+          }
+        }
+      }
+    }
+  }
+
+  .quiz-step-7 {
+    text-align: center;
+    display: block;
+    width: 100%;
+    @include mq("phone") {
+      margin-bottom: 0;
+    } 
+    .quiz-step-7-block {
+      max-width: 100%;
+      margin: 0 auto 0;
+      text-align: center;
+      height: calc(100vh - 101px);
+      padding: 0 20px;
+      @include flexbox();
+      @include justify-content(center);
+      @include align-items(center);
+      @include flex-wrap(wrap);
+      @include mq('phone'){
+        padding-right: 0;
+      }
+      .quiz-step-7-options {
+        width: 100%;
+        max-width: 1067px;
+        margin: 0 auto 0;
+        @include mq("phone") {
+          max-width: 100%;
+          .slick-list{padding:0 20px 0 0 !important;}
+        }
+        li {
+          cursor: pointer;
+          font-size: 16px;
+          text-align: left;
+          max-width: 100%;
+          transition: 0.3s all;
+          &.active {
+            .img {
+              border: 5px solid $color_sky;
+              @include mq("phone") {
+                border: 3px solid $color_sky;
+              }
+              .floating-icon{
+                .icon{
+                  background: #6AD1E3;
+                }
+              }
+            }
+          }
+          .img {
+            transition: 0.3s all;
+            margin-bottom: 15px;
+            border: 5px solid transparent;
+            position: relative;
+            @include mq("phone") {
+              border: 3px solid transparent;
+            }
+            .floating-icon{
+              text-align: left;
+              padding: 0 10px 15px;
+              position: absolute;
+              left: 0;
+              top: 15px;
+              z-index: 1;
+              @include mq('phone'){
+                padding: 0 5px 10px;
+              }
+              .icon{
+                height: 28px;
+                border-radius: 100%;
+                width: 28px;
+                background: #D9D9D9;
+                display: inline-block;
+                text-align: center;
+                vertical-align: middle;
+                @include mq('phone'){
+                  width: 20px;
+                  height: 20px;
+                  display: inline-flex;
+                  justify-content: center;
+                  align-items: center;
+                }
+                svg{
+                  height: 18px;
+                  width: 16px;
+                  vertical-align: middle;
+                  @include mq('phone'){
+                    height: 14px;
+                    width: 12px;
+                  }
+                }
+              }
+              .text{
+                padding: 0;
+                display: inline-block;
+                margin: 0;
+                margin-left: 8px;
+                color: #c2c2c2;
+                font-size: 12px;
+                font-family: $futura_bt;
+                text-transform: uppercase;
+                @include mq('phone'){
+                  font-size: 12px;
+                }
+                @include mq('small-phone'){
+                  font-size: 10px;
+                }
+              }
+            }
+            img {
+              display: block;
+              width: 100%;
+              max-width: 100%;
+              height: auto;
+            }
+          }
+          p {
+            color: $color_navy;
+            letter-spacing: 0.6px;
+            font-size: 16px;
+            line-height: 1.07;
+            font-weight: 500;
+            text-align: center;
+            @include mq('phone'){
+              font-size: 14px;
+            }
+          }
+        }
+      }
+    }
+    .btn-wrapper {
+      text-align: center;
+      @include mq("phone") {
+        padding: 0 15px;
+      }
+    }
+  }
+
+  .quiz-step-8 {
+    text-align: center;
+    display: block;
+    width: 100%;
+    height: 100%;
+    @include mq("phone") {
+      &.no-margin{
+        margin-bottom: 0;
+      }
+    }
+
+    .link-text {
+      text-decoration: underline;
+      cursor: pointer;
+    }
+    .error-screen-bg{
+      position: fixed;
+      top: 0;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      background: rgba(0,0,0,0.5);
+      z-index: 100;
+      .error-screen{
+        background: #fff;
+        margin: 0 auto;
+        max-width: 750px;
+        background: #fff;
+        margin: 0 auto;
+        max-height: 90vh;
+        overflow-y: auto;
+        position: absolute;
+        top: 50%;
+        @include transform(translateY(-50%));
+        left: 0;
+        right: 0;
+        @include mq('phone'){
+          max-width: calc(100% - 30px);
+        }
+        .title{
+          font-size: 18px;
+          margin: 0;
+          padding: 25px 0;
+          background: #F3E9E2;
+          line-height: 1.2;
+          font-family: $futura_bt;
+        }
+        .img{
+          img{
+            width: 100%;
+            max-width: 100%;
+            height: auto;
+            display: block;
+          }
+        }
+        .btn-wrapper{
+          background: #F3E9E2;
+          padding: 15px 0;
+          .ai-quiz-next-btn{
+            width: 50%;
+            max-width: 320px;
+            &.first-btn{
+              background: #BFEBF3;
+              color: $color_navy;
+              border-color: #BFEBF3;
+              margin-left: auto;
+              margin-right: 0;
+            }
+            &.last-btn{
+              margin-left: 0;
+              margin-right: auto;
+            }
+          }
+        }
+      }
+    }
+    .quiz-step-8-block {
+      max-width: 100%;
+      text-align: center;
+      height: calc(100% - 100px - 81px);
+      @include mq("phone") {
+        height: calc(100% - 100px - 50px);
+      }
+      .bags {
+        height: calc(100% - 60px);
+        .swiper{
+          height: 100%;
+        }
+        li {
+          cursor: pointer;
+          font-size: 16px;
+          text-align: left;
+          max-width: 100%;
+          height: 100%;
+          transition: 0.3s all;
+          &.active {
+            .img {
+              background-color: #f0f0f0;
+              border: 5px solid $color_sky;
+              @include mq("phone") {
+                border: 3px solid $color_sky;
+              }
+            }
+          }
+          .img {
+            transition: 0.3s all;
+            background: #F0F0F0 !important;
+            border: 2px solid #DBDBDB;
+            height: calc(100% - 6px);
+            img {
+              display: block;
+              width: auto;
+              height: 100%;
+              max-width: 100%;
+              margin: 0 auto;
+              // height: auto;
+              object-fit: contain;
+              @include mq('phone'){
+                width: 100%;
+                height: 100%;
+              }
+            }
+          }
+          p.bag-title {
+            color: $color_navy;
+            letter-spacing: 0.6px;
+            font-size: 16px;
+            font-weight: 500;
+            background: #F6F6F6;;
+            text-align: center;
+            height: 60px;
+            line-height: 60px;
+          }
+        }
+      }
+    }
+    .swatches-quiz-wrap{
+      // margin: 10px 0;
+      .swatches-quiz{
+        background: #F6F6F6;
+        @include flexbox();
+        @include justify-content(center);
+        @include align-items(center);
+        @include flex-wrap(wrap);
+        height: 60px;
+        li{
+          display: inline-block;
+          height: 24px;
+          width: 24px;
+          min-width: 24px;
+          cursor: pointer;
+          margin: 0 5px;
+          &.active{
+            img{
+              border-color: #00263A;
+            }
+          }
+          img{
+            border-radius: 100%;
+            border: 2px solid transparent;
+            height: 24px;
+            width: 24px;
+          }
+        }
+      }
+    }
+    .btn-wrapper {
+      @include flexbox();
+      text-align: center;
+      background: #E0B39E;
+      padding: 8px 135px;
+      .ai-quiz-next-btn{
+        margin-right: 0;
+        @include mq("phone") {
+          width: 100%;
+        }
+      }
+      @include mq("phone") {
+        padding: 0;
+        width: 100%;
+      }
+    }
+  }
+
+  
+
+  .quiz-step-9 {
+    text-align: center;
+    display: block;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 100;
+    height: 100vh;
+    background: rgba(0,0,0,0.5);
+    .quiz-step-9-block {
+        background: #F3E9E2;
+        margin: 0 auto;
+        max-width: 750px;
+        max-height: 90vh;
+        overflow-y: auto;
+        position: absolute;
+        top: 50%;
+        @include transform(translateY(-50%));
+        left: 0;
+        right: 0;
+        @include mq('phone'){
+          max-width: calc(100% - 30px);
+        }
+        .close-user-form{
+          position: absolute;
+          right: 15px;
+          top: 15px;
+          width: 25px;
+          height: 25px;
+          display: inline-block;
+          cursor: pointer;
+        }
+    }
+    .customer-details-form {
+      text-align: center;
+      max-width: 380px;
+      padding: 35px 15px;
+      margin: 0 auto;
+      .title{
+        font-size: 50px;
+        line-height: 1.1;
+        margin-bottom: 12px;
+        @include mq('phone'){
+          font-size: 45px;
+        }
+      }
+      .text-wrap p{
+        font-size: 18px;
+      }
+      .input-wrap {
+        margin-bottom: 1px;
+        position: relative;
+      }
+      input {
+        background: transparent;
+        border: none;
+        color: $color_activeBlue;
+        border-bottom: 1px solid #000;
+        padding-bottom: 10px;
+        outline: none;
+        width: 100%;
+        display: block;
+        letter-spacing: 1.25px;
+        font-family: $futura_bt;
+        opacity: 0.5;
+        font-size: 20px;
+        margin-bottom: 8px;
+        @include mq("phone") {
+          font-size: 16px;
+          letter-spacing: 1px;
+          width: 100%;
+          max-width: 100%;
+          padding-bottom: 8px;
+        }
+      }
+      .error {
+        text-align: left;
+        text-align: left;
+        color: red;
+        letter-spacing: 1px;
+        font-family: $futura_bt;
+        margin: 0;
+      }
+      input::-webkit-input-placeholder {
+        color: #7F929C;
+        text-transform: uppercase;
+        text-align: center;
+      }
+
+      input:-ms-input-placeholder {
+        color: #7F929C;
+        text-transform: uppercase;
+        text-align: center;
+      }
+
+      input::placeholder {
+        text-align: center;
+        color: #7F929C;
+        text-transform: uppercase;
+      }
+      .btn-wrapper {
+        text-align: center;
+        margin-bottom: 15px;
+        .ai-quiz-next-btn{
+          width: 334px;
+          max-width: 100%;
+        }
+      }
+      .privacy-text {
+        text-align: center;
+        margin: 0 auto 55px;
+        p {
+          margin-bottom: 10px;
+        }
+        a {
+          text-decoration: underline;
+        }
+      }
+      .skip-btn-wrapper{
+        padding-top: 15px;
+        margin-top: 15px;
+        max-width: 90px;
+        margin: 15px auto 0;
+        border-top: 1px solid #000;
+        .btn{
+          border: none;
+          outline: none;
+          background: transparent;
+          padding: 0 15px;
+          cursor: pointer;
+          color: #000;
+          font-weight: 500;
+          font-family: $futura_bt;
+        }
+      }
+    }
+  }
+
+  .quiz-review-section {
+    min-height: auto;
+    overflow-y: auto;
+    width: 100%;
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+    &::-webkit-scrollbar {
+      display: none;
+    }
+    .quiz-header {
+      .review-header-title {
+        padding: 34px 0;
+        margin: 0;
+        text-align: left;
+
+      }
+      .review-text {
+        text-align: center;
+      }
+    }
+    .products {
+      max-width: 85%;
+      margin: 0 auto;
+      padding: 25px 0 75px;
+      .item {
+        margin-bottom: 35px;
+        max-width: 450px;
+        .img {
+          background: #f0f0f0;
+          height: 100%;
+          height: 250px;
+          @include flexbox();
+          @include justify-content(center);
+          @include align-items(center);
+          @include mq('phone'){
+              height: 180px;
+          }
+        }
+        .no-xs-space {
+          @include mq("phone") {
+            padding: 0;
+          }
+        }
+        .details {
+          .current-swatch {
+            margin-bottom: 8px;
+            font-family: $futura_bt;
+          }
+          .product-title-wrap {
+            @include flexbox();
+            @include justify-content(space-between);
+            @include align-items(center);
+            margin-bottom: 5px;
+            .product-title {
+              font-size: 18px;
+              color: $color_navy;
+              font-weight: 500;
+            }
+            .product-price-wrap {
+              @include flexbox();
+              @include justify-content(flex-end);
+              @include mq('phone'){
+                min-width: 100;
+              }
+              p {
+                font-size: 14px;
+                &.compare-price {
+                  margin-right: 5px;
+                  text-decoration: line-through;
+                }
+              }
+            }
+          }
+          .variant-info{
+            margin-bottom: 10px;
+          }
+          .remove-btn {
+            text-decoration: underline;
+            font-family: $futura_bt;
+            cursor: pointer;
+          }
+          .swatch-wrap {
+            margin-bottom: 10px;
+            .swatch-element {
+              margin-bottom: 10px;
+            }
+          }
+          .option-selector {
+            .selected-swatch {
+              margin-bottom: 10px;
+            }
+          }
+        }
+      }
+    }
+    .review-bottom-bar {
+      position: fixed;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      width: 100%;
+      max-width: 100%;
+      background: $color_lightpink;
+      z-index: 11;
+      padding: 12px 78px;
+      @include mq("phone") {
+        padding: 0;
+      }
+      .text {
+        margin: 0;
+        text-transform: uppercase;
+        font-family: $futura_bt;
+        letter-spacing: 1px;
+        font-weight: bold;
+        @include mq("phone") {
+          display: none;
+        }
+      }
+      .btn {
+        @include aiButton();
+        height: 50px;
+        margin: 0;
+      }
+      .start-over {
+        background: #BFEBF3;
+        border-color: #BFEBF3;
+        width: 100%;
+        color: $color_navy;
+        max-width: 260px;
+        margin-right: 30px;
+        @include mq("phone") {
+          max-width: 50%;
+          margin: 0;
+        }
+      }
+      .add-to-cart {
+        width: 100%;
+        max-width: 260px;
+        background: $color_navy;
+        border-color: $color_navy;
+        margin-left: 30px;
+        @include mq("phone") {
+          max-width: 50%;
+          margin: 0;
+        }
+        .compare {
+          text-decoration: line-through;
+          padding-left: 5px;
+          display: inline-block;
+        }
+        .price {
+          padding-left: 5px;
+          display: inline-block;
+        }
+      }
+    }
+  }
+}
+
+.page-quiz .ju_preview_3{
+  @include mq('phone'){
+    z-index: 5 !important;
+  }
+}

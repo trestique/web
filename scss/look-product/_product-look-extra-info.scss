@@ -1,0 +1,94 @@
+.look-product-extra-info{
+    max-width: 335px;
+    padding: 0 4px;
+    width: 100%;
+    @include mq('phone'){
+        max-width: 100%;
+        padding: 0 15px;
+    }
+    .look-product-user-info{
+        margin-bottom: 22px;
+        @include flexbox();
+        @include justify-content(space-between);
+        .img{
+            width: 100px;
+            border-radius: 100%;
+            img{
+                width: 100px;
+                height: 100px;
+                object-fit: cover;
+                display: block;
+                border-radius: 100%;
+            }
+        }
+        .user-details{
+            padding-left: 5px;
+            width: calc(100% - 100px);
+            .user-name{
+                font-size: 24px;
+            }
+            .insta-details{
+                @include flexbox();
+                .insta-img{
+                    img{
+                        width: 100%;
+                        max-width: 16px;
+                    }
+                }
+                .insta-handle-followers{
+                    padding-left: 8px;
+                    p{
+                        font-family: $futura_bt;
+                        font-size: 14px;
+                        margin-bottom: 0;
+                    }
+                }
+            }
+            .short-info{
+                font-size: 14px;
+                font-family: $futura_bt;
+            }
+        }
+    }
+
+    .look-para-1{
+        padding: 16px;
+        background: #FFFFFF;
+        border: 1px solid #E9E9E9;
+        box-shadow: 0px 9px 22px rgba(0, 0, 0, 0.1);
+        border-radius: 8px;
+        margin-bottom: 16px;
+        .info-list{
+            @include flexbox();
+            @include flex-wrap(wrap);
+            @include justify-content(space-between);
+            li{
+                width: 50%;
+                margin-bottom: 6px;
+                font-size: 12px;
+                font-family: $futura_bt;
+                @include mq('phone'){
+                    font-size: 14px;
+                    text-align: center;
+                }
+            } 
+        }
+        .text{
+            margin-top: 18px;
+            font-family: $font_FreightDisp;
+            font-weight: 400;
+            font-size: 18px;
+            line-height: 24px;
+            text-align: center;
+        }
+    }
+    .look-para-2{
+        padding: 16px;
+        background: #F3F3F3;
+        font-family: $font_FreightDisp;
+        font-weight: 400;
+        font-size: 18px;
+        line-height: 24px;
+        text-align: center;
+    }
+}
